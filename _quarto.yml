@@ -1,0 +1,31 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "*.md"
+  output-dir: docs   
+
+website:
+  title: "EC 380 - International Econ"
+  favicon: UO-icon.png
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Me
+
+  announcement: 
+    icon: clipboard2-check-fill
+    dismissable: true
+    content: "Practice Final Exam is Published Under the Assignments Tab"
+    type: warning
+    position: below-navbar
+
+format:
+  html:
+    theme: 
+      - cosmo 
+      - styles.scss
+    toc: true
+    toc-location: left
