@@ -8,6 +8,7 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}  % Ensure proper encoding
 \usepackage{titlesec}
+\usepackage{amsfonts}
 
 \titleformat{\section}
   {\normalfont\large\bfseries\sffamily}{\thesection}{1em}{}
@@ -29,8 +30,16 @@
 
 \fontfamily{lmss}\selectfont
 
-\input{Class-Information}
+\input{01-header/Class-Information}
 
 \bigskip
+
+\input{02-course-summary/course-summary.tex}
+
+\input{03-grades/grades.tex}
+
+\newpage 
+
+\input{04-recommendations/recommendations.tex}
 
 \end{document}
