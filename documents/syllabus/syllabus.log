@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.22)  17 JUN 2025 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.22)  17 JUN 2025 22:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,7 +673,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 16
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [2]) (./03-grades/grades.tex) [3] (./04-recommendations/recommendations.tex
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [2]) (./03-grades/grades.tex) [3] (./04-schedule/schedule.tex) (./05-recommendations/recommendations.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -691,10 +691,10 @@ Package rerunfilecheck Info: File `syllabus.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12550 strings out of 474116
- 200692 string characters out of 5743681
+ 12557 strings out of 474116
+ 200859 string characters out of 5743681
  1939187 words of memory out of 5000000
- 34667 multiletter control sequences out of 15000+600000
+ 34670 multiletter control sequences out of 15000+600000
  618462 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,7n,79p,415b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -705,7 +705,7 @@ pdfTeX warning (dest): name{target\040name} has been referenced but does not exi
 pdfTeX warning (dest): name{https://jrojas1003.github.io/EC-320-Intro-Econometrics/} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on syllabus.pdf (4 pages, 191186 bytes).
+Output written on syllabus.pdf (4 pages, 191494 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

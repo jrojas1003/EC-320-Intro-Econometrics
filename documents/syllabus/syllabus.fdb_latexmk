@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1750224656.03848 "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" "syllabus.pdf" "syllabus" 1750224657.02132 0
-  "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" 1750224655.77188 952 39db0cef41c0048e546f86dfac1b4c9f ""
+["pdflatex"] 1750225731.18041 "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" "syllabus.pdf" "syllabus" 1750225732.25489 0
+  "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" 1750225730.93194 986 b1fe2ba3297b11b2adb0d5e06fe07a73 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -134,10 +134,11 @@
   "01-header/Class-Information.tex" 1750224161.67073 701 270100a56eddfb9018e02227a8b47e59 ""
   "02-course-summary/course-summary.tex" 1750222908.32329 5853 d0b71e0fed3fc22a2b93fe08112eae7a ""
   "03-grades/grades.tex" 1750223774.29773 926 7bbbaa277b54ec007ac6b1aad5bee92d ""
-  "04-recommendations/recommendations.tex" 1750224119.97505 1408 c09826ad5c94e1bce1828e4ff4cacdac ""
-  "syllabus.aux" 1750224656.88894 257 05758fd683ead0a40fe8a10db615d480 "pdflatex"
-  "syllabus.out" 1750224656.62678 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "syllabus.tex" 1750224655.77188 952 39db0cef41c0048e546f86dfac1b4c9f ""
+  "04-schedule/schedule.tex" 1750225668.03097 301 d567b80ca4bde1aee6ca9765c9c5ed34 ""
+  "05-recommendations/recommendations.tex" 1750224119.97505 1408 c09826ad5c94e1bce1828e4ff4cacdac ""
+  "syllabus.aux" 1750225732.06215 257 05758fd683ead0a40fe8a10db615d480 "pdflatex"
+  "syllabus.out" 1750225731.76812 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "syllabus.tex" 1750225730.93194 986 b1fe2ba3297b11b2adb0d5e06fe07a73 ""
   (generated)
   "syllabus.aux"
   "syllabus.log"

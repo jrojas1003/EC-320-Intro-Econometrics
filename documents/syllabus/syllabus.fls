@@ -230,9 +230,12 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT ./03-grades/grades.tex
 INPUT ./03-grades/grades.tex
 INPUT 03-grades/grades.tex
-INPUT ./04-recommendations/recommendations.tex
-INPUT ./04-recommendations/recommendations.tex
-INPUT 04-recommendations/recommendations.tex
+INPUT ./04-schedule/schedule.tex
+INPUT ./04-schedule/schedule.tex
+INPUT 04-schedule/schedule.tex
+INPUT ./05-recommendations/recommendations.tex
+INPUT ./05-recommendations/recommendations.tex
+INPUT 05-recommendations/recommendations.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
