@@ -1,0 +1,89 @@
+---
+name: rvs, discrete and continuous, 
+---
+
+## Random Variables
+
+A [Random Variable]{.h} is any variable whose value cannot be predicted exactly. 
+For example:
+
+- The message you get in a fortune cookie
+- The amount of time spent searching for your keys
+- The number of likes you get on a social media post
+- The number of customers that enter a store in a day
+
+All of these are random variables. 
+
+Some random variables are [discrete]{.h} and some are [continuous]{.h}
+
+---
+
+## Discrete and Continuous RV
+
+What's the difference?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Discrete]{.hi .align-center}
+
+- Counted
+- Take on a small number of possible values
+- Ex: Number of M&Ms in your bag
+:::
+
+::: {.column width="50%"}
+[Continuous]{.hi .align-center}
+
+- Measured
+- Can take on an infinite number of possible values
+- Ex: How heavy your bag is
+:::
+
+::::
+
+Variables can also be categorical instead of numeric. 
+They may represent qualitative data that can be divided into categories or groups. 
+For now, we will lump them in with discrete variables
+
+---
+
+## Discrete Probability Distributions
+
+Consider the event of a dice roll.
+This action produces a discrete random variable.
+
+It could take on values 1 to 6 and, if it is a fair die, it takes on each of those values with equali probability $1/6$.
+
+Our notation will be:
+
+- $X$ is the random variable, $x_{i}$ is a potential outcome for $X$, and each potential outcome $x_{i}$ happens with probability $p_{i}$
+
+| $x_{i}$ |  1  | 2 | 3 | 4 | 5 | 6 | 
+|:--------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| $p_{i}$ | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 |
+
+---
+
+## Discrete Probability Distributions {.small}
+
+Consider another random variable $X$ to be the sum of two dice rolls. 
+In the table below, the first row represents the potential outcomes for the first roll and the first column represents the potential outcomes for the second roll. 
+The values inside the table represent the potential outcomes for $X$ (the sum)
+
+::: {.fullwidth .small}
+
+|       |  1  |  2  |  3  |  4  |  5  |  6  |
+|:-----:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **1** |  2  |  3  |  4  |  5  |  6  |  7  |
+| **2** |  3  |  4  |  5  |  6  |  7  |  8  |
+| **3** |  4  |  5  |  6  |  7  |  8  |  9  |
+| **4** |  5  |  6  |  7  |  8  |  9  | 10  |
+| **5** |  6  |  7  |  8  |  9  | 10  | 11  |
+| **6** |  7  |  8  |  9  | 10  | 11  | 12  |
+
+:::
+
+Each of the cells occur with equal probability. 
+So that X = 2 has probability 1/36. 
+X = 3 has probability 2/36, as it can occur in two ways. 

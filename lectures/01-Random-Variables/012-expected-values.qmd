@@ -1,0 +1,42 @@
+---
+name: expected values
+---
+
+## Expected Values of Discrete Random Variables {.small}
+
+The [expected value]{.h} of a random variable is its long-term average.
+
+We will use the greek letter $\mu$ ("mew") to refer to expected values. 
+That is, we will say that the expected value of $X$ is $\mu_{X}$, or equivalently, $E[X] = \mu_{X}$.
+
+If the variable is discrete, you can calculate its expectation by taking the sum of all possible values of the random variable, each multiplied by their corresponding probabilities. 
+
+We write this as: 
+
+$$
+    E[X] = \sum_{i} x_{i}p_{i}
+$$
+
+Where $x_{i}$ is a potential outcome for $X$ and $p_{i}$ is the probability that outcome occurs
+
+---
+
+## Expected Value Rules
+
+::: {.small}
+Here are some very important math rules to know about the way expected values work. 
+Let $X$,$Y$, and $Z$ be random variables and let $b$ be a constant.
+:::
+
+1. The expectation of the sum of several RVs is the sum of their expectation:
+$$
+    E[X + Y + Z] = E[X] + E[Y] + E[Z]
+$$
+2. Constants can pass outside of an expectation:
+$$
+    E[bX] = bE[X]
+$$
+3. The expected value of a constant is that constant:
+$$
+    E[b] = b
+$$

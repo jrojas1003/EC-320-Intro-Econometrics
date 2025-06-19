@@ -1,0 +1,25 @@
+---
+name: correlation
+---
+
+## Definition {.small}
+
+An issue with covariance is that the covariance between two random variables depends on the units those variables are measured in.
+That's where correlation comes in:
+
+Correlation is another measure of linear association that has the benefit of being dimensionless because the units in the numerator cancel with the units in the denominator.
+
+It is also the case that the correlation between two variables is always between -1 and 1. 
+Where correlation = 1, the two variables have a perfect positive linear relationsihp, and when correlation = -1, the two variables have a perfect negative linear relationship.
+
+We will use the greek letter $\rho$ ("rho") to refer to the correlation between two RVs.
+The formula is:
+
+\begin{align*}
+    \rho_{XY} = 
+    \dfrac{
+        \sigma_{XY}
+    }{
+        \sqrt{\sigma_{X}^{2}\sigma_{Y}^{2}}
+    }
+\end{align*}

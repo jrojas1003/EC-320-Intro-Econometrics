@@ -1,0 +1,45 @@
+---
+name: covariance
+---
+
+## Definition
+
+The covariance of two random variables $(\sigma_{XY})$ is a measure of the linear association between those variables. 
+For example, since people who are taller are generally heavier, we would say that the random variables [*height*]{.h} and [*weight*]{.h} have a positive covariance. 
+On the other hand, if large values for one random variable tend to correspond to small values in the other, we would say the two variables have a negative covariance.
+Two variables are independent have a covariance of 0. 
+
+The formula is:
+
+$$
+    Cov(X,Y) = \sigma_{XY} = E[(X - \mu_{X})(Y - \mu_{Y})]
+$$
+
+Notice that the covariance of a random variable $X$ with itself is the variance of $X$
+
+---
+
+## Rules {.tiny}
+
+Some important rules about the way variance works. 
+Let $X$,$Y$, and $Z$ be random variables and let $b$ be a constant.
+
+1. The covariance of a random variable with a constant is 0
+$$
+    Cov(X,b) = 0
+$$
+
+2. The covariance of a random variable with itself is its variance:
+$$
+    Cov(X,X) = Var(X)
+$$
+
+3. Constants can come outside of the covariance:
+$$
+    Cov(X,bY) = bCov(X,Y)
+$$
+
+4. If $Z$ is a third random variable, we write:
+$$
+    Cov(X,Y + Z) = Cov(X,Y) + Cov(X,Z)
+$$

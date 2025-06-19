@@ -1,0 +1,68 @@
+---
+title: "Random Variables"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, Lecture 01 | Random Variables"
+        preview-links: auto
+        code-fold: FALSE
+title-slide-attributes: 
+  data-background-position: left
+---
+
+## Preview
+
+In this chapter we will:
+
+1. Learn what discrete and continuous random variables are
+2. How to use the probability distribution of a discrete random variable to obtain the expected value and variance of the random variable
+3. How to use the probability density function (PDF) of a continuous random variable to obtain the expected value and variance of the random variable
+4. How to obtain the covariance and correlation between two random variables
+
+## Notation 
+
+Some important notation we need to introduce:
+
+::: {.wider-table .small}
+
+| Symbol | Meaning |
+|:------:|:--------|
+| $X$ | Random Variable (RV) |
+| $x_i$ | A potential outcome for the RV $X$ |
+| $p_i$ | The probability a certain outcome will occur (discrete RVs) |
+| $\mu_X$ | The expected value of $X$, also known as $E[X]$ |
+| $\sigma_X^2$ | The variance of $X$ |
+| $\sigma_X$ | The standard deviation of $X$ |
+| $\sigma_{XY}$ | The covariance of $X$ and $Y$ |
+| $\rho_{XY}$ | The correlation between $X$ and $Y$ |
+
+::: 
+
+# Random Variables {.inverse .note}
+
+{{< include 011-probs.qmd >}}
+
+# Expected Values {.inverse .note}
+
+{{< include 012-expected-values.qmd >}}
+
+# Variance {.inverse .note}
+
+{{< include 013-variance.qmd >}}
+
+# Covariance {.inverse .note}
+
+{{< include 014-covariance.qmd >}}
+
+# Correlation {.inverse .note}
+
+{{< include 015-correlation.qmd >}}
+
+# Continuous Random Variables {.inverse .note}
+
+{{< include 016-continuous-rvs.qmd >}}

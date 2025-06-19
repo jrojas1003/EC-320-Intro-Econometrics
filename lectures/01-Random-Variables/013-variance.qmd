@@ -1,0 +1,47 @@
+---
+name: variance
+---
+
+## Definition {.small}
+
+The variance of a random variable measures its [dispersion]{.h}.
+It asks "on average, how far is the variable from its average"?
+Differences are squared to get rid of the negative sign and punish large deviances a little more. 
+We will use the greek letter $\sigma$ ("sigma") for variance $(\sigma^{2})$ and standard deviation $(\sigma)$
+
+The formula is:
+
+\begin{align}
+    Var(X) = \sigma_{X}^{2} 
+    &= E[(X - \mu_{X})^{2}] \\
+    &= (x_{1} - \mu_{X})^{2}p_{1} + (x_{2} - \mu_{X})^{2}p_{2} + \cdots + (x_{n} - \mu_{X})^{2}p_{n} \\
+    &= \sum_{i = 1}^{n} (x_{i} - \mu_{X})^{2}p_{i}
+\end{align}
+
+Note that because of the square and the fact that probabilities $p_{i}$ are never negative, the variance of a RV can never be a negative number
+
+
+---
+
+## Rules {.tiny}
+
+Some important rules about the way variance works. 
+Let $X$ and $Y$ be random variables and let $b$ be a constant.
+
+1. The variance of the sum of two RVs is the sum of their variances plus two times their covariance:
+$$
+    Var(X + Y) = Var(X) + Var(Y) + 2Cov(X,Y)
+$$
+2. Constants can pass outside of a variance if you square them: 
+$$
+    Var(bX) = b^{2}Var(X)
+$$
+3. The variance of a constant is 0:
+$$
+    Var(b) = 0
+$$
+4. The variance of a RV plus a constant is the variance of that random variable:
+$$
+    Var(X + b) = Var(X)
+$$
+
