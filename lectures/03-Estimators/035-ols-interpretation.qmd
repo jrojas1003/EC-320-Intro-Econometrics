@@ -1,0 +1,65 @@
+---
+name: ols interpretations
+---
+
+## Interpretation
+
+There are [two stages]{.h} of interpretation of a regression equation
+
+1. Interpret regression estimates into words
+
+2. Deciding whether this interpretation should be taken at face value
+
+<br>
+
+Both stages are important, but for now, we will focus on the first
+
+Let's revisit our crime example
+
+---
+
+## Ex: Effect of Police on Crime
+
+Using the OLS formulas, we get $\hat{\beta}_{0} = 18.41$ and $\hat{\beta}_{1} = 1.76$
+
+![](images/interpretation-ex.png){fig-align="center"}
+
+---
+
+## Coefficient Interpretation
+
+How do I interpret $\hat{\beta}_{0} = 18.41$ and $\hat{\beta}_{1} = 1.76$?
+
+The [general interpration]{.hi} of the intercept is the estimated value of $y_{i}$ when $x_{i} = 0$
+
+And the [general interpretation]{.hi} of the slope parameter is the estimated change $y_{i}$ for the marginal increase $x_{i}$
+
+. . .
+
+[First]{.h}, it is important to understand the units:
+
+- $\widehat{\text{Crime}}_{i}$ is measured as a crime [rate]{.hi}, the number of crimes per 1,000 students on campus
+
+- $\text{Police}_{i}$ is also measured as a [rate]{.hi}, the number of police officers per 1,000 students on campus
+
+---
+
+## Coefficient Interpretation
+
+Using OLS gives us the fitted line
+
+$$
+ \widehat{\text{Crime}_i} = \hat{\beta}_1 + \hat{\beta}_2\text{Police}_i.
+$$
+
+What does $\hat{\beta_0}$ [=]{.mono} $18.41$ tell us? [Without any police on campus, the crime rate is $18.41$ per 1,000 people on campus]{.note .fragment}
+
+. . .
+
+What does $\hat{\beta_1}$ [=]{.mono} $1.76$ tell us? [For each additional police officer per 1,000, there is an associated increase in the crime rate by $1.76$ crimes per 1,000 people on campus.]{.note .fragment}
+
+. . .
+
+_Does this mean that police [cause]{.note} crime?_ [Probably not.]{.fragment}
+
+[This is where deciding if the interpretation should be taken at face value. It now becomes your job to bring reason to the values.]{.fragment}
