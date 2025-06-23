@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EC320 - Introduction to Econometrics – EC 380 - International Econ</title>
+<title>linear-ex – EC 380 - International Econ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./UO-icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 380 - International Econ</span>
     </a>
   </div>
@@ -89,19 +118,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lectures/index.html"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -119,11 +148,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a></li>
-  <li><a href="#summer-2025-class-details" id="toc-summer-2025-class-details" class="nav-link" data-scroll-target="#summer-2025-class-details">Summer 2025 Class Details</a>
-  <ul class="collapse">
-  <li><a href="#course-grade-breakdown" id="toc-course-grade-breakdown" class="nav-link" data-scroll-target="#course-grade-breakdown">Course Grade Breakdown</a></li>
-  </ul></li>
+  <li><a href="#ex.-effect-of-police-on-crime" id="toc-ex.-effect-of-police-on-crime" class="nav-link active" data-scroll-target="#ex.-effect-of-police-on-crime"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-1" id="toc-ex.-effect-of-police-on-crime-1" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-1"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-2" id="toc-ex.-effect-of-police-on-crime-2" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-2"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-3" id="toc-ex.-effect-of-police-on-crime-3" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-3"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-4" id="toc-ex.-effect-of-police-on-crime-4" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-4"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-5" id="toc-ex.-effect-of-police-on-crime-5" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-5"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-6" id="toc-ex.-effect-of-police-on-crime-6" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-6"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#ex.-effect-of-police-on-crime-7" id="toc-ex.-effect-of-police-on-crime-7" class="nav-link" data-scroll-target="#ex.-effect-of-police-on-crime-7"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#residuals" id="toc-residuals" class="nav-link" data-scroll-target="#residuals">Residuals</a></li>
+  <li><a href="#residuals-sum-of-squares-rss" id="toc-residuals-sum-of-squares-rss" class="nav-link" data-scroll-target="#residuals-sum-of-squares-rss">Residuals Sum of Squares (RSS)</a></li>
+  <li><a href="#minimizing-rss" id="toc-minimizing-rss" class="nav-link" data-scroll-target="#minimizing-rss">Minimizing RSS</a></li>
   </ul>
 </nav>
 </nav>
@@ -132,86 +172,194 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">EC320 - Introduction to Econometrics</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<details>
-  <summary>Summer 2025 Syllabus PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="documents/syllabus/syllabus.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i> Download
-  </a>
-  <div class="embed-container">
-    <iframe src="documents/syllabus/syllabus.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details>
+<hr>
+<section id="ex.-effect-of-police-on-crime" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<dl>
+<dt><span class="note">Empirical question:</span></dt>
+<dd>
+<p>Does the number of on-campus police officers affect campus crime rates? If so, by how much?</p>
+</dd>
+</dl>
+<p>. . .</p>
+<p><br></p>
+<p>Always plot your data first</p>
+<hr>
 </section>
-<section id="summer-2025-class-details" class="level2">
-<h2 class="anchored" data-anchor-id="summer-2025-class-details">Summer 2025 Class Details</h2>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p><img src="images/plotted-data.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-1" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-1"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>The scatter plot suggest that a <em>weak</em> positive relationship exists</p>
+<ul>
+<li>A sample correlation of 0.14 confirms this</li>
+</ul>
+<p><br></p>
+<p>. . .</p>
+<p><em>But correlation does not imply causation</em></p>
+<p>. . .</p>
+<p><br></p>
+<p>Lets estimate a statistical model</p>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-2" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-2"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>We express the relationship between a <span class="hp">dependent variable</span> and an <span class="hii">independent variable</span> as linear:</p>
+<p><span class="math display">\[
+{\text{Crime}_i} = \beta_0 + \beta_1 \text{Police}_i + u_i.
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <em>intercept</em> or constant.</p></li>
+<li><p><span class="math inline">\(\beta_1\)</span> is the <em>slope coefficient</em>.</p></li>
+<li><p><span class="math inline">\(u_i\)</span> is an <em>error term</em> or disturbance term.</p></li>
+</ul>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-3" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-3"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>The <span class="hi-red">intercept</span> tells us the expected value of <span class="math inline">\(\text{Crime}_i\)</span> when <span class="math inline">\(\text{Police}_i = 0\)</span>.</p>
+<p><span class="math display">\[
+\text{Crime}_i = {\color{#BF616A} \beta_{0}} + \beta_1\text{Police}_i + u_i
+\]</span></p>
+<p>Usually not the focus of an analysis.</p>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-4" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-4"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>The <span class="hi-red">slope coefficient</span> tells us the expected change in <span class="math inline">\(\text{Crime}_i\)</span> when <span class="math inline">\(\text{Police}_i\)</span> increases by one.</p>
+<p><span class="math display">\[
+\text{Crime}_i = \beta_0 + {\color{#BF616A} \beta_1} \text{Police}_i + u_i
+\]</span></p>
+<p>“A one-unit increase in <span class="math inline">\(\text{Police}_i\)</span> is associated with a <span class="math inline">\(\color{#BF616A}{\beta_1}\)</span>-unit increase in <span class="math inline">\(\text{Crime}_i\)</span>.”</p>
+<p>. . .</p>
+<p>Interpretation of this parameter is <span class="hi">crucial</span></p>
+<p>. . .</p>
+<p>Under certain (strong) assumptions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="math inline">\(\color{#BF616A}{\beta_1}\)</span> is the <em>effect of</em> <span class="math inline">\(X_i\)</span> <em>on</em> <span class="math inline">\(Y_i\)</span>.</p>
+<ul>
+<li>Otherwise, it’s the <em>association of</em> <span class="math inline">\(X_i\)</span> <em>with</em> <span class="math inline">\(Y_i\)</span>.</li>
+</ul>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-5" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-5"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>The <span class="hi-red">error term</span> reminds us that <span class="math inline">\(\text{Police}_i\)</span> does not perfectly explain <span class="math inline">\(Y_i\)</span>.</p>
+<p><span class="math display">\[
+\text{Crime}_i = \beta_0 + \beta_1\text{Police}_i + {\color{#BF616A} u_i}
+\]</span></p>
+<p>Represents all other factors that explain <span class="math inline">\(\text{Crime}_i\)</span>.</p>
+<ul>
+<li>Useful mnemonic: pretend that <span class="math inline">\(u\)</span> stands for <em>“unobserved”</em> or <em>“unexplained.”</em></li>
+</ul>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-6" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-6"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>How might we apply the simple linear regression model to our question about the effect of on-campus police on campus crime?</p>
+<p><span class="math display">\[
+\text{Crime}_i = \beta_0 + \beta_1\text{Police}_i + u_i.
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span> is the crime rate for colleges without police.</li>
+<li><span class="math inline">\(\beta_1\)</span> is the increase in the crime rate for an additional police officer per 1000 students.</li>
+</ul>
+<hr>
+</section>
+<section id="ex.-effect-of-police-on-crime-7" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-police-on-crime-7"><span class="ex">Ex.</span> <span class="hi">Effect of police on crime</span></h2>
+<p>How might we apply the simple linear regression model to our question?</p>
+<p><span class="math display">\[
+\text{Crime}_i = \beta_0 + \beta_1\text{Police}_i + u_i
+\]</span></p>
+<p><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are the unobserved population parameters we want</p>
+<p>. . .</p>
+<p><br></p>
+<p><span class="hii">We estimate</span></p>
+<ul>
+<li><p><span class="math inline">\(\hat{\beta_0}\)</span> and <span class="math inline">\(\hat{\beta_1}\)</span> generate predictions of <span class="math inline">\(\text{Crime}_i\)</span> called <span class="math inline">\(\widehat{\text{Crime}_i}\)</span>.</p></li>
+<li><p>We call the predictions of the dependent variable <span class="hi">fitted values.</span></p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Together, these trace a line: <span class="math inline">\(\widehat{\text{Crime}_i} = \hat{\beta_0} + \hat{\beta_1}\text{Police}_i\)</span>.</li>
+</ul>
+<hr>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="vertical-center">
+<p>So, the question becomes, <em>how do I pick <span class="math inline">\(\hat{\beta_0}\)</span> and <span class="math inline">\(\hat{\beta_1}\)</span></em></p>
+</div>
+<hr>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p>Let’s take some guesses: <span class="math inline">\(\hat{\beta_0} = 60\)</span> and <span class="math inline">\(\hat{\beta}_{1} = -7\)</span></p>
+<p><img src="images/int60-guess.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+<p>Let’s take some guesses: <span class="math inline">\(\hat{\beta_0} = 30\)</span> and <span class="math inline">\(\hat{\beta}_{1} = 0\)</span></p>
+<p><img src="images/int30-guess.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<p>Let’s take some guesses: <span class="math inline">\(\hat{\beta_0} = 15.6\)</span> and <span class="math inline">\(\hat{\beta}_{1} = 7.94\)</span></p>
+<p><img src="images/int15-guess.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="residuals" class="level2">
+<h2 class="anchored" data-anchor-id="residuals">Residuals</h2>
+<p>Using <span class="math inline">\(\hat{\beta}_{0}\)</span> and <span class="math inline">\(\hat{\beta}_{1}\)</span> to make <span class="math inline">\(\hat{y}_{i}\)</span> generates misses.</p>
+<p><br><br></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Instructor:</strong> Jose Rojas-Fallas</p>
-<p><strong>Office Hours:</strong> Tues/Thurs 02:00 to 04:00 pm</p>
-</div><div class="column" style="width:50%;">
-<p><strong>Email:</strong> jrojas2@uoregon.edu</p>
-<p><a href="https://uoregon.zoom.us/j/98965994279"><strong>Zoom Room</strong></a></p>
+<div class="column" style="width:33%;">
+<p><img src="images/int60-resid.png" class="img-fluid"> <span class="h align-center"><span class="math inline">\(\hat{\beta_0} = 60 \;\)</span> Guess</span></p>
+</div><div class="column" style="width:33%;">
+<p><img src="images/int30-resid.png" class="img-fluid"> <span class="h align-center"><span class="math inline">\(\hat{\beta_0} = 30 \;\)</span> Guess</span></p>
+</div><div class="column" style="width:33%;">
+<p><img src="images/int15-resid.png" class="img-fluid"> <span class="h align-center"><span class="math inline">\(\hat{\beta_0} = 15 \;\)</span> Guess</span></p>
 </div>
 </div>
-<section id="course-grade-breakdown" class="level3">
-<h3 class="anchored" data-anchor-id="course-grade-breakdown">Course Grade Breakdown</h3>
-<p>For more details, read the <a href="Documents/Syllabus/Syllabus.pdf">Syllabus</a> above</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Assignment</th>
-<th style="text-align: center;">Grade Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Problem Sets (x4)</td>
-<td style="text-align: center;"><strong>20%</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Quizzes (x4)</td>
-<td style="text-align: center;"><strong>20%</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Midterm Exam</td>
-<td style="text-align: center;"><strong>30%</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Final Exam</td>
-<td style="text-align: center;"><strong>30%</strong></td>
-</tr>
-</tbody>
-</table>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<hr>
+</section>
+<section id="residuals-sum-of-squares-rss" class="level2">
+<h2 class="anchored" data-anchor-id="residuals-sum-of-squares-rss">Residuals Sum of Squares (RSS)</h2>
+<p>What if we picked an estimator that <span class="h">minimizes</span> the residuals?</p>
+<p>Why do we not minimize:</p>
+<p><span class="math display">\[
+    \sum_{i=1}^{n} \hat{u}_{i}^{2}
+\]</span></p>
+<p>so that the estimator makes fewer big misses?</p>
+<p>This estimator, the <span class="hii">residual sum of squares (RSS)</span>, is convenient because squared numbers are never negative so we can minimze an absolut sum of the residuals</p>
+<p><span class="hii">RSS</span> will give bigger penalties to bigger residuals</p>
+<hr>
+</section>
+<section id="minimizing-rss" class="level2">
+<h2 class="anchored" data-anchor-id="minimizing-rss">Minimizing RSS</h2>
+<p>We could test thousands of guesses of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> an pick the pair the has the smallest RSS</p>
+<p>We could painstakingly do that, and eventually figure out which one fits best.</p>
+<p>Or… <span class="fragment">We could just do a little math</span></p>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Assumptions regarding the error term<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

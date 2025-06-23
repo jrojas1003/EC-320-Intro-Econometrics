@@ -364,32 +364,11 @@
     "text": "Summer 2025 Syllabus PDF\n  \n     Download"
   },
   {
-    "objectID": "index.html#syllabus",
-    "href": "index.html#syllabus",
-    "title": "EC320 - Introduction to Econometrics",
-    "section": "",
-    "text": "Summer 2025 Syllabus PDF\n  \n     Download"
-  },
-  {
-    "objectID": "index.html#summer-2025-class-details",
-    "href": "index.html#summer-2025-class-details",
-    "title": "EC320 - Introduction to Econometrics",
-    "section": "Summer 2025 Class Details",
-    "text": "Summer 2025 Class Details\n\n\nInstructor: Jose Rojas-Fallas\nOffice Hours: Tues/Thurs 02:00 to 04:00 pm\n\nEmail: jrojas2@uoregon.edu\nZoom Room\n\n\n\nCourse Grade Breakdown\nFor more details, read the Syllabus above\n\n\n\nAssignment\nGrade Weight\n\n\n\n\nProblem Sets (x4)\n20%\n\n\nQuizzes (x4)\n20%\n\n\nMidterm Exam\n30%\n\n\nFinal Exam\n30%\n\n\n\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this site"
-  },
-  {
-    "objectID": "documents/problem-sets/index.html",
-    "href": "documents/problem-sets/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Test"
   },
   {
     "objectID": "lectures/01-Random-Variables/010-compile.html#preview",
@@ -1223,5 +1202,26 @@
     "title": "EC 380 - International Econ",
     "section": "",
     "text": "Say there are two regressions Regression 1 and Regression 2 with the:\n\nSame slope\nSame intercept\n\nThe question is: Which fitted regression line “explains/fits” the data better?"
+  },
+  {
+    "objectID": "documents/problem-sets/index.html",
+    "href": "documents/problem-sets/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Test"
+  },
+  {
+    "objectID": "index.html#syllabus",
+    "href": "index.html#syllabus",
+    "title": "EC320 - Introduction to Econometrics",
+    "section": "",
+    "text": "Summer 2025 Syllabus PDF\n  \n     Download"
+  },
+  {
+    "objectID": "index.html#summer-2025-class-details",
+    "href": "index.html#summer-2025-class-details",
+    "title": "EC320 - Introduction to Econometrics",
+    "section": "Summer 2025 Class Details",
+    "text": "Summer 2025 Class Details\n\n\nInstructor: Jose Rojas-Fallas\nOffice Hours: Tues/Thurs 02:00 to 04:00 pm\n\nEmail: jrojas2@uoregon.edu\nZoom Room\n\n\n\nCourse Grade Breakdown\nFor more details, read the Syllabus above\n\n\n\nAssignment\nGrade Weight\n\n\n\n\nProblem Sets (x4)\n20%\n\n\nQuizzes (x4)\n20%\n\n\nMidterm Exam\n30%\n\n\nFinal Exam\n30%\n\n\n\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]

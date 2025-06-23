@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EC320 - Introduction to Econometrics – EC 380 - International Econ</title>
+<title>linear-model – EC 380 - International Econ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./UO-icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 380 - International Econ</span>
     </a>
   </div>
@@ -89,19 +118,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lectures/index.html"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -119,11 +148,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a></li>
-  <li><a href="#summer-2025-class-details" id="toc-summer-2025-class-details" class="nav-link" data-scroll-target="#summer-2025-class-details">Summer 2025 Class Details</a>
-  <ul class="collapse">
-  <li><a href="#course-grade-breakdown" id="toc-course-grade-breakdown" class="nav-link" data-scroll-target="#course-grade-breakdown">Course Grade Breakdown</a></li>
-  </ul></li>
+  <li><a href="#sidebar-summation-rules" id="toc-sidebar-summation-rules" class="nav-link active" data-scroll-target="#sidebar-summation-rules">Sidebar: Summation Rules</a></li>
+  <li><a href="#summation-rules" id="toc-summation-rules" class="nav-link" data-scroll-target="#summation-rules">Summation Rules</a></li>
+  <li><a href="#summation-rules-1" id="toc-summation-rules-1" class="nav-link" data-scroll-target="#summation-rules-1">Summation Rules</a></li>
+  <li><a href="#summation-rules-2" id="toc-summation-rules-2" class="nav-link" data-scroll-target="#summation-rules-2">Summation Rules</a></li>
+  <li><a href="#linear-model-estimators" id="toc-linear-model-estimators" class="nav-link" data-scroll-target="#linear-model-estimators">Linear Model Estimators</a></li>
+  <li><a href="#the-linear-regression-model" id="toc-the-linear-regression-model" class="nav-link" data-scroll-target="#the-linear-regression-model">The Linear Regression Model</a></li>
+  <li><a href="#the-error-term-u_i" id="toc-the-error-term-u_i" class="nav-link" data-scroll-target="#the-error-term-u_i">The Error Term <span class="math inline">\(u_{i}\)</span></a></li>
+  <li><a href="#the-error-term" id="toc-the-error-term" class="nav-link" data-scroll-target="#the-error-term">The Error Term</a></li>
+  <li><a href="#the-error-term-1" id="toc-the-error-term-1" class="nav-link" data-scroll-target="#the-error-term-1">The Error Term</a></li>
+  <li><a href="#the-error-term-2" id="toc-the-error-term-2" class="nav-link" data-scroll-target="#the-error-term-2">The Error Term</a></li>
+  <li><a href="#the-error-term-3" id="toc-the-error-term-3" class="nav-link" data-scroll-target="#the-error-term-3">The Error Term</a></li>
+  <li><a href="#the-error-term-4" id="toc-the-error-term-4" class="nav-link" data-scroll-target="#the-error-term-4">The Error Term</a></li>
+  <li><a href="#the-error-term-5" id="toc-the-error-term-5" class="nav-link" data-scroll-target="#the-error-term-5">The Error Term</a></li>
+  <li><a href="#running-a-regression-model" id="toc-running-a-regression-model" class="nav-link" data-scroll-target="#running-a-regression-model">Running a Regression Model</a></li>
   </ul>
 </nav>
 </nav>
@@ -132,83 +170,211 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">EC320 - Introduction to Econometrics</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<details>
-  <summary>Summer 2025 Syllabus PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="documents/syllabus/syllabus.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i> Download
-  </a>
-  <div class="embed-container">
-    <iframe src="documents/syllabus/syllabus.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details>
+<section id="sidebar-summation-rules" class="level2 tiny">
+<h2 class="tiny anchored" data-anchor-id="sidebar-summation-rules">Sidebar: Summation Rules</h2>
+<p>Before we continue, let’s cover some important rules we will need to derive some OLS things in the near future:</p>
+<p>Summations <span class="math inline">\((\sum)\)</span> have certain rules that we cannot violate and are important to hold in mind:</p>
+<p><br></p>
+<ol type="1">
+<li><span class="math inline">\(\sum_{i=1}^{n} x_{i} = x_{1} + x_{2} + \cdots + x_{n}\)</span></li>
+</ol>
+<p><br></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\sum_{i} x_{i} + y_{i} = \sum_{i} x_{i} + \sum_{i} y_{i}\)</span></li>
+</ol>
+<p><br></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(\sum_{i} x_{i} y_{i} \neq \sum_{i} x_{i} \sum_{i} y_{i}\)</span></li>
+</ol>
+<p><br></p>
+<hr>
 </section>
-<section id="summer-2025-class-details" class="level2">
-<h2 class="anchored" data-anchor-id="summer-2025-class-details">Summer 2025 Class Details</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Instructor:</strong> Jose Rojas-Fallas</p>
-<p><strong>Office Hours:</strong> Tues/Thurs 02:00 to 04:00 pm</p>
-</div><div class="column" style="width:50%;">
-<p><strong>Email:</strong> jrojas2@uoregon.edu</p>
-<p><a href="https://uoregon.zoom.us/j/98965994279"><strong>Zoom Room</strong></a></p>
-</div>
-</div>
-<section id="course-grade-breakdown" class="level3">
-<h3 class="anchored" data-anchor-id="course-grade-breakdown">Course Grade Breakdown</h3>
-<p>For more details, read the <a href="Documents/Syllabus/Syllabus.pdf">Syllabus</a> above</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Assignment</th>
-<th style="text-align: center;">Grade Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Problem Sets (x4)</td>
-<td style="text-align: center;"><strong>20%</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Quizzes (x4)</td>
-<td style="text-align: center;"><strong>20%</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Midterm Exam</td>
-<td style="text-align: center;"><strong>30%</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Final Exam</td>
-<td style="text-align: center;"><strong>30%</strong></td>
-</tr>
-</tbody>
-</table>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-
-
+<section id="summation-rules" class="level2">
+<h2 class="anchored" data-anchor-id="summation-rules">Summation Rules</h2>
+<p><span class="math display">\[\sum_{i=1}^{n} x_{i} = x_{1} + x_{2} + \cdots + x_{n}\]</span></p>
+<p>Let <span class="math inline">\(x\)</span> be the set of <span class="math inline">\({1,5,2}\)</span> <span class="math inline">\((x: \{1,5,2\})\)</span> then using our summation rule we have:</p>
+<p><span class="math display">\[
+    \sum_{i} x_{i} = 1 + 5 + 2 = 8.
+\]</span></p>
+<hr>
 </section>
+<section id="summation-rules-1" class="level2">
+<h2 class="anchored" data-anchor-id="summation-rules-1">Summation Rules</h2>
+<p><span class="math display">\[\sum_{i} x_{i} + y_{i} = \sum_{i} x_{i} + \sum_{i} y_{i}\]</span></p>
+<p>Let <span class="math inline">\(x: \{1,5,2\}\)</span> and <span class="math inline">\(y: \{1,2,1\}\)</span>, then using our summation rule we have:</p>
+<p><span class="math display">\[\begin{align*}
+    \sum_{i} x_{i} + y_{i} &amp;= x_{1} + y_{1} + x_{2} + y_{2} + x_{3} + y_{3} \\
+                           &amp;= x_{1} + x_{2} + x_{3} + y_{1} + y_{2} + y_{3} \\
+                           &amp;= 1 + 5 + 2 + 1 + 2 + 1 \\
+                           &amp;= 12
+\end{align*}\]</span></p>
+<hr>
+</section>
+<section id="summation-rules-2" class="level2">
+<h2 class="anchored" data-anchor-id="summation-rules-2">Summation Rules</h2>
+<p><span class="math display">\[\sum_{i} x_{i} y_{i} \neq \sum_{i} x_{i} \sum_{i} y_{i}\]</span></p>
+<p>If we expand <span class="math inline">\(\sum_{i} x_{i} y_{i} \neq \sum_{i} x_{i} \sum_{i} y_{i}\)</span>, we get:</p>
+<p><br></p>
+<p><span class="math display">\[\begin{align*}
+    x_{1}y_{1} + x_{2}y_{2} + x_{3}y_{3} \neq (x_{1} + x_{2} + x_{3})(y_{1} + y_{2} + y_{3})
+\end{align*}\]</span></p>
+<p><br><br></p>
+<p>I’ll leave it to you to use the above numbers to show this holds</p>
+<hr>
+</section>
+<section id="linear-model-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="linear-model-estimators">Linear Model Estimators</h2>
+<p>We will spend the rest of the course exploring how to use <span class="hi">Ordinary Least Squares (OLS)</span> to fit a linear model like:</p>
+<p><span class="math display">\[
+    y_{i} = \beta_{0} + \beta_{1}x_{i} + u_{i},
+\]</span></p>
+<p>That is, if we wanted to hypothesize that some random variable <span class="math inline">\(Y\)</span> depends on another random variable <span class="math inline">\(X\)</span> and that there is a <span class="hi">linear relationship between then</span>, <span class="math inline">\(\beta_{0}\)</span> and <span class="math inline">\(\beta_{1}\)</span> are the parameters which describe the nature of that relationship.</p>
+<p>Given a sample of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we will derive <span class="h">unbiased estimators</span> for the intercept <span class="math inline">\(\beta_{0}\)</span> and slope <span class="math inline">\(\beta_{1}\)</span>. Those estimators help us <span class="h">combine observations</span> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to estimate underlying relationships between them.</p>
+<hr>
+<!--
+## Linear Model Notation {.tiny}
+
+|   Symbol        |             Meaning                    |                    Example                  |
+|:---------------:|:--------------------------------------:|:-------------------------------------------:|
+|  $\beta_{0}$    | Intercept parameter in a linear model  | $y_{i} = \beta_{0} + \beta_{1}x_{i} + u_{i}$|
+|  $\beta_{1}$    | Slope parameter in a linear model      |                    See above                |
+|    $y_{i}$      | Dependent variable or outcome variable |                    See above                |
+|    $x_{i}$      | Explanatory variable                   |                    See above                |
+|    $u_{i}$      | Unobservable term, disturbance, shock  |                    See above                |
+|$\hat{\beta}_{0}$| Estimate of the intercept              |$y_{i} = \hat{\beta}_{0} + \hat{\beta}_{1}x_{i} + e_{i}$|
+|$\hat{\beta}_{1}$| Estimate of the slope                  |                    See above                |
+|    $e_{i}$      | Residuals                              |                    See above                |
+
+--->
+</section>
+<section id="the-linear-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-linear-regression-model">The Linear Regression Model</h2>
+<p>We can estimate the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> by estimating the model:</p>
+<p><span class="math display">\[
+    y_{i} = \beta_{0} + \beta_{1}x_{i} + u_{i},
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(y_i\)</span> is the <em>dependent</em> variable</p></li>
+<li><p><span class="math inline">\(x_i\)</span> is the <em>independent</em> variable (continuous)</p></li>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <em>intercept</em> parameter. <span class="math inline">\(E\left[ {y_i | x_i=0} \right] = \beta_0\)</span></p></li>
+<li><p><span class="math inline">\(\beta_1\)</span> is the <em>slope</em> parameter, which under the correct causal setting represents marginal change in <span class="math inline">\(x_i\)</span>’s effect on <span class="math inline">\(y_i\)</span>. <span class="math inline">\(\frac{\partial y_i}{\partial x_i} = \beta_1\)</span></p></li>
+<li><p><span class="math inline">\(u_i\)</span> is an Error Term including all other (omitted) factors affecting <span class="math inline">\(y_i\)</span>.</p></li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-u_i" class="level2">
+<h2 class="anchored" data-anchor-id="the-error-term-u_i">The Error Term <span class="math inline">\(u_{i}\)</span></h2>
+<p><span class="math inline">\(u_{i}\)</span> is quite special</p>
+<p>Consider the <span class="hi note">data generating process</span> of variable <span class="math inline">\(y_{i}\)</span>,</p>
+<ul>
+<li><span class="math inline">\(u_{i}\)</span> captures <span class="h">all unobserved variables</span> that explain variation in <span class="math inline">\(y_{i}\)</span></li>
+</ul>
+<p><br></p>
+<p>Some error will exist in all models, no model is perfect.</p>
+<ul>
+<li>Our aim is to minimize error under a set of constraints</li>
+</ul>
+<blockquote class="blockquote">
+<p>Error is the price we are willing to accept for a simplified model</p>
+</blockquote>
+<hr>
+</section>
+<section id="the-error-term" class="level2">
+<h2 class="anchored" data-anchor-id="the-error-term">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p>. . .</p>
+<p><span class="hi">1</span>. <span class="hii"><em>Omission of independent variables</em></span></p>
+<p>. . .</p>
+<ul>
+<li>Our description (model) of the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> is a simplification</li>
+<li>Other variables have been left out (omitted)</li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-1" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="the-error-term-1">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p><span class="hi">1</span>. Omission of independent variables</p>
+<p><span class="hi">2</span>. <span class="hii"><em>Aggregation of Variables</em></span></p>
+<p>. . .</p>
+<ul>
+<li>Microeconomic relationships are often summarized</li>
+<li><span class="ex">Ex.</span> Housing prices (<span class="math inline">\(X\)</span>) are described by county-level median home value data</li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-2" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="the-error-term-2">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p><span class="hi">1</span>. Omission of independent variables</p>
+<p><span class="hi">2</span>. Aggregation of Variables</p>
+<p><span class="hi">3</span>. <span class="hii"><em>Model misspecificiation</em></span></p>
+<p>. . .</p>
+<ul>
+<li>Model structure is incorrectly specified</li>
+<li><span class="ex">Ex.</span> <span class="math inline">\(Y\)</span> depends on the anticipated value of <span class="math inline">\(X\)</span> in the previous period, not <span class="math inline">\(X\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-3" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="the-error-term-3">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p><span class="hi">1</span>. Omission of independent variables</p>
+<p><span class="hi">2</span>. Aggregation of Variables</p>
+<p><span class="hi">3</span>. Model misspecificiation</p>
+<p><span class="hi">4</span>. <span class="hii"><em>Functional misspecificiation</em></span></p>
+<p>. . .</p>
+<ul>
+<li>The functional relationship is specified incorrectly</li>
+<li>True relationship is nonlinear, not linear</li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-4" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="the-error-term-4">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p><span class="hi">1</span>. Omission of independent variables</p>
+<p><span class="hi">2</span>. Aggregation of Variables</p>
+<p><span class="hi">3</span>. Model misspecificiation</p>
+<p><span class="hi">4</span>. Functional misspecificiation</p>
+<p><span class="hi">5</span>. <span class="hii"><em>Measurement error</em></span></p>
+<p>. . .</p>
+<ul>
+<li>Measurement of the variables in the data is just wrong</li>
+<li><span class="math inline">\(Y\)</span> or <span class="math inline">\(X\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="the-error-term-5" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="the-error-term-5">The Error Term</h2>
+<p><span class="hi">Five</span> items contribute to the existence of the disturbance term:</p>
+<p><span class="hi">1</span>. Omission of independent variables</p>
+<p><span class="hi">2</span>. Aggregation of Variables</p>
+<p><span class="hi">3</span>. Model misspecificiation</p>
+<p><span class="hi">4</span>. Functional misspecificiation</p>
+<p><span class="hi">5</span>. Measurement error</p>
+<hr>
+</section>
+<section id="running-a-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-regression-model">Running a Regression Model</h2>
+<p>Using an estimator with data on <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\(y_{i}\)</span>, we can estimate a <span class="h">fitted regression line</span>:</p>
+<p><span class="math display">\[
+    \hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1}x_{i}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\hat{y}_{i}\)</span> is the <span class="hi">fitted value</span> of <span class="math inline">\(y_{i}\)</span></li>
+<li><span class="math inline">\(\hat{\beta}_{0}\)</span> is the <span class="hi">estimated intercept</span></li>
+<li><span class="math inline">\(\hat{\beta}_{1}\)</span> is the <span class="hi">estimated slope</span></li>
+</ul>
+<p>This procedure produces misses, known as <span class="hi">residuals</span> <span class="math inline">\(y_{i} - \hat{y_{i}}\)</span></p>
+<p>Let’s look at an example of how this works</p>
+
+
 </section>
 
 </main> <!-- /main -->
