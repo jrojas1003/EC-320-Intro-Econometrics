@@ -12,16 +12,12 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: lectures/index.qmd
+        text: Lectures
+      - href: documents/problem-sets/index.qmd
+        text: Assignments
       - href: about.qmd
         text: About Me
-
-  announcement: 
-    icon: clipboard2-check-fill
-    dismissable: true
-    content: "Practice Final Exam is Published Under the Assignments Tab"
-    type: warning
-    position: below-navbar
-
 format:
   html:
     theme: 

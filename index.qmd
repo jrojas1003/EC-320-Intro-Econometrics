@@ -1,7 +1,51 @@
 ---
-title: "EC320"
+title: "EC320 - Introduction to Econometrics"
 ---
 
-This is a Quarto website.
+## Syllabus
 
+```{=html}
+<details>
+  <summary>Summer 2025 Syllabus PDF</summary>
+  <a class="btn btn-primary btn-lg cv-download" href="documents/syllabus/syllabus.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+  </a>
+  <div class="embed-container">
+    <iframe src="documents/syllabus/syllabus.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+## Summer 2025 Class Details
+
+:::: {.columns}
+:::{.column width="50%"}
+
+**Instructor:** Jose Rojas-Fallas
+
+**Office Hours:** Tues/Thurs 02:00 to 04:00 pm
+:::
+
+::: {.column width="50%"}
+
+**Email:** jrojas2@uoregon.edu
+
+[**Zoom Room**](https://uoregon.zoom.us/j/98965994279)
+:::
+
+::::
+
+
+
+### Course Grade Breakdown
+
+For more details, read the [Syllabus](Documents/Syllabus/Syllabus.pdf) above
+
+
+| Assignment   | Grade Weight  | 
+|:------------|:------------:|
+| Problem Sets (x4) | **20%** |
+| Quizzes (x4) | **20%** |
+| Midterm Exam | **30%** |
+| Final Exam | **30%** |
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
