@@ -6,7 +6,7 @@ project:
   output-dir: docs   
 
 website:
-  title: "EC 380 - International Econ"
+  title: "EC 320 - Intro. Econometrics"
   favicon: UO-icon.png
   navbar:
     right:
