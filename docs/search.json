@@ -361,14 +361,21 @@
     "href": "index.html",
     "title": "EC320 - Introduction to Econometrics",
     "section": "",
-    "text": "Summer 2025 Syllabus PDF\n  \n     Download"
+    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above.\nThat said: as you can clearly see, it is still largely incomplete. I aim to be as transparent as possible with students and their course so allow me to quickly explain why and how I intend for this course to run:\n\nThis is my first time teaching this course so I am still putting all the content together in a way that I like to teach it.\nI will have a complete “Week 01” content by Tuesday evening. I am currently traveling for a conference so my time has unfortunately been drawn away. But you will not be negatively impacted.\nWe will be doing alternate weeks of “theory/math” and “R”. The goal is to understand the reason why things work and then learn how to make them work.\nA lot, and I mean a lot, of econometrics is about learning by doing. What I mean by that is that you should always attempt the math or to code things even if you do not have a clear picture of how to do things. R may become frustrating but it is a worthwhile skill to pick up. To this day I still have to refer to older code I’ve used for simple things such as making a graph.\nLLMs, like ChatGPT, are a great tool that can assist you but it still requires you to understand the output and be able to properly implement it. Do not over rely on it."
+  },
+  {
+    "objectID": "index.html#hello",
+    "href": "index.html#hello",
+    "title": "EC320 - Introduction to Econometrics",
+    "section": "",
+    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above.\nThat said: as you can clearly see, it is still largely incomplete. I aim to be as transparent as possible with students and their course so allow me to quickly explain why and how I intend for this course to run:\n\nThis is my first time teaching this course so I am still putting all the content together in a way that I like to teach it.\nI will have a complete “Week 01” content by Tuesday evening. I am currently traveling for a conference so my time has unfortunately been drawn away. But you will not be negatively impacted.\nWe will be doing alternate weeks of “theory/math” and “R”. The goal is to understand the reason why things work and then learn how to make them work.\nA lot, and I mean a lot, of econometrics is about learning by doing. What I mean by that is that you should always attempt the math or to code things even if you do not have a clear picture of how to do things. R may become frustrating but it is a worthwhile skill to pick up. To this day I still have to refer to older code I’ve used for simple things such as making a graph.\nLLMs, like ChatGPT, are a great tool that can assist you but it still requires you to understand the output and be able to properly implement it. Do not over rely on it."
   },
   {
     "objectID": "index.html#syllabus",
     "href": "index.html#syllabus",
     "title": "EC320 - Introduction to Econometrics",
-    "section": "",
-    "text": "Summer 2025 Syllabus PDF\n  \n     Download"
+    "section": "Syllabus",
+    "text": "Syllabus\n\n  Summer 2025 Syllabus PDF\n  \n     Download"
   },
   {
     "objectID": "index.html#summer-2025-class-details",
