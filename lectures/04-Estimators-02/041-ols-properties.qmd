@@ -1,0 +1,89 @@
+---
+name: ols properties
+---
+
+## Important Properties
+
+There are three important OLS properties
+
+<br>
+
+1. The point $(\bar{x}, \bar{y})$ is always on the regression line
+
+<br>
+
+2. Residuals sum to zero: $\sum_{i}^{n} \hat{u}_{i} = 0$
+
+<br>
+
+3. The sample covariance between the independent variable and the residuals is zero: $\sum_{i}^{n} x_{i}\hat{u}_{i} = 0$
+
+<br>
+
+---
+
+## Property 1 - Proof
+
+The point $(\bar{x}, \bar{y})$ is always on the regression line
+
+- Start with the regression line: $\hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1} x_{i}$
+
+- Recall that $\hat{\beta}_{0} = \bar{y} - \hat{\beta}_{1}\bar{x}$
+
+- Plug that in $\hat{\beta}_{0}$ and substitute $\bar{x}$ for $x_{i}$:
+
+\begin{align*}
+    \hat{y}_{i} &= \bar{y} - \hat{\beta}_{1}\bar{x} + \hat{\beta}_{1} \bar{x} \\ 
+    \hat{y}_{i} &= \bar{y}
+\end{align*}
+
+---
+
+## Property 2 - Proof {.pseudocode-small}
+
+Residuals sum to zero: $\sum_{i}^{n} \hat{u}_{i} = 0$
+
+1. Recall a couple of things we have derived:
+
+$$
+    \hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1}x_{i} \;\; \text{and} \;\; \hat{u}_{i} = y_{i} - \hat{y}_{i}
+$$
+
+2. The sum of residuals is:
+
+$$
+    \sum_{i} \hat{u}_{i} = \sum_{i} (y_{i} - \hat{y}_{i}) = \sum_{i} y_{i} - \sum \hat{y}_{i}
+$$
+
+3. Recall the fact that $\sum_{i} y_{i} = n\bar{y}$ and also:
+
+\begin{align*}
+    \sum_{i} \hat{y}_{i} &= \sum_{i} (\hat{\beta}_{0} + \hat{\beta}_{1}x_{i}) 
+    = n \hat{\beta}_{0} + \hat{\beta}_{1} \sum_{i} x_{i} \\
+    &= n (\bar{y}_{i} - \hat{\beta}_{1}\bar{x}) + \hat{\beta}_{1} n\bar{x} = n\bar{y}_{i}
+\end{align*}
+
+4. So:
+
+$$
+    \sum_{i} \hat{u}_{i} = n\bar{y}_{i} - n\bar{y}_{i} = 0
+$$
+
+
+---
+
+## Property 3 - Proof
+
+The sample covariance between the independent variable and the residuals is zero: $\sum_{i}^{n} x_{i}\hat{u}_{i} = 0$
+
+1. Start with our residuals: $\hat{u}_{i} = y_{i} - \hat{\beta}_{0} - \hat{\beta}_{1}x_{i}$
+
+2. Multiply both sides by $x_{i}$ and sum them:
+
+$$
+    \sum_{i} x_{i}\hat{u}_{i} = \sum_{i} x_{i}y_{i} - \hat{\beta}_{0}\sum_{i} x_{i} - \hat{\beta}_{1}\sum_{i} x_{i}^{2}
+$$
+
+3. Recall from our $\hat{\beta}_{1}$ derivation that $\sum_{i} x_{i}y_{i} = \hat{\beta}_{0}\sum_{i} x_{i} + \hat{\beta}_{1}\sum_{i} x_{i}^{2}$
+
+So: $\sum_{i}^{n} x_{i}\hat{u}_{i} = \hat{\beta}_{0}\sum_{i} x_{i} + \hat{\beta}_{1}\sum_{i} x_{i}^{2} - \hat{\beta}_{0}\sum_{i} x_{i} - \hat{\beta}_{1}\sum_{i} x_{i}^{2} = 0$

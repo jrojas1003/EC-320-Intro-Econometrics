@@ -1,0 +1,24 @@
+---
+name: goodness of fit
+---
+
+## Goodness of Fit
+
+Say there are two regressions [Regression 1]{.hi-orange} and [Regression 2]{.hii} with the:
+
+- Same slope
+- Same intercept
+
+The question is: Which fitted regression line "explains/fits" the data better?
+
+:::: {.columns}
+
+::: {.column width="50"}
+![](images/fit-01.png)
+:::
+
+::: {.column width="50"}
+![](images/fit-02.png)
+:::
+
+::::

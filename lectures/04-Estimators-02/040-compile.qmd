@@ -1,0 +1,27 @@
+---
+title: "Estimators Part II"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, Lecture 03 | Estimators II"
+        preview-links: auto
+        code-fold: FALSE
+        html: true
+        embed-resources: false  # prevent inlining everything (important for iframes)
+        self-contained: false   # allows iframe-based content like YouTube
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# OLS Properties {.inverse .note}
+
+{{< include 041-ols-properties.qmd >}}
+
+# Goodness of Fit {.inverse .note}
+
+{{< include 042-goodness-of-fit.qmd >}}
