@@ -1,0 +1,40 @@
+---
+title: "Lectures"
+---
+
+## Theory
+
+### Random Variables
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="01-Random-Variables/010-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+
+### Estimators
+
+#### Part I
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="03-Estimators-01/030-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+
+#### Part II
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="04-Estimators-02/040-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
