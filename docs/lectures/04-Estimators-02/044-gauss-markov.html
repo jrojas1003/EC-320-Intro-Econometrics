@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>goodness-of-fit – EC 320 - Intro. Econometrics</title>
+<title>gauss-markov – EC 320 - Intro. Econometrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,21 +148,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goodness-of-fit" id="toc-goodness-of-fit" class="nav-link active" data-scroll-target="#goodness-of-fit">Goodness of Fit</a></li>
-  <li><a href="#goodness-of-fit-1" id="toc-goodness-of-fit-1" class="nav-link" data-scroll-target="#goodness-of-fit-1">Goodness of Fit</a></li>
-  <li><a href="#explained-and-unexplained-variation" id="toc-explained-and-unexplained-variation" class="nav-link" data-scroll-target="#explained-and-unexplained-variation">Explained and Unexplained Variation</a></li>
-  <li><a href="#explained-and-unexplained-variation-1" id="toc-explained-and-unexplained-variation-1" class="nav-link" data-scroll-target="#explained-and-unexplained-variation-1">Explained and Unexplained Variation</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
-  <li><a href="#goodness-of-fit-2" id="toc-goodness-of-fit-2" class="nav-link" data-scroll-target="#goodness-of-fit-2">Goodness of Fit</a></li>
-  <li><a href="#goodness-of-fit-3" id="toc-goodness-of-fit-3" class="nav-link" data-scroll-target="#goodness-of-fit-3">Goodness of Fit</a></li>
+  <li><a href="#gauss-markov-theorem" id="toc-gauss-markov-theorem" class="nav-link active" data-scroll-target="#gauss-markov-theorem">Gauss-Markov Theorem</a></li>
+  <li><a href="#gauss-markov-theorem-1" id="toc-gauss-markov-theorem-1" class="nav-link" data-scroll-target="#gauss-markov-theorem-1">Gauss-Markov Theorem</a></li>
   </ul>
 </nav>
 </nav>
@@ -176,293 +163,31 @@ window.Quarto = {
 
 
 
-<section id="goodness-of-fit" class="level2">
-<h2 class="anchored" data-anchor-id="goodness-of-fit">Goodness of Fit</h2>
-<p>Say there are two regressions <span class="hi-orange">Regression 1</span> and <span class="hii">Regression 2</span> with the:</p>
-<ul>
-<li>Same slope</li>
-<li>Same intercept</li>
-</ul>
-<p>The question is: Which fitted regression line “explains/fits” the data better?</p>
-<div class="columns">
-<div class="column" style="width:50;">
-<p><img src="images/fit-01.png" class="img-fluid"></p>
-</div><div class="column" style="width:50;">
-<p><img src="images/fit-02.png" class="img-fluid"></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="goodness-of-fit-1" class="level2">
-<h2 class="anchored" data-anchor-id="goodness-of-fit-1">Goodness of Fit</h2>
-<p><span class="hi-orange">Regression 1</span> vs <span class="hii">Regression 2</span></p>
-<p>The <span class="hi note">coefficient of determination</span>, <span class="math inline">\(R^{2}\)</span>, is the fraction of the variation in <span class="math inline">\(y_{i}\)</span> “explained” by <span class="math inline">\(x_{i}\)</span>.</p>
-<ul>
-<li><span class="math inline">\(R^{2} = 1 \Rightarrow x_{i}\)</span> explains <span class="hi">all</span> of the variation in <span class="math inline">\(y_{i}\)</span></li>
-<li><span class="math inline">\(R^{2} = 0 \Rightarrow x_{i}\)</span> explains <span class="hi">none</span> of the variation in <span class="math inline">\(y_{i}\)</span></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50;">
-<p><img src="images/fit-01.png" class="img-fluid"></p>
-</div><div class="column" style="width:50;">
-<p><img src="images/fit-02.png" class="img-fluid"></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="explained-and-unexplained-variation" class="level2">
-<h2 class="anchored" data-anchor-id="explained-and-unexplained-variation">Explained and Unexplained Variation</h2>
-<p>Residuals remind us that there are parts of <span class="math inline">\(y_{i}\)</span> we cannot explain:</p>
-<p><span class="math display">\[
-    y_{i} = \hat{y}_{i} + \hat{u}_{i}
-\]</span></p>
-<ul>
-<li>If you sum the above, divide by <span class="math inline">\(n\)</span>, and use the fact that OLS residuals sum to zero, you get:</li>
-</ul>
-<p><span class="math display">\[
-    \bar{\hat{u}} = 0 \Rightarrow \bar{y} = \bar{\hat{y}}
-\]</span></p>
-<ul>
-<li>So the fitted values average out to the actual values</li>
-</ul>
-<hr>
-</section>
-<section id="explained-and-unexplained-variation-1" class="level2">
-<h2 class="anchored" data-anchor-id="explained-and-unexplained-variation-1">Explained and Unexplained Variation</h2>
-<p><span class="note hi">Total Sum of Squares</span> (<span class="hi-red">TSS</span>) measures variation in <span class="math inline">\(y_{i}\)</span>:</p>
-<p><span class="math display">\[
-    \color{#BF616A}{TSS} \equiv \sum_{i = 1}^{n} (y_{i} - \bar{y})^{2}
-\]</span></p>
-<ul>
-<li><span class="hi-red">TSS</span> can be decomposed into explained and unexplained variation</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="note hi">Explained Sum of Squared</span> (<span class="hi-teal">ESS</span>) measures the variation in <span class="math inline">\(\hat{y}_{i}\)</span>:</p>
-<p><span class="math display">\[
-    \color{#8FBCBB}{ESS} \equiv \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2}
-\]</span></p>
-</div><div class="column" style="width:50%;">
-<p><span class="note hi">Residual Sum of Squares</span> (<span class="hi-orange">ESS</span>) measures the variation in $ _{i}$:</p>
-<p><span class="math display">\[
-    \color{#D08770}{RSS} \equiv \sum_{i = 1}^{n} \hat{u}_{i}^{2}
-\]</span></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p>This means that we can show <span class="math inline">\(\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}\)</span></p>
-<p><span class="note hi">Step 01:</span> Plug <span class="math inline">\(y_{i} = \hat{y}_{i} + \hat{u}_{i}\)</span> into <span class="hi-red">TSS</span></p>
-<p><span class="math display">\[\begin{align*}
-    \color{#BF616A}{TSS} &amp;= \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2} \\
-    &amp;= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2}
-\end{align*}\]</span></p>
-<hr>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
-<p>This means that we can show <span class="math inline">\(\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}\)</span></p>
-<p><span class="note hi">Step 02:</span> Recall that <span class="math inline">\(\bar{\hat{u}} = 0\)</span> &amp; <span class="math inline">\(\bar{y} = \bar{\hat{y}}\)</span>.</p>
-<p><span class="math display">\[\begin{align*}
-    \color{#BF616A}{TSS} &amp;= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2} \\
-    &amp;= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - \bar{\hat{y}})^{2} \\
-    &amp;= \sum_{i=1}^{n} ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) \\
-    &amp;= \sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2} +
-    \sum_{i=1}^{n} \hat{u}_{i}^{2} +
-    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right)
-\end{align*}\]</span></p>
-<hr>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2"></h2>
-<p><span class="note hi">Step 03:</span> Notice <span class="hi-teal">ESS</span> and <span class="hi-orange">RSS</span></p>
-<p><span class="math display">\[\begin{align*}
-    \color{#BF616A}{TSS} &amp;= \color{#8FBCBB}{\sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2}} +
-    \color{#D08770}{\sum_{i=1}^{n} \hat{u}_{i}^{2}} +
-    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
-    &amp;= \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} + 2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
-\end{align*}\]</span></p>
-<p><span class="note hi">Step 04:</span> Simplify</p>
-<p><span class="math display">\[\begin{align*}
-    \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} +
-    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
-    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i}
-\end{align*}\]</span></p>
-<hr>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3"></h2>
-<p><span class="note hi">Step 05:</span> Shut down that last two terms by noticing that:</p>
-<p><span class="math display">\[\begin{align*}
-    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
-    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i} =
-    0
-\end{align*}\]</span></p>
-<p><span class="note hi align-center">You will prove this in an assignment</span></p>
-<p>Then we have:</p>
-<p><span class="math display">\[\begin{align*}
-     \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}
-\end{align*}\]</span></p>
+<section id="gauss-markov-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="gauss-markov-theorem">Gauss-Markov Theorem</h2>
+<blockquote class="blockquote">
+<p>OLS is the <span class="hi">Best Linear Unbiased Estimator</span> (<span class="hii">BLUE</span>) when the following assumptions hold:</p>
+</blockquote>
 <p>. . .</p>
-<p>Some visual intuition makes all the math seem a lot simpler</p>
-<hr>
-<p><span class="hi align-center">Plot our data</span></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>Coordinate system already present. Adding new coordinate system, which will
-replace the existing one.</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-<p><span class="math display">\[
-\color{#148B25}{\overline{\text{MPG}}_{i}} = 20.09
-\]</span></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p><span class="note">A1.</span> <span class="hi">Linearity:</span> The population relationship is <span class="note"><em>linear in parameters</em></span> with an additive error term.</p>
+<p><span class="note">A2.</span> <span class="hi">Sample Variation:</span> There is variation in <span class="math inline">\(X\)</span>.</p>
+<p><span class="note">A3.</span> <span class="hi">Exogeniety:</span> The <span class="math inline">\(X\)</span> variable is <span class="note">exogenous</span></p>
+<p><span class="note">A4.</span> <span class="hi">Homoskedasticity:</span> The error term has the same variance for each value of the independent variable</p>
+<p><span class="note">A5.</span> <span class="hi">Non-autocorrelation:</span> The values of error terms have independent distributions</p>
 <hr>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4"></h2>
-<div class="small">
-<p><span class="math display">\[
-\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (y_i - \bar{y})^2
-\]</span></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5"></h2>
-<div class="small">
-<p><span class="math display">\[
-\color{#148B25}{\widehat{\text{MPG}}_{i}} = 37.3 - 5.34 \cdot \text{weight}_i
-\]</span></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6"></h2>
-<p><span class="math display">\[
-\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{y}_{i} - \bar{y})^2
-\]</span></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7"></h2>
-<div class="small align-center">
-<p><span class="math display">\[
-\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
-\]</span></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8"></h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><span class="math display">\[
-\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (Y_i - \bar{Y})^2
-\]</span></p>
-</div><div class="column" style="width:33%;">
-<p><span class="math display">\[
-\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{Y_i} - \bar{Y})^2
-\]</span></p>
-</div><div class="column" style="width:33%;">
-<p><span class="math display">\[
-\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
-\]</span></p>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: `position_dodge()` requires non-overlapping x intervals.
-`position_dodge()` requires non-overlapping x intervals.</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="042-goodness-of-fit_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="goodness-of-fit-2" class="level2">
-<h2 class="anchored" data-anchor-id="goodness-of-fit-2">Goodness of Fit</h2>
-<p>What percentage of the variation in our <span class="math inline">\(y_{i}\)</span> is <span class="hi">apparently</span> explained by our model? The <span class="math inline">\(R^{2}\)</span> term represents this percentage.</p>
-<p>Total variation is represented by <span class="hi-red">TSS</span> and our model is capturing the ‘explained’ sum of squares, <span class="hi-teal">ESS</span>.</p>
-<p>Taking a simple ratio reveals how much variation our model explains:</p>
-<ul>
-<li><p><span class="math inline">\(R^{2} = \dfrac{\color{#8FBCBB}{ESS}}{\color{#BF616A}{TSS}}\)</span> varies between 0 and 1</p></li>
-<li><p><span class="math inline">\(R^{2} = 1 - \dfrac{\color{#D08770}{RSS}}{\color{#BF616A}{TSS}}\)</span>, 100% minus the unexplained variation</p></li>
-</ul>
-<p><span class="math inline">\(R^{2}\)</span> is related to the correlation between the actual values of <span class="math inline">\(y\)</span> and the fitted values of <span class="math inline">\(y\)</span>.</p>
-<hr>
-</section>
-<section id="goodness-of-fit-3" class="level2">
-<h2 class="anchored" data-anchor-id="goodness-of-fit-3">Goodness of Fit</h2>
-<p><span class="note hi">So what?</span> In the social sciences, low <span class="math inline">\(R^{2}\)</span> values are common.</p>
-<p>Low <span class="math inline">\(R^{2}\)</span> does not necessarily mean you have a “good” regression:</p>
-<ul>
-<li><p>Worries about selection bias and omitted variables still apply</p></li>
-<li><p>Some ‘powerfully high’ <span class="math inline">\(R^{2}\)</span> values are the result of simple accounting exercises, and tell us nothing about causality</p></li>
-</ul>
+<section id="gauss-markov-theorem-1" class="level2">
+<h2 class="anchored" data-anchor-id="gauss-markov-theorem-1">Gauss-Markov Theorem</h2>
+<blockquote class="blockquote">
+<p>OLS is the <span class="hi">Best Unbiased Estimator</span> (<span class="hii">BUE</span>) when the following assumptions hold:</p>
+</blockquote>
+<p>. . .</p>
+<p><span class="note">A1.</span> <span class="hi">Linearity:</span> The population relationship is <span class="note"><em>linear in parameters</em></span> with an additive error term.</p>
+<p><span class="note">A2.</span> <span class="hi">Sample Variation:</span> There is variation in <span class="math inline">\(X\)</span>.</p>
+<p><span class="note">A3.</span> <span class="hi">Exogeniety:</span> The <span class="math inline">\(X\)</span> variable is <span class="note">exogenous</span></p>
+<p><span class="note">A4.</span> <span class="hi">Homoskedasticity:</span> The error term has the same variance for each value of the independent variable</p>
+<p><span class="note">A5.</span> <span class="hi">Non-autocorrelation:</span> The values of error terms have independent distributions</p>
+<p><span class="note">A6.</span> <span class="hi">Normality:</span> The population error term in normally distributed with mean zero and variance <span class="math inline">\(\sigma^2\)</span></p>
 
 
 </section>

@@ -14,6 +14,244 @@
     "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
   },
   {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "The most important assumptions concern the error term \\(u_{i}\\).\nImportant: An error \\(u_{i}\\) and a residual \\(\\hat{u}_{i}\\) are related, but different.\nTake for example, a model of the effects of education on wages.\n\nError:\n\nDifference between the wage of a worker with 11 years of education and the expected wage with 11 years of education\n\nResidual:\n\nDifference between the wage of a worker with 11 years of education and the average wage of workers with 11 years of education\n\n. . .\n\nPopulation vs. Sample"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "The most important assumptions concern the error term \\(u_{i}\\).\nImportant: An error \\(u_{i}\\) and a residual \\(\\hat{u}_{i}\\) are related, but different.\nTake for example, a model of the effects of education on wages.\n\nError:\n\nDifference between the wage of a worker with 11 years of education and the expected wage with 11 years of education\n\nResidual:\n\nDifference between the wage of a worker with 11 years of education and the average wage of workers with 11 years of education\n\n. . .\n\nPopulation vs. Sample"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nA residual tells us how a worker’s wages comapre to the average wages of workers in the sample with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-2",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nA residual tells us how a worker’s wages comapre to the average wages of workers in the sample with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-3",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#residuals-vs-errors-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nAn error tells us how a worker’s wages compare to the expected wages of workers in the population with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term\nA2. Sample Variation: There is variation in \\(X\\)\nA3. Exogeneity: The \\(X\\) variable is exogenous\nA4. Homosekdasticity: The error term has the same variance for each value of the independent variable\nA5. Non-Autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term is normally distributed with mean zero and variance \\(\\sigma^{2}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a1.-linearity",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a1.-linearity",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A1. Linearity",
+    "text": "A1. Linearity\n\nThe population relationship is linear in parameters with an additive error term\n\nExamples\n\n\\(\\text{Wage}_i = \\beta_1 + \\beta_2 \\text{Experience}_i + u_i\\)\n\n. . .\n\n\\(\\log(\\text{Happiness}_i) = \\beta_1 + \\beta_2 \\log(\\text{Money}_i) + u_i\\)\n\n. . .\n\n\\(\\sqrt{\\text{Convictions}_i} = \\beta_1 + \\beta_2 (\\text{Early Childhood Lead Exposure})_i + u_i\\)\n\n. . .\n\n\\(\\log(\\text{Earnings}_i) = \\beta_1 + \\beta_2 \\text{Education}_i + u_i\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a1.-linearity-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a1.-linearity-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A1. Linearity",
+    "text": "A1. Linearity\n\nThe population relationship is linear in parameters with an additive error term.\n\nViolations\n\n\\(\\text{Wage}_i = (\\beta_1 + \\beta_2 \\text{Experience}_i)u_i\\)\n\n. . .\n\n\\(\\text{Consumption}_i = \\frac{1}{\\beta_1 + \\beta_2 \\text{Income}_i} + u_i\\)\n\n. . .\n\n\\(\\text{Population}_i = \\frac{\\beta_1}{1 + e^{\\beta_2 + \\beta_3 \\text{Food}_i}} + u_i\\)\n\n. . .\n\n\\(\\text{Batting Average}_i = \\beta_1 (\\text{Wheaties Consumption})_i^{\\beta_2} + u_i\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a2.-sample-variation",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a2.-sample-variation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A2. Sample Variation",
+    "text": "A2. Sample Variation\n\nThere is variation in \\(X\\).\n\nExample"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a2.-sample-variation-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a2.-sample-variation-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A2. Sample Variation",
+    "text": "A2. Sample Variation\n\nThere is variation in \\(X\\).\n\nViolation\n\n\n\n\n\nWe will see later that variation matters for inference as well"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\nThe \\(X\\) variable is exogenous\n\nWe can write this as:\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\nWhich essentially says that the expected value of the errors term, conditional on the variable \\(X\\) is 0. The assignment of \\(X\\) is effectively random.\nA significant implication of this is no selection bias or omitted variable bias"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\nThe \\(X\\) variable is exogenous\n\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\nExample\nIn the labor market, an important component of \\(u\\) is unobserved ability\n\n\\(\\mathbb{E}(u|\\text{Education} = 12) = 0\\) and \\(\\mathbb{E}(u|\\text{Education} = 20) = 0\\)\n\\(\\mathbb{E}(u|\\text{Education} = 0) = 0\\) and \\(\\mathbb{E}(u|\\text{Education} = 40) = 0\\)\n\nnote: This is an assumption that does not necessarily hold true in real life, but with enough observations we can comfortably assume something like this"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity-2",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a3.-exogeneity-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\n\nValid Exogeneity\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\n\n\n\n\n\n\nInvalid Exogeneity\n\\[\n    \\mathbb{E}[(u|X)] \\neq 0\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#interlude-unbiasedness-of-ols",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#interlude-unbiasedness-of-ols",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Interlude: Unbiasedness of OLS",
+    "text": "Interlude: Unbiasedness of OLS\nWhen can we trust OLS?\nIn estimators, the concept of bias means that the expected value of the estimate is different from the true population parameter.\nGraphically we have:\n\n\nUnbiased estimator: \\(\\mathop{\\mathbb{E}}\\left[ \\hat{\\beta} \\right] = \\beta\\)\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n\n\n\n\n\n\n\n\nBiased estimator: \\(\\mathop{\\mathbb{E}}\\left[ \\hat{\\beta} \\right] \\neq \\beta\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#is-ols-unbiased",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#is-ols-unbiased",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Is OLS Unbiased?",
+    "text": "Is OLS Unbiased?\nWe require our first 3 assumptions for unbaised OLS estimator\nA1. Linearity: The population relationship is linear in parameters with an additive error term\nA2. Sample Variation: There is variation in \\(X\\)\nA3. Exogeneity: The \\(X\\) variable is exogenous\nAnd we can mathematically prove it!"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#proving-unbiasedness-of-ols",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#proving-unbiasedness-of-ols",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Proving Unbiasedness of OLS",
+    "text": "Proving Unbiasedness of OLS\nSuppose we have the following model\n\\[\n    y_{i} = \\beta_{1} + \\beta_{2}x_{i} + u_{i}\n\\]\n. . .\nThe slope parameter follows as:\n\\[\n\\hat{\\beta}_2 = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}\n\\]\n. . .\n(As shown in section 2.3 in ItE) that the estimator \\(\\hat{\\beta_2}\\), can be broken up into a nonrandom and a random component:\n\nProving unbiasedness of simple OLS\nSubstitute for \\(y_i\\):\n\\[\n\\hat{\\beta}_2 = \\frac{\\sum((\\beta_1 + \\beta_2x_i + u_i) - \\bar{y})(x_i - \\bar{x})}{\\sum(x_i - \\bar{x})^2}\n\\]\n. . .\nSubstitute \\(\\bar{y} = \\beta_1 + \\beta_2\\bar{x}\\):\n\\[\n\\hat{\\beta}_2 = \\frac{\\sum(u_i(x_i - \\bar{x}))}{\\sum(x_i - \\bar{x})^2} + \\frac{\\sum(\\beta_2x_i(x_i - \\bar{x}))}{\\sum(x_i - \\bar{x})^2}\n\\]\n. . .\nThe non-random component, \\(\\beta_2\\), is factored out:\n\\[\n\\hat{\\beta}_2 = \\frac{\\sum(u_i(x_i - \\bar{x}))}{\\sum(x_i - \\bar{x})^2} + \\beta_2\\frac{\\sum(x_i(x_i - \\bar{x}))}{\\sum(x_i - \\bar{x})^2}\n\\]\n\nProving unbiasedness of simple OLS\nObserve that the second term is equal to 1. Thus, we have:\n\\[\n\\hat{\\beta}_2 = \\beta_2 + \\frac{\\sum(u_i(x_i - \\bar{x}))}{\\sum(x_i - \\bar{x})^2}\n\\]\n. . .\nTaking the expectation,\n\\[\n\\mathbb{E}[\\hat{\\beta_2}] = \\mathbb{E}[\\beta] + \\mathbb{E} \\left[\\frac{\\sum \\hat{u_i} (x_i - \\bar{x})}{\\sum(x_i - \\bar{x})^2} \\right]\n\\]\n. . .\nBy Rules 01 and 02 of expected value and A3:\n\\[\n\\begin{equation*}\n  \\mathbb{E}[\\hat{\\beta_2}] = \\beta + \\frac{\\sum \\mathbb{E}[\\hat{u_i}] (x_i - \\bar{x})}{\\sum(x_i - \\bar{x})^2} = \\beta\n\\end{equation*}\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#required-assumptions",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#required-assumptions",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Required Assumptions",
+    "text": "Required Assumptions\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n\nA3 implies random sampling.\n\n\nResult: OLS is unbiased."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n. . .\n \n\nThe following 2 assumptions are not required for unbiasedness…\n\n\nBut they are important for an efficient estimator\n\n\nLet’s talk about why variance matters"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#why-variance-matters",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#why-variance-matters",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Why variance matters",
+    "text": "Why variance matters\nUnbiasedness tells us that OLS gets it right, on average. But we can’t tell whether our sample is “typical.”\n\n. . .\nVariance tells us how far OLS can deviate from the population mean.\n\nHow tight is OLS centered on its expected value?\nThis determines the efficiency of our estimator."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#why-variance-matters-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#why-variance-matters-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Why variance matters",
+    "text": "Why variance matters\nUnbiasedness tells us that OLS gets it right, on average. But we can’t tell whether our sample is “typical.”\n\nThe smaller the variance, the closer OLS gets, on average, to the true population parameters on any sample.\n\nGiven two unbiased estimators, we want the one with smaller variance.\nIf two more assumptions are satisfied, we are using the most efficient linear estimator."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-2",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n. . .\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nExample:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nViolation:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity-2",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a4.-homoskedasticity-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nViolation:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#heteroskedasticity-example",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#heteroskedasticity-example",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Heteroskedasticity Example",
+    "text": "Heteroskedasticity Example\nSuppose we study the following relationship:\n\\[\n\\text{Luxury Expenditure}_i = \\beta_1 + \\beta_2 \\text{Income}_i + u_i\n\\]\n\nAs income increases, variation in luxury expenditures increase\n\nVariance of \\(u_i\\) is likely larger for higher-income households\nPlot of the residuals against the household income would likely reveal a funnel-shaped pattern"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#section",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#section",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Common test for heteroskedasticity… Plot the residuals across \\(X\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-3",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2.Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\n. . .\nA5. Non-autocorrelation: The values of error terms have independent distributions"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a5.-non-autocorrelation",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a5.-non-autocorrelation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A5. Non-Autocorrelation",
+    "text": "A5. Non-Autocorrelation\n\nThe values of error terms have independent distributions1\n\n\\[\nE[u_i u_j]=0, \\forall i \\text{ s.t. } i \\neq j\n\\]\n. . .\nOr…\n\\[\n\\begin{align*}\n\\mathop{\\text{Cov}}(u_i, u_j) &= E[(u_i - \\mu_u)(u_j - \\mu_u)]\\\\\n                              &= E[u_i u_j] = E[u_i] E[u_j]  = 0, \\text{where } i \\neq j\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a5.-non-autocorrelation-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a5.-non-autocorrelation-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A5. Non-Autocorrelation",
+    "text": "A5. Non-Autocorrelation\n\nThe values of error terms have independent distributions\n\n\\[\nE[u_i u_j]=0, \\forall i \\text{ s.t. } i \\neq j\n\\]\n\nImplies no systematic association between pairs of individual \\(u_i\\)\nAlmost always some unobserved correlation across individuals2\nReferred to as clustering problem.\nAn easy solution exists where we can adjust our standard errors"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#section-1",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#section-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Let’s take a moment to talk about the variance of the OLS estimator\n\n\\[\n    Var(\\hat{\\beta}_{1}) = \\dfrac{\n        \\sigma^{2}\n        }{\n        \\sum (x_{i} - \\bar{x})^{2}\n        }\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-4",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\n\nIf A4 and A5 are satisfied, along with A1, A2, and A3, then we are using the most efficient linear estimator"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-5",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#classical-assumptions-of-ols-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\n. . .\nA6. Normality The population error term in normally distributed with mean zero and variance \\(\\sigma^{2}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#a6.-normality",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#a6.-normality",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "A6. Normality",
+    "text": "A6. Normality\n\nThe population error term in normally distributed with mean zero and variance \\(\\sigma^{2}\\)\n\nAlso known as:\n\\[\n    u \\sim N(0,\\sigma^{2})\n\\]\nWhere \\(\\sim\\) means distributed by and \\(N\\) stands for normal distribution\nHowever, A6 is not required for efficiency nor unbiasedness"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#footnotes",
+    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#footnotes",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nNotes: \\(\\forall i = \\text{for all} \\: i\\), \\(\\text{s.t.} = \\text{such that}\\), \\(i \\neq j \\: \\text{means} \\: i \\: \\text{is not equal to} \\: j\\)↩︎\n(e.g. common correlation in unobservables among individuals within a given US state)↩︎"
+  },
+  {
     "objectID": "lectures/04-Estimators-02/041-ols-properties.html",
     "href": "lectures/04-Estimators-02/041-ols-properties.html",
     "title": "EC 320 - Intro. Econometrics",
@@ -1218,6 +1456,342 @@
     "text": "Goodness of Fit\nSay there are two regressions Regression 1 and Regression 2 with the:\n\nSame slope\nSame intercept\n\nThe question is: Which fitted regression line “explains/fits” the data better?"
   },
   {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-2",
+    "title": "Estimators Part II",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nRegression 1 vs Regression 2\nThe coefficient of determination, \\(R^{2}\\), is the fraction of the variation in \\(y_{i}\\) “explained” by \\(x_{i}\\).\n\n\\(R^{2} = 1 \\Rightarrow x_{i}\\) explains all of the variation in \\(y_{i}\\)\n\\(R^{2} = 0 \\Rightarrow x_{i}\\) explains none of the variation in \\(y_{i}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#explained-and-unexplained-variation",
+    "href": "lectures/04-Estimators-02/040-compile.html#explained-and-unexplained-variation",
+    "title": "Estimators Part II",
+    "section": "Explained and Unexplained Variation",
+    "text": "Explained and Unexplained Variation\nResiduals remind us that there are parts of \\(y_{i}\\) we cannot explain:\n\\[\n    y_{i} = \\hat{y}_{i} + \\hat{u}_{i}\n\\]\n\nIf you sum the above, divide by \\(n\\), and use the fact that OLS residuals sum to zero, you get:\n\n\\[\n    \\bar{\\hat{u}} = 0 \\Rightarrow \\bar{y} = \\bar{\\hat{y}}\n\\]\n\nSo the fitted values average out to the actual values"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#explained-and-unexplained-variation-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#explained-and-unexplained-variation-1",
+    "title": "Estimators Part II",
+    "section": "Explained and Unexplained Variation",
+    "text": "Explained and Unexplained Variation\nTotal Sum of Squares (TSS) measures variation in \\(y_{i}\\):\n\\[\n    \\color{#BF616A}{TSS} \\equiv \\sum_{i = 1}^{n} (y_{i} - \\bar{y})^{2}\n\\]\n\nTSS can be decomposed into explained and unexplained variation\n\n\n\nExplained Sum of Squared (ESS) measures the variation in \\(\\hat{y}_{i}\\):\n\\[\n    \\color{#8FBCBB}{ESS} \\equiv \\sum_{i = 1}^{n} (\\hat{y}_{i} - \\bar{y})^{2}\n\\]\n\nResidual Sum of Squares (ESS) measures the variation in $ _{i}$:\n\\[\n    \\color{#D08770}{RSS} \\equiv \\sum_{i = 1}^{n} \\hat{u}_{i}^{2}\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section",
+    "href": "lectures/04-Estimators-02/040-compile.html#section",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "This means that we can show \\(\\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\\)\nStep 01: Plug \\(y_{i} = \\hat{y}_{i} + \\hat{u}_{i}\\) into TSS\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\sum_{i = 1}^{n} (\\hat{y}_{i} - \\bar{y})^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - [\\bar{\\hat{y}} + \\bar{\\hat{u}}])^{2}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-1",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "This means that we can show \\(\\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\\)\nStep 02: Recall that \\(\\bar{\\hat{u}} = 0\\) & \\(\\bar{y} = \\bar{\\hat{y}}\\).\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - [\\bar{\\hat{y}} + \\bar{\\hat{u}}])^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - \\bar{\\hat{y}})^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} - \\bar{y}] + \\hat{u}_{i}) ([\\hat{y}_{i} - \\bar{y}] + \\hat{u}_{i}) \\\\\n    &= \\sum_{i=1}^{n} (\\hat{y}_{i} - \\bar{y})^{2} +\n    \\sum_{i=1}^{n} \\hat{u}_{i}^{2} +\n    2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right)\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-2",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "Step 03: Notice ESS and RSS\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\color{#8FBCBB}{\\sum_{i=1}^{n} (\\hat{y}_{i} - \\bar{y})^{2}} +\n    \\color{#D08770}{\\sum_{i=1}^{n} \\hat{u}_{i}^{2}} +\n    2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right) \\\\\n    &= \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS} + 2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right) \\\\\n\\end{align*}\\]\nStep 04: Simplify\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS} +\n    2\\sum_{i=1}^{n}\\hat{y}_{i}\\hat{u}_{i} -\n    2\\bar{y} \\sum_{i=1}^{n} \\hat{u}_{i}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-3",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-3",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "Step 05: Shut down that last two terms by noticing that:\n\\[\\begin{align*}\n    2\\sum_{i=1}^{n}\\hat{y}_{i}\\hat{u}_{i} -\n    2\\bar{y} \\sum_{i=1}^{n} \\hat{u}_{i} =\n    0\n\\end{align*}\\]\nYou will prove this in an assignment\nThen we have:\n\\[\\begin{align*}\n     \\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\n\\end{align*}\\]\n\nSome visual intuition makes all the math seem a lot simpler"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-4",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-4",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (y_i - \\bar{y})^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-5",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-5",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "\\[\n\\color{#148B25}{\\widehat{\\text{MPG}}_{i}} = 37.3 - 5.34 \\cdot \\text{weight}_i\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-6",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-6",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{y}_{i} - \\bar{y})^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-7",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-7",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-8",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-8",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (Y_i - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{Y_i} - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-3",
+    "href": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-3",
+    "title": "Estimators Part II",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nWhat percentage of the variation in our \\(y_{i}\\) is apparently explained by our model? The \\(R^{2}\\) term represents this percentage.\nTotal variation is represented by TSS and our model is capturing the ‘explained’ sum of squares, ESS.\nTaking a simple ratio reveals how much variation our model explains:\n\n\\(R^{2} = \\dfrac{\\color{#8FBCBB}{ESS}}{\\color{#BF616A}{TSS}}\\) varies between 0 and 1\n\\(R^{2} = 1 - \\dfrac{\\color{#D08770}{RSS}}{\\color{#BF616A}{TSS}}\\), 100% minus the unexplained variation\n\n\\(R^{2}\\) is related to the correlation between the actual values of \\(y\\) and the fitted values of \\(y\\)."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-4",
+    "href": "lectures/04-Estimators-02/040-compile.html#goodness-of-fit-4",
+    "title": "Estimators Part II",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nSo what? In the social sciences, low \\(R^{2}\\) values are common.\nLow \\(R^{2}\\) does not necessarily mean you have a “good” regression:\n\nWorries about selection bias and omitted variables still apply\nSome ‘powerfully high’ \\(R^{2}\\) values are the result of simple accounting exercises, and tell us nothing about causality"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors",
+    "href": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors",
+    "title": "Estimators Part II",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\n\nThe most important assumptions concern the error term \\(u_{i}\\).\nImportant: An error \\(u_{i}\\) and a residual \\(\\hat{u}_{i}\\) are related, but different.\nTake for example, a model of the effects of education on wages.\n\nError:\n\nDifference between the wage of a worker with 11 years of education and the expected wage with 11 years of education\n\nResidual:\n\nDifference between the wage of a worker with 11 years of education and the average wage of workers with 11 years of education\n\n\n\nPopulation vs. Sample"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-1",
+    "title": "Estimators Part II",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nA residual tells us how a worker’s wages comapre to the average wages of workers in the sample with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-2",
+    "title": "Estimators Part II",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nA residual tells us how a worker’s wages comapre to the average wages of workers in the sample with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-3",
+    "href": "lectures/04-Estimators-02/040-compile.html#residuals-vs-errors-3",
+    "title": "Estimators Part II",
+    "section": "Residuals vs Errors",
+    "text": "Residuals vs Errors\nAn error tells us how a worker’s wages compare to the expected wages of workers in the population with the same level of education"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term\nA2. Sample Variation: There is variation in \\(X\\)\nA3. Exogeneity: The \\(X\\) variable is exogenous\nA4. Homosekdasticity: The error term has the same variance for each value of the independent variable\nA5. Non-Autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term is normally distributed with mean zero and variance \\(\\sigma^{2}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a1.-linearity",
+    "href": "lectures/04-Estimators-02/040-compile.html#a1.-linearity",
+    "title": "Estimators Part II",
+    "section": "A1. Linearity",
+    "text": "A1. Linearity\n\nThe population relationship is linear in parameters with an additive error term\n\nExamples\n\n\\(\\text{Wage}_i = \\beta_1 + \\beta_2 \\text{Experience}_i + u_i\\)\n\n\n\n\\(\\log(\\text{Happiness}_i) = \\beta_1 + \\beta_2 \\log(\\text{Money}_i) + u_i\\)\n\n\n\n\n\\(\\sqrt{\\text{Convictions}_i} = \\beta_1 + \\beta_2 (\\text{Early Childhood Lead Exposure})_i + u_i\\)\n\n\n\n\n\\(\\log(\\text{Earnings}_i) = \\beta_1 + \\beta_2 \\text{Education}_i + u_i\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a1.-linearity-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#a1.-linearity-1",
+    "title": "Estimators Part II",
+    "section": "A1. Linearity",
+    "text": "A1. Linearity\n\nThe population relationship is linear in parameters with an additive error term.\n\nViolations\n\n\\(\\text{Wage}_i = (\\beta_1 + \\beta_2 \\text{Experience}_i)u_i\\)\n\n\n\n\\(\\text{Consumption}_i = \\frac{1}{\\beta_1 + \\beta_2 \\text{Income}_i} + u_i\\)\n\n\n\n\n\\(\\text{Population}_i = \\frac{\\beta_1}{1 + e^{\\beta_2 + \\beta_3 \\text{Food}_i}} + u_i\\)\n\n\n\n\n\\(\\text{Batting Average}_i = \\beta_1 (\\text{Wheaties Consumption})_i^{\\beta_2} + u_i\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a2.-sample-variation",
+    "href": "lectures/04-Estimators-02/040-compile.html#a2.-sample-variation",
+    "title": "Estimators Part II",
+    "section": "A2. Sample Variation",
+    "text": "A2. Sample Variation\n\nThere is variation in \\(X\\).\n\nExample"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a2.-sample-variation-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#a2.-sample-variation-1",
+    "title": "Estimators Part II",
+    "section": "A2. Sample Variation",
+    "text": "A2. Sample Variation\n\nThere is variation in \\(X\\).\n\nViolation\n\nWe will see later that variation matters for inference as well"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity",
+    "href": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity",
+    "title": "Estimators Part II",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\nThe \\(X\\) variable is exogenous\n\nWe can write this as:\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\nWhich essentially says that the expected value of the errors term, conditional on the variable \\(X\\) is 0. The assignment of \\(X\\) is effectively random.\nA significant implication of this is no selection bias or omitted variable bias"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity-1",
+    "title": "Estimators Part II",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\nThe \\(X\\) variable is exogenous\n\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\nExample\nIn the labor market, an important component of \\(u\\) is unobserved ability\n\n\\(\\mathbb{E}(u|\\text{Education} = 12) = 0\\) and \\(\\mathbb{E}(u|\\text{Education} = 20) = 0\\)\n\\(\\mathbb{E}(u|\\text{Education} = 0) = 0\\) and \\(\\mathbb{E}(u|\\text{Education} = 40) = 0\\)\n\nnote: This is an assumption that does not necessarily hold true in real life, but with enough observations we can comfortably assume something like this"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#a3.-exogeneity-2",
+    "title": "Estimators Part II",
+    "section": "A3. Exogeneity",
+    "text": "A3. Exogeneity\n\n\nValid Exogeneity\n\\[\n    \\mathbb{E}[(u|X)] = 0\n\\]\n\n\n\n\n\n\nInvalid Exogeneity\n\\[\n    \\mathbb{E}[(u|X)] \\neq 0\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#interlude-unbiasedness-of-ols",
+    "href": "lectures/04-Estimators-02/040-compile.html#interlude-unbiasedness-of-ols",
+    "title": "Estimators Part II",
+    "section": "Interlude: Unbiasedness of OLS",
+    "text": "Interlude: Unbiasedness of OLS\nWhen can we trust OLS?\nIn estimators, the concept of bias means that the expected value of the estimate is different from the true population parameter.\nGraphically we have:\n\n\nUnbiased estimator: \\(\\mathop{\\mathbb{E}}\\left[ \\hat{\\beta} \\right] = \\beta\\)\n\n\n\n\n\n\n\n\n\n\nBiased estimator: \\(\\mathop{\\mathbb{E}}\\left[ \\hat{\\beta} \\right] \\neq \\beta\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#is-ols-unbiased",
+    "href": "lectures/04-Estimators-02/040-compile.html#is-ols-unbiased",
+    "title": "Estimators Part II",
+    "section": "Is OLS Unbiased?",
+    "text": "Is OLS Unbiased?\nWe require our first 3 assumptions for unbaised OLS estimator\nA1. Linearity: The population relationship is linear in parameters with an additive error term\nA2. Sample Variation: There is variation in \\(X\\)\nA3. Exogeneity: The \\(X\\) variable is exogenous\nAnd we can mathematically prove it!"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#proving-unbiasedness-of-ols",
+    "href": "lectures/04-Estimators-02/040-compile.html#proving-unbiasedness-of-ols",
+    "title": "Estimators Part II",
+    "section": "Proving Unbiasedness of OLS",
+    "text": "Proving Unbiasedness of OLS\nSuppose we have the following model\n\\[\n    y_{i} = \\beta_{1} + \\beta_{2}x_{i} + u_{i}\n\\]\n\nThe slope parameter follows as:\n\\[\n\\hat{\\beta}_2 = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}\n\\]\n\n\n(As shown in section 2.3 in ItE) that the estimator \\(\\hat{\\beta_2}\\), can be broken up into a nonrandom and a random component:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#required-assumptions",
+    "href": "lectures/04-Estimators-02/040-compile.html#required-assumptions",
+    "title": "Estimators Part II",
+    "section": "Required Assumptions",
+    "text": "Required Assumptions\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n\nA3 implies random sampling.\n\n\nResult: OLS is unbiased."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-1",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n\n \n\nThe following 2 assumptions are not required for unbiasedness…\n\n\nBut they are important for an efficient estimator\n\n\nLet’s talk about why variance matters"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#why-variance-matters",
+    "href": "lectures/04-Estimators-02/040-compile.html#why-variance-matters",
+    "title": "Estimators Part II",
+    "section": "Why variance matters",
+    "text": "Why variance matters\nUnbiasedness tells us that OLS gets it right, on average. But we can’t tell whether our sample is “typical.”\n\n\nVariance tells us how far OLS can deviate from the population mean.\n\nHow tight is OLS centered on its expected value?\nThis determines the efficiency of our estimator."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#why-variance-matters-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#why-variance-matters-1",
+    "title": "Estimators Part II",
+    "section": "Why variance matters",
+    "text": "Why variance matters\nUnbiasedness tells us that OLS gets it right, on average. But we can’t tell whether our sample is “typical.”\n\nThe smaller the variance, the closer OLS gets, on average, to the true population parameters on any sample.\n\nGiven two unbiased estimators, we want the one with smaller variance.\nIf two more assumptions are satisfied, we are using the most efficient linear estimator."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-2",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\n\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity",
+    "href": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity",
+    "title": "Estimators Part II",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nExample:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity-1",
+    "title": "Estimators Part II",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nViolation:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#a4.-homoskedasticity-2",
+    "title": "Estimators Part II",
+    "section": "A4. Homoskedasticity",
+    "text": "A4. Homoskedasticity\n\nThe error term has the same variance for each value of the independent variable \\(x_{i}\\)\n\n\\[\n    Var(u|X) = \\sigma^{2}.\n\\]\nViolation:"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#heteroskedasticity-example",
+    "href": "lectures/04-Estimators-02/040-compile.html#heteroskedasticity-example",
+    "title": "Estimators Part II",
+    "section": "Heteroskedasticity Example",
+    "text": "Heteroskedasticity Example\nSuppose we study the following relationship:\n\\[\n\\text{Luxury Expenditure}_i = \\beta_1 + \\beta_2 \\text{Income}_i + u_i\n\\]\n\nAs income increases, variation in luxury expenditures increase\n\nVariance of \\(u_i\\) is likely larger for higher-income households\nPlot of the residuals against the household income would likely reveal a funnel-shaped pattern"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-9",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-9",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "Common test for heteroskedasticity… Plot the residuals across \\(X\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-3",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-3",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2.Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\n\nA5. Non-autocorrelation: The values of error terms have independent distributions"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a5.-non-autocorrelation",
+    "href": "lectures/04-Estimators-02/040-compile.html#a5.-non-autocorrelation",
+    "title": "Estimators Part II",
+    "section": "A5. Non-Autocorrelation",
+    "text": "A5. Non-Autocorrelation\n\nThe values of error terms have independent distributions1\n\n\\[\nE[u_i u_j]=0, \\forall i \\text{ s.t. } i \\neq j\n\\]\n\nOr…\n\\[\n\\begin{align*}\n\\mathop{\\text{Cov}}(u_i, u_j) &= E[(u_i - \\mu_u)(u_j - \\mu_u)]\\\\\n                              &= E[u_i u_j] = E[u_i] E[u_j]  = 0, \\text{where } i \\neq j\n\\end{align*}\n\\]\n\nNotes: \\(\\forall i = \\text{for all} \\: i\\), \\(\\text{s.t.} = \\text{such that}\\), \\(i \\neq j \\: \\text{means} \\: i \\: \\text{is not equal to} \\: j\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a5.-non-autocorrelation-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#a5.-non-autocorrelation-1",
+    "title": "Estimators Part II",
+    "section": "A5. Non-Autocorrelation",
+    "text": "A5. Non-Autocorrelation\n\nThe values of error terms have independent distributions\n\n\\[\nE[u_i u_j]=0, \\forall i \\text{ s.t. } i \\neq j\n\\]\n\nImplies no systematic association between pairs of individual \\(u_i\\)\nAlmost always some unobserved correlation across individuals1\nReferred to as clustering problem.\nAn easy solution exists where we can adjust our standard errors\n\n(e.g. common correlation in unobservables among individuals within a given US state)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#section-10",
+    "href": "lectures/04-Estimators-02/040-compile.html#section-10",
+    "title": "Estimators Part II",
+    "section": "",
+    "text": "Let’s take a moment to talk about the variance of the OLS estimator\n\n\\[\n    Var(\\hat{\\beta}_{1}) = \\dfrac{\n        \\sigma^{2}\n        }{\n        \\sum (x_{i} - \\bar{x})^{2}\n        }\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-4",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-4",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\n\nIf A4 and A5 are satisfied, along with A1, A2, and A3, then we are using the most efficient linear estimator"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-5",
+    "href": "lectures/04-Estimators-02/040-compile.html#classical-assumptions-of-ols-5",
+    "title": "Estimators Part II",
+    "section": "Classical Assumptions of OLS",
+    "text": "Classical Assumptions of OLS\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\n\nA6. Normality The population error term in normally distributed with mean zero and variance \\(\\sigma^{2}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#a6.-normality",
+    "href": "lectures/04-Estimators-02/040-compile.html#a6.-normality",
+    "title": "Estimators Part II",
+    "section": "A6. Normality",
+    "text": "A6. Normality\n\nThe population error term in normally distributed with mean zero and variance \\(\\sigma^{2}\\)\n\nAlso known as:\n\\[\n    u \\sim N(0,\\sigma^{2})\n\\]\nWhere \\(\\sim\\) means distributed by and \\(N\\) stands for normal distribution\nHowever, A6 is not required for efficiency nor unbiasedness"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#gauss-markov-theorem-1",
+    "href": "lectures/04-Estimators-02/040-compile.html#gauss-markov-theorem-1",
+    "title": "Estimators Part II",
+    "section": "Gauss-Markov Theorem",
+    "text": "Gauss-Markov Theorem\n\nOLS is the Best Linear Unbiased Estimator (BLUE) when the following assumptions hold:\n\n\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/040-compile.html#gauss-markov-theorem-2",
+    "href": "lectures/04-Estimators-02/040-compile.html#gauss-markov-theorem-2",
+    "title": "Estimators Part II",
+    "section": "Gauss-Markov Theorem",
+    "text": "Gauss-Markov Theorem\n\nOLS is the Best Unbiased Estimator (BUE) when the following assumptions hold:\n\n\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term in normally distributed with mean zero and variance \\(\\sigma^2\\)"
+  },
+  {
     "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html",
     "href": "lectures/04-Estimators-02/042-goodness-of-fit.html",
     "title": "EC 320 - Intro. Econometrics",
@@ -1230,5 +1804,124 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "",
     "text": "Say there are two regressions Regression 1 and Regression 2 with the:\n\nSame slope\nSame intercept\n\nThe question is: Which fitted regression line “explains/fits” the data better?"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-1",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nRegression 1 vs Regression 2\nThe coefficient of determination, \\(R^{2}\\), is the fraction of the variation in \\(y_{i}\\) “explained” by \\(x_{i}\\).\n\n\\(R^{2} = 1 \\Rightarrow x_{i}\\) explains all of the variation in \\(y_{i}\\)\n\\(R^{2} = 0 \\Rightarrow x_{i}\\) explains none of the variation in \\(y_{i}\\)"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#explained-and-unexplained-variation",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#explained-and-unexplained-variation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Explained and Unexplained Variation",
+    "text": "Explained and Unexplained Variation\nResiduals remind us that there are parts of \\(y_{i}\\) we cannot explain:\n\\[\n    y_{i} = \\hat{y}_{i} + \\hat{u}_{i}\n\\]\n\nIf you sum the above, divide by \\(n\\), and use the fact that OLS residuals sum to zero, you get:\n\n\\[\n    \\bar{\\hat{u}} = 0 \\Rightarrow \\bar{y} = \\bar{\\hat{y}}\n\\]\n\nSo the fitted values average out to the actual values"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#explained-and-unexplained-variation-1",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#explained-and-unexplained-variation-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Explained and Unexplained Variation",
+    "text": "Explained and Unexplained Variation\nTotal Sum of Squares (TSS) measures variation in \\(y_{i}\\):\n\\[\n    \\color{#BF616A}{TSS} \\equiv \\sum_{i = 1}^{n} (y_{i} - \\bar{y})^{2}\n\\]\n\nTSS can be decomposed into explained and unexplained variation\n\n\n\nExplained Sum of Squared (ESS) measures the variation in \\(\\hat{y}_{i}\\):\n\\[\n    \\color{#8FBCBB}{ESS} \\equiv \\sum_{i = 1}^{n} (\\hat{y}_{i} - \\bar{y})^{2}\n\\]\n\nResidual Sum of Squares (ESS) measures the variation in $ _{i}$:\n\\[\n    \\color{#D08770}{RSS} \\equiv \\sum_{i = 1}^{n} \\hat{u}_{i}^{2}\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "This means that we can show \\(\\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\\)\nStep 01: Plug \\(y_{i} = \\hat{y}_{i} + \\hat{u}_{i}\\) into TSS\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\sum_{i = 1}^{n} (\\hat{y}_{i} - \\bar{y})^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - [\\bar{\\hat{y}} + \\bar{\\hat{u}}])^{2}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-1",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "This means that we can show \\(\\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\\)\nStep 02: Recall that \\(\\bar{\\hat{u}} = 0\\) & \\(\\bar{y} = \\bar{\\hat{y}}\\).\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - [\\bar{\\hat{y}} + \\bar{\\hat{u}}])^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} + \\hat{u}_{i}] - \\bar{\\hat{y}})^{2} \\\\\n    &= \\sum_{i=1}^{n} ([\\hat{y}_{i} - \\bar{y}] + \\hat{u}_{i}) ([\\hat{y}_{i} - \\bar{y}] + \\hat{u}_{i}) \\\\\n    &= \\sum_{i=1}^{n} (\\hat{y}_{i} - \\bar{y})^{2} +\n    \\sum_{i=1}^{n} \\hat{u}_{i}^{2} +\n    2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right)\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-2",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Step 03: Notice ESS and RSS\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} &= \\color{#8FBCBB}{\\sum_{i=1}^{n} (\\hat{y}_{i} - \\bar{y})^{2}} +\n    \\color{#D08770}{\\sum_{i=1}^{n} \\hat{u}_{i}^{2}} +\n    2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right) \\\\\n    &= \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS} + 2\\sum_{i=1}^{n} \\left( (\\hat{y}_{i} - \\bar{y}) \\hat{u}_{i} \\right) \\\\\n\\end{align*}\\]\nStep 04: Simplify\n\\[\\begin{align*}\n    \\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS} +\n    2\\sum_{i=1}^{n}\\hat{y}_{i}\\hat{u}_{i} -\n    2\\bar{y} \\sum_{i=1}^{n} \\hat{u}_{i}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-3",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Step 05: Shut down that last two terms by noticing that:\n\\[\\begin{align*}\n    2\\sum_{i=1}^{n}\\hat{y}_{i}\\hat{u}_{i} -\n    2\\bar{y} \\sum_{i=1}^{n} \\hat{u}_{i} =\n    0\n\\end{align*}\\]\nYou will prove this in an assignment\nThen we have:\n\\[\\begin{align*}\n     \\color{#BF616A}{TSS} = \\color{#8FBCBB}{ESS} + \\color{#D08770}{RSS}\n\\end{align*}\\]\n. . .\nSome visual intuition makes all the math seem a lot simpler\n\nPlot our data\n\n\nCoordinate system already present. Adding new coordinate system, which will\nreplace the existing one.\n\n\n\n\n\n\n\n\n\n\n\\[\n\\color{#148B25}{\\overline{\\text{MPG}}_{i}} = 20.09\n\\]\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-4",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (y_i - \\bar{y})^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-5",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "\\[\n\\color{#148B25}{\\widehat{\\text{MPG}}_{i}} = 37.3 - 5.34 \\cdot \\text{weight}_i\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-6",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-6",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{y}_{i} - \\bar{y})^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-7",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-7",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-8",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-8",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (Y_i - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{Y_i} - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]\n\n\n\n\nWarning: `position_dodge()` requires non-overlapping x intervals.\n`position_dodge()` requires non-overlapping x intervals."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-2",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nWhat percentage of the variation in our \\(y_{i}\\) is apparently explained by our model? The \\(R^{2}\\) term represents this percentage.\nTotal variation is represented by TSS and our model is capturing the ‘explained’ sum of squares, ESS.\nTaking a simple ratio reveals how much variation our model explains:\n\n\\(R^{2} = \\dfrac{\\color{#8FBCBB}{ESS}}{\\color{#BF616A}{TSS}}\\) varies between 0 and 1\n\\(R^{2} = 1 - \\dfrac{\\color{#D08770}{RSS}}{\\color{#BF616A}{TSS}}\\), 100% minus the unexplained variation\n\n\\(R^{2}\\) is related to the correlation between the actual values of \\(y\\) and the fitted values of \\(y\\)."
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-3",
+    "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Goodness of Fit",
+    "text": "Goodness of Fit\nSo what? In the social sciences, low \\(R^{2}\\) values are common.\nLow \\(R^{2}\\) does not necessarily mean you have a “good” regression:\n\nWorries about selection bias and omitted variables still apply\nSome ‘powerfully high’ \\(R^{2}\\) values are the result of simple accounting exercises, and tell us nothing about causality"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/044-gauss-markov.html",
+    "href": "lectures/04-Estimators-02/044-gauss-markov.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "OLS is the Best Linear Unbiased Estimator (BLUE) when the following assumptions hold:\n\n. . .\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/044-gauss-markov.html#gauss-markov-theorem",
+    "href": "lectures/04-Estimators-02/044-gauss-markov.html#gauss-markov-theorem",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "OLS is the Best Linear Unbiased Estimator (BLUE) when the following assumptions hold:\n\n. . .\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions"
+  },
+  {
+    "objectID": "lectures/04-Estimators-02/044-gauss-markov.html#gauss-markov-theorem-1",
+    "href": "lectures/04-Estimators-02/044-gauss-markov.html#gauss-markov-theorem-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Gauss-Markov Theorem",
+    "text": "Gauss-Markov Theorem\n\nOLS is the Best Unbiased Estimator (BUE) when the following assumptions hold:\n\n. . .\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term in normally distributed with mean zero and variance \\(\\sigma^2\\)"
   }
 ]
