@@ -215,6 +215,8 @@ Graphically we have:
 #| echo: false
 #| fig.height: 5.75
 #| fig.align: center
+library(pacman)
+p_load(tidyverse)
 
 tmp <- tibble(x = seq(-4, 4, 0.01), y = dnorm(x))
 tmp <- rbind(tmp, tibble(x = seq(4, -4, -0.01), y = 0))
