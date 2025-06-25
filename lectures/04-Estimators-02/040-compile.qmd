@@ -25,3 +25,11 @@ title-slide-attributes:
 # Goodness of Fit {.inverse .note}
 
 {{< include 042-goodness-of-fit.qmd >}}
+
+# OLS Assumptions {.inverse .note}
+
+{{< include 043-classical-assumptions.qmd >}}
+
+# Gauss-Markov Theorem {.inverse .note}
+
+{{< include 044-gauss-markov.qmd >}}

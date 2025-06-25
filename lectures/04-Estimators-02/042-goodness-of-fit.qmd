@@ -22,3 +22,435 @@ The question is: Which fitted regression line "explains/fits" the data better?
 :::
 
 ::::
+
+---
+
+## Goodness of Fit
+
+[Regression 1]{.hi-orange} vs [Regression 2]{.hii}
+
+The [coefficient of determination]{.hi .note}, $R^{2}$, is the fraction of the variation in $y_{i}$ "explained" by $x_{i}$.
+
+- $R^{2} = 1 \Rightarrow x_{i}$ explains [all]{.hi} of the variation in $y_{i}$
+- $R^{2} = 0 \Rightarrow x_{i}$ explains [none]{.hi} of the variation in $y_{i}$
+
+:::: {.columns}
+
+::: {.column width="50"}
+![](images/fit-01.png)
+:::
+
+::: {.column width="50"}
+![](images/fit-02.png)
+:::
+
+::::
+
+---
+
+## Explained and Unexplained Variation
+
+Residuals remind us that there are parts of $y_{i}$ we cannot explain:
+
+$$
+    y_{i} = \hat{y}_{i} + \hat{u}_{i}
+$$
+
+- If you sum the above, divide by $n$, and use the fact that OLS residuals sum to zero, you get:
+
+$$
+    \bar{\hat{u}} = 0 \Rightarrow \bar{y} = \bar{\hat{y}}
+$$
+
+- So the fitted values average out to the actual values
+
+---
+
+## Explained and Unexplained Variation
+
+[Total Sum of Squares]{.note .hi} ([TSS]{.hi-red}) measures variation in $y_{i}$:
+
+$$
+    \color{#BF616A}{TSS} \equiv \sum_{i = 1}^{n} (y_{i} - \bar{y})^{2}
+$$
+
+- [TSS]{.hi-red} can be decomposed into explained and unexplained variation
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Explained Sum of Squared]{.note .hi} ([ESS]{.hi-teal}) measures the variation in $\hat{y}_{i}$:
+
+$$
+    \color{#8FBCBB}{ESS} \equiv \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2}
+$$
+
+:::
+
+::: {.column width="50%"}
+[Residual Sum of Squares]{.note .hi} ([ESS]{.hi-orange}) measures the variation in $ \hat{u}_{i}$:
+
+$$
+    \color{#D08770}{RSS} \equiv \sum_{i = 1}^{n} \hat{u}_{i}^{2}
+$$
+:::
+
+::::
+
+---
+
+## 
+
+This means that we can show $\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}$
+
+[Step 01:]{.note .hi} Plug $y_{i} = \hat{y}_{i} + \hat{u}_{i}$ into [TSS]{.hi-red}
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2}
+\end{align*}
+
+---
+
+##
+
+This means that we can show $\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}$
+
+[Step 02:]{.note .hi} Recall that $\bar{\hat{u}} = 0$ & $\bar{y} = \bar{\hat{y}}$.
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - \bar{\hat{y}})^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) \\
+    &= \sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2} +
+    \sum_{i=1}^{n} \hat{u}_{i}^{2} + 
+    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right)
+\end{align*}
+
+---
+
+## 
+
+[Step 03:]{.note .hi} Notice [ESS]{.hi-teal} and [RSS]{.hi-orange}
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \color{#8FBCBB}{\sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2}} +
+    \color{#D08770}{\sum_{i=1}^{n} \hat{u}_{i}^{2}} + 
+    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
+    &= \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} + 2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
+\end{align*}
+
+[Step 04:]{.note .hi} Simplify
+
+\begin{align*}
+    \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} + 
+    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
+    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i}
+\end{align*}
+
+---
+
+## 
+
+[Step 05:]{.note .hi} Shut down that last two terms by noticing that:
+
+\begin{align*}
+    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
+    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i} =
+    0
+\end{align*}    
+
+[You will prove this in an assignment]{.note .hi .align-center}
+
+Then we have:
+
+\begin{align*}
+     \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}
+\end{align*}
+
+. . .
+
+Some visual intuition makes all the math seem a lot simpler
+
+---
+
+[Plot our data]{.hi .align-center}
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+library(pacman)
+p_load(dplyr, ggplot2) 
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal()
+```
+
+---
+
+$$
+\color{#148B25}{\overline{\text{MPG}}_{i}} = 20.09
+$$
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+
+lm0 <- lm(mpg ~ wt, data = mtcars)
+
+# Define a function
+y_hat <- function(x, b0, b1) {b0 + b1 * x}
+# Define line's parameters
+b0 <- lm0$coefficients[1]
+b1 <- lm0$coefficients[2]
+
+y_bar = mtcars$mpg %>% mean()
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+## 
+
+::: {.small}
+$$
+\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (y_i - \bar{y})^2
+$$
+:::
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    # geom_abline(intercept = b0, slope = b1, color = hp, size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_bar), color = '#BF616A', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+## 
+
+::: {.small}
+$$
+\color{#148B25}{\widehat{\text{MPG}}_{i}} = 37.3 - 5.34 \cdot \text{weight}_i 
+$$
+:::
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() + 
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+##
+
+$$
+\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{y}_{i} - \bar{y})^2
+$$
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = y_bar, yend = y_hat(wt, b0, b1)), color = '#8FBCBB', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    theme_minimal() + 
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+## 
+
+::: {.small .align-center}
+$$
+\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
+$$
+:::
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_hat(wt, b0, b1)), color = '#D08770', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    theme_minimal() + 
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+## 
+
+:::: {.columns}
+
+::: {.column width="33%"}
+$$
+\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (Y_i - \bar{Y})^2
+$$
+:::
+
+::: {.column width="33%"}
+$$
+\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{Y_i} - \bar{Y})^2
+$$
+:::
+
+::: {.column width="33%"}
+$$
+\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
+$$
+:::
+
+::::
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt+0.02, xend = wt+0.02, y = y_bar, yend = y_hat(wt, b0, b1)), color = '#BF616A', position = position_dodge(-1000), alpha = 1, size = 2) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_bar), color = '#8FBCBB', alpha = 1, size = 2) +
+    geom_segment(aes(x = wt-0.02, xend = wt-0.02, y = mpg, yend = y_hat(wt, b0, b1)), color = '#D08770', position = position_dodge(1000), alpha = 1, size = 2) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+---
+
+## Goodness of Fit
+
+What percentage of the variation in our $y_{i}$ is [apparently]{.hi} explained by our model?
+The $R^{2}$ term represents this percentage.
+
+Total variation is represented by [TSS]{.hi-red} and our model is capturing the 'explained' sum of squares, [ESS]{.hi-teal}.
+
+Taking a simple ratio reveals how much variation our model explains:
+
+- $R^{2} = \dfrac{\color{#8FBCBB}{ESS}}{\color{#BF616A}{TSS}}$ varies between 0 and 1
+
+- $R^{2} = 1 - \dfrac{\color{#D08770}{RSS}}{\color{#BF616A}{TSS}}$, 100% minus the unexplained variation
+
+$R^{2}$ is related to the correlation between the actual values of $y$ and the fitted values of $y$. 
+
+---
+
+## Goodness of Fit
+
+[So what?]{.note .hi} 
+In the social sciences, low $R^{2}$ values are common. 
+
+Low $R^{2}$ does not necessarily mean you have a "good" regression:
+
+- Worries about selection bias and omitted variables still apply
+
+- Some 'powerfully high' $R^{2}$ values are the result of simple accounting exercises, and tell us nothing about causality
