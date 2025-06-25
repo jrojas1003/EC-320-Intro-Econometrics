@@ -1,0 +1,148 @@
+\documentclass[12pt]{exam}
+\usepackage{amsthm}
+\usepackage{libertine}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}  % Ensure proper encoding
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+\CorrectChoiceEmphasis{\color{red}\bfseries\itshape}
+
+\newcommand{\class}{\fontfamily{lmss}\selectfont \textbf{EC 320}} % This is the name of the course 
+\newcommand{\examnum}{\fontfamily{lmss}\selectfont \textbf{Problem Set 01}} % This is the name of the assignment
+\newcommand{\examdate}{\textbf{Due 06/29 @ 11:59pm}} % This is the due date
+\newcommand{\timelimit}{}
+\addpoints % Allows to add points up to include table at end of document
+
+\pagestyle{headandfoot} % Fancy equivalent for exam documentclass
+\firstpageheadrule % Horizontal bar in first page
+\runningheadrule % Horizontal bar in rest of pages
+\firstpageheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % 1st page header content
+\firstpagefooter{}{Page \thepage}{} % 1st page footer content
+\runningheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % Rest of pages header content
+%\runningfooter{Points earned: \makebox[1in]{\hrulefill} / \pointsonpage{\thepage} points}{}{\thepage\ of \numpages} % Rest of pages footer content
+\bracketedpoints % Puts points per question inside brackets instead of parenthesis 
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+
+\begin{document}
+\fontfamily{lmss}\selectfont
+
+\begin{questions}
+    
+\question 
+    We derived the OLS estimator and found that:
+
+    \begin{align*}
+        \hat{\beta}_{1} = \dfrac{
+        \sum_{i} (x_{i}y_{i}) - n\bar{x}\bar{y}
+    }{
+        \sum_{i} (x_{i}^{2}) - \bar{x}^{2}n
+    }
+    \end{align*}
+
+    \begin{parts}
+        \part Show that $\hat{\beta}_{1} = \dfrac{\sum_{i} (x_{i} - \bar{x}(y_{i} - \bar{y}))}{\sum_{i} (x_{i} - \bar{x})^{2}}$.
+        \vspace*{\stretch{1}}
+        \part Use the formula for $\hat{\beta}_{1}$ derived in 1) to show that $\hat{\beta}_{1} = \dfrac{\sum_{i} (x_{i} - \bar{x})y_{i}}{\sum_{i}(x_{i} - \bar{x})^{2}}$.
+        \vspace*{\stretch{1}}
+        \part Use the formula for $\hat{\beta}_{1}$ in 2) to show that $\hat{\beta}_{1} = \beta_{1} + \dfrac{\sum_{i} (x_{i} - \bar{x})u_{i}}{\sum_{i}(x_{i} - \bar{x})^{2}}$.
+
+        \emph{Hint: Note that the left hand-side is the estimate for $\beta_{1}$ and the right hand-side includes the true value of $\beta_{1}$. 
+        These will not be exactly equivalent except by chance.
+        You should start this problem by making a substitution for $y_{i}$, since $y_{i} = \beta_{0} + \beta_{1}x_{i} + u_{i}$. 
+        This will get the true $\beta_{1}$ and $u_{i}$ into the equation.}
+        \vspace*{\stretch{1}}
+    \end{parts}
+
+\newpage
+
+\question 
+    \textbf{Recall:} $\hat{\beta}_{1} = \dfrac{
+        \sum_{i} (x_{i}y_{i}) - n\bar{x}\bar{y}
+    }{
+        \sum_{i} (x_{i}^{2}) - \bar{x}^{2}n
+    }$ 
+    and $\hat{\beta}_{0} = \bar{y} - \beta_{1}\bar{x}$
+
+Use those formulas to calculate $\hat{\beta}_{1}$ and $\hat{\beta}_{0}$ by hand. 
+It may be helpful to draw a plot of the data and try to eyeball the line of best fit in order to double check that your answer makes sense.
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{x} & \textbf{y} \\
+        \midrule
+        0 & 1 \\
+        1 & 2 \\ 
+        1 & 3 \\
+        0 & 2 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question
+    \textbf{Interpreting regression coefficients}
+
+    Consider a dataset obtained from a labor economics study that investigates the impact of years on education on individual's wages. 
+    The dataset includes a random sample of workers in a specific region. 
+    The following regression equation estimates the relationship between wages (measured in thousands of dollars) and years of education:
+
+$$
+    \text{Wage}_{i} = \beta_{0} + \beta_{1} \times \text{Education}_{i} + u_{i}
+$$
+
+From the regression output, you have the following estimates:
+
+$$
+    \text{Wage} = 12 + 3.5 \times \text{Education}
+$$
+
+\begin{parts}
+    \part \textbf{Interpret the Estimates:} Interpret the intercept and slope coefficients in the context of the model
+    \vspace*{\stretch{1}}
+    \part \textbf{Predicted Outcomes:} If an individual has 12 years of education, what is the predicted wage according to the model?
+    \vspace*{\stretch{1}}
+    \part \textbf{Effect of Changing $X$:} Suppose an individual worker is deciding whether or not to complete their associates degree (two years of education). What would the model predict her change in wage would be? In other words, what is her expected increase in wage if she completes her associates degree?
+    \vspace*{\stretch{1}}
+    \part What must we assume to be true regarding the error term $u_{i}$ for the OLS estimator to be unbiased? Specifically, I am interested in the third assumption of the classical linear regression model. Give an example of a violation of this assumption in the context of the wage equation.
+    \vspace*{\stretch{1}}
+\end{parts}
+\vspace*{\stretch{1}}
+
+\newpage
+\question 
+
+    We showed in lecture 03 that:
+
+    \begin{align*}
+        TSS = ESS + RSS + 2 \sum_{i=1}^{n} \hat{y}_{i}\hat{u}_{i} - 2 \bar{y} \sum_{i=1}^{n} \hat{u}_{i}
+    \end{align*}
+
+    And I shut down the last two terms to make it so $TSS = ESS + RSS$. 
+    \begin{parts}
+        \part Show that $2 \sum_{i=1}^{n} \hat{y}_{i}\hat{u}_{i} - 2 \bar{y} \sum_{i=1}^{n} \hat{u}_{i} = 0$ 
+        
+        \emph{Hint: The property of the residuals may be helpful: $\sum_{i=1}^{n} \hat{u}_{i} = 0$}
+    \end{parts}
+    
+
+\end{questions}
+
+\end{document}
