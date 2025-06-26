@@ -4,6 +4,8 @@ project:
     - "*.qmd"
     - "*.md"
   output-dir: docs   
+  resources:
+    - documents/problem-sets/ps01/questions.pdf
 
 website:
   title: "EC 320 - Intro. Econometrics"
