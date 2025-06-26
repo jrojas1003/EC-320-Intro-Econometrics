@@ -9,11 +9,11 @@ title: "Assignments"
 ```{=html}
 <details>
   <summary>View PDF</summary> 
-  <a class="btn btn-primary btn-lg cv-download" href="ps01/questions.pdf" target="_blank">
+  <a class="btn btn-primary btn-lg cv-download" href="documents/problem-sets/ps01/questions.pdf" target="_blank">
     <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
   </a>
   <div class="embed-container">
-    <iframe src="ps01/questions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="documents/problem-sets/ps01/questions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
