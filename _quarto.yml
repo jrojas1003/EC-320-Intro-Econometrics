@@ -18,6 +18,8 @@ website:
         text: Lectures
       - href: documents/problem-sets/index.qmd
         text: Assignments
+      - href: documents/readings
+        text: Readings
       - href: about.qmd
         text: About Me
 format:
