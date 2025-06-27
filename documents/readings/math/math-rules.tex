@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage{geometry,url, hyperref}
+\geometry{margin=1in, centering}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol, multirow}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw, color, soul, booktabs, graphicx}
+\usepackage{caption}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}  % Ensure proper encoding
+\usepackage{titlesec}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+  
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+\fancyhead[L]{EC 320}
+\fancyhead[R]{Math Rules}
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fontfamily{lmss}\selectfont
+
+Here is a list of important math rules you should know. 
+We may not use all of them directly, or I may omit some to save time, but they are generally helpful in econometrics work. 
+
+\section*{Summation Rules}
+
+Let $x$ and $y$ be vectors of length $n$. 
+
+\begin{enumerate}
+    \item Summation definition: $\sum_{i = 1}^{n} x_{i} \equiv x_{1} + x_{2} + \cdots + x_{n}$
+    \item The sum of $x + y$ is the same as the sum of $x$ plus the sum of $y$: $sum_{i} (x_{i} + y_{i}) = \sum_{i=1} x_{i} + \sum_{i} y_{i}$
+    \item For any constant $c$, the sum of $c \times x$ is the same as $c$ times the sum of $x$: $\sum_{i} cx_{i} = c \sum_{i} x_{i}$
+    \item In general, the sume of $x$ times $y$ is not equal to the sum of $x$ times the sum of $y$: \\ $\sum_{i} x_{i}y_{i} \neq \sum_{i}x_{i} \sum_{i} y_{i}$
+\end{enumerate}
+
+\section*{Variance Rules}
+
+\begin{itemize}
+    \item The variance of a constant is zero: $Var{c} = 0$
+    \item The variance of a constant times a random variable: $Var(cX) = c^{2}Var(X)$
+    \item The variance of a constant plus a random variable: $Var(c + X) = Var(x)$
+    \item The variance of the sum of two random variables: $Var(X + Y) = Var(X) + Var(Y) + 2Cov(X,Y)$
+\end{itemize}
+
+\section*{Covariance Rules}
+
+\begin{itemize}
+    \item The covariance of a random variable with a constant is 0: $Cov(X,c) = 0$
+    \item The covariance of a random variable with itself is its variance: $Cov(X,X) = Var(X)$
+    \item Constants can be brought outside of the covariance: $Cov(X,cY) = cCov(X,Y)$
+    \item If $Z$ is a third random variable, then: $Cov(X,Y + Z) = Cov(X,Y) + Cov(X,Z)$
+\end{itemize}
+
+
+\section*{$plim$ Rules}
+
+$plim$ stands for probability limit, that is: $plim_{n \rightarrow \infty} \hat{\theta}_{n} = 0$. So as the sample size $n$ increases, the estimator $\hat{\theta}_{n}$ converges in probability to the true value $\theta$.
+
+\noindent Let $c$ be a constant. 
+Let $x_{n}$ and $y_{n}$ be sequences of random variables where $plim(x_{n}) = x$ and $plim(y_{n}) = y$
+\begin{enumerate}
+    \item The probability limit of a constant is the constant: $plim(c) = c$
+    \item $plim(x_{n} + y_{n}) = x + y$
+    \item $plim(x_{n}y_{n}) = xy$
+    \item $plim(\dfrac{x_{n}}{y_{n}}) = \dfrac{x}{y}$
+    \item $plim(g(x_{n},y_{n})) = g(x,y)$ for any function $g()$
+\end{enumerate}
+
+\section*{Expectations Rules}
+
+Let $A$ and $B$ be random variables, and let $c$ be a constant.
+
+\begin{enumerate}
+    \item $\mathbb{E}[A + B] = \mathbb{E}[A] + \mathbb{E}[B]$
+    \item In general, $\mathbb{E}[AB] \neq \mathbb{E}[A]\mathbb{E}[B]$
+    \item Constants can pass outside of an expectation: $\mathbb{E}[cA] = c\mathbb{E}[A]$
+    \item Since $\mathbb{E}[A]$ is a constant, then: $\mathbb{E}[B \mathbb{E}[A]] = \mathbb{E}[A] \mathbb{E}[B]$
+\end{enumerate}
+
+\section*{Conditional Expectations Rules}
+
+If the conditional expectation of something is a constant, then the unconditional expectation is that same constant:
+
+If $\mathbb{E}[A|B] = c$, then $\mathbb{E}[A] = c$.
+
+Why? The \textbf{law of iterated expectations:}
+
+\begin{align*}
+    \mathbb{E}[A] &= \mathbb{E}[\mathbb{E}[A|B]] \\
+                  &= \mathbb{E}[c] \\
+                  &= c
+\end{align*}
+
+\section*{Log Rules}
+
+\begin{enumerate}
+    \item $log_{e}(e) = 1$
+    \item $log(ab) = log(a) + log(b)$
+    \item $log(\dfrac{a}{b}) = log(a) - log(b)$
+    \item $log(a^{b}) = b \times log(a)$
+\end{enumerate}
+
+\end{document}
