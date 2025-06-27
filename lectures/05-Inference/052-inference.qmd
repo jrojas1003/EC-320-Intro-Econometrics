@@ -1,0 +1,91 @@
+---
+name: inference
+---
+
+## Inference
+
+Our current workflow consists of:
+
+::: {.incremental}
+1. Get data (points with $X$ and $Y$ values)
+2. Regress $Y$ on $X$ (aka $Y = \beta_{0} + \beta_{1}X$)
+3. Plot the [point estimates $(\hat{\beta}_{0},\hat{\beta}_{1})$]{.hi} and report them
+:::
+
+. . .
+
+But when do we [learn something?]{.hi} We are still missing a step.
+
+- For $\hat{\beta}_{1}$, can we rule out a previously [hypothesized values]{.hi}?
+- How [condifent]{.hi} should we be in the precision of our estimates?
+
+We need to be careful about our sample being atypical $\Rightarrow$ uncertainty
+
+---
+
+## 
+
+However, there is a [problem]{.hi-red}.
+
+. . .
+
+<br>
+<br>
+
+Recall the variance of the [point estimate]{.note} $\hat{\beta_1}$
+$$
+\mathop{\text{Var}}(\hat{\beta}_1) = \frac{\sigma^2}{\sum_{i=1}^n (X_i - \bar{X})^2}
+$$
+
+The problem is that $\color{#BF616A}{\sigma^2}$ is unobserved. So what do we do? [_Estimate it._]{.fragment}
+
+---
+
+## Estimating error variance
+
+We can estimate the variance of $u_i$ ($\color{#BF616A}{\sigma^2}$) using the sum of squared residuals ([RSS]{.hi-orange}):
+
+$$
+s^2_u = \dfrac{\sum_i \hat{u}_i^2}{n - k}
+$$
+
+where $n$ is the number of observations and $k$ is the number of regression parameters. [(In a simple linear regression, $k=2$)]{.fragment}
+
+. . .
+
+If the assumptions from [Gauss-Markov]{.note} hold, then $s^2_u$ is an unbiased estimator of $\sigma^2$.
+
+. . .
+
+In essence, we are _learning from our prediction errors_
+
+---
+
+## OLS Variance
+
+With $s^2_u = \dfrac{\sum_i \hat{u}_i^2}{n - k}$, we can calculate the [estimated variance]{.note} of $\hat{\beta}_1$
+
+$$
+\mathop{\text{Var}}(\hat{\beta}_1) = \frac{s^2_u}{\sum_{i=1}^n (X_i - \bar{X})^2}
+$$
+
+. . .
+
+Taking the square root, we get the [standard error]{.note} of the OLS estimator:
+
+$$
+\mathop{\widehat{\text{SE}}} \left( \hat{\beta}_1 \right) = \sqrt{ \frac{s^2_u}{\sum_{i=1}^n (X_i - \bar{X})^2} }
+$$
+
+The [standard error]{.note} is the [standard deviation]{.hi} of the [sampling distribution.]{.note}
+
+---
+
+## Inference
+
+After deriving the distribution of $\hat{\beta}_1$^[*Hint:* It's normal with mean $\beta_1$ and variance $\frac{\sigma^2}{\sum_{i=1}^n (X_i - \bar{X})^2}$.], we have two (related) options for formal statistical inference (learning) about our unknown parameter $\beta_1$:
+
+<br>
+
+- [Hypothesis testing:]{.hi} Determine whether there is statistically significant evidence to reject a hypothesized value or range of values.
+- [Confidence intervals:]{.hi} Use the estimate and its standard error to create an interval that will generally^[_E.g._, similarly constructed 95% confidence intervals will contain the true parameter 95% of the time.] contain the true parameter.

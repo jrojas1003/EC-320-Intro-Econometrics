@@ -1,0 +1,35 @@
+---
+title: "Inference"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, Lecture 04 | Inference"
+        preview-links: auto
+        code-fold: FALSE
+        html: true
+        embed-resources: false  # prevent inlining everything (important for iframes)
+        self-contained: false   # allows iframe-based content like YouTube
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# Prologue {.inverse .note}
+
+{{< include 051-prologue.qmd >}}
+
+# Inference {.inverse .note}
+
+{{< include 052-inference.qmd >}}
+
+# Hypothesis Testing {.inverse .note}
+
+{{< include 053-hypothesis-test.qmd >}}
+
+# Confidence Intervals {.inverse .note}
+
+{{< include 054-conf-intervals.qmd >}}

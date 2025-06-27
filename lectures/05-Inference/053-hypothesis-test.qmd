@@ -1,0 +1,431 @@
+---
+name: hypothesis testing
+---
+
+---
+
+## Hypothesis Tests
+
+Systematic procedure that gives us evidence to hang our hat on. Starting with a [Null hypothesis]{.hi} ($H_0$) and an [Alternative hypothesis]{.hi} ($H_1$)
+
+$$
+\begin{align*}
+H_0:& \beta_1 = 0 \\
+H_1:& \beta_1 \neq 0
+\end{align*}
+$$
+
+. . .
+
+_In the context of the [wage regression]{.hii}:_
+
+
+$$
+\text{Wage}_i = \beta_0 + \beta_1 \cdot \text{Education}_i + u_i
+$$
+
+::: {.align-center}
+$H_0$: _Education has no effect on wage_
+:::
+::: {.align-center}
+$H_1$: _Education has an effect on wage_
+:::
+
+---
+
+## Possible outcomes
+
+Within this structure, four possible outcomes exist:
+
+<br>
+
+. . .
+
+[1.]{.note} We [fail to reject]{.hi} the null hypothesis and the null is true.
+
+. . .
+
+_[Ex]{.ex}. Education has no effect on wage and, correctly, we fail to reject $H_0$._
+
+
+---
+
+## Possible outcomes {data-visibility="uncounted"}
+
+Within this structure, four possible outcomes exist:
+
+<br>
+
+[1.]{.note} We [fail to reject]{.hi} the null hypothesis and the null is true.
+
+[2.]{.note} We [reject]{.hi-red} the null hypothesis and the null is false.
+
+. . .
+
+_[Ex]{.ex}. Education has an effect on wage and, correctly, we reject $H_0$._
+
+
+---
+
+## Possible outcomes {data-visibility="uncounted"}
+
+Within this structure, four possible outcomes exist:
+
+<br>
+
+[1.]{.note} We [fail to reject]{.hi} the null hypothesis and the null is true.
+
+[2.]{.note} We [reject]{.hi-red} the null hypothesis and the null is false.
+
+[3.]{.note} We [reject]{.hi-red} the null hypothesis, but the null is actually true.
+
+. . .
+
+_[Ex]{.ex}. Education has no effect on wage, but we incorrectly reject $H_0$._
+
+_This is an error._ Defined as a [Type I error]{.note}.
+
+
+
+
+---
+
+## Possible outcomes {data-visibility="uncounted"}
+
+Within this structure, four possible outcomes exist:
+
+<br>
+
+[1.]{.note} We [fail to reject]{.hi} the null hypothesis and the null is true.
+
+[2.]{.note} We [reject]{.hi-red} the null hypothesis and the null is false.
+
+[3.]{.note} We [reject]{.hi-red} the null hypothesis, but the null is actually true.
+
+[4.]{.note} We [fail to reject]{.hi} the null hypothesis, but the null is actually false.
+
+. . .
+
+_[Ex]{.ex}. Education has an effect on wage, but we incorrectly fail to reject $H_0$._
+
+This is an _error_. Defined as a [Type II error]{.note}.
+
+
+---
+
+## Possible outcomes {data-visibility="uncounted"}
+
+Within this structure, four possible outcomes exist:
+
+<br>
+
+[1.]{.note} We [fail to reject]{.hi} the null hypothesis and the null is true.
+
+[2.]{.note} We [reject]{.hi-red} the null hypothesis and the null is false.
+
+[3.]{.note} We [reject]{.hi-red} the null hypothesis, but the null is actually true.^[[Type I error]{.note}]
+
+[4.]{.note} We [fail to reject]{.hi} the null hypothesis, but the null is actually false.^[[Type II error]{.note}]
+
+---
+
+Or... from the golden age of textbook illustrations
+
+. . .
+
+![How I think of it](images/type1vstype2.jpg){width=700}
+
+---
+
+## Hypothesis Tests
+
+[Goal:]{.note} Make a statement about $\beta_1$ using information on $\hat{\beta}_1$.
+
+. . .
+
+$\hat{\beta}_1$ is random---it could be anything, even if $\beta_1 = 0$ is true.
+
+- But if $\beta_1 = 0$ is true, then $\hat{\beta}_1$ is unlikely to take values far from zero.
+- As the standard error shrinks, we are even less likely to observe "extreme" values of $\hat{\beta}_1$ (assuming $\beta_1 = 0$).
+
+. . .
+
+Hypothesis testing takes [extreme values]{.hi-red} of $\hat{\beta}_1$ as [_evidence against the null hypothesis_]{.note}, [but it will weight them by information about variance the [estimated variance]{.note} of $\hat{\beta}_1$.]{.fragment}
+
+---
+
+## Hypothesis Tests
+
+::: {.align-center}
+$H_0$: $\beta_1 = 0$
+:::
+::: {.align-center}
+$H_1$: $\beta \neq 0$
+:::
+
+To conduct the test, we calculate a $t$-statistic^[$\beta_1^0$ is the value of $\beta_1$ in our null hypothesis (*e.g.,* $\beta_1^0 = 0$).]:
+
+$$
+t = \frac{\hat{\beta}_1 - \beta_1^0}{\mathop{\hat{\text{SE}}} \left( \hat{\beta}_1 \right)}
+$$
+
+Distributed by a $t$-distribution with $n-2$ _degrees of freedom_^[represents the number of independent values in a sample that are free to vary when estimating statistical parameters.].
+
+---
+
+## Hypothesis Testing
+
+[Normal distribution vs. $t$ distribution]{.hi}
+
+- A normal distribution has the same shape for any sample size.
+- The shape of the t distribution depends the [degrees of freedom]{.hi}.
+
+![](images/df-5.png){fig-align="center"}
+
+- Degrees of freedom [=]{.mono} 5.
+
+---
+
+## Hypothesis Testing {data-visibility="uncounted"}
+
+[Normal distribution vs. $t$ distribution]{.hi}
+
+- A normal distribution has the same shape for any sample size.
+- The shape of the t distribution depends the **degrees of freedom**.
+
+![](images/df-50.png){fig-align="center"}
+
+- Degrees of freedom [=]{.mono} 50.
+
+---
+
+## Hypothesis Testing {data-visibility="uncounted"}
+
+[Normal distribution vs. $t$ distribution]{.hi}
+
+- A normal distribution has the same shape for any sample size.
+- The shape of the t distribution depends the **degrees of freedom**.
+
+![](images/df-500.png){fig-align="center"}
+
+- Degrees of freedom [=]{.mono} 500.
+
+---
+
+## Hypothesis Testing
+
+[Two sided t Tests]{.hi}
+
+To conduct a t test, compare the $t$ statistic to the appropriate [critical value]{.hi} of the t distribution.
+
+- To find the critical value in a t table, we need the degrees of freedom and the significance level $\alpha$.
+
+Reject ($\text{H}_0$) at the $\alpha \cdot 100$-percent level if 
+
+$$
+\left| t \right| = \left| \dfrac{\hat{\mu} - \mu_0}{\mathop{\text{SE}}(\hat{\mu})} \right| > t_\text{crit}.
+$$
+
+---
+
+## Hypothesis Tests
+
+Next, we use the $\color{#434C5E}{t}$[-statistic]{.hi} to calculate a $\color{#B48EAD}{p}$[-value]{.hp}.
+
+![](images/t-stat-ex.png){fig-align="center"}
+
+Describes the probability of seeing a $\color{#434C5E}{t}$[-statistic]{.hi} as extreme as the one we observe _if the null hypothesis is actually true_.
+
+. . .
+
+But...we still need some benchmark to compare our $\color{#B48EAD}{p}$[-value]{.hp} against.
+
+---
+
+## Hypothesis Tests
+
+We worry mostly about false positives, so we conduct hypothesis tests based on the probability of making a [Type I error]{.note}^[We _reject_ the null hypothesis, but the null is actually true.].
+
+. . .
+
+[_How?_]{.blue} [We select a [significance level]{.note}, $\color{#434C5E}{\alpha}$, that specifies our tolerance for false positives (i.e., the probability of [Type I error]{.note} we choose to live with).]{.fragment}
+
+. . .
+
+![](images/signif-level.png){fig-align="center"}
+
+---
+
+::: {.middle}
+
+To visualize [Type I]{.note} and [Type II]{.note}, we can plot the [sampling distributions]{.note} of $\hat{\beta}_1$ under the null and alternative hypotheses
+
+:::
+
+![](images/type1-type2-graph.png){fig-align="center"}
+
+---
+
+## Hypothesis Tests
+
+We then compare $\color{#434C5E}{\alpha}$ to the $\color{#B48EAD}{p}$[-value]{.hp} of our test.
+
+- If the $\color{#B48EAD}{p}$[-value]{.hp} is less than $\color{#434C5E}{\alpha}$, then we [reject the null hypothesis]{.hi-red} at the $\color{#434C5E}{\alpha}\cdot100$ percent level.
+
+- If the $\color{#B48EAD}{p}$[-value]{.hp} is greater than $\color{#434C5E}{\alpha}$, then we [fail to reject the null hypothesis]{.hi} at the $\color{#434C5E}{\alpha}\cdot100$ percent level.^[[Note:]{.note} _Fail to reject_ $\neq$ _accept_.]
+
+---
+
+#### [Ex.]{.ex} Are campus police associated with campus crime?
+
+![](images/t-test-crime-ex.png){fig-align="center"}
+
+<br>
+
+::: {.align-center}
+$H_0$: $\beta_\text{Police} = 0$  
+$H_1$: $\beta_\text{Police} \neq 0$
+:::
+
+
+Significance level: $\color{#434C5E}{\alpha} = 0.05$ (*i.e.,* 5 percent test)
+
+Test Condition: Reject $H_0$ if $p < \alpha$
+
+[_What is the $\color{#B48EAD}{p}$[-value]{.hp}?_]{.fragment} [$p = 0.18$]{.fragment}
+
+[_Do we reject the null hypothesis?_]{.fragment} [No.]{.fragment .hi}
+
+
+---
+
+## Hypothesis Tests
+
+$\color{#B48EAD}{p}$[-values]{.hp} are difficult to calculate by hand.
+
+[Alternative:]{.note} Compare $\color{#434C5E}{t}$[-statistic]{.hi} to [critical values]{.note} from the ${\color{#434C5E} t}$-distribution.
+
+![](images/hypoth-test-p-value.png){fig-align="center"}
+
+---
+
+## Hypothesis Tests
+
+[Notation:]{.note} $t_{1-\alpha/2, n-2}$ or $t_\text{crit}$.
+
+- Find in a $t$-table using $\color{#434C5E}{\alpha}$ and $n-2$ degrees of freedom.
+
+Compare the the critical value to your $t$-statistic:
+
+- If $|t| > |t_{1-\alpha/2, n-2}|$, then [reject the null]{.hi-red}.
+- If $|t| < |t_{1-\alpha/2, n-2}|$, then [fail to reject the null]{.hi}.
+
+
+---
+
+## Two-sided tests
+
+Based on a critical value of $t_{1-\alpha/2, n-2} = t_{0.975, 100} = 1.98$ we can identify a [rejection region]{.hii} on the $\color{#434C5E}{t}$[-distribution]{.hi}.
+
+![](images/hypoth-test-p-value.png)
+
+. . .
+
+If our $\color{#434C5E}{t}$[-statistic]{.hi} is in the rejection region, then we reject the null hypothesis at the 5 percent level. 
+
+---
+
+[Ex.]{.ex}^[{{< fa brands r-project >}} defaults to testing hypotheses against the null hypothesis of zero.] $\alpha = 0.05$
+
+![](images/tidy-ex.png)
+
+<br>
+
+::: {.align-center}
+$H_0$: $\beta_1 = 0$  
+$H_1$: $\beta_1 \neq 0$
+:::
+
+Notice that the $\color{#434C5E}{t}$[-statistic]{.hi} is 7.15. The critical value is $\color{#434C5E}{t_{\text{0.975, 28}}} = 2.05$.
+
+[Which implies that  $p < 0.05$.]{.fragment} [Therefore, ]{.fragment} [we [reject $H_0$]{.hi-red} at the 5% level.]{.fragment}
+
+
+---
+
+[Ex.]{.ex} Are campus police associated with campus crime? ($\alpha = 0.1$)
+
+![](images/t-test-crime-ex.png)
+
+<br>
+
+::: {.align-center}
+$H_0$: $\beta_\text{Police} = 0$  
+$H_1$: $\beta_\text{Police} \neq 0$
+:::
+
+The $\color{#434C5E}{t \text{-stat}} = 1.35$. The critical value is $\color{#434C5E}{t_{\text{0.95, 94}}} = 1.66$.
+
+[|$\color{#434C5E}{t \text{-stat}}| < |\color{#434C5E}{t_{\text{crit}}}|$]{.fragment} [implies that  $p > 0.05$.]{.fragment} [Therefore, ]{.fragment} [we [fail to reject $H_0$]{.hi} at the 10% level.]{.fragment}
+
+
+---
+
+## One-sided tests
+
+We might be confident in a parameter being [non-negative]{.hii}/[non-positive]{.hi-red}.
+
+[One-sided]{.note} tests assume that the parameter of interest is either [greater than]{.hii}/[less than]{.hi-red} $H_0$.
+
+- [Option 1]{.note} $H_0$: $\beta_1 = 0$ *vs.* $H_1$: $\beta_1 > 0$
+
+- [Option 2]{.note} $H_0$: $\beta_1 = 0$ *vs.* $H_1$: $\beta_1 < 0$
+
+. . .
+
+If this assumption is reasonable, then our rejection region changes.
+
+- Same $\alpha$.
+
+---
+
+## One-sided tests
+
+[Left-tailed:]{.note} Based on a critical value of $t_{1-\alpha, n-2} = t_{0.95, 100} = 1.66$, we can identify a [rejection region]{.hii} on the $t$-distribution. 
+
+![](images/left-t-test.png){fig-align="center"}
+
+. . .
+
+If our $t$ statistic is in the rejection region, then we reject the null hypothesis at the 5 percent level. 
+
+---
+
+## One-sided tests
+
+[Right-tailed:]{.note} Based on a critical value of $t_{1-\alpha, n-2} = t_{0.95, 100} = 1.66$, we can identify a [rejection region]{.hii} on the $t$-distribution. 
+
+![](images/right-t-test.png){fig-align="center"}
+
+. . .
+
+If our $t$ statistic is in the rejection region, then we reject the null hypothesis at the 5 percent level. 
+
+---
+
+[Ex]{.ex}. _Do campus police deter campus crime?_ ($\alpha = 0.1$)
+
+[_Suppose we rule out the possibility that police increase crime, but not that they have no effect._]{.tiny}
+
+![](images/t-test-crime-ex.png){fig-align="center"}
+
+<br>
+
+::: {.align-center}
+$H_0$: $\beta_\text{Police} = 0$  
+$H_1$: $\beta_\text{Police} < 0$
+:::
+
+Notice that the $\color{#434C5E}{t \text{-stat}} = 1.35$. The critical value is $\color{#434C5E}{t_{\text{0.9, 94}}} = 1.29$.
+
+[Which implies that  $p > 0.05$.]{.fragment} [Therefore, ]{.fragment} [we [reject $H_0$]{.hi-red} at the 5% level.]{.fragment}
