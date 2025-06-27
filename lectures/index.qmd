@@ -43,9 +43,9 @@ title: "Lectures"
 
 ```{=html}
 <div>
-  <iframe class="slide deck" src="05-Inference/05-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+  <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="005-Inference/05-compile.qmd" target="_blank">
+<a class="btn btn-primary btn-md" href="05-Inference/050-compile.qmd" target="_blank">
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
