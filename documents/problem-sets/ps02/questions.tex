@@ -1,0 +1,122 @@
+\documentclass[12pt]{exam}
+\usepackage{amsthm}
+\usepackage{libertine}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}  % Ensure proper encoding
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+\CorrectChoiceEmphasis{\color{red}\bfseries\itshape}
+
+\newcommand{\class}{\fontfamily{lmss}\selectfont \textbf{EC 320}} % This is the name of the course 
+\newcommand{\examnum}{\fontfamily{lmss}\selectfont \textbf{Problem Set 02}} % This is the name of the assignment
+\newcommand{\examdate}{\textbf{Due 07/05 @ 11:59pm}} % This is the due date
+\newcommand{\timelimit}{}
+\addpoints % Allows to add points up to include table at end of document
+
+\pagestyle{headandfoot} % Fancy equivalent for exam documentclass
+\firstpageheadrule % Horizontal bar in first page
+\runningheadrule % Horizontal bar in rest of pages
+\firstpageheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % 1st page header content
+\firstpagefooter{}{Page \thepage}{} % 1st page footer content
+\runningheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % Rest of pages header content
+%\runningfooter{Points earned: \makebox[1in]{\hrulefill} / \pointsonpage{\thepage} points}{}{\thepage\ of \numpages} % Rest of pages footer content
+\bracketedpoints % Puts points per question inside brackets instead of parenthesis 
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+
+\begin{document}
+\fontfamily{lmss}\selectfont
+
+We determined that (given some assumptions): $\hat{\beta}_{1}$ is distributed $\mathcal{N} \left(\beta_{1}, \dfrac{Var(u)}{\sum_{i} (x_{i} - \bar{x})^{2}}\right)$.
+$Var(u)$ is unknown since $u_{i}$ is unobservable, so we have to approximate it using the regression residuals $e_{i}$.
+Because of this, we also use the t-distribution, which is similar to the Normal distribution, but with slightly fatter tails. 
+
+We define "standard errors" as our estimate of the standard deviation of the regression coefficient. 
+The formula for a simple regression standard error of $\hat{\beta}_{1}$ is:
+
+$$\sqrt{\dfrac{\sum_{i}(u_{i}^{2})}{(n-2)\sum_{i} (x_{i} - \bar{x})^{2}}}$$.
+
+\begin{questions}
+
+
+\question %01
+\textbf{We would like our standard errors to be as small as possible so we can} increase the precision of our estimates. 
+If we increased the number of observations (assuming all else is held equal), will our standard errors increase or decrease?
+
+\vspace*{\stretch{1}}
+
+\question %02
+\textbf{All else held equal, if the sample variance of $x_{i}$ decreased, should we} expect the standard errors would increase or decrease?
+
+For the sake of building intuition, we will use the following study:
+
+There are two studies designed to find the effect of a blood pressure medication on health outcomes. 
+
+Study A: 9 people take the placebo, 1 person takes the medication, so $X = (0,0,0,0,0,0,0,0,1)$
+
+Study B: 5 people take the placebo, 5 people take the medication, so $X = (0,0,0,0,0,1,1,1,1,1)$.
+
+Calculate the sample variance of $X$ in both studies (sample variance = $\dfrac{\sum_{i} (x_{i} - \bar{x})^{2}}{n - 1})$.
+Which study will yield a more confident estimate of the effect, and which study has a lower $Var(X)$?
+
+\vspace*{\stretch{1}}
+
+\newpage 
+
+\question %04
+\textbf{Inference}
+
+Say you run the following model and have the data below:
+
+$$
+    \text{Exam Score}_{i} = \beta_{0} + \beta_{1} \text{Hours Studied}_{i} + u_{i}
+$$
+
+\begin{table}[ht]
+    \centering 
+    \begin{tabular}{ccc}
+        \toprule 
+        Student & $X_{i}$ Hours Studied & $Y_{i}$ Exam Score \\
+        \midrule
+        1       &           2           &        65          \\
+        2       &           3           &        70          \\
+        3       &           5           &        75          \\
+        4       &           6           &        78          \\
+        5       &           8           &        85          \\       
+        \bottomrule 
+    \end{tabular}
+\end{table}
+
+You run the regression and receive the estimates: $\hat{\beta}_{0} = 59.35$ and $\hat{\beta}_{1} = 3.184$
+
+\begin{parts}
+    \part Recall we can estimate the variance of the error term $\sigma^{2}$ using $\dfrac{\sum_{i} \hat{u}_{i}}{n - k}$ where $n$ is the number of observations and $k$ are the number of regression parameters.   
+    What is $\sigma^{2}$ for this model?
+    \vspace*{\stretch{1}}
+    \part Calculate the Standard Error of $\hat{\beta}_{1}$
+    \vspace*{\stretch{1}}
+    \part Find the 95\% Confidence Interval for $\hat{\beta}_{1}$ using the t-value of 3.182
+    \vspace*{\stretch{1}}
+\end{parts}
+
+\question %03
+\textbf{If we decreased the variance of $u_{i}$ by including more explanatory variables}, should we expect that the standard error on $\hat{\beta}_{1}$ will increase or decrease? Why?
+\vspace*{\stretch{1}}
+
+\end{questions}
+
+\end{document}
