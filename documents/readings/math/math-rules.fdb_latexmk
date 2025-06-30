@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1751054923.20887 "/Users/joserojas/Documents/Teaching/EC320/documents/readings/math/math-rules.tex" "math-rules.pdf" "math-rules" 1751054924.14081 0
-  "/Users/joserojas/Documents/Teaching/EC320/documents/readings/math/math-rules.tex" 1751054922.97065 4251 fb329eb668ec1805bce0a43ef76c3844 ""
+["pdflatex"] 1751056197.86607 "/Users/joserojas/Documents/Teaching/EC320/documents/readings/math/math-rules.tex" "math-rules.pdf" "math-rules" 1751056198.77883 0
+  "/Users/joserojas/Documents/Teaching/EC320/documents/readings/math/math-rules.tex" 1751056197.4085 4252 8ae52510ac583e8cca04b10d230d29b6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -127,9 +127,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1734939054.00986 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1734939011 8221433 bb52dd08fc4036ad0c5bff34b43066ca ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "math-rules.aux" 1751054924.01229 257 51b5e24c6654e7413a5d3e34daff6903 "pdflatex"
-  "math-rules.out" 1751054923.75649 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "math-rules.tex" 1751054922.97065 4251 fb329eb668ec1805bce0a43ef76c3844 ""
+  "math-rules.aux" 1751056198.64331 257 51b5e24c6654e7413a5d3e34daff6903 "pdflatex"
+  "math-rules.out" 1751056198.39962 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "math-rules.tex" 1751056197.4085 4252 8ae52510ac583e8cca04b10d230d29b6 ""
   (generated)
   "math-rules.aux"
   "math-rules.log"
