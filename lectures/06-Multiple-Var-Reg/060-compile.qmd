@@ -1,0 +1,43 @@
+---
+title: "Multiple Variable Regression Analysis"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: "Jose Rojas-Fallas"
+date: last-modified
+date-format: "YYYY"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    footer: "EC320, Lecture 05 | Multi Variable Regression"
+    preview-links: auto
+    code-fold: false
+    html: true
+    embed-resources: false
+    self-contained: false
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# Prologue {.inverse .note}
+
+{{< include 061-prologue.qmd >}}
+
+# Ex. Effect of Class Sizes on Test Scores {.inverse .note}
+
+{{< include 062-class-size-ex.qmd >}}
+
+# Omitted Variable Bias {.inverse .note}
+
+{{< include 063-ovb.qmd >}}
+
+# Multiple Linear Regression {.inverse .note}
+
+{{< include 064-multi-linear-reg.qmd >}}
+
+# Multicollinearity {.inverse .note}
+
+{{< include 065-multicollinearity.qmd >}}
+
+# F-Tests {.inverse .note}
+ 
+{{< include 066-f-tests.qmd >}}

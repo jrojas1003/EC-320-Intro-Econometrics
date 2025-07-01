@@ -1,0 +1,313 @@
+---
+name: ommitted variable bias
+---
+
+## Omitted variable bias
+
+> Bias that occurs in statistical models when a relevant variable is not included in the model.
+
+
+. . .
+
+<br>
+
+[Consequence:]{.hi-red} Leads to the incorrect estimation of the relationships between variables, which may affect the reliability of the model's predictions and inferences.
+
+<br>
+
+. . .
+
+[Solution:]{.hii} [_"Control"_]{.note} for the omitted variable(s).
+
+
+
+---
+
+## {data-visibility="uncounted"}
+
+Class funding ([U]{.hi}) [confounds]{.note} our estimates of smaller class sizes ([X]{.hi}) on test scores ([Y]{.hi}). 
+<br>
+<br>
+
+![](images/dag-xyu-02.png){fig-align="center"}
+
+_Any unobserved variable_ that connects a [backdoor path]{.note} between class size ([X]{.hi}) and test scores ([Y]{.hi}) will [bias]{.hi} our [point estimate]{.note} of $\beta_1$.
+
+---
+
+## {data-visibility="uncounted"}
+
+Class funding ([U]{.hi}) [confounds]{.note} our estimates of smaller class sizes ([X]{.hi}) on test scores ([Y]{.hi}). Including data on school funding ([U]{.hi}) in a multiple linear regression allows us to close this backdoor path.
+
+![](images/dag-xyu-03.png){fig-align="center"}
+
+. . .
+
+With all backdoor paths closed, [point estimates]{.note} of $\beta_1$ will no longer be biased and will return the population parameter of interest
+
+---
+
+::: {.vertical-center}
+_In a little more detail, we can derive the bias mathematically._
+:::
+
+---
+
+## Omitted Variable Bias
+
+Imagine we have a population model of the form:
+
+$$
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 Z_i + u_i
+$$
+
+where $Z_i$ is a relevant variable that is omitted from the model.
+
+and suppose we estimate the following model:
+
+$$
+Y_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + v_i
+$$
+
+where $v_i$ is the new error term that absorbs the effect of $Z_i$
+
+
+---
+
+## Omitted Variable Bias
+
+To derive the bias of $\hat{\beta}_1$, we need to understand the relationship between $Z_i$ and $X_i$. Assume that:
+
+$$
+Z_i = \gamma_0 + \gamma_1 X_i + \varepsilon_i
+$$
+
+where $\varepsilon_i$ is the part of $Z_i$ that is uncorrelated with $X_i$
+
+. . .
+
+<br>
+
+If we substitute $Z_i$ into the population model, we get:
+
+$$
+\begin{align*}
+Y_i &= \beta_0 + \beta_1 X_i + \beta_2 \left( \gamma_0 + \gamma_1 X_i + \varepsilon_i \right) + u_i \\
+    &= \beta_0 + \beta_2 \gamma_0 + \left( \beta_1 + \beta_2 \gamma_1 \right) X_i + \beta_2 \varepsilon_i + u_i
+\end{align*}
+$$
+
+---
+
+## Omitted Variable Bias {.small}
+
+We can rewrite this expression:
+
+$$
+\begin{align*}
+Y_i &= \beta_0 + \beta_1 X_i + \beta_2 \left( \gamma_0 + \gamma_1 X_i + \varepsilon_i \right) + u_i \\
+    &= \beta_0 + \beta_2 \gamma_0 + \left( \beta_1 + \beta_2 \gamma_1 \right) X_i + \beta_2 \varepsilon_i + u_i
+\end{align*}
+$$
+
+as:
+
+$$
+Y_i = \widehat{\beta}_0 + \widehat{\beta}_1 X_i + v_i
+$$
+
+where:
+
+- $\widehat{\beta}_0 = \beta_0 + \beta_2 \gamma_0$
+- $\widehat{\beta}_1 = \beta_1 + \beta_2 \gamma_1$
+- $v_i = \beta_2 \varepsilon_i + u_i$
+
+Thus, we can see how $Z_i$ will bias our estimate of $\beta_1$
+
+---
+
+## Omitted Variable Bias
+
+Recall that we define the bias of an estimator as:
+
+$$
+\mathop{\text{Bias}}_\theta \left( W \right) = \mathop{\boldsymbol{E}}\left[ W \right] - \theta
+$$
+
+. . .
+
+The bias of the estimator $\hat{\beta}_1$ is given by:
+
+$$
+\begin{align*}
+\mathop{\text{Bias}}_{\beta_1} \left( \hat{\beta}_1 \right) &= \mathop{\boldsymbol{E}}\left[ \hat{\beta}_1 \right] - \beta_1 \\
+&= \mathop{\boldsymbol{E}}\left[ \beta_1 + \beta_2 \gamma_1 \right] - \beta_1 \\
+&= \beta_2 \gamma_1
+\end{align*}
+$$
+
+---
+
+## Omitted Variable Bias
+
+Finally, we can write the bias of $\hat{\beta}_1$ in terms of the correlation between $X_i$ and $Z_i$:
+
+$$
+\gamma_1 = \frac{\text{Cov}\left( X_i, Z_i \right)}{\text{Var}\left( X_i \right)}
+$$
+
+. . .
+
+Therefore, we can write the bias of $\hat{\beta}_1$ as:
+
+$$
+\mathop{\text{Bias}}_{\beta_1} \left( \hat{\beta}_1 \right) = \beta_2 \frac{\text{Cov}\left( X_i, Z_i \right)}{\text{Var}\left( X_i \right)}
+$$
+
+---
+
+## Signing the Bias
+
+Sometimes we're stuck with omitted variable bias.
+
+$$
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+$$
+
+When this happens, we can often at least know the direction of the bias.
+
+---
+
+## Signing the Bias {data-visiblity="uncounted"}
+
+Begin with
+
+$$
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+$$
+
+We know $\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) > 0}$. Suppose $\color{#81A1C1}{\beta_2 > 0}$ and $\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) > 0}$. Then
+
+. . .
+
+$$
+\begin{align}
+ \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(+)} \dfrac{\color{#EBCB8B}{(+)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] > \beta_1
+\end{align}
+$$
+∴ In this case, OLS is **biased upward** (estimates are too large).
+
+. . .
+
+$$
+\begin{matrix}
+ \enspace & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)> 0} & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)< 0} \\
+ \color{#81A1C1}{\beta_2 > 0} & \text{Upward} &  \\
+ \color{#81A1C1}{\beta_2 < 0} &  &
+\end{matrix}
+$$
+
+---
+
+## Signing the Bias {data-visiblity="uncounted"}
+
+Begin with
+
+$$
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+$$
+
+We know $\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) > 0}$. Suppose $\color{#81A1C1}{\beta_2 < 0}$ and $\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) > 0}$. Then
+
+. . .
+
+$$
+\begin{align}
+ \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(-)} \dfrac{\color{#EBCB8B}{(+)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] < \beta_1
+\end{align}
+$$
+∴ In this case, OLS is **biased downward** (estimates are too small).
+
+$$
+\begin{matrix}
+ \enspace & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)> 0} & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)< 0} \\
+ \color{#81A1C1}{\beta_2 > 0} & \text{Upward} &  \\
+ \color{#81A1C1}{\beta_2 < 0} & \text{Downward} &
+\end{matrix}
+$$
+
+---
+
+## Signing the Bias {data-visiblity="uncounted"}
+
+Begin with
+
+$$
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+$$
+
+We know $\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) > 0}$. Suppose $\color{#81A1C1}{\beta_2 > 0}$ and $\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) < 0}$. Then
+
+$$
+\begin{align}
+ \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(+)} \dfrac{\color{#EBCB8B}{(-)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] < \beta_1
+\end{align}
+$$
+∴ In this case, OLS is **biased downward** (estimates are too small).
+
+$$
+\begin{matrix}
+ \enspace & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)> 0} & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)< 0} \\
+ \color{#81A1C1}{\beta_2 > 0} & \text{Upward} & \text{Downward} \\
+ \color{#81A1C1}{\beta_2 < 0} & \text{Downward} &
+\end{matrix}
+$$
+
+---
+
+## Signing the Bias {data-visiblity="uncounted"}
+
+Begin with
+
+$$
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+$$
+
+We know $\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) > 0}$. Suppose $\color{#81A1C1}{\beta_2 < 0}$ and $\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) < 0}$. Then
+
+$$
+\begin{align}
+ \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(-)} \dfrac{\color{#EBCB8B}{(-)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] > \beta_1
+\end{align}
+$$
+∴ In this case, OLS is **biased upward** (estimates are too large).
+
+$$
+\begin{matrix}
+ \enspace & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)> 0} & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)< 0} \\
+ \color{#81A1C1}{\beta_2 > 0} & \text{Upward} & \text{Downward} \\
+ \color{#81A1C1}{\beta_2 < 0} & \text{Downward} & \text{Upward}
+\end{matrix}
+$$
+
+---
+
+## Signing the Bias
+
+Thus, in cases where we have a sense of
+
+1. the sign of $\mathop{\text{Cov}} \left( X_i,\,Z_i \right)$
+
+2. the sign of $\beta_2$
+
+we know in which direction bias pushes our estimates.
+
+**Direction of Bias**
+
+$$
+\begin{matrix}
+ \enspace & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)> 0} & \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)< 0} \\
+ \color{#81A1C1}{\beta_2 > 0} & \text{Upward} & \text{Downward} \\
+ \color{#81A1C1}{\beta_2 < 0} & \text{Downward} & \text{Upward}
+\end{matrix}
+$$

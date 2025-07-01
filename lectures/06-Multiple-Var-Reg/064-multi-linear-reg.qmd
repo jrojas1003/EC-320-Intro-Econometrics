@@ -1,0 +1,329 @@
+---
+name: multiple linear regression
+---
+
+## Multiple linear regression
+
+[Simple linear regression]{.note} features one [dependent variable]{.hi} and one [independent variable]{.hii}:
+
+$$
+\color{#434C5E}{Y_i} = \beta_0 + \beta_1 \color{"#81A1C1"}{X_i} + u_i
+$$
+
+[Multiple linear regression]{.note} features one [dependent variable]{.hi} and multiple [independent variables]{.hii}:
+
+$$
+\color{#434C5E}{Y_i} = \beta_0 + \beta_1 \color{"#81A1C1"}{X_{1i}} + \beta_2 \color{"#81A1C1"}{X_{2i}} + \cdots + \beta_{k} \color{"#81A1C1"}{X_{ki}} + u_i
+$$
+
+. . .
+
+This serves more than one purpose. Multiple [independent variables]{.hii} improves predictions, avoids [OVB]{.hi-red}, and better explains variation in $Y$.
+
+---
+
+## Simple Linear Regression
+
+![](images/multi-scatter-01.png){fig-align="center"}
+
+---
+
+## Add Dimension $\rightarrow$ Per Student Expenditure
+
+![](images/multi-scatter-02.png){fig-align="center"}
+
+---
+
+## Multiple Linear Regression [Ex.]{.ex}
+
+If we ignore per student expenditure (aka our original simple regression)
+
+$$
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+$$
+
+![](images/single-reg-results.png){fig-align="center"}
+
+---
+
+## Multiple Linear Regression [Ex.]{.ex}
+
+Controlling for [school funding]{.hi}
+
+$$
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + \text{Expenditure}_i+ u_i
+$$
+
+![](images/multi-reg-results.png){fig-align="center"}
+
+## OLS Estimation
+
+[Residuals]{.note} are now defined as:
+
+. . .
+
+$$
+\hat{u}_i = Y_i - \hat{\beta}_0 - \hat{\beta}_1 X_{1i} - \hat{\beta}_2 X_{2i} - \cdots - \hat{\beta}_{k} X_{ki}
+$$
+
+. . .
+
+As with SLR, OLS minimizes the sum of squared residuals ([RSS]{.hi-orange}).
+
+. . .
+
+$$
+\begin{align*}
+  \color{#D08770}{RSS} &= \sum_{i = 1}^{n} (Y_i - \hat{\beta}_0 - \hat{\beta}_1 X_{1i} - \hat{\beta}_2 X_{2i} - \cdots - \hat{\beta}_{k} X_{ki})^2 \\
+                        &= \color{#D08770}{\sum_{i=1}^n \hat{u}_i^2}
+\end{align*}
+$$
+
+which is a familiar expression.
+
+---
+
+## OLS Estimation
+
+To obtain [point estimates]{.note}: 
+
+$$
+\min_{\hat{\beta}_0,\, \hat{\beta}_1,\, \dots \, \hat{\beta}_k} \quad \color{#D08770}{\sum_{i=1}^n \hat{u}_i^2}
+$$
+
+- Take partial derivatives of RSS with respect to each $\hat{\beta}$
+- Set each derivative equal to zero
+- Solve the system of $k+1$ equations^[$k+1$ due to the intercept.].
+
+. . .
+
+The algebra is cumbersome. We let [R]{.hi} do the heavy lifting.
+
+---
+
+## Coefficient Interpretation
+
+[Model]{.hi}
+
+$$
+\color{}{Y_i} = \beta_0 + \beta_1 \color{}{X_{1i}} + \beta_2 \color{}{X_{2i}} + \cdots + \beta_{k} \color{}{X_{ki}} + u_i
+$$
+
+[Interpretation]{.hi}
+
+- The intercept $\hat{\beta}_0$ is the average value of $Y_i$ when all of the independent variables are equal to zero.
+- Slope parameters $\hat{\beta}_1, \dots, \hat{\beta}_{k}$ give us the change in $Y_i$ from a one-unit change in $X_j$, holding the other $X$ variables constant. 
+
+---
+
+## Algebraic properties of OLS
+
+The OLS first-order conditions yield the same properties as before.
+
+<br>
+
+[1.]{.note} Residuals sum to zero: $\sum_{i=1}^n \hat{u_i} = 0$.
+
+[2.]{.note} The sample covariance $X_i$ and the $\hat{u_i}$ is zero.
+
+[3.]{.note} The point $(\bar{X_1}, \bar{X_2}, \dots, \bar{X_k}, \bar{Y})$ is on the fitted regression "line."
+
+---
+
+## Goodness of fit
+
+Fitted values are defined similarly:
+
+$$
+\hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1 X_{1i} + \hat{\beta}_2 X_{2i} + \cdots + \hat{\beta}_{k} X_{ki}
+$$
+
+The formula for $R^2$ is the same as before:
+
+$$
+R^2 =\frac{\sum(\hat{Y_i}-\bar{Y})^2}{\sum(Y_i-\bar{Y})^2}
+$$
+
+---
+
+## Goodness of fit
+
+We can describe the variation explain in $Y$ with venn diagrams
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+![](images/venn-model-01.png){height=450  fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+:::
+
+::::
+
+---
+
+## Goodness of fit
+
+We can describe the variation explain in $Y$ with venn diagrams
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+![](images/venn-model-02.png){height=450 fig-align="center"}
+:::
+
+::: {.column width="50%" .vertical-center}
+As we add more variables, we are able to explain more "chunks" of the variation in $y$
+:::
+
+::::
+
+---
+
+##
+
+::: {.vertical-center}
+[Problem:]{.hi-red} As we add variables to our model, $R^2$ *mechanically* increases.
+
+<br>
+
+[Let me show you this [problem]{.hi-red} with a [simulation]{.hii}]{.fragment}
+
+:::
+
+---
+
+##
+
+::: {.vertical-center}
+Simulate a dataset of 10,000 observations on $y$ and 1,000 random $x_k$ variables, where 
+
+$$
+y \perp x_k \quad \forall x_k \; \text{s.t.} \; k = 1, 2, \dots, 1000
+$$
+
+<br>
+
+[We have 1,000 independent variables that are [independent]{.note} to the dependent variable.]{.fragment} [Each $x_k$ has no relationship to $y$ whatsoever.]{.fragment}
+
+:::
+
+---
+
+
+[Problem:]{.hi-red} As we add variables to our model, $\color{#314f4f}{R^2}$ *mechanically* increases.
+
+[Pseudo-code:]{.mono}
+
+::: {.pseudocode}
+Generate 10,000 obs. on $y$
+
+Generate 10,000 obs. on variables $x_1$ through $x_{1000}$
+
+<br>
+
+Regressions:
+
+- LM<sub>1</sub>: Regress $y$ of $x_1$; record $R^2$
+- LM<sub>2</sub>: Regress $y$ of $x_1$ and $x_2$; record $R^2$
+- ...
+- LM<sub>1000</sub>: Regress $y$ on $x_1$, $x_2$, ..., $x_{1000}$; record $R^2$
+:::
+
+---
+
+##
+
+[Problem:]{.hi-red} As we add variables to our model, $R^2$ *mechanically* increases.
+
+<br>
+
+![](images/more-vars-r2.png){fig-align="center"}
+
+---
+
+## {data-visibility="uncounted"}
+
+[Problem:]{.hi-red} As we add variables to our model, $R^2$ *mechanically* increases.
+
+[One solution:]{.hii} Penalize for the number of variables, _e.g._, adjusted $R^2$:
+
+![](images/adjusted-r2.png){fig-align="center"}
+
+---
+
+## Goodness of fit
+
+[Problem:]{.hi-red} As we add variables to our model, $R^2$ *mechanically* increases.
+
+[One solution:]{.hii} Penalize for the number of variables, _e.g._, adjusted $R^2$:
+
+$$
+\bar{R}^2 = 1 - \dfrac{\sum_i \left( Y_i - \hat{Y}_i \right)^2/(n-k-1)}{\sum_i \left( Y_i - \bar{Y} \right)^2/(n-1)}
+$$
+
+<br><br>
+
+*Note:* Adjusted $R^2$ need not be between 0 and 1.
+
+---
+
+## Multiple regression
+
+There are [tradeoffs]{.hi} to remember as we add/remove variables:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Fewer variables]{.hi-red}
+
+- Explains less variation in $y$
+- Provide simple interpretations and visualizations
+- More worried about omitted-variable bias
+:::
+
+::: {.column width="50%"}
+[More variables]{.hii}
+
+- More likely to find _spurious_ relationships^[Spurious meaning _statistically significant_ by coincidence---not reflective of true, population-level relationship]
+- More difficult interpretation
+- The [variance]{.note} of our [point estimates]{.note} will be bigger
+- We still might have omitted-variable bias
+:::
+
+::::
+
+---
+
+## Multiple regression {data-visibility="uncounted"}
+
+There are [tradeoffs]{.hi} to remember as we add/remove variables:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Fewer variables]{.hi-red}
+
+- Explains less variation in $y$
+- Provide simple interpretations and visualizations
+- More worried about omitted-variable bias
+:::
+
+::: {.column width="50%"}
+[More variables]{.hii}
+
+- More likely to find _spurious_ relationships^[Spurious meaning _statistically significant_ by coincidence---not reflective of true, population-level relationship]
+- More difficult interpretation
+- [The variance of our point estimates will be bigger]{.hi}
+- We still might have omitted-variable bias
+:::
+
+::::

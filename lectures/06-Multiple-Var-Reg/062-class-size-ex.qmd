@@ -1,0 +1,251 @@
+---
+name: class size example
+---
+
+## 
+
+::: {.vertical-center}
+[Empirical question:]{.note}
+
+: What improvement do smaller class sizes have on student test scores, if any?
+:::
+
+---
+
+## [Ex.]{.ex} [Effect of class sizes on test scores]{.hi}
+
+Estimate effect of class size on test scores with the following:
+
+$$
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+$$
+
+<br>
+
+. . .
+
+[Data:]{.hi} Test performance and class across school districts in MA
+
+- Scores: 4th grade test scores agg. across reading, math, and science
+- Class size: Ratio of number of students to teachers
+
+<br>
+
+. . .
+
+Always plot your data first
+
+---
+
+![](images/ex-raw-data.png){fig-align="center"}
+
+[Raw Data]{.hi .align-left}
+
+---
+
+![](images/ex-raw-linear.png){fig-align="center"}
+
+[Fitting OLS]{.hi .align-left}
+
+---
+
+## [Ex.]{.ex} [Effect of class sizes on test scores]{.hi}
+
+Estimate effect of class size on test scores with the following:
+
+$$
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+$$
+
+<br>
+
+[Q.]{.note} _How might smaller class sizes influence test scores?_
+
+. . .
+
+[A.]{.note} More personalized teaching, less classroom disruptions etc.
+
+. . .
+
+<br>
+
+[Q.]{.note} _What sign would we expect on $\beta_1$?_
+
+. . .
+
+[A.]{.note}  
+
+$$
+\beta_1 < 0
+$$
+
+---
+
+## 
+
+Smaller class sizes ([X]{.hi}) increases test scores ([Y]{.hi}) 
+<br>
+<br>
+
+![](images/dag-xy.png){fig-align="center"}
+
+---
+
+## [Ex.]{.ex} [Effect of class sizes on test scores]{.hi} {data-visibility="uncounted"}
+
+Estimate effect of class size on test scores with the following:
+
+$$
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+$$
+
+<br>
+
+[Q.]{.note} _Do we think $\beta_1$ will be a good guess of the underlying population parameter?_
+
+. . .
+
+[A.]{.note} In $u_i$, several variables are correlated with class size and test scores
+
+[Such as...]{.fragment} [school funding]{.fragment .hi}[, which might affect:]{.fragment}
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Textbooks
+- Computers
+:::
+
+::: {.column width="50%"}
+- Teacher salary
+- Attract high income parents
+:::
+
+::::
+
+---
+
+## {data-visibility="uncounted"}
+
+Smaller class sizes ([X]{.hi}) increases test scores ([Y]{.hi}) 
+<br>
+<br>
+
+![](images/dag-xy.png){fig-align="center"}
+
+---
+
+## {data-visibility="uncounted"}
+
+Smaller class sizes ([X]{.hi}) increases test scores ([Y]{.hi}) along with greater school funding ([U]{.hi})
+
+![](images/dag-xyu-01.png){fig-align="center"}
+
+---
+
+## {data-visibility="uncounted"}
+
+Smaller class sizes ([X]{.hi}) increases test scores ([Y]{.hi}) along with greater school funding ([U]{.hi}). And, school funding ([U]{.hi}) is correlated with test scores ([X]{.hi}).
+
+![](images/dag-xyu-02.png){fig-align="center"}
+
+::: {.fragment}
+_Any unobserved variable_ that connects a [backdoor path]{.note} between class size ([X]{.hi}) and test scores ([Y]{.hi}) will [bias]{.hi} our [point estimate]{.note} of $\beta_1$.
+:::
+
+---
+
+## {data-visibility="uncounted"}
+
+_Any unobserved variable_ that connects a [backdoor path]{.note} between class size ([X]{.hi}) and test scores ([Y]{.hi}) will [bias]{.hi} our [point estimate]{.note} of $\beta_1$. [Why?]{.fragment .note}
+
+<br>
+
+[A1.]{.note} Linearity
+
+[A2.]{.note} Sample Variation
+
+[A3.]{.note} Exogeniety
+
+[A4.]{.note} Homoskedasticity
+
+[A5.]{.note} Non-autocorrelation
+
+[A6.]{.note} Normality
+
+
+---
+
+## {data-visibility="uncounted"}
+
+_Any unobserved variable_ that connects a [backdoor path]{.note} between class size ([X]{.hi}) and test scores ([Y]{.hi}) will [bias]{.hi} our [point estimate]{.note} of $\beta_1$. [Why?]{.note}
+
+<br>
+
+[A1.]{.note} Linearity
+
+[A2.]{.note} Sample Variation
+
+[A3.]{.note} [Exogeniety: The $X$ variable is exogenous]{.hi-red}
+
+[A4.]{.note} Homoskedasticity
+
+[A5.]{.note} Non-autocorrelation
+
+[A6.]{.note} Normality
+
+---
+
+## {data-visibility="uncounted"}
+
+
+_Any unobserved variable_ that connects a [backdoor path]{.note} between class size ([X]{.hi}) and test scores ([Y]{.hi}) will [bias]{.hi} our [point estimate]{.note} of $\beta_1$. [Why?]{.note}
+
+<br>
+
+[A.]{.note} Because is [violates the exogeniety assumption]{.hi-red}
+
+$$
+\mathop{\mathbb{E}}\left( u|\text{Class Size} \right) \neq 0
+$$
+
+Correlation between class size and school funding ($u_i$) is not zero.
+
+
+---
+
+## {data-visibility="uncounted"}
+
+Graphically...
+Valid exogeniety, _i.e._, $\mathop{\mathbb{E}}\left( u \mid X \right) = 0$
+
+<br>
+
+![](images/sim-data-valid-exo.png){fig-align="center"}
+
+---
+
+## {data-visibility="uncounted"}
+
+Graphically...
+Invalid exogeniety, _i.e._, $\mathop{\mathbb{E}}\left( u \mid X \right) \neq 0$
+
+<br>
+
+![](images/sim-data-no-exo.png){fig-align="center"}
+
+---
+
+## {data-visibility="uncounted"}
+
+What the actual data looks like: 
+
+![](images/actual-data.png){fig-align="center"}
+
+---
+
+::: {.vertical-center}
+This violation has a name. [We call it [omitted variable bias]{.note}]{.fragment}
+:::
