@@ -49,3 +49,14 @@ title: "Lectures"
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
+
+### Multiple Variable Regressions
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="06-Multiple-Var-Reg/060-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
