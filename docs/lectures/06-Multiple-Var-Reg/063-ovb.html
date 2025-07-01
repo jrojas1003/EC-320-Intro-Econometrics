@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lectures – EC 320 - Intro. Econometrics</title>
+<title>ovb – EC 320 - Intro. Econometrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../UO-icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 320 - Intro. Econometrics</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../lectures/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/readings/index.html"> 
+    <a class="nav-link" href="../../documents/readings/index.html"> 
 <span class="menu-text">Readings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -123,13 +152,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a>
-  <ul class="collapse">
-  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables">Random Variables</a></li>
-  <li><a href="#estimators" id="toc-estimators" class="nav-link" data-scroll-target="#estimators">Estimators</a></li>
-  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
-  <li><a href="#multiple-variable-regressions" id="toc-multiple-variable-regressions" class="nav-link" data-scroll-target="#multiple-variable-regressions">Multiple Variable Regressions</a></li>
-  </ul></li>
+  <li><a href="#omitted-variable-bias" id="toc-omitted-variable-bias" class="nav-link active" data-scroll-target="#omitted-variable-bias">Omitted variable bias</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#omitted-variable-bias-1" id="toc-omitted-variable-bias-1" class="nav-link" data-scroll-target="#omitted-variable-bias-1">Omitted Variable Bias</a></li>
+  <li><a href="#omitted-variable-bias-2" id="toc-omitted-variable-bias-2" class="nav-link" data-scroll-target="#omitted-variable-bias-2">Omitted Variable Bias</a></li>
+  <li><a href="#omitted-variable-bias-3" id="toc-omitted-variable-bias-3" class="nav-link" data-scroll-target="#omitted-variable-bias-3">Omitted Variable Bias</a></li>
+  <li><a href="#omitted-variable-bias-4" id="toc-omitted-variable-bias-4" class="nav-link" data-scroll-target="#omitted-variable-bias-4">Omitted Variable Bias</a></li>
+  <li><a href="#omitted-variable-bias-5" id="toc-omitted-variable-bias-5" class="nav-link" data-scroll-target="#omitted-variable-bias-5">Omitted Variable Bias</a></li>
+  <li><a href="#signing-the-bias" id="toc-signing-the-bias" class="nav-link" data-scroll-target="#signing-the-bias">Signing the Bias</a></li>
+  <li><a href="#signing-the-bias-1" id="toc-signing-the-bias-1" class="nav-link" data-scroll-target="#signing-the-bias-1">Signing the Bias</a></li>
+  <li><a href="#signing-the-bias-2" id="toc-signing-the-bias-2" class="nav-link" data-scroll-target="#signing-the-bias-2">Signing the Bias</a></li>
+  <li><a href="#signing-the-bias-3" id="toc-signing-the-bias-3" class="nav-link" data-scroll-target="#signing-the-bias-3">Signing the Bias</a></li>
+  <li><a href="#signing-the-bias-4" id="toc-signing-the-bias-4" class="nav-link" data-scroll-target="#signing-the-bias-4">Signing the Bias</a></li>
+  <li><a href="#signing-the-bias-5" id="toc-signing-the-bias-5" class="nav-link" data-scroll-target="#signing-the-bias-5">Signing the Bias</a></li>
   </ul>
 </nav>
 </nav>
@@ -138,79 +174,249 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lectures</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="theory" class="level2">
-<h2 class="anchored" data-anchor-id="theory">Theory</h2>
-<section id="random-variables" class="level3">
-<h3 class="anchored" data-anchor-id="random-variables">Random Variables</h3>
-<div>
-  <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/01-Random-Variables/010-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<section id="omitted-variable-bias" class="level2">
+<h2 class="anchored" data-anchor-id="omitted-variable-bias">Omitted variable bias</h2>
+<blockquote class="blockquote">
+<p>Bias that occurs in statistical models when a relevant variable is not included in the model.</p>
+</blockquote>
+<p>. . .</p>
+<p><br></p>
+<p><span class="hi-red">Consequence:</span> Leads to the incorrect estimation of the relationships between variables, which may affect the reliability of the model’s predictions and inferences.</p>
+<p><br></p>
+<p>. . .</p>
+<p><span class="hii">Solution:</span> <span class="note"><em>“Control”</em></span> for the omitted variable(s).</p>
+<hr>
 </section>
-<section id="estimators" class="level3">
-<h3 class="anchored" data-anchor-id="estimators">Estimators</h3>
-<section id="part-i" class="level4">
-<h4 class="anchored" data-anchor-id="part-i">Part I</h4>
-<div>
-  <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="section" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section"></h2>
+<p>Class funding (<span class="hi">U</span>) <span class="note">confounds</span> our estimates of smaller class sizes (<span class="hi">X</span>) on test scores (<span class="hi">Y</span>). <br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xyu-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/03-Estimators-01/030-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<p><em>Any unobserved variable</em> that connects a <span class="note">backdoor path</span> between class size (<span class="hi">X</span>) and test scores (<span class="hi">Y</span>) will <span class="hi">bias</span> our <span class="note">point estimate</span> of <span class="math inline">\(\beta_1\)</span>.</p>
+<hr>
 </section>
-<section id="part-ii" class="level4">
-<h4 class="anchored" data-anchor-id="part-ii">Part II</h4>
-<div>
-  <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="section-1" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-1"></h2>
+<p>Class funding (<span class="hi">U</span>) <span class="note">confounds</span> our estimates of smaller class sizes (<span class="hi">X</span>) on test scores (<span class="hi">Y</span>). Including data on school funding (<span class="hi">U</span>) in a multiple linear regression allows us to close this backdoor path.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xyu-03.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/04-Estimators-02/040-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-</section>
-<section id="inference" class="level3">
-<h3 class="anchored" data-anchor-id="inference">Inference</h3>
-<div>
-  <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<p>. . .</p>
+<p>With all backdoor paths closed, <span class="note">point estimates</span> of <span class="math inline">\(\beta_1\)</span> will no longer be biased and will return the population parameter of interest</p>
+<hr>
+<div class="vertical-center">
+<p><em>In a little more detail, we can derive the bias mathematically.</em></p>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/05-Inference/050-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<hr>
 </section>
-<section id="multiple-variable-regressions" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-variable-regressions">Multiple Variable Regressions</h3>
-<div>
-  <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/06-Multiple-Var-Reg/060-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<section id="omitted-variable-bias-1" class="level2">
+<h2 class="anchored" data-anchor-id="omitted-variable-bias-1">Omitted Variable Bias</h2>
+<p>Imagine we have a population model of the form:</p>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 Z_i + u_i
+\]</span></p>
+<p>where <span class="math inline">\(Z_i\)</span> is a relevant variable that is omitted from the model.</p>
+<p>and suppose we estimate the following model:</p>
+<p><span class="math display">\[
+Y_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + v_i
+\]</span></p>
+<p>where <span class="math inline">\(v_i\)</span> is the new error term that absorbs the effect of <span class="math inline">\(Z_i\)</span></p>
+<hr>
+</section>
+<section id="omitted-variable-bias-2" class="level2">
+<h2 class="anchored" data-anchor-id="omitted-variable-bias-2">Omitted Variable Bias</h2>
+<p>To derive the bias of <span class="math inline">\(\hat{\beta}_1\)</span>, we need to understand the relationship between <span class="math inline">\(Z_i\)</span> and <span class="math inline">\(X_i\)</span>. Assume that:</p>
+<p><span class="math display">\[
+Z_i = \gamma_0 + \gamma_1 X_i + \varepsilon_i
+\]</span></p>
+<p>where <span class="math inline">\(\varepsilon_i\)</span> is the part of <span class="math inline">\(Z_i\)</span> that is uncorrelated with <span class="math inline">\(X_i\)</span></p>
+<p>. . .</p>
+<p><br></p>
+<p>If we substitute <span class="math inline">\(Z_i\)</span> into the population model, we get:</p>
+<p><span class="math display">\[
+\begin{align*}
+Y_i &amp;= \beta_0 + \beta_1 X_i + \beta_2 \left( \gamma_0 + \gamma_1 X_i + \varepsilon_i \right) + u_i \\
+    &amp;= \beta_0 + \beta_2 \gamma_0 + \left( \beta_1 + \beta_2 \gamma_1 \right) X_i + \beta_2 \varepsilon_i + u_i
+\end{align*}
+\]</span></p>
+<hr>
+</section>
+<section id="omitted-variable-bias-3" class="level2 small">
+<h2 class="small anchored" data-anchor-id="omitted-variable-bias-3">Omitted Variable Bias</h2>
+<p>We can rewrite this expression:</p>
+<p><span class="math display">\[
+\begin{align*}
+Y_i &amp;= \beta_0 + \beta_1 X_i + \beta_2 \left( \gamma_0 + \gamma_1 X_i + \varepsilon_i \right) + u_i \\
+    &amp;= \beta_0 + \beta_2 \gamma_0 + \left( \beta_1 + \beta_2 \gamma_1 \right) X_i + \beta_2 \varepsilon_i + u_i
+\end{align*}
+\]</span></p>
+<p>as:</p>
+<p><span class="math display">\[
+Y_i = \widehat{\beta}_0 + \widehat{\beta}_1 X_i + v_i
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\widehat{\beta}_0 = \beta_0 + \beta_2 \gamma_0\)</span></li>
+<li><span class="math inline">\(\widehat{\beta}_1 = \beta_1 + \beta_2 \gamma_1\)</span></li>
+<li><span class="math inline">\(v_i = \beta_2 \varepsilon_i + u_i\)</span></li>
+</ul>
+<p>Thus, we can see how <span class="math inline">\(Z_i\)</span> will bias our estimate of <span class="math inline">\(\beta_1\)</span></p>
+<hr>
+</section>
+<section id="omitted-variable-bias-4" class="level2">
+<h2 class="anchored" data-anchor-id="omitted-variable-bias-4">Omitted Variable Bias</h2>
+<p>Recall that we define the bias of an estimator as:</p>
+<p><span class="math display">\[
+\mathop{\text{Bias}}_\theta \left( W \right) = \mathop{\boldsymbol{E}}\left[ W \right] - \theta
+\]</span></p>
+<p>. . .</p>
+<p>The bias of the estimator <span class="math inline">\(\hat{\beta}_1\)</span> is given by:</p>
+<p><span class="math display">\[
+\begin{align*}
+\mathop{\text{Bias}}_{\beta_1} \left( \hat{\beta}_1 \right) &amp;= \mathop{\boldsymbol{E}}\left[ \hat{\beta}_1 \right] - \beta_1 \\
+&amp;= \mathop{\boldsymbol{E}}\left[ \beta_1 + \beta_2 \gamma_1 \right] - \beta_1 \\
+&amp;= \beta_2 \gamma_1
+\end{align*}
+\]</span></p>
+<hr>
+</section>
+<section id="omitted-variable-bias-5" class="level2">
+<h2 class="anchored" data-anchor-id="omitted-variable-bias-5">Omitted Variable Bias</h2>
+<p>Finally, we can write the bias of <span class="math inline">\(\hat{\beta}_1\)</span> in terms of the correlation between <span class="math inline">\(X_i\)</span> and <span class="math inline">\(Z_i\)</span>:</p>
+<p><span class="math display">\[
+\gamma_1 = \frac{\text{Cov}\left( X_i, Z_i \right)}{\text{Var}\left( X_i \right)}
+\]</span></p>
+<p>. . .</p>
+<p>Therefore, we can write the bias of <span class="math inline">\(\hat{\beta}_1\)</span> as:</p>
+<p><span class="math display">\[
+\mathop{\text{Bias}}_{\beta_1} \left( \hat{\beta}_1 \right) = \beta_2 \frac{\text{Cov}\left( X_i, Z_i \right)}{\text{Var}\left( X_i \right)}
+\]</span></p>
+<hr>
+</section>
+<section id="signing-the-bias" class="level2">
+<h2 class="anchored" data-anchor-id="signing-the-bias">Signing the Bias</h2>
+<p>Sometimes we’re stuck with omitted variable bias.</p>
+<p><span class="math display">\[
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+\]</span></p>
+<p>When this happens, we can often at least know the direction of the bias.</p>
+<hr>
+</section>
+<section id="signing-the-bias-1" class="level2" data-visiblity="uncounted">
+<h2 data-visiblity="uncounted" class="anchored" data-anchor-id="signing-the-bias-1">Signing the Bias</h2>
+<p>Begin with</p>
+<p><span class="math display">\[
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+\]</span></p>
+<p>We know <span class="math inline">\(\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) &gt; 0}\)</span>. Suppose <span class="math inline">\(\color{#81A1C1}{\beta_2 &gt; 0}\)</span> and <span class="math inline">\(\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) &gt; 0}\)</span>. Then</p>
+<p>. . .</p>
+<p><span class="math display">\[
+\begin{align}
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(+)} \dfrac{\color{#EBCB8B}{(+)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] &gt; \beta_1
+\end{align}
+\]</span> ∴ In this case, OLS is <strong>biased upward</strong> (estimates are too large).</p>
+<p>. . .</p>
+<p><span class="math display">\[
+\begin{matrix}
+\enspace &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&gt; 0} &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&lt; 0} \\
+\color{#81A1C1}{\beta_2 &gt; 0} &amp; \text{Upward} &amp;  \\
+\color{#81A1C1}{\beta_2 &lt; 0} &amp;  &amp;
+\end{matrix}
+\]</span></p>
+<hr>
+</section>
+<section id="signing-the-bias-2" class="level2" data-visiblity="uncounted">
+<h2 data-visiblity="uncounted" class="anchored" data-anchor-id="signing-the-bias-2">Signing the Bias</h2>
+<p>Begin with</p>
+<p><span class="math display">\[
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+\]</span></p>
+<p>We know <span class="math inline">\(\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) &gt; 0}\)</span>. Suppose <span class="math inline">\(\color{#81A1C1}{\beta_2 &lt; 0}\)</span> and <span class="math inline">\(\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) &gt; 0}\)</span>. Then</p>
+<p>. . .</p>
+<p><span class="math display">\[
+\begin{align}
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(-)} \dfrac{\color{#EBCB8B}{(+)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] &lt; \beta_1
+\end{align}
+\]</span> ∴ In this case, OLS is <strong>biased downward</strong> (estimates are too small).</p>
+<p><span class="math display">\[
+\begin{matrix}
+\enspace &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&gt; 0} &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&lt; 0} \\
+\color{#81A1C1}{\beta_2 &gt; 0} &amp; \text{Upward} &amp;  \\
+\color{#81A1C1}{\beta_2 &lt; 0} &amp; \text{Downward} &amp;
+\end{matrix}
+\]</span></p>
+<hr>
+</section>
+<section id="signing-the-bias-3" class="level2" data-visiblity="uncounted">
+<h2 data-visiblity="uncounted" class="anchored" data-anchor-id="signing-the-bias-3">Signing the Bias</h2>
+<p>Begin with</p>
+<p><span class="math display">\[
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+\]</span></p>
+<p>We know <span class="math inline">\(\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) &gt; 0}\)</span>. Suppose <span class="math inline">\(\color{#81A1C1}{\beta_2 &gt; 0}\)</span> and <span class="math inline">\(\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) &lt; 0}\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{align}
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(+)} \dfrac{\color{#EBCB8B}{(-)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] &lt; \beta_1
+\end{align}
+\]</span> ∴ In this case, OLS is <strong>biased downward</strong> (estimates are too small).</p>
+<p><span class="math display">\[
+\begin{matrix}
+\enspace &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&gt; 0} &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&lt; 0} \\
+\color{#81A1C1}{\beta_2 &gt; 0} &amp; \text{Upward} &amp; \text{Downward} \\
+\color{#81A1C1}{\beta_2 &lt; 0} &amp; \text{Downward} &amp;
+\end{matrix}
+\]</span></p>
+<hr>
+</section>
+<section id="signing-the-bias-4" class="level2" data-visiblity="uncounted">
+<h2 data-visiblity="uncounted" class="anchored" data-anchor-id="signing-the-bias-4">Signing the Bias</h2>
+<p>Begin with</p>
+<p><span class="math display">\[
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \beta_2 \dfrac{ \mathop{\text{Cov}} \left( X_i,\, Z_i \right)}{\mathop{\text{Var}} \left( X_i \right)}
+\]</span></p>
+<p>We know <span class="math inline">\(\color{#8FBCBB}{\mathop{\text{Var}} \left( X_i \right) &gt; 0}\)</span>. Suppose <span class="math inline">\(\color{#81A1C1}{\beta_2 &lt; 0}\)</span> and <span class="math inline">\(\color{#EBCB8B}{\mathop{\text{Cov}} \left( X_i,\,Z_i \right) &lt; 0}\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{align}
+\mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] = \beta_1 + \color{#81A1C1}{(-)} \dfrac{\color{#EBCB8B}{(-)}}{\color{#8FBCBB}{(+)}} \implies \mathop{\boldsymbol{E}} \left[ \hat{\beta}_1 \right] &gt; \beta_1
+\end{align}
+\]</span> ∴ In this case, OLS is <strong>biased upward</strong> (estimates are too large).</p>
+<p><span class="math display">\[
+\begin{matrix}
+\enspace &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&gt; 0} &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&lt; 0} \\
+\color{#81A1C1}{\beta_2 &gt; 0} &amp; \text{Upward} &amp; \text{Downward} \\
+\color{#81A1C1}{\beta_2 &lt; 0} &amp; \text{Downward} &amp; \text{Upward}
+\end{matrix}
+\]</span></p>
+<hr>
+</section>
+<section id="signing-the-bias-5" class="level2">
+<h2 class="anchored" data-anchor-id="signing-the-bias-5">Signing the Bias</h2>
+<p>Thus, in cases where we have a sense of</p>
+<ol type="1">
+<li><p>the sign of <span class="math inline">\(\mathop{\text{Cov}} \left( X_i,\,Z_i \right)\)</span></p></li>
+<li><p>the sign of <span class="math inline">\(\beta_2\)</span></p></li>
+</ol>
+<p>we know in which direction bias pushes our estimates.</p>
+<p><strong>Direction of Bias</strong></p>
+<p><span class="math display">\[
+\begin{matrix}
+\enspace &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&gt; 0} &amp; \color{#EBCB8B}{\text{Cov}(X_i,\,Z_i)&lt; 0} \\
+\color{#81A1C1}{\beta_2 &gt; 0} &amp; \text{Upward} &amp; \text{Downward} \\
+\color{#81A1C1}{\beta_2 &lt; 0} &amp; \text{Downward} &amp; \text{Upward}
+\end{matrix}
+\]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

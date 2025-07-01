@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lectures – EC 320 - Intro. Econometrics</title>
+<title>class-size-ex – EC 320 - Intro. Econometrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../UO-icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 320 - Intro. Econometrics</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../lectures/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/readings/index.html"> 
+    <a class="nav-link" href="../../documents/readings/index.html"> 
 <span class="menu-text">Readings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -123,13 +152,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a>
-  <ul class="collapse">
-  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables">Random Variables</a></li>
-  <li><a href="#estimators" id="toc-estimators" class="nav-link" data-scroll-target="#estimators">Estimators</a></li>
-  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
-  <li><a href="#multiple-variable-regressions" id="toc-multiple-variable-regressions" class="nav-link" data-scroll-target="#multiple-variable-regressions">Multiple Variable Regressions</a></li>
-  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#ex.-effect-of-class-sizes-on-test-scores" id="toc-ex.-effect-of-class-sizes-on-test-scores" class="nav-link" data-scroll-target="#ex.-effect-of-class-sizes-on-test-scores"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></a></li>
+  <li><a href="#ex.-effect-of-class-sizes-on-test-scores-1" id="toc-ex.-effect-of-class-sizes-on-test-scores-1" class="nav-link" data-scroll-target="#ex.-effect-of-class-sizes-on-test-scores-1"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#ex.-effect-of-class-sizes-on-test-scores-2" id="toc-ex.-effect-of-class-sizes-on-test-scores-2" class="nav-link" data-scroll-target="#ex.-effect-of-class-sizes-on-test-scores-2"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9"></a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10"></a></li>
   </ul>
 </nav>
 </nav>
@@ -138,79 +174,216 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lectures</h1>
+
+
+
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="vertical-center">
+<dl>
+<dt><span class="note">Empirical question:</span></dt>
+<dd>
+<p>What improvement do smaller class sizes have on student test scores, if any?</p>
+</dd>
+</dl>
+</div>
+<hr>
+</section>
+<section id="ex.-effect-of-class-sizes-on-test-scores" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-class-sizes-on-test-scores"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></h2>
+<p>Estimate effect of class size on test scores with the following:</p>
+<p><span class="math display">\[
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+\]</span></p>
+<p><br></p>
+<p>. . .</p>
+<p><span class="hi">Data:</span> Test performance and class across school districts in MA</p>
+<ul>
+<li>Scores: 4th grade test scores agg. across reading, math, and science</li>
+<li>Class size: Ratio of number of students to teachers</li>
+</ul>
+<p><br></p>
+<p>. . .</p>
+<p>Always plot your data first</p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ex-raw-data.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="hi align-left">Raw Data</span></p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ex-raw-linear.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="hi align-left">Fitting OLS</span></p>
+<hr>
+</section>
+<section id="ex.-effect-of-class-sizes-on-test-scores-1" class="level2">
+<h2 class="anchored" data-anchor-id="ex.-effect-of-class-sizes-on-test-scores-1"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></h2>
+<p>Estimate effect of class size on test scores with the following:</p>
+<p><span class="math display">\[
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+\]</span></p>
+<p><br></p>
+<p><span class="note">Q.</span> <em>How might smaller class sizes influence test scores?</em></p>
+<p>. . .</p>
+<p><span class="note">A.</span> More personalized teaching, less classroom disruptions etc.</p>
+<p>. . .</p>
+<p><br></p>
+<p><span class="note">Q.</span> <em>What sign would we expect on <span class="math inline">\(\beta_1\)</span>?</em></p>
+<p>. . .</p>
+<p><span class="note">A.</span></p>
+<p><span class="math display">\[
+\beta_1 &lt; 0
+\]</span></p>
+<hr>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<p>Smaller class sizes (<span class="hi">X</span>) increases test scores (<span class="hi">Y</span>) <br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xy.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="ex.-effect-of-class-sizes-on-test-scores-2" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="ex.-effect-of-class-sizes-on-test-scores-2"><span class="ex">Ex.</span> <span class="hi">Effect of class sizes on test scores</span></h2>
+<p>Estimate effect of class size on test scores with the following:</p>
+<p><span class="math display">\[
+\text{Scores}_i = \beta_0 + \beta_1 \text{Class Size}_i + u_i
+\]</span></p>
+<p><br></p>
+<p><span class="note">Q.</span> <em>Do we think <span class="math inline">\(\beta_1\)</span> will be a good guess of the underlying population parameter?</em></p>
+<p>. . .</p>
+<p><span class="note">A.</span> In <span class="math inline">\(u_i\)</span>, several variables are correlated with class size and test scores</p>
+<p><span class="fragment">Such as…</span> <span class="fragment hi">school funding</span><span class="fragment">, which might affect:</span></p>
+<p>. . .</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Textbooks</li>
+<li>Computers</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Teacher salary</li>
+<li>Attract high income parents</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="section-2" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-2"></h2>
+<p>Smaller class sizes (<span class="hi">X</span>) increases test scores (<span class="hi">Y</span>) <br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xy.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="section-3" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-3"></h2>
+<p>Smaller class sizes (<span class="hi">X</span>) increases test scores (<span class="hi">Y</span>) along with greater school funding (<span class="hi">U</span>)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xyu-01.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="section-4" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-4"></h2>
+<p>Smaller class sizes (<span class="hi">X</span>) increases test scores (<span class="hi">Y</span>) along with greater school funding (<span class="hi">U</span>). And, school funding (<span class="hi">U</span>) is correlated with test scores (<span class="hi">X</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dag-xyu-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="fragment">
+<p><em>Any unobserved variable</em> that connects a <span class="note">backdoor path</span> between class size (<span class="hi">X</span>) and test scores (<span class="hi">Y</span>) will <span class="hi">bias</span> our <span class="note">point estimate</span> of <span class="math inline">\(\beta_1\)</span>.</p>
+</div>
+<hr>
+</section>
+<section id="section-5" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-5"></h2>
+<p><em>Any unobserved variable</em> that connects a <span class="note">backdoor path</span> between class size (<span class="hi">X</span>) and test scores (<span class="hi">Y</span>) will <span class="hi">bias</span> our <span class="note">point estimate</span> of <span class="math inline">\(\beta_1\)</span>. <span class="fragment note">Why?</span></p>
+<p><br></p>
+<p><span class="note">A1.</span> Linearity</p>
+<p><span class="note">A2.</span> Sample Variation</p>
+<p><span class="note">A3.</span> Exogeniety</p>
+<p><span class="note">A4.</span> Homoskedasticity</p>
+<p><span class="note">A5.</span> Non-autocorrelation</p>
+<p><span class="note">A6.</span> Normality</p>
+<hr>
+</section>
+<section id="section-6" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-6"></h2>
+<p><em>Any unobserved variable</em> that connects a <span class="note">backdoor path</span> between class size (<span class="hi">X</span>) and test scores (<span class="hi">Y</span>) will <span class="hi">bias</span> our <span class="note">point estimate</span> of <span class="math inline">\(\beta_1\)</span>. <span class="note">Why?</span></p>
+<p><br></p>
+<p><span class="note">A1.</span> Linearity</p>
+<p><span class="note">A2.</span> Sample Variation</p>
+<p><span class="note">A3.</span> <span class="hi-red">Exogeniety: The <span class="math inline">\(X\)</span> variable is exogenous</span></p>
+<p><span class="note">A4.</span> Homoskedasticity</p>
+<p><span class="note">A5.</span> Non-autocorrelation</p>
+<p><span class="note">A6.</span> Normality</p>
+<hr>
+</section>
+<section id="section-7" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-7"></h2>
+<p><em>Any unobserved variable</em> that connects a <span class="note">backdoor path</span> between class size (<span class="hi">X</span>) and test scores (<span class="hi">Y</span>) will <span class="hi">bias</span> our <span class="note">point estimate</span> of <span class="math inline">\(\beta_1\)</span>. <span class="note">Why?</span></p>
+<p><br></p>
+<p><span class="note">A.</span> Because is <span class="hi-red">violates the exogeniety assumption</span></p>
+<p><span class="math display">\[
+\mathop{\mathbb{E}}\left( u|\text{Class Size} \right) \neq 0
+\]</span></p>
+<p>Correlation between class size and school funding (<span class="math inline">\(u_i\)</span>) is not zero.</p>
+<hr>
+</section>
+<section id="section-8" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-8"></h2>
+<p>Graphically… Valid exogeniety, <em>i.e.</em>, <span class="math inline">\(\mathop{\mathbb{E}}\left( u \mid X \right) = 0\)</span></p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sim-data-valid-exo.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="section-9" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-9"></h2>
+<p>Graphically… Invalid exogeniety, <em>i.e.</em>, <span class="math inline">\(\mathop{\mathbb{E}}\left( u \mid X \right) \neq 0\)</span></p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sim-data-no-exo.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="section-10" class="level2" data-visibility="uncounted">
+<h2 data-visibility="uncounted" class="anchored" data-anchor-id="section-10"></h2>
+<p>What the actual data looks like:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/actual-data.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<hr>
+<div class="vertical-center">
+<p>This violation has a name. <span class="fragment">We call it <span class="note">omitted variable bias</span></span></p>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="theory" class="level2">
-<h2 class="anchored" data-anchor-id="theory">Theory</h2>
-<section id="random-variables" class="level3">
-<h3 class="anchored" data-anchor-id="random-variables">Random Variables</h3>
-<div>
-  <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/01-Random-Variables/010-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="estimators" class="level3">
-<h3 class="anchored" data-anchor-id="estimators">Estimators</h3>
-<section id="part-i" class="level4">
-<h4 class="anchored" data-anchor-id="part-i">Part I</h4>
-<div>
-  <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/03-Estimators-01/030-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="part-ii" class="level4">
-<h4 class="anchored" data-anchor-id="part-ii">Part II</h4>
-<div>
-  <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/04-Estimators-02/040-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-</section>
-<section id="inference" class="level3">
-<h3 class="anchored" data-anchor-id="inference">Inference</h3>
-<div>
-  <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/05-Inference/050-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="multiple-variable-regressions" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-variable-regressions">Multiple Variable Regressions</h3>
-<div>
-  <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/06-Multiple-Var-Reg/060-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-
-
-</section>
 </section>
 
 </main> <!-- /main -->
