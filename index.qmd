@@ -11,16 +11,6 @@ I have begun to use a website as a main method of course delivery as it is more 
 For this course, Canvas is a glorified assignment submission site and gradebook. 
 You will find everything you need on this site by navigating the tabs above. 
 
-That said: as you can clearly see, it is still largely incomplete. 
-I aim to be as transparent as possible with students and their course so allow me to quickly explain why and how I intend for this course to run: 
-
-1. This is my first time teaching this course so I am still putting all the content together in a way that I like to teach it. 
-2. I will have a complete "Week 01" content by Tuesday evening. I am currently traveling for a conference so my time has unfortunately been drawn away. But you will not be negatively impacted. 
-3. We will be doing alternate weeks of "theory/math" and "R". The goal is to understand the reason why things work and then learn how to make them work. 
-4. A lot, and I mean a lot, of econometrics is about learning by doing. What I mean by that is that you should always attempt the math or to code things even if you do not have a clear picture of how to do things. R may become frustrating but it is a worthwhile skill to pick up. To this day I still have to refer to older code I've used for simple things such as making a graph. 
-5. LLMs, like ChatGPT, are a great tool that can assist you but it still requires you to understand the output and be able to properly implement it. Do not over rely on it. 
-
-
 ## Syllabus
 
 ```{=html}
