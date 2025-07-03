@@ -1299,14 +1299,14 @@
     "href": "index.html",
     "title": "EC320 - Introduction to Econometrics",
     "section": "",
-    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above.\nThat said: as you can clearly see, it is still largely incomplete. I aim to be as transparent as possible with students and their course so allow me to quickly explain why and how I intend for this course to run:\n\nThis is my first time teaching this course so I am still putting all the content together in a way that I like to teach it.\nI will have a complete “Week 01” content by Tuesday evening. I am currently traveling for a conference so my time has unfortunately been drawn away. But you will not be negatively impacted.\nWe will be doing alternate weeks of “theory/math” and “R”. The goal is to understand the reason why things work and then learn how to make them work.\nA lot, and I mean a lot, of econometrics is about learning by doing. What I mean by that is that you should always attempt the math or to code things even if you do not have a clear picture of how to do things. R may become frustrating but it is a worthwhile skill to pick up. To this day I still have to refer to older code I’ve used for simple things such as making a graph.\nLLMs, like ChatGPT, are a great tool that can assist you but it still requires you to understand the output and be able to properly implement it. Do not over rely on it."
+    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above."
   },
   {
     "objectID": "index.html#hello",
     "href": "index.html#hello",
     "title": "EC320 - Introduction to Econometrics",
     "section": "",
-    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above.\nThat said: as you can clearly see, it is still largely incomplete. I aim to be as transparent as possible with students and their course so allow me to quickly explain why and how I intend for this course to run:\n\nThis is my first time teaching this course so I am still putting all the content together in a way that I like to teach it.\nI will have a complete “Week 01” content by Tuesday evening. I am currently traveling for a conference so my time has unfortunately been drawn away. But you will not be negatively impacted.\nWe will be doing alternate weeks of “theory/math” and “R”. The goal is to understand the reason why things work and then learn how to make them work.\nA lot, and I mean a lot, of econometrics is about learning by doing. What I mean by that is that you should always attempt the math or to code things even if you do not have a clear picture of how to do things. R may become frustrating but it is a worthwhile skill to pick up. To this day I still have to refer to older code I’ve used for simple things such as making a graph.\nLLMs, like ChatGPT, are a great tool that can assist you but it still requires you to understand the output and be able to properly implement it. Do not over rely on it."
+    "text": "Hello! Welcome to EC 320. I am Jose Rojas-Fallas, a 4th Year PhD student in the Econ department. And welcome to the course website! I have begun to use a website as a main method of course delivery as it is more intuitive (and easier to manage) than Canvas. For this course, Canvas is a glorified assignment submission site and gradebook. You will find everything you need on this site by navigating the tabs above."
   },
   {
     "objectID": "index.html#syllabus",
@@ -1323,18 +1323,11 @@
     "text": "Summer 2025 Class Details\n\n\nInstructor: Jose Rojas-Fallas\nOffice Hours: Tues/Thurs 02:00 to 04:00 pm\n\nEmail: jrojas2@uoregon.edu\nZoom Room\n\n\n\nCourse Grade Breakdown\nFor more details, read the Syllabus above\n\n\n\nAssignment\nGrade Weight\n\n\n\n\nProblem Sets (x4)\n20%\n\n\nQuizzes (x4)\n20%\n\n\nMidterm Exam\n30%\n\n\nFinal Exam\n30%\n\n\n\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "documents/problem-sets/index.html",
-    "href": "documents/problem-sets/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "View PDF \n  \n     Download \n  \n  \n    \n  \n\n\n  Solutions \n  \n     Download \n  \n  \n    \n  \n\n\n\n\n\n  View PDF \n  \n     Download"
-  },
-  {
     "objectID": "documents/problem-sets/index.html#problem-sets",
     "href": "documents/problem-sets/index.html#problem-sets",
     "title": "Assignments",
-    "section": "",
-    "text": "View PDF \n  \n     Download \n  \n  \n    \n  \n\n\n  Solutions \n  \n     Download \n  \n  \n    \n  \n\n\n\n\n\n  View PDF \n  \n     Download"
+    "section": "Problem Sets",
+    "text": "Problem Sets\n\nPS01 (Due June 29 at 11:59pm) on Canvas\n\n  View PDF \n  \n     Download \n  \n  \n    \n  \n\n\n  Solutions \n  \n     Download \n  \n  \n    \n  \n\n\n\nPS02 (Due July 05 at 11:59pm) on Canvas\n\n  View PDF \n  \n     Download \n  \n  \n    \n  \n\n\n\nPS03\n\n\nPS04"
   },
   {
     "objectID": "documents/problem-sets/index.html#quiz",
