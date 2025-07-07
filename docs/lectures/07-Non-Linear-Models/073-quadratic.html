@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lectures – EC 320 - Intro. Econometrics</title>
+<title>quadratic – EC 320 - Intro. Econometrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../UO-icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 320 - Intro. Econometrics</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../lectures/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/readings/index.html"> 
+    <a class="nav-link" href="../../documents/readings/index.html"> 
 <span class="menu-text">Readings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -123,14 +152,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a>
-  <ul class="collapse">
-  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables">Random Variables</a></li>
-  <li><a href="#estimators" id="toc-estimators" class="nav-link" data-scroll-target="#estimators">Estimators</a></li>
-  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
-  <li><a href="#multiple-variable-regressions" id="toc-multiple-variable-regressions" class="nav-link" data-scroll-target="#multiple-variable-regressions">Multiple Variable Regressions</a></li>
-  <li><a href="#non-linear-models" id="toc-non-linear-models" class="nav-link" data-scroll-target="#non-linear-models">Non-Linear Models</a></li>
-  </ul></li>
+  <li><a href="#quadratic-variables" id="toc-quadratic-variables" class="nav-link active" data-scroll-target="#quadratic-variables">Quadratic variables</a></li>
+  <li><a href="#quadratic-variables-1" id="toc-quadratic-variables-1" class="nav-link" data-scroll-target="#quadratic-variables-1">Quadratic variables</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#quadratic-regression" id="toc-quadratic-regression" class="nav-link" data-scroll-target="#quadratic-regression">Quadratic regression</a></li>
+  <li><a href="#quadratic-regression-1" id="toc-quadratic-regression-1" class="nav-link" data-scroll-target="#quadratic-regression-1">Quadratic Regression</a></li>
+  <li><a href="#quadratic-regression-2" id="toc-quadratic-regression-2" class="nav-link" data-scroll-target="#quadratic-regression-2">Quadratic Regression</a></li>
+  <li><a href="#quadratic-regression-3" id="toc-quadratic-regression-3" class="nav-link" data-scroll-target="#quadratic-regression-3">Quadratic Regression</a></li>
+  <li><a href="#quadratic-regression-4" id="toc-quadratic-regression-4" class="nav-link" data-scroll-target="#quadratic-regression-4">Quadratic Regression</a></li>
+  <li><a href="#fitted-regression-line" id="toc-fitted-regression-line" class="nav-link" data-scroll-target="#fitted-regression-line">Fitted Regression Line</a></li>
+  <li><a href="#marginal-effect-of-x-on-y" id="toc-marginal-effect-of-x-on-y" class="nav-link" data-scroll-target="#marginal-effect-of-x-on-y">Marginal Effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span></a></li>
+  <li><a href="#quadratic-regression-5" id="toc-quadratic-regression-5" class="nav-link" data-scroll-target="#quadratic-regression-5">Quadratic regression</a></li>
   </ul>
 </nav>
 </nav>
@@ -139,88 +171,286 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lectures</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="theory" class="level2">
-<h2 class="anchored" data-anchor-id="theory">Theory</h2>
-<section id="random-variables" class="level3">
-<h3 class="anchored" data-anchor-id="random-variables">Random Variables</h3>
-<div>
-  <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/01-Random-Variables/010-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<section id="quadratic-variables" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-variables">Quadratic variables</h2>
+<p>Let’s talk about a wage regression again. <span class="fragment">Suppose we would like to estimate the effect of age on earnings. We estimate the following SLR:</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + u_i
+\]</span></p>
+<p>. . .</p>
+<p>However, maybe we believe that <span class="math inline">\(\text{Wage}_i\)</span> and <span class="math inline">\(\text{Age}_i\)</span> have some nonlinear relationship<span class="fragment">—the effect of an additional year of experience, when age is 27 vs age is 67, might be <span class="hi">different</span>.</span> <span class="fragment">So instead, we might estimate:</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + \beta_2 \text{Age}^2_i + u_i
+\]</span></p>
+<hr>
 </section>
-<section id="estimators" class="level3">
-<h3 class="anchored" data-anchor-id="estimators">Estimators</h3>
-<section id="part-i" class="level4">
-<h4 class="anchored" data-anchor-id="part-i">Part I</h4>
-<div>
-  <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/03-Estimators-01/030-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<section id="quadratic-variables-1" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-variables-1">Quadratic variables</h2>
+<p>In this model:</p>
+<p><span class="math display">\[
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + \beta_2 \text{Age}^2_i + u_i
+\]</span></p>
+<p>the effect of <span class="math inline">\(\text{Age}_i\)</span> on <span class="math inline">\(\text{Wage}_i\)</span> would be:</p>
+<p>. . .</p>
+<p><span class="math display">\[
+\frac{\partial \text{Wage}_i}{\partial \text{Age}_i} = \beta_1 + 2\beta_2 \text{Age}_i
+\]</span></p>
+<hr>
 </section>
-<section id="part-ii" class="level4">
-<h4 class="anchored" data-anchor-id="part-ii">Part II</h4>
-<div>
-  <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/quadratic-data-scatter.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/04-Estimators-02/040-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<hr>
 </section>
+<section id="quadratic-regression" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression">Quadratic regression</h2>
+<p><span class="hi">Regression Model</span></p>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + u_i
+\]</span></p>
+<p>. . .</p>
+<p><span class="note">Interpretation</span></p>
+<p>Sign of <span class="math inline">\(\beta_2\)</span> indicates whether the relationship is convex (<span class="mono">+</span>) or concave (<span class="mono">-</span>)</p>
+<p>. . .</p>
+<p>Sign of <span class="math inline">\(\beta_1\)</span>? <span class="fragment">🤷</span></p>
+<p>. . .</p>
+<p>Partial derivative of <span class="math inline">\(Y\)</span> wrt. <span class="math inline">\(X\)</span> is the <span class="hp">marginal effect</span> of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>:</p>
+<p><span class="math display">\[
+\color{#B48EAD}{\dfrac{\partial Y}{\partial X} = \beta_1 + 2 \beta_2 X}
+\]</span></p>
+<ul>
+<li>Effect of <span class="math inline">\(X\)</span> depends on the level of <span class="math inline">\(X\)</span></li>
+</ul>
+<hr>
 </section>
-<section id="inference" class="level3">
-<h3 class="anchored" data-anchor-id="inference">Inference</h3>
-<div>
-  <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="quadratic-regression-1" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression-1">Quadratic Regression</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">Std. Error</th>
+<th style="text-align: center;">Statistic</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: center;">30,046</td>
+<td style="text-align: center;">138</td>
+<td style="text-align: center;">218</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">X</td>
+<td style="text-align: center;">158.89</td>
+<td style="text-align: center;">5.81</td>
+<td style="text-align: center;">27.3</td>
+<td style="text-align: center;">2.58e-123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(X^{2}\)</span></td>
+<td style="text-align: center;">-1.50</td>
+<td style="text-align: center;">0.0564</td>
+<td style="text-align: center;">-26.6</td>
+<td style="text-align: center;">6.19e-118</td>
+</tr>
+</tbody>
+</table>
+<p><span class="hp">What is the marginal effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>?</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+    \hat{\dfrac{\partial Y}{\partial X}} = \hat{\beta}_{1} + 2 \hat{\beta}_{2} X =
+    158.89 + 2(-1.50)X =
+    158.89 - 3X
+\]</span></p>
+<p><span class="hi align-center">Depends on level of <span class="math inline">\(X\)</span></span></p>
+<hr>
+</section>
+<section id="quadratic-regression-2" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression-2">Quadratic Regression</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">Std. Error</th>
+<th style="text-align: center;">Statistic</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: center;">30,046</td>
+<td style="text-align: center;">138</td>
+<td style="text-align: center;">218</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">X</td>
+<td style="text-align: center;">158.89</td>
+<td style="text-align: center;">5.81</td>
+<td style="text-align: center;">27.3</td>
+<td style="text-align: center;">2.58e-123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(X^{2}\)</span></td>
+<td style="text-align: center;">-1.50</td>
+<td style="text-align: center;">0.0564</td>
+<td style="text-align: center;">-26.6</td>
+<td style="text-align: center;">6.19e-118</td>
+</tr>
+</tbody>
+</table>
+<p><span class="hp">What is the marginal effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>, when <span class="math inline">\(X = 0\)</span>?</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=0} = \hat{\beta}_{1} = 158.89
+\]</span></p>
+<hr>
+</section>
+<section id="quadratic-regression-3" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression-3">Quadratic Regression</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">Std. Error</th>
+<th style="text-align: center;">Statistic</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: center;">30,046</td>
+<td style="text-align: center;">138</td>
+<td style="text-align: center;">218</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">X</td>
+<td style="text-align: center;">158.89</td>
+<td style="text-align: center;">5.81</td>
+<td style="text-align: center;">27.3</td>
+<td style="text-align: center;">2.58e-123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(X^{2}\)</span></td>
+<td style="text-align: center;">-1.50</td>
+<td style="text-align: center;">0.0564</td>
+<td style="text-align: center;">-26.6</td>
+<td style="text-align: center;">6.19e-118</td>
+</tr>
+</tbody>
+</table>
+<p><span class="hp">What is the marginal effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>, when <span class="math inline">\(X = 2\)</span>?</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=2} =
+    \hat{\beta}_{1} + 2 \hat{\beta}_{2} \cdot (2) =
+    158.89 - 5.99 =
+    152.9
+\]</span></p>
+<hr>
+</section>
+<section id="quadratic-regression-4" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression-4">Quadratic Regression</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">Std. Error</th>
+<th style="text-align: center;">Statistic</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: center;">30,046</td>
+<td style="text-align: center;">138</td>
+<td style="text-align: center;">218</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">X</td>
+<td style="text-align: center;">158.89</td>
+<td style="text-align: center;">5.81</td>
+<td style="text-align: center;">27.3</td>
+<td style="text-align: center;">2.58e-123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(X^{2}\)</span></td>
+<td style="text-align: center;">-1.50</td>
+<td style="text-align: center;">0.0564</td>
+<td style="text-align: center;">-26.6</td>
+<td style="text-align: center;">6.19e-118</td>
+</tr>
+</tbody>
+</table>
+<p><span class="hp">What is the marginal effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>, when <span class="math inline">\(X = 7\)</span>?</span></p>
+<p>. . .</p>
+<p><span class="math display">\[
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=7} =
+    \hat{\beta}_{1} + 2 \hat{\beta}_{2} \cdot (7) =
+    158.89 - 20.98 =
+    137.91
+\]</span></p>
+<hr>
+</section>
+<section id="fitted-regression-line" class="level2">
+<h2 class="anchored" data-anchor-id="fitted-regression-line">Fitted Regression Line</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fitted-reg-line.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/05-Inference/050-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<hr>
 </section>
-<section id="multiple-variable-regressions" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-variable-regressions">Multiple Variable Regressions</h3>
-<div>
-  <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="marginal-effect-of-x-on-y" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-effect-of-x-on-y">Marginal Effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/marginal-effect-x-on-y.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/06-Multiple-Var-Reg/060-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<hr>
 </section>
-<section id="non-linear-models" class="level3">
-<h3 class="anchored" data-anchor-id="non-linear-models">Non-Linear Models</h3>
-<div>
-  <iframe class="slide deck" src="07-Non-Linear-Models/070-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/07-Non-Linear-Models/070-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<section id="quadratic-regression-5" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-regression-5">Quadratic regression</h2>
+<p>Where does the regression <span class="math inline">\(\hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\beta}_2 X_i^2\)</span> <span class="hi">turn?</span></p>
+<!-- - In other words, where is the peak (valley) of the fitted relationship? -->
+<p>. . .</p>
+<p><span class="note">Step 1:</span> Take the derivative and set equal to zero.</p>
+<p><span class="math display">\[
+\widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} } = \hat{\beta}_1 + 2\hat{\beta}_2 X = 0
+\]</span></p>
+<p>. . .</p>
+<p><span class="note">Step 1:</span> Solve for <span class="math inline">\(X\)</span>.</p>
+<p><span class="math display">\[
+X = -\dfrac{\hat{\beta}_1}{2\hat{\beta}_2}
+\]</span></p>
+<p>. . .</p>
+<p><span class="ex">Ex.</span> Peak of previous regression occurs at <span class="math inline">\(X = 53.02\)</span>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -4,14 +4,497 @@
     "href": "lectures/index.html",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
   },
   {
     "objectID": "lectures/index.html#theory",
     "href": "lectures/index.html#theory",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "The natural log is the inverse function for the exponential function:\n\\[\n\\quad \\log(e^x) = x \\quad \\text{for} \\quad x&gt;0\n\\]\n. . .\n(Natural) Log rules:\n1. Product rule: \\(\\log(AB) = \\log(A) + \\log(B)\\).\n. . .\n2. Quotient rule: \\(\\log(A/B) = \\log(A) - \\log(B)\\).\n. . .\n3. Power rule: \\(\\log(A^B) = B \\cdot \\log(A)\\).\n. . .\n4. Derivative: \\(f(x) = \\log(x)\\) =&gt; \\(f'(x) = \\dfrac{1}{x}\\).\n. . .\nNote: \\(\\log(e) = 1\\), \\(\\log(1) = 0\\), and \\(\\log(x)\\) is undefined for \\(x \\leq 0\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#were-going-to-take-logs",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#were-going-to-take-logs",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "The natural log is the inverse function for the exponential function:\n\\[\n\\quad \\log(e^x) = x \\quad \\text{for} \\quad x&gt;0\n\\]\n. . .\n(Natural) Log rules:\n1. Product rule: \\(\\log(AB) = \\log(A) + \\log(B)\\).\n. . .\n2. Quotient rule: \\(\\log(A/B) = \\log(A) - \\log(B)\\).\n. . .\n3. Power rule: \\(\\log(A^B) = B \\cdot \\log(A)\\).\n. . .\n4. Derivative: \\(f(x) = \\log(x)\\) =&gt; \\(f'(x) = \\dfrac{1}{x}\\).\n. . .\nNote: \\(\\log(e) = 1\\), \\(\\log(1) = 0\\), and \\(\\log(x)\\) is undefined for \\(x \\leq 0\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nNonlinear Model\n\\[\nY_i = \\alpha e^{\\beta_1 X_i}v_i\n\\]\n\n\\(Y &gt; 0\\), \\(X\\) is continuous, and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n. . .\n. . .\n\n\nLogarithmic Transformation\n\\[\n\\log(Y_i) = \\log(\\alpha) + \\beta_1 X_i + \\log(v_i)\n\\]\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\nTransformed (Linear) Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nRegression Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nInterpretation\n\nA one-unit increase in the explanatory variable increases the outcome variable by approximately \\(\\beta_1\\times 100\\) percent, on average.\n\n\nEx.\n\nIf \\(\\log(\\hat{\\text{Pay}_i}) = 2.9 + 0.03 \\cdot \\text{School}_i\\), then an additional year of schooling increases pay by approximately 3 percent, on average."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model-2",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-model-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nDerivation Consider the log-linear model\n\\[\n\\log(Y) = \\beta_0 + \\beta_1 \\, X + u\n\\]\nand differentiate\n\\[\n\\dfrac{dY}{Y} = \\beta_1 dX\n\\]\n. . .\nMarginal change in \\(X\\) (\\(dX\\)) leads to a \\(\\beta_1 dX\\) proportionate change in \\(Y\\).\n\nMultiply by 100 to get the percentage change in \\(Y\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\n\\[\n    log(\\hat{Y}_{i}) = 10.02 + 0.73 \\cdot X_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\n\\[\n    log(\\hat{Y}_{i}) = 10.02 + 0.73 \\cdot X_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear",
+    "text": "Log-Linear\nNote: If you have a log-linear model with a binary indicator variable, the interpretation of the coefficient on that variable changes. Consider\n. . .\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nfor binary variable \\(X\\).\n. . .\nInterpretation of \\(\\beta_1\\):\n\nWhen \\(X\\) changes from 0 to 1, \\(Y\\) will increase by \\(100 \\times \\left( e^{\\beta_1} -1 \\right)\\)%\nWhen \\(X\\) changes from 1 to 0, \\(Y\\) will decrease by \\(100 \\times \\left( e^{-\\beta_1} -1 \\right)\\)%"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex-2",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-linear-ex-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\nTake a binary explanatory variable: trained\n\ntrained = 1 if employee \\(i\\) received training\ntrained = 0 if employee \\(i\\) did not receive training\n\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n9.94\n0.0446\n223\n0\n\n\nTrained\n0.557\n0.0631\n8.83\n4.72e-18\n\n\n\nQ. How do we interpret the coefficient on trained?\n. . .\nA1: Trained workers are 74.52 percent more productive than untrained workers.\n. . .\nA2: Untrained workers are 42.7 percent less productive than trained workers."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-model",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-model",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Log model",
+    "text": "Log-Log model\nNonlinear Model\n\\[\nY_i = \\alpha  X_i^{\\beta_1}v_i\n\\]\n\n\\(Y &gt; 0\\), \\(X &gt; 0\\), and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n. . .\n\n\nLogarithmic Transformation\n\\[\n\\begin{align*}\n\\log(Y_i) = \\log(\\alpha) +& \\beta_1 \\log(X_i) \\\\\n                         +& \\log(v_i)\n\\end{align*}\n\\]\n\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\n\nTransformed (Linear) Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-regression-model",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-regression-model",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Log regression model",
+    "text": "Log-Log regression model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nInterpretation\n\nA one-percent increase in the explanatory variable leads to a \\(\\beta_1\\)-percent change in the outcome variable, on average.\nOften interpreted as an elasticity.\n\n\nEx.\n\nIf \\(\\log(\\widehat{\\text{Quantity Demanded}}_i) = 0.45 - 0.31 \\cdot \\log(\\text{Income}_i)\\), then each one-percent increase in income decreases quantity demanded by 0.31 percent."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-derivation",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-derivation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Log derivation",
+    "text": "Log-Log derivation\nConsider the log-log model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u\n\\]\nand differentiate\n\\[\n\\dfrac{dY}{Y} = \\beta_1 \\dfrac{dX}{X}\n\\]\nA one-percent increase in \\(X\\) leads to a \\(\\beta_1\\)-percent increase in \\(Y\\).\n\nRearrange to show elasticity interpretation:\n\n\\[\n\\dfrac{dY}{dX} \\dfrac{X}{Y} = \\beta_1\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-example",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-example",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Log Example",
+    "text": "Log-Log Example\n\\[\n    log(\\hat{Y}_{i}) = 0.01 + 2.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-example-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#log-log-example-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Log-Log Example",
+    "text": "Log-Log Example\n\\[\n    log(\\hat{Y}_{i}) = 0.01 + 2.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-model",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-model",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear-Log Model",
+    "text": "Linear-Log Model\nNonlinear Model\n\\[\ne^{Y_i} = \\alpha  X_i^{\\beta_1}v_i\n\\]\n\n\\(X &gt; 0\\) and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n. . .\n\n\nLogarithmic Transformation\n\\[\nY_i = \\log(\\alpha) + \\beta_1 \\log(X_i) + \\log(v_i)\n\\]\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\nTransformed (Linear) Model\n\\[\nY_i = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-model-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-model-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear-Log Model",
+    "text": "Linear-Log Model\nRegression Model\n\\[\nY_i = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nInterpretation\n\nA one-percent increase in the explanatory variable increases the outcome variable by approximately \\(\\beta_1 \\div 100\\), on average.\n\n\nEx.\n\nIf \\(\\widehat{(\\text{Blood Pressure})_i} = 150 - 9.1 \\log(\\text{Income}_i)\\), then a one-percent increase in income decrease blood pressure by 0.091 points."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-derivation",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-derivation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear-Log derivation",
+    "text": "Linear-Log derivation\nConsider the log-linear model\n\\[\nY = \\beta_0 + \\beta_1 \\log(X) + u\n\\]\nand differentiate\n\\[\ndY = \\beta_1 \\dfrac{dX}{X}\n\\]\n. . .\nA one-percent increase in \\(X\\) leads to a \\(\\beta_1 \\div 100\\) change in \\(Y\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-ex",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-ex",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear-Log Ex",
+    "text": "Linear-Log Ex\n\\[\n    \\hat{Y}_{i} = 0 + 0.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-ex-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#linear-log-ex-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear-Log Ex",
+    "text": "Linear-Log Ex\n\\[\n    \\hat{Y}_{i} = 0 + 0.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#approximate-coefficient-interpretation",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#approximate-coefficient-interpretation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "(Approximate) Coefficient Interpretation",
+    "text": "(Approximate) Coefficient Interpretation\nFor Model Type:\n\n\nLinear-Linear \\(\\rightarrow Y_{i} = \\beta_{0} + \\beta_{1} X_{i} + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\Delta Y = \\beta_{1} \\cdot \\Delta X \\rightarrow\\) A one-unit increase in \\(X\\) leads to a \\(\\beta_{1}\\)-unit increase in \\(Y\\)\n\nLog-Linear \\(\\rightarrow log(Y_{i}) = \\beta_{0} + \\beta_{1} X_{i} + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\% \\Delta Y = 100 \\cdot \\beta_{1} \\cdot \\Delta X \\rightarrow\\) A one-unit increase in \\(X\\) leads to a \\(\\beta_{1} \\cdot 100\\)-percent increase in \\(Y\\)\n\nLog-Log \\(\\rightarrow log(Y_{i}) = \\beta_{0} + \\beta_{1} log(X_{i}) + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\% \\Delta Y = \\beta_{1} \\cdot \\% \\Delta X \\rightarrow\\) A one-percent increase in \\(X\\) leads to a \\(\\beta_{1}\\)-percent increase in \\(Y\\)\n\nLinear-Log \\(\\rightarrow Y_{i} = \\beta_{0} + \\beta_{1} log(X_{i}) + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\Delta Y = (\\beta_{1} \\div 100) \\cdot \\% \\Delta X \\rightarrow\\) A one-percent increase in \\(X\\) leads to a \\(\\beta_{1} \\div\\)-unit increase in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\n(\\widehat{\\text{Life Expectancy})_i} = 53.96 + 8 \\times 10^{-4} \\cdot \\text{GDP}_i \\quad\\quad R^2 = 0.34\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-1",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\nlog(\\widehat{\\text{Life Expectancy})_i} = 3.97 + 1.3 \\times 10^{-5} \\cdot \\text{GDP}_i \\quad\\quad R^2 = 0.3\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-2",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\nlog(\\widehat{\\text{Life Expectancy})_i} = 2.86 + 0.15 \\cdot log(\\text{GDP}_i) \\quad\\quad R^2 = 0.61\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-3",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#so-can-we-do-better-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\n(\\widehat{\\text{Life Expectancy})_i} = -9.1 + 8.41 \\cdot log(\\text{GDP}_i) \\quad\\quad R^2 = 0.65\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html#practical-considerations",
+    "href": "lectures/07-Non-Linear-Models/072-logarithms.html#practical-considerations",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Practical Considerations",
+    "text": "Practical Considerations\nConsideration 01 Does your data take negative numbers or zeros as values?\n\n\\(log(0) = \\infty\\)\n\nConsideration 02 What coefficient intepretation do you want?\n\nUnit change? Unit-free percentage change?\n\nConsideration 03 Are your data skewed?"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-regression",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-regression",
+    "title": "Non-Linear Models",
+    "section": "Linear regression",
+    "text": "Linear regression\nSuppose we would like to estimate the degree to which an increase in GDP correlates with Life expectancy. We set up our model as follows:\n\\[\n{\\text{Life Expectancy}_i} = \\beta_0 + \\beta_1 \\text{GDP}_i + u_i\n\\]\n\nUsing the gapminder package in R, we could quickly generate estimates to get at the correlation But first, as always, let’s plot it before running the regression"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-regression-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-regression-1",
+    "title": "Non-Linear Models",
+    "section": "Linear regression",
+    "text": "Linear regression\nUsing the gapminder, we could quickly generate estimates for\n\\[\n\\widehat{\\text{Life Expectancy}_i} = \\hat{\\beta_0} + \\hat{\\beta_1} \\cdot \\text{GDP}_i\n\\]\n\n\n\nlibrary(gapminder)\nlibrary(broom)\n\nm1 = lm(lifeExp ~ gdpPercap, data = gapminder) \n\ntidy(m1)\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic   p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept) 54.0      0.315         171.  0        \n2 gdpPercap    0.000765 0.0000258      29.7 3.57e-156"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-in-ols",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-in-ols",
+    "title": "Non-Linear Models",
+    "section": "Linearity in OLS",
+    "text": "Linearity in OLS\nUp to this point, we’ve acknowledged OLS as a “linear” estimator.\n\n\nMany economic relationships are nonlinear.\n\ne.g., most production functions, profit, diminishing marginal utility, tax revenue as a function of the tax rate, etc.\n\n\n\n\nThe “linear” in simple linear regression refers to the linearity of the parameters or coefficients, not the predictors themselves."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-in-ols-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-in-ols-1",
+    "title": "Non-Linear Models",
+    "section": "Linearity in OLS",
+    "text": "Linearity in OLS\nOLS is flexible and can accommodate a subset of nonlinear relationships.\n\nUnderlying model must be linear-in-parameters.\nNonlinear transformations of variables are okay.\nModeling some nonlinear relationships requires advanced estimation techniques, such as maximum likelihood1\n\n\n\nPut different, independent variables can be a linear combination of the parameters, regardless of any nonlinear transformations\n\nBeyond the scope of this class."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity",
+    "title": "Non-Linear Models",
+    "section": "Linearity",
+    "text": "Linearity\nLinear-in-parameters: Parameters enter model as a weighted sum, where the weights are functions of the variables.\n\nOne of the assumptions required for the unbiasedness of OLS.\n\nLinear-in-variables: Variables enter the model as a weighted sum, where the weights are functions of the parameters.\n\nNot required for the unbiasedness of OLS.\n\n\nThe standard linear regression model satisfies both properties:\n\\[Y_i = \\beta_0 + \\beta_1X_{1i} + \\beta_2X_{2i} + \\dots + \\beta_kX_{ki} + u_i\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-1",
+    "title": "Non-Linear Models",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i\\)\n2. \\(Y_i = \\beta_0X_i^{\\beta_1}v_i\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-2",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-2",
+    "title": "Non-Linear Models",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(Y_i = \\beta_0X_i^{\\beta_1}v_i\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-3",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-3",
+    "title": "Non-Linear Models",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(\\color{#434C5E}{Y_i = \\beta_0X_i^{\\beta_1}v_i}\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables.\nModel 2 is neither."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linearity-4",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linearity-4",
+    "title": "Non-Linear Models",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(\\color{#434C5E}{Y_i = \\beta_0X_i^{\\beta_1}v_i}\\)\n3. \\(\\color{#B48EAD}{Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i}\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables.\nModel 2 is neither.\nModel 3 is linear-in-variables, but not linear-in-parameters."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#were-going-to-take-logs",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#were-going-to-take-logs",
+    "title": "Non-Linear Models",
+    "section": "We’re going to take logs",
+    "text": "We’re going to take logs\nThe natural log is the inverse function for the exponential function:\n\\[\n\\quad \\log(e^x) = x \\quad \\text{for} \\quad x&gt;0\n\\]\n\n(Natural) Log rules:\n1. Product rule: \\(\\log(AB) = \\log(A) + \\log(B)\\).\n\n\n2. Quotient rule: \\(\\log(A/B) = \\log(A) - \\log(B)\\).\n\n\n3. Power rule: \\(\\log(A^B) = B \\cdot \\log(A)\\).\n\n\n4. Derivative: \\(f(x) = \\log(x)\\) =&gt; \\(f'(x) = \\dfrac{1}{x}\\).\n\n\nNote: \\(\\log(e) = 1\\), \\(\\log(1) = 0\\), and \\(\\log(x)\\) is undefined for \\(x \\leq 0\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nNonlinear Model\n\\[\nY_i = \\alpha e^{\\beta_1 X_i}v_i\n\\]\n\n\\(Y &gt; 0\\), \\(X\\) is continuous, and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n\n\n\nLogarithmic Transformation\n\\[\n\\log(Y_i) = \\log(\\alpha) + \\beta_1 X_i + \\log(v_i)\n\\]\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\nTransformed (Linear) Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model-1",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nRegression Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nInterpretation\n\nA one-unit increase in the explanatory variable increases the outcome variable by approximately \\(\\beta_1\\times 100\\) percent, on average.\n\n\nEx.\n\nIf \\(\\log(\\hat{\\text{Pay}_i}) = 2.9 + 0.03 \\cdot \\text{School}_i\\), then an additional year of schooling increases pay by approximately 3 percent, on average."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model-2",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-model-2",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear model",
+    "text": "Log-Linear model\nDerivation Consider the log-linear model\n\\[\n\\log(Y) = \\beta_0 + \\beta_1 \\, X + u\n\\]\nand differentiate\n\\[\n\\dfrac{dY}{Y} = \\beta_1 dX\n\\]\n\nMarginal change in \\(X\\) (\\(dX\\)) leads to a \\(\\beta_1 dX\\) proportionate change in \\(Y\\).\n\nMultiply by 100 to get the percentage change in \\(Y\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\n\\[\n    log(\\hat{Y}_{i}) = 10.02 + 0.73 \\cdot X_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex-1",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\n\\[\n    log(\\hat{Y}_{i}) = 10.02 + 0.73 \\cdot X_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear",
+    "text": "Log-Linear\nNote: If you have a log-linear model with a binary indicator variable, the interpretation of the coefficient on that variable changes. Consider\n\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 X_i + u_i\n\\]\nfor binary variable \\(X\\).\n\n\nInterpretation of \\(\\beta_1\\):\n\nWhen \\(X\\) changes from 0 to 1, \\(Y\\) will increase by \\(100 \\times \\left( e^{\\beta_1} -1 \\right)\\)%\nWhen \\(X\\) changes from 1 to 0, \\(Y\\) will decrease by \\(100 \\times \\left( e^{-\\beta_1} -1 \\right)\\)%"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex-2",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-linear-ex-2",
+    "title": "Non-Linear Models",
+    "section": "Log-Linear Ex",
+    "text": "Log-Linear Ex\nTake a binary explanatory variable: trained\n\ntrained = 1 if employee \\(i\\) received training\ntrained = 0 if employee \\(i\\) did not receive training\n\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n9.94\n0.0446\n223\n0\n\n\nTrained\n0.557\n0.0631\n8.83\n4.72e-18\n\n\n\nQ. How do we interpret the coefficient on trained?\n\nA1: Trained workers are 74.52 percent more productive than untrained workers.\n\n\nA2: Untrained workers are 42.7 percent less productive than trained workers."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-log-model",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-log-model",
+    "title": "Non-Linear Models",
+    "section": "Log-Log model",
+    "text": "Log-Log model\nNonlinear Model\n\\[\nY_i = \\alpha  X_i^{\\beta_1}v_i\n\\]\n\n\\(Y &gt; 0\\), \\(X &gt; 0\\), and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n\n\n\nLogarithmic Transformation\n\\[\n\\begin{align*}\n\\log(Y_i) = \\log(\\alpha) +& \\beta_1 \\log(X_i) \\\\\n                         +& \\log(v_i)\n\\end{align*}\n\\]\n\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\n\nTransformed (Linear) Model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-log-regression-model",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-log-regression-model",
+    "title": "Non-Linear Models",
+    "section": "Log-Log regression model",
+    "text": "Log-Log regression model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nInterpretation\n\nA one-percent increase in the explanatory variable leads to a \\(\\beta_1\\)-percent change in the outcome variable, on average.\nOften interpreted as an elasticity.\n\n\nEx.\n\nIf \\(\\log(\\widehat{\\text{Quantity Demanded}}_i) = 0.45 - 0.31 \\cdot \\log(\\text{Income}_i)\\), then each one-percent increase in income decreases quantity demanded by 0.31 percent."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-log-derivation",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-log-derivation",
+    "title": "Non-Linear Models",
+    "section": "Log-Log derivation",
+    "text": "Log-Log derivation\nConsider the log-log model\n\\[\n\\log(Y_i) = \\beta_0 + \\beta_1 \\log(X_i) + u\n\\]\nand differentiate\n\\[\n\\dfrac{dY}{Y} = \\beta_1 \\dfrac{dX}{X}\n\\]\nA one-percent increase in \\(X\\) leads to a \\(\\beta_1\\)-percent increase in \\(Y\\).\n\nRearrange to show elasticity interpretation:\n\n\\[\n\\dfrac{dY}{dX} \\dfrac{X}{Y} = \\beta_1\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-log-example",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-log-example",
+    "title": "Non-Linear Models",
+    "section": "Log-Log Example",
+    "text": "Log-Log Example\n\\[\n    log(\\hat{Y}_{i}) = 0.01 + 2.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#log-log-example-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#log-log-example-1",
+    "title": "Non-Linear Models",
+    "section": "Log-Log Example",
+    "text": "Log-Log Example\n\\[\n    log(\\hat{Y}_{i}) = 0.01 + 2.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-model",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-model",
+    "title": "Non-Linear Models",
+    "section": "Linear-Log Model",
+    "text": "Linear-Log Model\nNonlinear Model\n\\[\ne^{Y_i} = \\alpha  X_i^{\\beta_1}v_i\n\\]\n\n\\(X &gt; 0\\) and \\(v_i\\) is a multiplicative error term.\nCannot estimate parameters with OLS directly.\n\n\n\n\nLogarithmic Transformation\n\\[\nY_i = \\log(\\alpha) + \\beta_1 \\log(X_i) + \\log(v_i)\n\\]\nRedefine \\(\\log(\\alpha) \\equiv \\beta_0\\), \\(\\log(v_i) \\equiv u_i\\).\n\nTransformed (Linear) Model\n\\[\nY_i = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nCan estimate with OLS, but interpretation changes."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-model-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-model-1",
+    "title": "Non-Linear Models",
+    "section": "Linear-Log Model",
+    "text": "Linear-Log Model\nRegression Model\n\\[\nY_i = \\beta_0 + \\beta_1 \\log(X_i) + u_i\n\\]\nInterpretation\n\nA one-percent increase in the explanatory variable increases the outcome variable by approximately \\(\\beta_1 \\div 100\\), on average.\n\n\nEx.\n\nIf \\(\\widehat{(\\text{Blood Pressure})_i} = 150 - 9.1 \\log(\\text{Income}_i)\\), then a one-percent increase in income decrease blood pressure by 0.091 points."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-derivation",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-derivation",
+    "title": "Non-Linear Models",
+    "section": "Linear-Log derivation",
+    "text": "Linear-Log derivation\nConsider the log-linear model\n\\[\nY = \\beta_0 + \\beta_1 \\log(X) + u\n\\]\nand differentiate\n\\[\ndY = \\beta_1 \\dfrac{dX}{X}\n\\]\n\nA one-percent increase in \\(X\\) leads to a \\(\\beta_1 \\div 100\\) change in \\(Y\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-ex",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-ex",
+    "title": "Non-Linear Models",
+    "section": "Linear-Log Ex",
+    "text": "Linear-Log Ex\n\\[\n    \\hat{Y}_{i} = 0 + 0.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-ex-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#linear-log-ex-1",
+    "title": "Non-Linear Models",
+    "section": "Linear-Log Ex",
+    "text": "Linear-Log Ex\n\\[\n    \\hat{Y}_{i} = 0 + 0.99 \\cdot log(X_{i})\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#approximate-coefficient-interpretation",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#approximate-coefficient-interpretation",
+    "title": "Non-Linear Models",
+    "section": "(Approximate) Coefficient Interpretation",
+    "text": "(Approximate) Coefficient Interpretation\nFor Model Type:\n\n\nLinear-Linear \\(\\rightarrow Y_{i} = \\beta_{0} + \\beta_{1} X_{i} + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\Delta Y = \\beta_{1} \\cdot \\Delta X \\rightarrow\\) A one-unit increase in \\(X\\) leads to a \\(\\beta_{1}\\)-unit increase in \\(Y\\)\n\nLog-Linear \\(\\rightarrow log(Y_{i}) = \\beta_{0} + \\beta_{1} X_{i} + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\% \\Delta Y = 100 \\cdot \\beta_{1} \\cdot \\Delta X \\rightarrow\\) A one-unit increase in \\(X\\) leads to a \\(\\beta_{1} \\cdot 100\\)-percent increase in \\(Y\\)\n\nLog-Log \\(\\rightarrow log(Y_{i}) = \\beta_{0} + \\beta_{1} log(X_{i}) + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\% \\Delta Y = \\beta_{1} \\cdot \\% \\Delta X \\rightarrow\\) A one-percent increase in \\(X\\) leads to a \\(\\beta_{1}\\)-percent increase in \\(Y\\)\n\nLinear-Log \\(\\rightarrow Y_{i} = \\beta_{0} + \\beta_{1} log(X_{i}) + u_{i}\\)\n\n\\(\\beta_{1} \\rightarrow \\Delta Y = (\\beta_{1} \\div 100) \\cdot \\% \\Delta X \\rightarrow\\) A one-percent increase in \\(X\\) leads to a \\(\\beta_{1} \\div\\)-unit increase in \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better",
+    "title": "Non-Linear Models",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\n(\\widehat{\\text{Life Expectancy})_i} = 53.96 + 8 \\times 10^{-4} \\cdot \\text{GDP}_i \\quad\\quad R^2 = 0.34\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-1",
+    "title": "Non-Linear Models",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\nlog(\\widehat{\\text{Life Expectancy})_i} = 3.97 + 1.3 \\times 10^{-5} \\cdot \\text{GDP}_i \\quad\\quad R^2 = 0.3\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-2",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-2",
+    "title": "Non-Linear Models",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\nlog(\\widehat{\\text{Life Expectancy})_i} = 2.86 + 0.15 \\cdot log(\\text{GDP}_i) \\quad\\quad R^2 = 0.61\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-3",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#so-can-we-do-better-3",
+    "title": "Non-Linear Models",
+    "section": "So … Can we Do Better?",
+    "text": "So … Can we Do Better?\n\\[\n(\\widehat{\\text{Life Expectancy})_i} = -9.1 + 8.41 \\cdot log(\\text{GDP}_i) \\quad\\quad R^2 = 0.65\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#practical-considerations",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#practical-considerations",
+    "title": "Non-Linear Models",
+    "section": "Practical Considerations",
+    "text": "Practical Considerations\nConsideration 01 Does your data take negative numbers or zeros as values?\n\n\\(log(0) = \\infty\\)\n\nConsideration 02 What coefficient intepretation do you want?\n\nUnit change? Unit-free percentage change?\n\nConsideration 03 Are your data skewed?"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-variables",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-variables",
+    "title": "Non-Linear Models",
+    "section": "Quadratic variables",
+    "text": "Quadratic variables\nLet’s talk about a wage regression again. Suppose we would like to estimate the effect of age on earnings. We estimate the following SLR:\n\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + u_i\n\\]\n\n\nHowever, maybe we believe that \\(\\text{Wage}_i\\) and \\(\\text{Age}_i\\) have some nonlinear relationship—the effect of an additional year of experience, when age is 27 vs age is 67, might be different. So instead, we might estimate:\n\n\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + \\beta_2 \\text{Age}^2_i + u_i\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-variables-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-variables-1",
+    "title": "Non-Linear Models",
+    "section": "Quadratic variables",
+    "text": "Quadratic variables\nIn this model:\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + \\beta_2 \\text{Age}^2_i + u_i\n\\]\nthe effect of \\(\\text{Age}_i\\) on \\(\\text{Wage}_i\\) would be:\n\n\\[\n\\frac{\\partial \\text{Wage}_i}{\\partial \\text{Age}_i} = \\beta_1 + 2\\beta_2 \\text{Age}_i\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression",
+    "title": "Non-Linear Models",
+    "section": "Quadratic regression",
+    "text": "Quadratic regression\nRegression Model\n\\[\nY_i = \\beta_0 + \\beta_1 X_i + \\beta_2 X_i^2 + u_i\n\\]\n\nInterpretation\nSign of \\(\\beta_2\\) indicates whether the relationship is convex (+) or concave (-)\n\n\nSign of \\(\\beta_1\\)? 🤷\n\n\nPartial derivative of \\(Y\\) wrt. \\(X\\) is the marginal effect of \\(X\\) on \\(Y\\):\n\\[\n\\color{#B48EAD}{\\dfrac{\\partial Y}{\\partial X} = \\beta_1 + 2 \\beta_2 X}\n\\]\n\nEffect of \\(X\\) depends on the level of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-1",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-1",
+    "title": "Non-Linear Models",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\)?\n\n\\[\n    \\hat{\\dfrac{\\partial Y}{\\partial X}} = \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} X =\n    158.89 + 2(-1.50)X =\n    158.89 - 3X\n\\]\nDepends on level of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-2",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-2",
+    "title": "Non-Linear Models",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 0\\)?\n\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=0} = \\hat{\\beta}_{1} = 158.89\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-3",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-3",
+    "title": "Non-Linear Models",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 2\\)?\n\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=2} =\n    \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} \\cdot (2) =\n    158.89 - 5.99 =\n    152.9\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-4",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-4",
+    "title": "Non-Linear Models",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 7\\)?\n\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=7} =\n    \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} \\cdot (7) =\n    158.89 - 20.98 =\n    137.91\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#fitted-regression-line",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#fitted-regression-line",
+    "title": "Non-Linear Models",
+    "section": "Fitted Regression Line",
+    "text": "Fitted Regression Line"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#marginal-effect-of-x-on-y",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#marginal-effect-of-x-on-y",
+    "title": "Non-Linear Models",
+    "section": "Marginal Effect of \\(X\\) on \\(Y\\)",
+    "text": "Marginal Effect of \\(X\\) on \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-5",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#quadratic-regression-5",
+    "title": "Non-Linear Models",
+    "section": "Quadratic regression",
+    "text": "Quadratic regression\nWhere does the regression \\(\\hat{Y_i} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X_i + \\hat{\\beta}_2 X_i^2\\) turn?\n\n\nStep 1: Take the derivative and set equal to zero.\n\\[\n\\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} } = \\hat{\\beta}_1 + 2\\hat{\\beta}_2 X = 0\n\\]\n\n\nStep 1: Solve for \\(X\\).\n\\[\nX = -\\dfrac{\\hat{\\beta}_1}{2\\hat{\\beta}_2}\n\\]\n\n\nEx. Peak of previous regression occurs at \\(X = 53.02\\)."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/070-compile.html#anscombes-quartet-aka-plot-your-data",
+    "href": "lectures/07-Non-Linear-Models/070-compile.html#anscombes-quartet-aka-plot-your-data",
+    "title": "Non-Linear Models",
+    "section": "Anscombe’s Quartet AKA Plot Your Data",
+    "text": "Anscombe’s Quartet AKA Plot Your Data\nFour “identical” regressions: Intercept \\(= 3\\), Slope \\(= 0.5\\), \\(R^{2} = 0.67\\)\n\nSame results, but with very different distributions only visible when you scatter them"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/065-multicollinearity.html",
@@ -3701,5 +4184,152 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "F Tests",
     "text": "F Tests\nRSS is usually a large cumbersome number.\nAlternative: Calculate the \\(F\\)-statistic using \\(R^2\\).\n\\[\n\\begin{align}\n  F = \\dfrac{\\left(R^2_u - R^2_r\\right)/q}{ (1 - R^2_u)/(n-k-1)}\n\\end{align}\n\\]\n. . .\nWhere does this come from?\n\n\n\\(\\text{TSS} = \\text{RSS} + \\text{ESS}\\)\n\\(R^2 = \\text{ESS}/\\text{TSS}\\)\n\n\\(\\text{RSS}_r = \\text{TSS}(1-R^2_r)\\)\n\\(\\text{RSS}_u = \\text{TSS}(1-R^2_u)\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linear-regression",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linear-regression",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear regression",
+    "text": "Linear regression\nSuppose we would like to estimate the degree to which an increase in GDP correlates with Life expectancy. We set up our model as follows:\n\\[\n{\\text{Life Expectancy}_i} = \\beta_0 + \\beta_1 \\text{GDP}_i + u_i\n\\]\n. . .\nUsing the gapminder package in R, we could quickly generate estimates to get at the correlation But first, as always, let’s plot it before running the regression\n\nVisualize the OLS fit? Is \\(\\beta_1\\) positive or negeative?"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linear-regression-1",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linear-regression-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linear regression",
+    "text": "Linear regression\nUsing the gapminder, we could quickly generate estimates for\n\\[\n\\widehat{\\text{Life Expectancy}_i} = \\hat{\\beta_0} + \\hat{\\beta_1} \\cdot \\text{GDP}_i\n\\]\n. . .\n\n\nlibrary(gapminder)\nlibrary(broom)\n\nm1 = lm(lifeExp ~ gdpPercap, data = gapminder) \n\ntidy(m1)\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic   p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept) 54.0      0.315         171.  0        \n2 gdpPercap    0.000765 0.0000258      29.7 3.57e-156\n\n\n\nFitting OLS. But are you satisfied? Can we do better?\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-in-ols",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-in-ols",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity in OLS",
+    "text": "Linearity in OLS\nUp to this point, we’ve acknowledged OLS as a “linear” estimator.\n. . .\n\nMany economic relationships are nonlinear.\n\ne.g., most production functions, profit, diminishing marginal utility, tax revenue as a function of the tax rate, etc.\n\n. . .\n\nThe “linear” in simple linear regression refers to the linearity of the parameters or coefficients, not the predictors themselves."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-in-ols-1",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-in-ols-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity in OLS",
+    "text": "Linearity in OLS\nOLS is flexible and can accommodate a subset of nonlinear relationships.\n\nUnderlying model must be linear-in-parameters.\nNonlinear transformations of variables are okay.\nModeling some nonlinear relationships requires advanced estimation techniques, such as maximum likelihood1\n\n. . .\n\nPut different, independent variables can be a linear combination of the parameters, regardless of any nonlinear transformations"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity",
+    "text": "Linearity\nLinear-in-parameters: Parameters enter model as a weighted sum, where the weights are functions of the variables.\n\nOne of the assumptions required for the unbiasedness of OLS.\n\nLinear-in-variables: Variables enter the model as a weighted sum, where the weights are functions of the parameters.\n\nNot required for the unbiasedness of OLS.\n\n. . .\nThe standard linear regression model satisfies both properties:\n\\[Y_i = \\beta_0 + \\beta_1X_{1i} + \\beta_2X_{2i} + \\dots + \\beta_kX_{ki} + u_i\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-1",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i\\)\n2. \\(Y_i = \\beta_0X_i^{\\beta_1}v_i\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-2",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(Y_i = \\beta_0X_i^{\\beta_1}v_i\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-3",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(\\color{#434C5E}{Y_i = \\beta_0X_i^{\\beta_1}v_i}\\)\n3. \\(Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables.\nModel 2 is neither."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-4",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#linearity-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Linearity",
+    "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(\\color{#434C5E}{Y_i = \\beta_0X_i^{\\beta_1}v_i}\\)\n3. \\(\\color{#B48EAD}{Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i}\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables.\nModel 2 is neither.\nModel 3 is linear-in-variables, but not linear-in-parameters."
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#footnotes",
+    "href": "lectures/07-Non-Linear-Models/071-prologue.html#footnotes",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBeyond the scope of this class.↩︎"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Let’s talk about a wage regression again. Suppose we would like to estimate the effect of age on earnings. We estimate the following SLR:\n. . .\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + u_i\n\\]\n. . .\nHowever, maybe we believe that \\(\\text{Wage}_i\\) and \\(\\text{Age}_i\\) have some nonlinear relationship—the effect of an additional year of experience, when age is 27 vs age is 67, might be different. So instead, we might estimate:\n. . .\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + \\beta_2 \\text{Age}^2_i + u_i\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-variables",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-variables",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Let’s talk about a wage regression again. Suppose we would like to estimate the effect of age on earnings. We estimate the following SLR:\n. . .\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + u_i\n\\]\n. . .\nHowever, maybe we believe that \\(\\text{Wage}_i\\) and \\(\\text{Age}_i\\) have some nonlinear relationship—the effect of an additional year of experience, when age is 27 vs age is 67, might be different. So instead, we might estimate:\n. . .\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + \\beta_2 \\text{Age}^2_i + u_i\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-variables-1",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-variables-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic variables",
+    "text": "Quadratic variables\nIn this model:\n\\[\n\\text{Wage}_i = \\beta_0 + \\beta_1 \\text{Age}_i + \\beta_2 \\text{Age}^2_i + u_i\n\\]\nthe effect of \\(\\text{Age}_i\\) on \\(\\text{Wage}_i\\) would be:\n. . .\n\\[\n\\frac{\\partial \\text{Wage}_i}{\\partial \\text{Age}_i} = \\beta_1 + 2\\beta_2 \\text{Age}_i\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic regression",
+    "text": "Quadratic regression\nRegression Model\n\\[\nY_i = \\beta_0 + \\beta_1 X_i + \\beta_2 X_i^2 + u_i\n\\]\n. . .\nInterpretation\nSign of \\(\\beta_2\\) indicates whether the relationship is convex (+) or concave (-)\n. . .\nSign of \\(\\beta_1\\)? 🤷\n. . .\nPartial derivative of \\(Y\\) wrt. \\(X\\) is the marginal effect of \\(X\\) on \\(Y\\):\n\\[\n\\color{#B48EAD}{\\dfrac{\\partial Y}{\\partial X} = \\beta_1 + 2 \\beta_2 X}\n\\]\n\nEffect of \\(X\\) depends on the level of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-1",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\)?\n. . .\n\\[\n    \\hat{\\dfrac{\\partial Y}{\\partial X}} = \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} X =\n    158.89 + 2(-1.50)X =\n    158.89 - 3X\n\\]\nDepends on level of \\(X\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-2",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 0\\)?\n. . .\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=0} = \\hat{\\beta}_{1} = 158.89\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-3",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 2\\)?\n. . .\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=2} =\n    \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} \\cdot (2) =\n    158.89 - 5.99 =\n    152.9\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-4",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic Regression",
+    "text": "Quadratic Regression\n\n\n\nTerm\nEstimate\nStd. Error\nStatistic\nP-value\n\n\n\n\nIntercept\n30,046\n138\n218\n0\n\n\nX\n158.89\n5.81\n27.3\n2.58e-123\n\n\n\\(X^{2}\\)\n-1.50\n0.0564\n-26.6\n6.19e-118\n\n\n\nWhat is the marginal effect of \\(X\\) on \\(Y\\), when \\(X = 7\\)?\n. . .\n\\[\n    \\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} }\\Bigg|_{\\small \\text{X}=7} =\n    \\hat{\\beta}_{1} + 2 \\hat{\\beta}_{2} \\cdot (7) =\n    158.89 - 20.98 =\n    137.91\n\\]"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#fitted-regression-line",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#fitted-regression-line",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Fitted Regression Line",
+    "text": "Fitted Regression Line"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#marginal-effect-of-x-on-y",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#marginal-effect-of-x-on-y",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Marginal Effect of \\(X\\) on \\(Y\\)",
+    "text": "Marginal Effect of \\(X\\) on \\(Y\\)"
+  },
+  {
+    "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-5",
+    "href": "lectures/07-Non-Linear-Models/073-quadratic.html#quadratic-regression-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Quadratic regression",
+    "text": "Quadratic regression\nWhere does the regression \\(\\hat{Y_i} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X_i + \\hat{\\beta}_2 X_i^2\\) turn?\n\n. . .\nStep 1: Take the derivative and set equal to zero.\n\\[\n\\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} } = \\hat{\\beta}_1 + 2\\hat{\\beta}_2 X = 0\n\\]\n. . .\nStep 1: Solve for \\(X\\).\n\\[\nX = -\\dfrac{\\hat{\\beta}_1}{2\\hat{\\beta}_2}\n\\]\n. . .\nEx. Peak of previous regression occurs at \\(X = 53.02\\)."
   }
 ]
