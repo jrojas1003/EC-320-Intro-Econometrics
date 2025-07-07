@@ -1,0 +1,200 @@
+---
+name: quadratic terms
+---
+
+## Quadratic variables
+
+Let's talk about a wage regression again. [Suppose we would like to estimate the effect of age on earnings. We estimate the following SLR:]{.fragment}
+
+. . .
+
+$$
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + u_i
+$$
+
+. . .
+
+However, maybe we believe that $\text{Wage}_i$ and $\text{Age}_i$ have some nonlinear relationship[---the effect of an additional year of experience, when age is 27 vs age is 67, might be [different]{.hi}.]{.fragment} [So instead, we might estimate:]{.fragment}
+
+. . .
+
+$$
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + \beta_2 \text{Age}^2_i + u_i
+$$
+
+--- 
+
+## Quadratic variables
+
+In this model:
+
+$$
+\text{Wage}_i = \beta_0 + \beta_1 \text{Age}_i + \beta_2 \text{Age}^2_i + u_i
+$$
+
+the effect of $\text{Age}_i$ on $\text{Wage}_i$ would be:
+
+. . .
+
+$$
+\frac{\partial \text{Wage}_i}{\partial \text{Age}_i} = \beta_1 + 2\beta_2 \text{Age}_i
+$$
+
+---
+
+## 
+
+![](images/quadratic-data-scatter.png){fig-align="center"}
+
+---
+
+## Quadratic regression
+
+[Regression Model]{.hi}
+
+$$
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + u_i
+$$
+
+. . .
+
+[Interpretation]{.note}
+
+Sign of $\beta_2$ indicates whether the relationship is convex ([+]{.mono}) or concave ([-]{.mono})
+
+. . .
+
+Sign of $\beta_1$? [🤷]{.fragment}
+
+. . .
+
+Partial derivative of $Y$ wrt. $X$ is the [marginal effect]{.hp} of $X$ on $Y$:
+
+$$
+\color{#B48EAD}{\dfrac{\partial Y}{\partial X} = \beta_1 + 2 \beta_2 X}
+$$
+
+- Effect of $X$ depends on the level of $X$
+
+---
+
+## Quadratic Regression 
+
+|   Term   | Estimate | Std. Error | Statistic | P-value   |
+|:---------|:--------:|:----------:|:---------:|:---------:|
+|Intercept |  30,046  |     138    |    218    |    0      | 
+|    X     |  158.89  |    5.81    |    27.3   | 2.58e-123 | 
+| $X^{2}$  |   -1.50  |   0.0564   |   -26.6   | 6.19e-118  | 
+
+[What is the marginal effect of $X$ on $Y$?]{.hp}
+
+. . .
+
+$$
+    \hat{\dfrac{\partial Y}{\partial X}} = \hat{\beta}_{1} + 2 \hat{\beta}_{2} X =
+    158.89 + 2(-1.50)X =
+    158.89 - 3X
+$$
+
+[Depends on level of $X$]{.hi .align-center}
+
+---
+
+## Quadratic Regression 
+
+|   Term   | Estimate | Std. Error | Statistic | P-value   |
+|:---------|:--------:|:----------:|:---------:|:---------:|
+|Intercept |  30,046  |     138    |    218    |    0      | 
+|    X     |  158.89  |    5.81    |    27.3   | 2.58e-123 | 
+| $X^{2}$  |   -1.50  |   0.0564   |   -26.6   | 6.19e-118  | 
+
+[What is the marginal effect of $X$ on $Y$, when $X = 0$?]{.hp}
+
+. . .
+
+$$
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=0} = \hat{\beta}_{1} = 158.89
+$$
+
+---
+
+## Quadratic Regression 
+
+|   Term   | Estimate | Std. Error | Statistic | P-value   |
+|:---------|:--------:|:----------:|:---------:|:---------:|
+|Intercept |  30,046  |     138    |    218    |    0      | 
+|    X     |  158.89  |    5.81    |    27.3   | 2.58e-123 | 
+| $X^{2}$  |   -1.50  |   0.0564   |   -26.6   | 6.19e-118  | 
+
+[What is the marginal effect of $X$ on $Y$, when $X = 2$?]{.hp}
+
+. . .
+
+$$
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=2} = 
+    \hat{\beta}_{1} + 2 \hat{\beta}_{2} \cdot (2) = 
+    158.89 - 5.99 = 
+    152.9
+$$
+
+---
+
+## Quadratic Regression 
+
+|   Term   | Estimate | Std. Error | Statistic | P-value   |
+|:---------|:--------:|:----------:|:---------:|:---------:|
+|Intercept |  30,046  |     138    |    218    |    0      | 
+|    X     |  158.89  |    5.81    |    27.3   | 2.58e-123 | 
+| $X^{2}$  |   -1.50  |   0.0564   |   -26.6   | 6.19e-118  | 
+
+[What is the marginal effect of $X$ on $Y$, when $X = 7$?]{.hp}
+
+. . .
+
+$$
+    \widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} }\Bigg|_{\small \text{X}=7} = 
+    \hat{\beta}_{1} + 2 \hat{\beta}_{2} \cdot (7) = 
+    158.89 - 20.98 = 
+    137.91
+$$
+
+---
+
+## Fitted Regression Line
+
+![](images/fitted-reg-line.png){fig-align="center"}
+
+---
+
+## Marginal Effect of $X$ on $Y$
+
+![](images/marginal-effect-x-on-y.png){fig-align="center"}
+
+---
+
+## Quadratic regression
+
+Where does the regression $\hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\beta}_2 X_i^2$ [turn?]{.hi}
+
+<!-- - In other words, where is the peak (valley) of the fitted relationship? -->
+
+. . .
+
+[Step 1:]{.note} Take the derivative and set equal to zero.
+
+$$
+\widehat{\dfrac{\partial \text{Y}}{\partial \text{X}} } = \hat{\beta}_1 + 2\hat{\beta}_2 X = 0
+$$
+
+. . .
+
+[Step 1:]{.note} Solve for $X$.
+
+$$
+X = -\dfrac{\hat{\beta}_1}{2\hat{\beta}_2}
+$$
+
+. . .
+
+[Ex.]{.ex} Peak of previous regression occurs at $X = 53.02$.
+

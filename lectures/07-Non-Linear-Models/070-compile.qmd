@@ -1,0 +1,41 @@
+---
+title: "Non-Linear Models"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: "Jose Rojas-Fallas"
+date: last-modified
+date-format: "YYYY"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    footer: "EC320, Lecture 06 | Non-Linear Models"
+    preview-links: auto
+    code-fold: false
+    html: true
+    embed-resources: false
+    self-contained: false
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# Prologue {.inverse .note}
+
+{{< include 071-prologue.qmd >}}
+
+# Logarithms {.inverse .note}
+
+{{< include 072-logarithms.qmd >}}
+
+# Quadratic Terms {.inverse .note}
+
+{{< include 073-quadratic.qmd >}}
+
+# Extra: Anscombe's Quartet {.inverse .note}
+
+## Anscombe's Quartet AKA Plot Your Data
+
+[Four "identical" regressions:]{.hi} Intercept $= 3$, Slope $= 0.5$, $R^{2} = 0.67$
+
+![](images/anscombes-quartet.png){fig-align="center"}
+
+Same results, but with very different distributions only visible when you scatter them
