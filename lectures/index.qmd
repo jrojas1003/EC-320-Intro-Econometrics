@@ -71,3 +71,7 @@ title: "Lectures"
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
+
+### Categorical Variables
+
+### Funadmental Probelm of Causal Inference
