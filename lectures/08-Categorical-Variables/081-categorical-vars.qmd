@@ -1,0 +1,342 @@
+---
+name: categorical variables
+---
+
+## Categorical Variables
+
+[Goal]{.note} Make quantitative statements about [qualitative information]{.purple}.
+
+- *e.g.,* race, gender, being employed, living in Oregon, *etc.*
+
+. . .
+
+[Approach.]{.note} Construct [binary variables]{.hp}.
+
+- _a.k.a._ [dummy variables]{.purple} or [indicator variables]{.purple}.
+- Value equals 1 if observation is in the category or 0 if otherwise.
+
+. . .
+
+[Regression implications.]{.note}
+
+1. Change the interpretation of the intercept.
+
+2. Change the interpretations of the slope parameters.
+
+
+---
+
+## Continuous Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + u_i
+$$
+
+_where_
+
+- $\text{Pay}_i$ is a continuous variable measuring an individual's pay
+- $\text{School}_i$ is a continuous variable that measures years of education
+
+. . .
+
+[Interpretation]{.note}
+
+- $\beta_0$: $y$-intercept, _i.e._, $\text{Pay}$ when $\text{School} = 0$
+- $\beta_1$: expected increase in $\text{Pay}$ for a one-unit increase in $\text{School}$
+
+
+---
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + u_i
+$$
+
+[Derive the slope's interpretation.]{.note}
+
+$\mathop{\mathbb{E}}\left[ \text{Pay} | \text{School} = \ell + 1 \right] - \mathop{\mathbb{E}}\left[ \text{Pay} | \text{School} = \ell \right]$
+
+. . .
+
+<br> $\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 (\ell + 1) + u \right] - \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 \ell + u \right]$
+
+. . .
+
+<br> $\quad = \left[ \beta_0 + \beta_1 (\ell + 1) \right] - \left[ \beta_0 + \beta_1 \ell \right]$
+
+. . .
+
+<br> $\quad = \beta_0 - \beta_0 + \beta_1 \ell - \beta_1 \ell + \beta_1$ [$\: = \beta_1$.]{.fragment} 
+
+[Expected increase in pay for an additional year of schooling]{.fragment}
+
+---
+
+## Continuous Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + u_i
+$$
+
+[Alternative derivation:]{.note}
+
+Differentiate the model with respect to schooling:
+
+$$
+\dfrac{\partial \text{Pay}}{\partial \text{School}} = \beta_1
+$$
+
+[Expected increase in pay for an additional year of schooling]{.fragment}
+
+
+---
+
+If we have multiple explanatory variables, _e.g._,
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \beta_2 \text{Ability}_i + u_i
+$$
+
+then the interpretation changes slightly.
+
+. . .
+
+$\mathop{\mathbb{E}}\left[ \text{Pay} | \text{School} = \ell + 1 \land \text{Ability} = \alpha \right] - \mathop{\mathbb{E}}\left[ \text{Pay} | \text{School} = \ell \land \text{Ability} = \alpha \right]$
+
+. . .
+
+<br> $\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 (\ell + 1) + \beta_2 \alpha + u \right] - \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 \ell + \beta_2 \alpha + u \right]$
+
+. . .
+
+<br> $\quad = \left[ \beta_0 + \beta_1 (\ell + 1) + \beta_2 \alpha \right] - \left[ \beta_0 + \beta_1 \ell + \beta_2 \alpha \right]$
+
+. . .
+
+<br> $\quad = \beta_0 - \beta_0 + \beta_1 \ell - \beta_1 \ell + \beta_1 + \beta_2 \alpha - \beta_2 \alpha$ [$\: = \beta_1$]{.fragment}
+
+. . .
+
+The slope gives the expected increase in pay for an additional year of schooling, [_holding ability constant_]{.note}.
+
+
+---
+
+## Continuous Variables
+
+If we have multiple explanatory variables, _e.g._,
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \beta_2 \text{Ability}_i + u_i
+$$
+
+then the interpretation changes slightly.
+
+. . .
+
+[Alternative derivation]{.note}
+
+Differentiate the model with respect to schooling:
+
+$$
+\dfrac{\partial\text{Pay}}{\partial\text{School}} = \beta_1
+$$
+
+The slope gives the expected increase in pay for an additional year of schooling, [holding ability constant]{.hi}.
+
+
+---
+
+## Categorical Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{Female}_i + u_i
+$$
+
+where $\text{Pay}_i$ is a continuous variable measuring an individual's pay and $\text{Female}_i$ is a binary variable equal to $1$ when $i$ is female.
+
+. . .
+
+[Interpretation of]{.note} $\beta_0$
+
+$\beta_0$ is the expected $\text{Pay}$ for males (_i.e._, when $\text{Female} = 0$):
+
+. . .
+
+$$
+\mathop{\mathbb{E}}\left[ \text{Pay} | \text{Male} \right] = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1\times 0 + u_i \right] = \mathop{\mathbb{E}}\left[ \beta_0 + 0 + u_i \right] = \beta_0
+$$
+
+
+---
+
+## Categorical Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{Female}_i + u_i
+$$
+
+where $\text{Pay}_i$ is a continuous variable measuring an individual's pay and $\text{Female}_i$ is a binary variable equal to $1$ when $i$ is female.
+
+. . .
+
+[Interpretation of]{.note} $\beta_1$
+
+$\beta_1$ is the expected difference in $\text{Pay}$ between females and males:
+
+. . .
+
+$\mathop{\mathbb{E}}\left[ \text{Pay} | \text{Female} \right] - \mathop{\mathbb{E}}\left[ \text{Pay} | \text{Male} \right]$
+
+. . .
+
+$\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1\times 1 + u_i \right] - \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1\times 0 + u_i \right]$
+
+. . .
+
+$\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 + u_i \right] - \mathop{\mathbb{E}}\left[ \beta_0 + 0 + u_i \right]$
+
+. . .
+
+$\quad = \beta_0 + \beta_1 - \beta_0$ [$\quad = \beta_1$]{.fragment}
+
+
+---
+
+## Categorical Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{Female}_i + u_i
+$$
+
+where $\text{Pay}_i$ is a continuous variable measuring an individual's pay and $\text{Female}_i$ is a binary variable equal to $1$ when $i$ is female.
+
+[Interpretation]{.note}
+
+$\beta_0 + \beta_1$: is the expected $\text{Pay}$ for females:
+
+$\mathop{\mathbb{E}}\left[ \text{Pay} | \text{Female} \right]$
+
+. . .
+
+$\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1\times 1 + u_i \right]$
+
+. . .
+
+$\quad = \mathop{\mathbb{E}}\left[ \beta_0 + \beta_1 + u_i \right]$
+
+. . .
+
+$\quad = \beta_0 + \beta_1$
+
+
+---
+
+## Categorical Variables
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{Female}_i + u_i
+$$
+
+[Interpretation]{.note}
+
+- $\beta_0$: expected $\text{Pay}$ for males (_i.e._, when $\text{Female} = 0$)
+- $\beta_1$: expected difference in $\text{Pay}$ between females and males
+- $\beta_0 + \beta_1$: expected $\text{Pay}$ for females
+- Males are the [reference group]{.hi}
+
+---
+
+## Categorical Variables {data-visibility="uncounted"}
+
+Consider the relationship
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{Female}_i + u_i
+$$
+
+
+[Note.]{.note} If there are no other variables to condition on, then $\hat{\beta}_1$ equals the difference in group means, _e.g._, $\bar{X}_\text{Female} - \bar{X}_\text{Male}$.
+
+<br>
+
+. . .
+
+[Note~2~.]{.note} The *holding all other variables constant* interpretation also applies for categorical variables in multiple regression settings.
+
+---
+
+## Categorical Variables
+
+$Y_i = \beta_0 + \beta_1 X_i + u_i$ for binary variable $X_i = \{\color{#434C5E}{0}, \, {\color{#B48EAD}{1}}\}$
+
+![](images/category-01.png){fig-align="center"}
+
+---
+
+## Categorical Variables
+
+$Y_i = \beta_0 + \beta_1 X_i + u_i$ for binary variable $X_i = \{\color{#434C5E}{0}, \, {\color{#B48EAD}{1}}\}$
+
+![](images/category-02.png){fig-align="center"}
+
+---
+
+## Categorical Variables
+
+$Y_i = \beta_0 + \beta_1 X_i + u_i$ for binary variable $X_i = \{\color{#434C5E}{0}, \, {\color{#B48EAD}{1}}\}$
+
+![](images/category-03.png){fig-align="center"}
+
+---
+
+## Multiple Regression
+
+$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + u_i \quad$ $X_1$ is continuous $\quad X_2$ is categorical
+
+![](images/category-04.png){fig-align="center"}
+
+---
+
+## Multiple Regression
+
+The intercept and categorical variable $X_2$ control for the groups' means.
+
+![](images/category-05.png){fig-align="center"}
+
+---
+
+## Multiple Regression
+
+With groups' means removed
+
+![](images/category-06.png){fig-align="center"}
+
+---
+
+## Multiple Regression
+
+$\hat{\beta}_1$ estimates the relationship between $Y$ and $X_1$ after controlling for $X_2$.
+
+![](images/category-07.png){fig-align="center"}
+
+---
+
+## Multiple Regression
+
+Another way to think about it: Regression by group
+
+![](images/category-08.png){fig-align="center"}

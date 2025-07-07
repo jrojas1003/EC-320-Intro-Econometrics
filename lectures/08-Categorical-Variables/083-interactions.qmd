@@ -1,0 +1,56 @@
+---
+name: interactions
+---
+
+## Motivation
+
+Regression coefficients describe average effects. [But for whom does _on average_ mean?]{.fragment}
+
+<br>
+
+. . .
+
+Averages can mask [heterogeneous effects]{.hp} that differ by group or by the level of another variable.
+
+<br>
+
+. . .
+
+We can use [interaction terms]{.note} to model [heterogeneous effects]{.hp}[, accommodating complexity and nuance by going beyond *"the effect of* $X$ *on* $Y$ *is* $\beta_1$*."*]{.fragment}
+
+---
+
+## Interaction Terms
+
+[Starting point:]{.hi} $Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + u_i$
+
+:::: {.columns}
+::: {.column width="50%"}
+- $X_{1i}$ is the variable of interest
+:::
+
+::: {.column width="50%"}
+- $X_{2i}$ is a control variable
+:::
+
+::::
+
+. . .
+
+[A richer model:]{.note} Interactions test whether $X_{2i}$ [*moderates*]{.purple} the effect of $X_{1i}$
+
+$$
+Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \beta_3 X_{1i} \cdot X_{2i} + u_i
+$$
+
+. . .
+
+[Interpretation:]{.note} The partial derivative of $Y_i$ with respect to $X_{1i}$ is the [marginal effect]{.note} of $X_1$ on $Y_i$:
+
+$$
+\color{#81A1C1}{\dfrac{\partial Y}{\partial X_1} = \beta_1 + \beta_3 X_{2i}}
+$$
+
+. . .
+
+The effect of $X_1$ depends on the level of $X_2$ 🤯

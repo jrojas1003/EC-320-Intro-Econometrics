@@ -1,0 +1,31 @@
+---
+title: "Categorical Variables and Interactions"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: "Jose Rojas-Fallas"
+date: last-modified
+date-format: "YYYY"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    footer: "EC320, Lecture 07 | Categorical Vars and Interactions"
+    preview-links: auto
+    code-fold: false
+    html: true
+    embed-resources: false
+    self-contained: false
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# Categorical Variables {.inverse .note}
+
+{{< include 081-categorical-vars.qmd >}}
+
+# Omitted Variable Bias Example {.inverse .note}
+
+{{< include 082-ovb.qmd >}}
+
+# Interactive Relationships {.inverse .note}
+
+{{< include 083-interactions.qmd >}}

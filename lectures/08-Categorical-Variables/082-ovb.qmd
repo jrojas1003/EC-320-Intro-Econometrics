@@ -1,0 +1,133 @@
+---
+name: omitted variable bias
+---
+
+## Omitted variable bias
+
+[Ex.]{.ex} Imagine a population model for the amount individual $i$ gets paid
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \beta_2 \text{Male}_i + u_i
+$$
+
+where $\text{School}_i$ gives $i$'s years of schooling and $\text{Male}_i$ denotes an indicator variable for whether individual $i$ is male.
+
+[Interpretation]{.note}
+
+- $\beta_1$: returns to an additional year of schooling (*ceteris paribus*)
+- $\beta_2$: premium for being male (*ceteris paribus*)
+
+. . .
+
+<br>
+
+If $\beta_2 > 0$, then there is discrimination against women.
+
+---
+
+## Omitted variable bias
+
+[Ex.]{.ex} From the population model
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \beta_2 \text{Male}_i + u_i
+$$
+
+An analyst focuses on the relationship between pay and schooling, _i.e._,
+
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \left(\beta_2 \text{Male}_i + u_i\right)
+$$
+$$
+\text{Pay}_i = \beta_0 + \beta_1 \text{School}_i + \varepsilon_i
+$$
+
+where $\varepsilon_i = \beta_2 \text{Male}_i + u_i$.
+
+---
+
+## Omitted variable bias {data-visibility="uncounted"}
+
+We assumed exogeniety to show that OLS is unbiased. 
+
+[Even if $\mathop{\mathbb{E}}\left[ u | X \right] = 0$, it is not necessarily true that $\mathop{\mathbb{E}}\left[ \varepsilon | X \right] = 0$]{.fragment} 
+
+. . .
+
+- If $\beta_2 \neq 0$, then it is false
+
+. . .
+
+Specifically, if
+
+$$
+\mathop{\mathbb{E}}\left[ \varepsilon | \text{Male} = 1 \right] = \beta_2 + \mathop{\mathbb{E}}\left[ u | \text{Male} = 1 \right] \neq 0
+$$
+
+. . .
+
+Then, OLS is [biased]{.hi}
+
+---
+
+## Omitted Variable Bias
+
+Let's try to see this result graphically.
+
+The true population model:
+
+$$
+\text{Pay}_i = 20 + 0.5 \times \text{School}_i + 10 \times \text{Male}_i + u_i
+$$
+
+The regression model that suffers from omitted-variable bias:
+
+$$
+\text{Pay}_i = \hat{\beta}_0 + \hat{\beta}_1 \times \text{School}_i + e_i
+$$
+
+Suppose that women, on average, receive more schooling than men.
+
+---
+
+## Omitted Variable Bias
+
+True model: $\text{Pay}_i = 20 + 0.5 \times \text{School}_i + 10 \times \text{Male}_i + u_i$
+
+![](images/ovb-01.png){fig-align="center"}
+
+---
+
+## Omitted Variable Bias
+
+Biased regression: $\widehat{\text{Pay}}_{i} = 31.3 - 0.9 \times \text{School}_{i}$
+
+![](images/ovb-02.png){fig-align="center"}
+
+---
+
+## Omitted Variable Bias
+
+Recalling the omitted variable: Sex ([female]{.hp} vs [male]{.h})
+
+![](images/ovb-03.png){fig-align="center"}
+
+---
+
+## Omitted Variable Bias
+
+Recalling the omitted variable: Sex ([female]{.hp} vs [male]{.h})
+
+![](images/ovb-04.png){fig-align="center"}
+
+---
+
+## Omitted Variable Bias
+
+Unbiased Regression:
+
+$$
+    \widehat{\text{Pay}}_{i} = 20.9 + 0.4 \times \text{School}_{i} + 9.1 \times \text{Male}_{i}
+$$
+
+![](images/ovb-05.png){fig-align="center"}
