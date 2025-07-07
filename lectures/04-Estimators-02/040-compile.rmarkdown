@@ -1,0 +1,1310 @@
+---
+title: "Estimators Part II"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, Lecture 03 | Estimators II"
+        preview-links: auto
+        code-fold: FALSE
+        html: true
+        embed-resources: false  # prevent inlining everything (important for iframes)
+        self-contained: false   # allows iframe-based content like YouTube
+title-slide-attributes: 
+  data-background-position: left
+---
+
+
+
+# OLS Properties {.inverse .note}
+
+
+
+---
+name: ols properties
+---
+
+
+## Important Properties
+
+There are three important OLS properties
+
+<br>
+
+1. The point $(\bar{x}, \bar{y})$ is always on the regression line
+
+<br>
+
+2. Residuals sum to zero: $\sum_{i}^{n} \hat{u}_{i} = 0$
+
+<br>
+
+3. The sample covariance between the independent variable and the residuals is zero: $\sum_{i}^{n} x_{i}\hat{u}_{i} = 0$
+
+<br>
+
+---
+
+## Property 1 - Proof
+
+The point $(\bar{x}, \bar{y})$ is always on the regression line
+
+- Start with the regression line: $\hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1} x_{i}$
+
+- Recall that $\hat{\beta}_{0} = \bar{y} - \hat{\beta}_{1}\bar{x}$
+
+- Plug that in $\hat{\beta}_{0}$ and substitute $\bar{x}$ for $x_{i}$:
+
+\begin{align*}
+    \hat{y}_{i} &= \bar{y} - \hat{\beta}_{1}\bar{x} + \hat{\beta}_{1} \bar{x} \\ 
+    \hat{y}_{i} &= \bar{y}
+\end{align*}
+
+---
+
+## Property 2 - Proof {.pseudocode-small}
+
+Residuals sum to zero: $\sum_{i}^{n} \hat{u}_{i} = 0$
+
+1. Recall a couple of things we have derived:
+
+$$
+    \hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1}x_{i} \;\; \text{and} \;\; \hat{u}_{i} = y_{i} - \hat{y}_{i}
+$$
+
+2. The sum of residuals is:
+
+$$
+    \sum_{i} \hat{u}_{i} = \sum_{i} (y_{i} - \hat{y}_{i}) = \sum_{i} y_{i} - \sum \hat{y}_{i}
+$$
+
+3. Recall the fact that $\sum_{i} y_{i} = n\bar{y}$ and also:
+
+\begin{align*}
+    \sum_{i} \hat{y}_{i} &= \sum_{i} (\hat{\beta}_{0} + \hat{\beta}_{1}x_{i}) 
+    = n \hat{\beta}_{0} + \hat{\beta}_{1} \sum_{i} x_{i} \\
+    &= n (\bar{y}_{i} - \hat{\beta}_{1}\bar{x}) + \hat{\beta}_{1} n\bar{x} = n\bar{y}_{i}
+\end{align*}
+
+4. So:
+
+$$
+    \sum_{i} \hat{u}_{i} = n\bar{y}_{i} - n\bar{y}_{i} = 0
+$$
+
+
+---
+
+## Property 3 - Proof
+
+The sample covariance between the independent variable and the residuals is zero: $\sum_{i}^{n} x_{i}\hat{u}_{i} = 0$
+
+1. Start with our residuals: $\hat{u}_{i} = y_{i} - \hat{\beta}_{0} - \hat{\beta}_{1}x_{i}$
+
+2. Multiply both sides by $x_{i}$ and sum them:
+
+$$
+    \sum_{i} x_{i}\hat{u}_{i} = \sum_{i} x_{i}y_{i} - \hat{\beta}_{0}\sum_{i} x_{i} - \hat{\beta}_{1}\sum_{i} x_{i}^{2}
+$$
+
+3. Recall from our $\hat{\beta}_{1}$ derivation that $\sum_{i} x_{i}y_{i} = \hat{\beta}_{0}\sum_{i} x_{i} + \hat{\beta}_{1}\sum_{i} x_{i}^{2}$
+
+So: $\sum_{i}^{n} x_{i}\hat{u}_{i} = \hat{\beta}_{0}\sum_{i} x_{i} + \hat{\beta}_{1}\sum_{i} x_{i}^{2} - \hat{\beta}_{0}\sum_{i} x_{i} - \hat{\beta}_{1}\sum_{i} x_{i}^{2} = 0$
+
+
+
+# Goodness of Fit {.inverse .note}
+
+
+
+---
+name: goodness of fit
+---
+
+
+## Goodness of Fit
+
+Say there are two regressions [Regression 1]{.hi-orange} and [Regression 2]{.hii} with the:
+
+- Same slope
+- Same intercept
+
+The question is: Which fitted regression line "explains/fits" the data better?
+
+:::: {.columns}
+
+::: {.column width="50"}
+![](images/fit-01.png)
+:::
+
+::: {.column width="50"}
+![](images/fit-02.png)
+:::
+
+::::
+
+---
+
+## Goodness of Fit
+
+[Regression 1]{.hi-orange} vs [Regression 2]{.hii}
+
+The [coefficient of determination]{.hi .note}, $R^{2}$, is the fraction of the variation in $y_{i}$ "explained" by $x_{i}$.
+
+- $R^{2} = 1 \Rightarrow x_{i}$ explains [all]{.hi} of the variation in $y_{i}$
+- $R^{2} = 0 \Rightarrow x_{i}$ explains [none]{.hi} of the variation in $y_{i}$
+
+:::: {.columns}
+
+::: {.column width="50"}
+![](images/fit-01.png)
+:::
+
+::: {.column width="50"}
+![](images/fit-02.png)
+:::
+
+::::
+
+---
+
+## Explained and Unexplained Variation
+
+Residuals remind us that there are parts of $y_{i}$ we cannot explain:
+
+$$
+    y_{i} = \hat{y}_{i} + \hat{u}_{i}
+$$
+
+- If you sum the above, divide by $n$, and use the fact that OLS residuals sum to zero, you get:
+
+$$
+    \bar{\hat{u}} = 0 \Rightarrow \bar{y} = \bar{\hat{y}}
+$$
+
+- So the fitted values average out to the actual values
+
+---
+
+## Explained and Unexplained Variation
+
+[Total Sum of Squares]{.note .hi} ([TSS]{.hi-red}) measures variation in $y_{i}$:
+
+$$
+    \color{#BF616A}{TSS} \equiv \sum_{i = 1}^{n} (y_{i} - \bar{y})^{2}
+$$
+
+- [TSS]{.hi-red} can be decomposed into explained and unexplained variation
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Explained Sum of Squared]{.note .hi} ([ESS]{.hi-teal}) measures the variation in $\hat{y}_{i}$:
+
+$$
+    \color{#8FBCBB}{ESS} \equiv \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2}
+$$
+
+:::
+
+::: {.column width="50%"}
+[Residual Sum of Squares]{.note .hi} ([ESS]{.hi-orange}) measures the variation in $ \hat{u}_{i}$:
+
+$$
+    \color{#D08770}{RSS} \equiv \sum_{i = 1}^{n} \hat{u}_{i}^{2}
+$$
+:::
+
+::::
+
+---
+
+## 
+
+This means that we can show $\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}$
+
+[Step 01:]{.note .hi} Plug $y_{i} = \hat{y}_{i} + \hat{u}_{i}$ into [TSS]{.hi-red}
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \sum_{i = 1}^{n} (\hat{y}_{i} - \bar{y})^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2}
+\end{align*}
+
+---
+
+##
+
+This means that we can show $\color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}$
+
+[Step 02:]{.note .hi} Recall that $\bar{\hat{u}} = 0$ & $\bar{y} = \bar{\hat{y}}$.
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - [\bar{\hat{y}} + \bar{\hat{u}}])^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} + \hat{u}_{i}] - \bar{\hat{y}})^{2} \\
+    &= \sum_{i=1}^{n} ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) ([\hat{y}_{i} - \bar{y}] + \hat{u}_{i}) \\
+    &= \sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2} +
+    \sum_{i=1}^{n} \hat{u}_{i}^{2} + 
+    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right)
+\end{align*}
+
+---
+
+## 
+
+[Step 03:]{.note .hi} Notice [ESS]{.hi-teal} and [RSS]{.hi-orange}
+
+\begin{align*}
+    \color{#BF616A}{TSS} &= \color{#8FBCBB}{\sum_{i=1}^{n} (\hat{y}_{i} - \bar{y})^{2}} +
+    \color{#D08770}{\sum_{i=1}^{n} \hat{u}_{i}^{2}} + 
+    2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
+    &= \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} + 2\sum_{i=1}^{n} \left( (\hat{y}_{i} - \bar{y}) \hat{u}_{i} \right) \\
+\end{align*}
+
+[Step 04:]{.note .hi} Simplify
+
+\begin{align*}
+    \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS} + 
+    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
+    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i}
+\end{align*}
+
+---
+
+## 
+
+[Step 05:]{.note .hi} Shut down that last two terms by noticing that:
+
+\begin{align*}
+    2\sum_{i=1}^{n}\hat{y}_{i}\hat{u}_{i} -
+    2\bar{y} \sum_{i=1}^{n} \hat{u}_{i} =
+    0
+\end{align*}    
+
+[You will prove this in an assignment]{.note .hi .align-center}
+
+Then we have:
+
+\begin{align*}
+     \color{#BF616A}{TSS} = \color{#8FBCBB}{ESS} + \color{#D08770}{RSS}
+\end{align*}
+
+. . .
+
+Some visual intuition makes all the math seem a lot simpler
+
+---
+
+[Plot our data]{.hi .align-center}
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+library(pacman)
+p_load(dplyr, ggplot2) 
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal()
+```
+
+
+---
+
+$$
+\color{#148B25}{\overline{\text{MPG}}_{i}} = 20.09
+$$
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+
+lm0 <- lm(mpg ~ wt, data = mtcars)
+
+# Define a function
+y_hat <- function(x, b0, b1) {b0 + b1 * x}
+# Define line's parameters
+b0 <- lm0$coefficients[1]
+b1 <- lm0$coefficients[2]
+
+y_bar = mtcars$mpg %>% mean()
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+## 
+
+::: {.small}
+$$
+\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (y_i - \bar{y})^2
+$$
+:::
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_point(color = 'black') +
+    # geom_abline(intercept = b0, slope = b1, color = hp, size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_bar), color = '#BF616A', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+## 
+
+::: {.small}
+$$
+\color{#148B25}{\widehat{\text{MPG}}_{i}} = 37.3 - 5.34 \cdot \text{weight}_i 
+$$
+:::
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() + 
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+##
+
+$$
+\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{y}_{i} - \bar{y})^2
+$$
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = y_bar, yend = y_hat(wt, b0, b1)), color = '#8FBCBB', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    theme_minimal() + 
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+## 
+
+::: {.small .align-center}
+$$
+\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
+$$
+:::
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_hat(wt, b0, b1)), color = '#D08770', alpha = 1, size = 1) +
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    theme_minimal() + 
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+## 
+
+:::: {.columns}
+
+::: {.column width="33%"}
+$$
+\color{#BF616A}{\text{TSS}} \equiv \sum_{i=1}^n (Y_i - \bar{Y})^2
+$$
+:::
+
+::: {.column width="33%"}
+$$
+\color{#8FBCBB}{\text{ESS}} \equiv \sum_{i=1}^n (\hat{Y_i} - \bar{Y})^2
+$$
+:::
+
+::: {.column width="33%"}
+$$
+\color{#D08770}{\text{RSS}} \equiv \sum_{i=1}^n \hat{u}_i^2
+$$
+:::
+
+::::
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+    geom_hline(yintercept = y_bar, color = '#148B25', size = 1) +
+    geom_abline(intercept = b0, slope = b1, color = '#B342BD', size = 1.25) +
+    geom_segment(aes(x = wt+0.02, xend = wt+0.02, y = y_bar, yend = y_hat(wt, b0, b1)), color = '#BF616A', position = position_dodge(-1000), alpha = 1, size = 2) +
+    geom_segment(aes(x = wt, xend = wt, y = mpg, yend = y_bar), color = '#8FBCBB', alpha = 1, size = 2) +
+    geom_segment(aes(x = wt-0.02, xend = wt-0.02, y = mpg, yend = y_hat(wt, b0, b1)), color = '#D08770', position = position_dodge(1000), alpha = 1, size = 2) +
+    geom_point(color = 'black') +
+    geom_vline(xintercept = 1) +
+    geom_hline(yintercept = 0) + 
+    # coord_fixed() +
+    coord_cartesian(xlim = c(1,6), ylim = c(0,35)) +
+    scale_size(range = c(0.001,2)) +
+    # scale_color_continuous() +
+    xlab("Weight (thousands)") + 
+    ylab("MPG") +
+    theme_minimal() +
+    theme(
+      legend.position = 'none'
+    )
+```
+
+
+---
+
+## Goodness of Fit
+
+What percentage of the variation in our $y_{i}$ is [apparently]{.hi} explained by our model?
+The $R^{2}$ term represents this percentage.
+
+Total variation is represented by [TSS]{.hi-red} and our model is capturing the 'explained' sum of squares, [ESS]{.hi-teal}.
+
+Taking a simple ratio reveals how much variation our model explains:
+
+- $R^{2} = \dfrac{\color{#8FBCBB}{ESS}}{\color{#BF616A}{TSS}}$ varies between 0 and 1
+
+- $R^{2} = 1 - \dfrac{\color{#D08770}{RSS}}{\color{#BF616A}{TSS}}$, 100% minus the unexplained variation
+
+$R^{2}$ is related to the correlation between the actual values of $y$ and the fitted values of $y$. 
+
+---
+
+## Goodness of Fit
+
+[So what?]{.note .hi} 
+In the social sciences, low $R^{2}$ values are common. 
+
+Low $R^{2}$ does not necessarily mean you have a "good" regression:
+
+- Worries about selection bias and omitted variables still apply
+
+- Some 'powerfully high' $R^{2}$ values are the result of simple accounting exercises, and tell us nothing about causality
+
+
+
+# OLS Assumptions {.inverse .note}
+
+
+
+---
+name: ols assumptions
+---
+
+
+## Residuals vs Errors
+
+::: {.small}
+The most important [assumptions]{.h} concern the error term $u_{i}$.
+
+[Important:]{.hi} An error $u_{i}$ and a residual $\hat{u}_{i}$ are related, but different.
+
+Take for example, a model of the effects of education on wages. 
+:::
+
+[Error:]{.hi-green}
+
+> Difference between the wage of a worker with 11 years of education and the [expected wage]{.hi-green} with 11 years of education
+
+[Residual:]{.hii}
+
+> Difference between the wage of a worker with 11 years of education and the [average wage]{.hii} of workers with 11 years of education
+
+. . .
+
+::: {.align-center}
+[Population]{.hi-green} vs. [Sample]{.hii}
+:::
+
+---
+
+## Residuals vs Errors
+
+A [residual]{.hii} tells us how a [worker]{.hi}'s wages comapre to the average wages of workers in the [sample]{.hii} with the same level of education 
+
+![](images/residual-01.png){fig-align="center"}
+
+---
+
+## Residuals vs Errors
+
+A [residual]{.hii} tells us how a [worker]{.hi}'s wages comapre to the average wages of workers in the [sample]{.hii} with the same level of education 
+
+![](images/residual-02.png){fig-align="center"}
+
+---
+
+## Residuals vs Errors
+
+An [error]{.hi-green} tells us how a [worker]{.hi}'s wages compare to the expected wages of workers in the [population]{.hi-green} with the same level of education
+
+![](images/error-01.png){fig-align="center"}
+
+---
+
+## Classical Assumptions of OLS
+
+A1. [Linearity:]{.hi} The population relationship is [linear in parameters]{.note} with an additive error term
+
+A2. [Sample Variation:]{.hi} There is variation in $X$
+
+A3. [Exogeneity:]{.hi} The $X$ variable is [exogenous]{.note}
+
+A4. [Homosekdasticity:]{.hi} The error term has the same variance for each value of the independent variable
+
+A5. [Non-Autocorrelation:]{.hi} The values of error terms have independent distributions
+
+A6. [Normality:]{.hi} The population error term is normally distributed with mean zero and variance $\sigma^{2}$
+
+---
+
+## A1. Linearity
+
+> The population relationship is [linear in parameters]{.note} with an additive error term
+
+[Examples]{.hi}
+
+- $\text{Wage}_i = \beta_1 + \beta_2 \text{Experience}_i + u_i$
+
+. . .
+
+- $\log(\text{Happiness}_i) = \beta_1 + \beta_2 \log(\text{Money}_i) + u_i$
+
+. . .
+
+- $\sqrt{\text{Convictions}_i} = \beta_1 + \beta_2 (\text{Early Childhood Lead Exposure})_i + u_i$
+
+. . .
+
+- $\log(\text{Earnings}_i) = \beta_1 + \beta_2 \text{Education}_i + u_i$
+
+---
+
+## A1. Linearity
+
+> The population relationship is [linear in parameters]{.note} with an additive error term.
+
+[Violations]{.hi}
+
+- $\text{Wage}_i = (\beta_1 + \beta_2 \text{Experience}_i)u_i$
+
+. . .
+
+- $\text{Consumption}_i = \frac{1}{\beta_1 + \beta_2 \text{Income}_i} + u_i$
+
+. . .
+
+- $\text{Population}_i = \frac{\beta_1}{1 + e^{\beta_2 + \beta_3 \text{Food}_i}} + u_i$
+
+. . .
+
+- $\text{Batting Average}_i = \beta_1 (\text{Wheaties Consumption})_i^{\beta_2} + u_i$
+
+---
+
+## A2. Sample Variation
+
+> There is variation in $X$.
+
+[Example]{.hi}
+
+![](images/a2-ex.png){fig-align="center"}
+
+---
+
+## A2. Sample Variation
+
+> There is variation in $X$.
+
+[Violation]{.hi}
+
+![](images/a2-violation.png){fig-align="center"}
+
+We will see later that variation matters for inference as well
+
+---
+
+## A3. Exogeneity
+
+> The $X$ variable is [exogenous]{.note}
+
+We can write this as: 
+
+$$
+    \mathbb{E}[(u|X)] = 0
+$$
+
+Which essentially says that the expected value of the errors term, conditional on the variable $X$ is 0. 
+The assignment of $X$ is effectively random. 
+
+A significant implication of this is no [selection bias]{.hp} or [omitted variable bias]{.hii}
+
+---
+
+## A3. Exogeneity
+
+> The $X$ variable is [exogenous]{.note}
+
+$$
+    \mathbb{E}[(u|X)] = 0
+$$
+
+[Example]{.hi}
+
+In the labor market, an important component of $u$ is unobserved ability
+
+- $\mathbb{E}(u|\text{Education} = 12) = 0$ and $\mathbb{E}(u|\text{Education} = 20) = 0$
+- $\mathbb{E}(u|\text{Education} = 0) = 0$ and $\mathbb{E}(u|\text{Education} = 40) = 0$
+
+[note:]{.note} This is an assumption that does not necessarily hold true in real life, but with enough observations we can comfortably assume something like this
+
+---
+
+## A3. Exogeneity
+
+:::: {.columns}
+
+::: {.column width="50"}
+[Valid Exogeneity]{.hi .align-center}
+
+$$
+    \mathbb{E}[(u|X)] = 0
+$$
+
+![](images/a3-ex.png){fig-align="center"}
+:::
+
+::: {.column width="50"}
+[Invalid Exogeneity]{.hi .align-center}
+
+$$
+    \mathbb{E}[(u|X)] \neq 0
+$$
+
+![](images/a3-violation.png){fig-align="center"}
+:::
+
+::::
+
+---
+
+## Interlude: Unbiasedness of OLS
+
+When can we trust OLS?
+
+In estimators, the concept of [bias]{.hi-red} means that the expected value of the estimate is different from the true population parameter.
+
+Graphically we have:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Unbiased estimator:]{.hi} $\mathop{\mathbb{E}}\left[ \hat{\beta} \right] = \beta$
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+library(pacman)
+p_load(tidyverse)
+
+tmp <- tibble(x = seq(-4, 4, 0.01), y = dnorm(x))
+tmp <- rbind(tmp, tibble(x = seq(4, -4, -0.01), y = 0))
+ggplot(data = tmp, aes(x, y)) +
+geom_polygon(fill = 'grey90', alpha = 0.9) +
+geom_hline(yintercept = 0, color = 'darkblue') +
+geom_vline(xintercept = 0, size = 1, linetype = "dashed") +
+scale_x_continuous(breaks = 0, labels = "ß") + 
+theme_minimal()
+
+# +
+# theme(axis.text.x = element_text(size = 40),
+#       axis.text.y = element_blank(),
+#       axis.title = element_blank(),
+#       line = element_blank())
+```
+
+
+:::
+
+::: {.column width="50%"}
+[Biased estimator:]{.hi-red} $\mathop{\mathbb{E}}\left[ \hat{\beta} \right] \neq \beta$
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+tmp <- tibble(x = seq(-4, 4, 0.01), y = dnorm(x))
+tmp <- rbind(tmp, tibble(x = seq(4, -4, -0.01), y = 0))
+ggplot(data = tmp, aes(x, y)) +
+geom_polygon(aes(x = x + 2), fill = '#BF616A', alpha = 0.9) +
+geom_hline(yintercept = 0, color = 'darkblue') +
+geom_vline(xintercept = 0, size = 1, linetype = "dashed") +
+scale_x_continuous(breaks = 0, labels = "ß") +
+theme_minimal()
+
+# +
+# theme(axis.text.x = element_text(size = 40),
+#       axis.text.y = element_blank(),
+#       axis.title = element_blank(),
+#       line = element_blank())
+```
+
+
+:::
+
+::::
+
+---
+
+## Is OLS Unbiased?
+
+We require our first 3 assumptions for unbaised OLS estimator
+
+A1. [Linearity:]{.hi} The population relationship is [linear in parameters]{.note} with an additive error term
+
+A2. [Sample Variation:]{.hi} There is variation in $X$
+
+A3. [Exogeneity:]{.hi} The $X$ variable is [exogenous]{.note}
+
+And we can mathematically prove it!
+
+---
+
+## Proving Unbiasedness of OLS 
+
+Suppose we have the following model
+
+$$
+    y_{i} = \beta_{1} + \beta_{2}x_{i} + u_{i}
+$$
+
+. . .
+
+The slope parameter follows as:
+
+$$
+\hat{\beta}_2 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2}
+$$
+
+. . .
+
+(_As shown in section 2.3 in ItE_) that the estimator $\hat{\beta_2}$, can be broken up into a nonrandom and a random component:
+
+---
+
+[Proving unbiasedness of simple OLS]{.note}
+
+Substitute for $y_i$:
+
+$$
+\hat{\beta}_2 = \frac{\sum((\beta_1 + \beta_2x_i + u_i) - \bar{y})(x_i - \bar{x})}{\sum(x_i - \bar{x})^2}
+$$
+
+. . .
+
+Substitute $\bar{y} = \beta_1 + \beta_2\bar{x}$:
+
+$$
+\hat{\beta}_2 = \frac{\sum(u_i(x_i - \bar{x}))}{\sum(x_i - \bar{x})^2} + \frac{\sum(\beta_2x_i(x_i - \bar{x}))}{\sum(x_i - \bar{x})^2}
+$$
+
+. . .
+
+The non-random component, $\beta_2$, is factored out:
+
+$$
+\hat{\beta}_2 = \frac{\sum(u_i(x_i - \bar{x}))}{\sum(x_i - \bar{x})^2} + \beta_2\frac{\sum(x_i(x_i - \bar{x}))}{\sum(x_i - \bar{x})^2}
+$$
+
+---
+
+[Proving unbiasedness of simple OLS]{.note}
+
+[Observe]{.note} that the second term is equal to 1. Thus, we have:
+
+$$
+\hat{\beta}_2 = \beta_2 + \frac{\sum(u_i(x_i - \bar{x}))}{\sum(x_i - \bar{x})^2}
+$$
+
+. . .
+
+Taking the expectation, 
+
+$$
+\mathbb{E}[\hat{\beta_2}] = \mathbb{E}[\beta] + \mathbb{E} \left[\frac{\sum \hat{u_i} (x_i - \bar{x})}{\sum(x_i - \bar{x})^2} \right]
+$$
+
+. . .
+
+By [Rules 01]{.hi} and [02]{.hi} of expected value and [A3]{.note}:
+
+$$
+\begin{equation*}
+  \mathbb{E}[\hat{\beta_2}] = \beta + \frac{\sum \mathbb{E}[\hat{u_i}] (x_i - \bar{x})}{\sum(x_i - \bar{x})^2} = \beta
+\end{equation*}
+$$
+
+---
+
+## Required Assumptions {data-visibility="uncounted"}
+
+A1. [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+A2. [Sample Variation:]{.hi} There is variation in $X$.
+
+A3. [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+- A3 implies [random sampling]{.note}.
+
+<br>
+
+[Result:]{.hi} [OLS is unbiased.]{.fragment}
+
+---
+
+## Classical Assumptions of OLS {data-visibility="uncounted"}
+
+[A1.]{.note} [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+[A2.]{.note} [Sample Variation:]{.hi} There is variation in $X$.
+
+[A3.]{.note} [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+. . .
+
+<br>
+<br>
+
+::: {.align-center}
+The following 2 assumptions are not required for unbiasedness...
+:::
+
+::: {.align-center}
+[But they are important for an efficient estimator]{.fragment}
+:::
+
+::: {.align-center .fragment}
+Let's talk about why variance matters
+:::
+
+---
+
+## Why variance matters
+
+Unbiasedness tells us that OLS gets it right, _on average_. [But we can't tell whether our sample is "typical."]{.fragment}
+
+<br>
+
+. . .
+
+[Variance]{.hi} tells us how far OLS can deviate from the population mean.
+
+- How tight is OLS centered on its expected value?
+- This determines the [efficiency]{.hp} of our estimator.
+
+---
+
+## Why variance matters {data-visibility="uncounted"}
+
+Unbiasedness tells us that OLS gets it right, _on average_. But we can't tell whether our sample is "typical."
+
+<br>
+
+The smaller the variance, the closer OLS gets, _on average_, to the true population parameters _on any sample_.
+
+- Given two unbiased estimators, we want the one with smaller variance.
+- If [two more assumptions]{.note} are satisfied, we are using the [most efficient]{.hp} linear estimator.
+
+---
+
+## Classical Assumptions of OLS {data-visibility="uncounted"}
+
+A1. [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+A2. [Sample Variation:]{.hi} There is variation in $X$.
+
+A3. [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+. . .
+
+A4. [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+---
+
+## A4. Homoskedasticity
+
+> The error term has the same variance for each value of the independent variable $x_{i}$
+
+$$
+    Var(u|X) = \sigma^{2}.
+$$
+
+[Example:]{.hi}
+
+![](images/homoske.png){fig-align="center"}
+
+---
+
+## A4. Homoskedasticity
+
+> The error term has the same variance for each value of the independent variable $x_{i}$
+
+$$
+    Var(u|X) = \sigma^{2}.
+$$
+
+[Violation:]{.hi}
+
+![](images/heterosk-01.png){fig-align="center"}
+
+---
+
+## A4. Homoskedasticity
+
+> The error term has the same variance for each value of the independent variable $x_{i}$
+
+$$
+    Var(u|X) = \sigma^{2}.
+$$
+
+[Violation:]{.hi}
+
+![](images/heterosk-02.png){fig-align="center"}
+
+---
+
+## Heteroskedasticity Example
+
+Suppose we study the following relationship:
+
+$$
+\text{Luxury Expenditure}_i = \beta_1 + \beta_2 \text{Income}_i + u_i
+$$
+
+<br>
+
+As income increases, variation in luxury expenditures [increase]{.hii} 
+
+- Variance of $u_i$ is likely larger for higher-income households
+- Plot of the residuals against the household income would likely reveal a funnel-shaped pattern
+
+--- 
+
+## {data-visibility="uncounted"}
+
+[Common test for heteroskedasticity...]{.fragment} [Plot the residuals across $X$]{.fragment}
+
+
+```{r}
+#| echo: false
+#| fig.height: 5.75
+#| fig.align: center
+
+set.seed(12345)
+ggplot(data = tibble(
+  x = runif(1e3, 0, 10),
+  e = rnorm(1e3, 0, sd = 4 + 1.5 * x)
+), aes(x = x, y = e)) +
+geom_point(color = 'black', size = 2.75, alpha = 0.5) +
+labs(x = "Income", y = "Residuals") +
+scale_x_continuous(breaks = seq(0,10,2)) +
+theme_minimal() + 
+theme(
+  axis.text.x = element_text(size = 12),
+  axis.title.x = element_text(size = 12),
+  axis.text.y = element_blank()
+)
+
+```
+
+
+---
+
+## Classical Assumptions of OLS {data-visibility="uncounted"}
+
+A1. [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+A2.[Sample Variation:]{.hi} There is variation in $X$.
+
+A3. [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+A4. [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+. . .
+
+A5. [Non-autocorrelation:]{.hi} The values of error terms have independent distributions 
+
+---
+
+## A5. Non-Autocorrelation 
+
+> The values of error terms have independent distributions^[[Notes:]{.note} $\forall i = \text{for all} \: i$, $\text{s.t.} = \text{such that}$, $i \neq j \: \text{means} \: i \: \text{is not equal to} \: j$]
+
+$$
+E[u_i u_j]=0, \forall i \text{ s.t. } i \neq j
+$$
+
+. . .
+
+Or...
+
+$$
+\begin{align*}
+\mathop{\text{Cov}}(u_i, u_j) &= E[(u_i - \mu_u)(u_j - \mu_u)]\\
+                              &= E[u_i u_j] = E[u_i] E[u_j]  = 0, \text{where } i \neq j
+\end{align*}
+$$
+
+---
+
+## A5. Non-Autocorrelation 
+
+> The values of error terms have independent distributions 
+
+$$
+E[u_i u_j]=0, \forall i \text{ s.t. } i \neq j
+$$
+
+- Implies no systematic association between pairs of individual $u_i$
+- Almost always some unobserved correlation across individuals^[(e.g. common correlation in unobservables among individuals within a given US state)]
+- Referred to as [clustering]{.hp} problem.
+- An easy solution exists where we can adjust our standard errors
+
+## {data-visibility="uncounted"}
+
+::: {.align-center}
+Let's take a moment to talk about the [variance]{.note} of the [OLS]{.hi} [estimator]{.note}
+:::
+
+$$
+    Var(\hat{\beta}_{1}) = \dfrac{
+        \sigma^{2}
+        }{
+        \sum (x_{i} - \bar{x})^{2}
+        }
+$$
+
+<br>
+
+::: {.align-center}
+
+{{< video https://youtu.be/NnGZekJWqq8 width="700" height="375" >}}
+
+
+:::
+
+---
+
+## Classical Assumptions of OLS
+
+A1. [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+A2. [Sample Variation:]{.hi} There is variation in $X$.
+
+A3. [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+A4. [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+A5. [Non-autocorrelation:]{.hi} The values of error terms have independent distributions 
+
+> If A4 and A5 are satisfied, along with A1, A2, and A3, then we are using the [most efficient]{.hi} linear estimator
+
+---
+
+
+## Classical Assumptions of OLS
+
+A1. [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+A2. [Sample Variation:]{.hi} There is variation in $X$.
+
+A3. [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+A4. [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+A5. [Non-autocorrelation:]{.hi} The values of error terms have independent distributions 
+
+. . .
+
+A6. [Normality]{.hi} The population error term in normally distributed with mean zero and variance $\sigma^{2}$
+
+---
+
+## A6. Normality
+
+> The population error term in normally distributed with mean zero and variance $\sigma^{2}$
+
+Also known as:
+
+$$
+    u \sim N(0,\sigma^{2})
+$$
+
+Where $\sim$ means [distributed by]{.note} and $N$ stands for [normal distribution]{.note}
+
+However, A6 is not required for efficiency nor unbiasedness
+
+
+
+# Gauss-Markov Theorem {.inverse .note}
+
+
+
+---
+name: gauss markov
+---
+
+
+## Gauss-Markov Theorem
+
+> OLS is the [Best Linear Unbiased Estimator]{.hi} ([BLUE]{.hii}) when the following assumptions hold:
+
+. . .
+
+[A1.]{.note} [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+[A2.]{.note} [Sample Variation:]{.hi} There is variation in $X$.
+
+[A3.]{.note} [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+[A4.]{.note} [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+[A5.]{.note} [Non-autocorrelation:]{.hi} The values of error terms have independent distributions 
+
+---
+
+## Gauss-Markov Theorem
+
+> OLS is the [Best Unbiased Estimator]{.hi} ([BUE]{.hii}) when the following assumptions hold:
+
+. . .
+
+[A1.]{.note} [Linearity:]{.hi} The population relationship is [_linear in parameters_]{.note} with an additive error term.
+
+[A2.]{.note} [Sample Variation:]{.hi} There is variation in $X$.
+
+[A3.]{.note} [Exogeniety:]{.hi} The $X$ variable is [exogenous]{.note} 
+
+[A4.]{.note} [Homoskedasticity:]{.hi} The error term has the same variance for each value of the independent variable 
+
+[A5.]{.note} [Non-autocorrelation:]{.hi} The values of error terms have independent distributions 
+
+[A6.]{.note} [Normality:]{.hi} The population error term in normally distributed with mean zero and variance $\sigma^2$
+
+
