@@ -60,3 +60,14 @@ title: "Lectures"
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
+
+### Non-Linear Models
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="07-Non-Linear-Models/070-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="07-Non-Linear-Models/070-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
