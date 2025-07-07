@@ -4,14 +4,280 @@
     "href": "lectures/index.html",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
   },
   {
     "objectID": "lectures/index.html#theory",
     "href": "lectures/index.html#theory",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Ex. Imagine a population model for the amount individual \\(i\\) gets paid\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Male}_i + u_i\n\\]\nwhere \\(\\text{School}_i\\) gives \\(i\\)’s years of schooling and \\(\\text{Male}_i\\) denotes an indicator variable for whether individual \\(i\\) is male.\nInterpretation\n\n\\(\\beta_1\\): returns to an additional year of schooling (ceteris paribus)\n\\(\\beta_2\\): premium for being male (ceteris paribus)\n\n. . .\n\nIf \\(\\beta_2 &gt; 0\\), then there is discrimination against women."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Ex. Imagine a population model for the amount individual \\(i\\) gets paid\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Male}_i + u_i\n\\]\nwhere \\(\\text{School}_i\\) gives \\(i\\)’s years of schooling and \\(\\text{Male}_i\\) denotes an indicator variable for whether individual \\(i\\) is male.\nInterpretation\n\n\\(\\beta_1\\): returns to an additional year of schooling (ceteris paribus)\n\\(\\beta_2\\): premium for being male (ceteris paribus)\n\n. . .\n\nIf \\(\\beta_2 &gt; 0\\), then there is discrimination against women."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-1",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted variable bias",
+    "text": "Omitted variable bias\nEx. From the population model\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Male}_i + u_i\n\\]\nAn analyst focuses on the relationship between pay and schooling, i.e.,\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\left(\\beta_2 \\text{Male}_i + u_i\\right)\n\\] \\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\varepsilon_i\n\\]\nwhere \\(\\varepsilon_i = \\beta_2 \\text{Male}_i + u_i\\)."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-2",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted variable bias",
+    "text": "Omitted variable bias\nWe assumed exogeniety to show that OLS is unbiased.\nEven if \\(\\mathop{\\mathbb{E}}\\left[ u | X \\right] = 0\\), it is not necessarily true that \\(\\mathop{\\mathbb{E}}\\left[ \\varepsilon | X \\right] = 0\\)\n. . .\n\nIf \\(\\beta_2 \\neq 0\\), then it is false\n\n. . .\nSpecifically, if\n\\[\n\\mathop{\\mathbb{E}}\\left[ \\varepsilon | \\text{Male} = 1 \\right] = \\beta_2 + \\mathop{\\mathbb{E}}\\left[ u | \\text{Male} = 1 \\right] \\neq 0\n\\]\n. . .\nThen, OLS is biased"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-3",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nLet’s try to see this result graphically.\nThe true population model:\n\\[\n\\text{Pay}_i = 20 + 0.5 \\times \\text{School}_i + 10 \\times \\text{Male}_i + u_i\n\\]\nThe regression model that suffers from omitted-variable bias:\n\\[\n\\text{Pay}_i = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times \\text{School}_i + e_i\n\\]\nSuppose that women, on average, receive more schooling than men."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-4",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nTrue model: \\(\\text{Pay}_i = 20 + 0.5 \\times \\text{School}_i + 10 \\times \\text{Male}_i + u_i\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-5",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nBiased regression: \\(\\widehat{\\text{Pay}}_{i} = 31.3 - 0.9 \\times \\text{School}_{i}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-6",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-6",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nRecalling the omitted variable: Sex (female vs male)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-7",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-7",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nRecalling the omitted variable: Sex (female vs male)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-8",
+    "href": "lectures/08-Categorical-Variables/082-ovb.html#omitted-variable-bias-8",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nUnbiased Regression:\n\\[\n    \\widehat{\\text{Pay}}_{i} = 20.9 + 0.4 \\times \\text{School}_{i} + 9.1 \\times \\text{Male}_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-1",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-1",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nGoal Make quantitative statements about qualitative information.\n\ne.g., race, gender, being employed, living in Oregon, etc.\n\n\nApproach. Construct binary variables.\n\na.k.a. dummy variables or indicator variables.\nValue equals 1 if observation is in the category or 0 if otherwise.\n\n\n\nRegression implications.\n\nChange the interpretation of the intercept.\nChange the interpretations of the slope parameters."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables",
+    "title": "Categorical Variables and Interactions",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + u_i\n\\]\nwhere\n\n\\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay\n\\(\\text{School}_i\\) is a continuous variable that measures years of education\n\n\nInterpretation\n\n\\(\\beta_0\\): \\(y\\)-intercept, i.e., \\(\\text{Pay}\\) when \\(\\text{School} = 0\\)\n\\(\\beta_1\\): expected increase in \\(\\text{Pay}\\) for a one-unit increase in \\(\\text{School}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables-1",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables-1",
+    "title": "Categorical Variables and Interactions",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + u_i\n\\]\nAlternative derivation:\nDifferentiate the model with respect to schooling:\n\\[\n\\dfrac{\\partial \\text{Pay}}{\\partial \\text{School}} = \\beta_1\n\\]\nExpected increase in pay for an additional year of schooling"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables-2",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#continuous-variables-2",
+    "title": "Categorical Variables and Interactions",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nIf we have multiple explanatory variables, e.g.,\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Ability}_i + u_i\n\\]\nthen the interpretation changes slightly.\n\nAlternative derivation\nDifferentiate the model with respect to schooling:\n\\[\n\\dfrac{\\partial\\text{Pay}}{\\partial\\text{School}} = \\beta_1\n\\]\nThe slope gives the expected increase in pay for an additional year of schooling, holding ability constant."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-2",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-2",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\n\nInterpretation of \\(\\beta_0\\)\n\\(\\beta_0\\) is the expected \\(\\text{Pay}\\) for males (i.e., when \\(\\text{Female} = 0\\)):\n\n\n\\[\n\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Male} \\right] = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 0 + u_i \\right] = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + 0 + u_i \\right] = \\beta_0\n\\]"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-3",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-3",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\n\nInterpretation of \\(\\beta_1\\)\n\\(\\beta_1\\) is the expected difference in \\(\\text{Pay}\\) between females and males:\n\n\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Female} \\right] - \\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Male} \\right]\\)\n\n\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 1 + u_i \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 0 + u_i \\right]\\)\n\n\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 + u_i \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + 0 + u_i \\right]\\)\n\n\n\\(\\quad = \\beta_0 + \\beta_1 - \\beta_0\\) \\(\\quad = \\beta_1\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-4",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-4",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\nInterpretation\n\\(\\beta_0 + \\beta_1\\): is the expected \\(\\text{Pay}\\) for females:\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Female} \\right]\\)\n\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 1 + u_i \\right]\\)\n\n\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 + u_i \\right]\\)\n\n\n\\(\\quad = \\beta_0 + \\beta_1\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-5",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-5",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nInterpretation\n\n\\(\\beta_0\\): expected \\(\\text{Pay}\\) for males (i.e., when \\(\\text{Female} = 0\\))\n\\(\\beta_1\\): expected difference in \\(\\text{Pay}\\) between females and males\n\\(\\beta_0 + \\beta_1\\): expected \\(\\text{Pay}\\) for females\nMales are the reference group"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-6",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-6",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nNote. If there are no other variables to condition on, then \\(\\hat{\\beta}_1\\) equals the difference in group means, e.g., \\(\\bar{X}_\\text{Female} - \\bar{X}_\\text{Male}\\).\n\n\nNote2. The holding all other variables constant interpretation also applies for categorical variables in multiple regression settings."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-7",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-7",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-8",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-8",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-9",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#categorical-variables-9",
+    "title": "Categorical Variables and Interactions",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression",
+    "title": "Categorical Variables and Interactions",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\n\\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i \\quad\\) \\(X_1\\) is continuous \\(\\quad X_2\\) is categorical"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-1",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-1",
+    "title": "Categorical Variables and Interactions",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nThe intercept and categorical variable \\(X_2\\) control for the groups’ means."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-2",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-2",
+    "title": "Categorical Variables and Interactions",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nWith groups’ means removed"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-3",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-3",
+    "title": "Categorical Variables and Interactions",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\n\\(\\hat{\\beta}_1\\) estimates the relationship between \\(Y\\) and \\(X_1\\) after controlling for \\(X_2\\)."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-4",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#multiple-regression-4",
+    "title": "Categorical Variables and Interactions",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nAnother way to think about it: Regression by group"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted variable bias",
+    "text": "Omitted variable bias\nEx. Imagine a population model for the amount individual \\(i\\) gets paid\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Male}_i + u_i\n\\]\nwhere \\(\\text{School}_i\\) gives \\(i\\)’s years of schooling and \\(\\text{Male}_i\\) denotes an indicator variable for whether individual \\(i\\) is male.\nInterpretation\n\n\\(\\beta_1\\): returns to an additional year of schooling (ceteris paribus)\n\\(\\beta_2\\): premium for being male (ceteris paribus)\n\n\n\nIf \\(\\beta_2 &gt; 0\\), then there is discrimination against women."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-1",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-1",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted variable bias",
+    "text": "Omitted variable bias\nEx. From the population model\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Male}_i + u_i\n\\]\nAn analyst focuses on the relationship between pay and schooling, i.e.,\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\left(\\beta_2 \\text{Male}_i + u_i\\right)\n\\] \\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\varepsilon_i\n\\]\nwhere \\(\\varepsilon_i = \\beta_2 \\text{Male}_i + u_i\\)."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-2",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-2",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted variable bias",
+    "text": "Omitted variable bias\nWe assumed exogeniety to show that OLS is unbiased.\nEven if \\(\\mathop{\\mathbb{E}}\\left[ u | X \\right] = 0\\), it is not necessarily true that \\(\\mathop{\\mathbb{E}}\\left[ \\varepsilon | X \\right] = 0\\)\n\n\nIf \\(\\beta_2 \\neq 0\\), then it is false\n\n\n\nSpecifically, if\n\\[\n\\mathop{\\mathbb{E}}\\left[ \\varepsilon | \\text{Male} = 1 \\right] = \\beta_2 + \\mathop{\\mathbb{E}}\\left[ u | \\text{Male} = 1 \\right] \\neq 0\n\\]\n\n\nThen, OLS is biased"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-3",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-3",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nLet’s try to see this result graphically.\nThe true population model:\n\\[\n\\text{Pay}_i = 20 + 0.5 \\times \\text{School}_i + 10 \\times \\text{Male}_i + u_i\n\\]\nThe regression model that suffers from omitted-variable bias:\n\\[\n\\text{Pay}_i = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times \\text{School}_i + e_i\n\\]\nSuppose that women, on average, receive more schooling than men."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-4",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-4",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nTrue model: \\(\\text{Pay}_i = 20 + 0.5 \\times \\text{School}_i + 10 \\times \\text{Male}_i + u_i\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-5",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-5",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nBiased regression: \\(\\widehat{\\text{Pay}}_{i} = 31.3 - 0.9 \\times \\text{School}_{i}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-6",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-6",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nRecalling the omitted variable: Sex (female vs male)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-7",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-7",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nRecalling the omitted variable: Sex (female vs male)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-8",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#omitted-variable-bias-8",
+    "title": "Categorical Variables and Interactions",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\nUnbiased Regression:\n\\[\n    \\widehat{\\text{Pay}}_{i} = 20.9 + 0.4 \\times \\text{School}_{i} + 9.1 \\times \\text{Male}_{i}\n\\]"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#motivation",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#motivation",
+    "title": "Categorical Variables and Interactions",
+    "section": "Motivation",
+    "text": "Motivation\nRegression coefficients describe average effects. But for whom does on average mean?\n\n\nAverages can mask heterogeneous effects that differ by group or by the level of another variable.\n\n\n\nWe can use interaction terms to model heterogeneous effects, accommodating complexity and nuance by going beyond “the effect of \\(X\\) on \\(Y\\) is \\(\\beta_1\\).”"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/080-compile.html#interaction-terms",
+    "href": "lectures/08-Categorical-Variables/080-compile.html#interaction-terms",
+    "title": "Categorical Variables and Interactions",
+    "section": "Interaction Terms",
+    "text": "Interaction Terms\nStarting point: \\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i\\)\n\n\n\n\\(X_{1i}\\) is the variable of interest\n\n\n\n\\(X_{2i}\\) is a control variable\n\n\n\nA richer model: Interactions test whether \\(X_{2i}\\) moderates the effect of \\(X_{1i}\\)\n\\[\nY_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{1i} \\cdot X_{2i} + u_i\n\\]\n\n\nInterpretation: The partial derivative of \\(Y_i\\) with respect to \\(X_{1i}\\) is the marginal effect of \\(X_1\\) on \\(Y_i\\):\n\\[\n\\color{#81A1C1}{\\dfrac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_{2i}}\n\\]\n\n\nThe effect of \\(X_1\\) depends on the level of \\(X_2\\) 🤯"
   },
   {
     "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html",
@@ -4331,5 +4597,152 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "Quadratic regression",
     "text": "Quadratic regression\nWhere does the regression \\(\\hat{Y_i} = \\hat{\\beta}_0 + \\hat{\\beta}_1 X_i + \\hat{\\beta}_2 X_i^2\\) turn?\n\n. . .\nStep 1: Take the derivative and set equal to zero.\n\\[\n\\widehat{\\dfrac{\\partial \\text{Y}}{\\partial \\text{X}} } = \\hat{\\beta}_1 + 2\\hat{\\beta}_2 X = 0\n\\]\n. . .\nStep 1: Solve for \\(X\\).\n\\[\nX = -\\dfrac{\\hat{\\beta}_1}{2\\hat{\\beta}_2}\n\\]\n. . .\nEx. Peak of previous regression occurs at \\(X = 53.02\\)."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Goal Make quantitative statements about qualitative information.\n\ne.g., race, gender, being employed, living in Oregon, etc.\n\n. . .\nApproach. Construct binary variables.\n\na.k.a. dummy variables or indicator variables.\nValue equals 1 if observation is in the category or 0 if otherwise.\n\n. . .\nRegression implications.\n\nChange the interpretation of the intercept.\nChange the interpretations of the slope parameters."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Goal Make quantitative statements about qualitative information.\n\ne.g., race, gender, being employed, living in Oregon, etc.\n\n. . .\nApproach. Construct binary variables.\n\na.k.a. dummy variables or indicator variables.\nValue equals 1 if observation is in the category or 0 if otherwise.\n\n. . .\nRegression implications.\n\nChange the interpretation of the intercept.\nChange the interpretations of the slope parameters."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + u_i\n\\]\nwhere\n\n\\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay\n\\(\\text{School}_i\\) is a continuous variable that measures years of education\n\n. . .\nInterpretation\n\n\\(\\beta_0\\): \\(y\\)-intercept, i.e., \\(\\text{Pay}\\) when \\(\\text{School} = 0\\)\n\\(\\beta_1\\): expected increase in \\(\\text{Pay}\\) for a one-unit increase in \\(\\text{School}\\)\n\n\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + u_i\n\\]\nDerive the slope’s interpretation.\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{School} = \\ell + 1 \\right] - \\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{School} = \\ell \\right]\\)\n. . .\n \\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 (\\ell + 1) + u \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 \\ell + u \\right]\\)\n. . .\n \\(\\quad = \\left[ \\beta_0 + \\beta_1 (\\ell + 1) \\right] - \\left[ \\beta_0 + \\beta_1 \\ell \\right]\\)\n. . .\n \\(\\quad = \\beta_0 - \\beta_0 + \\beta_1 \\ell - \\beta_1 \\ell + \\beta_1\\) \\(\\: = \\beta_1\\).\nExpected increase in pay for an additional year of schooling"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables-1",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + u_i\n\\]\nAlternative derivation:\nDifferentiate the model with respect to schooling:\n\\[\n\\dfrac{\\partial \\text{Pay}}{\\partial \\text{School}} = \\beta_1\n\\]\nExpected increase in pay for an additional year of schooling\n\nIf we have multiple explanatory variables, e.g.,\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Ability}_i + u_i\n\\]\nthen the interpretation changes slightly.\n. . .\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{School} = \\ell + 1 \\land \\text{Ability} = \\alpha \\right] - \\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{School} = \\ell \\land \\text{Ability} = \\alpha \\right]\\)\n. . .\n \\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 (\\ell + 1) + \\beta_2 \\alpha + u \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 \\ell + \\beta_2 \\alpha + u \\right]\\)\n. . .\n \\(\\quad = \\left[ \\beta_0 + \\beta_1 (\\ell + 1) + \\beta_2 \\alpha \\right] - \\left[ \\beta_0 + \\beta_1 \\ell + \\beta_2 \\alpha \\right]\\)\n. . .\n \\(\\quad = \\beta_0 - \\beta_0 + \\beta_1 \\ell - \\beta_1 \\ell + \\beta_1 + \\beta_2 \\alpha - \\beta_2 \\alpha\\) \\(\\: = \\beta_1\\)\n. . .\nThe slope gives the expected increase in pay for an additional year of schooling, holding ability constant."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables-2",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#continuous-variables-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Continuous Variables",
+    "text": "Continuous Variables\nIf we have multiple explanatory variables, e.g.,\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{School}_i + \\beta_2 \\text{Ability}_i + u_i\n\\]\nthen the interpretation changes slightly.\n. . .\nAlternative derivation\nDifferentiate the model with respect to schooling:\n\\[\n\\dfrac{\\partial\\text{Pay}}{\\partial\\text{School}} = \\beta_1\n\\]\nThe slope gives the expected increase in pay for an additional year of schooling, holding ability constant."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-1",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\n. . .\nInterpretation of \\(\\beta_0\\)\n\\(\\beta_0\\) is the expected \\(\\text{Pay}\\) for males (i.e., when \\(\\text{Female} = 0\\)):\n. . .\n\\[\n\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Male} \\right] = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 0 + u_i \\right] = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + 0 + u_i \\right] = \\beta_0\n\\]"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-2",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\n. . .\nInterpretation of \\(\\beta_1\\)\n\\(\\beta_1\\) is the expected difference in \\(\\text{Pay}\\) between females and males:\n. . .\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Female} \\right] - \\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Male} \\right]\\)\n. . .\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 1 + u_i \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 0 + u_i \\right]\\)\n. . .\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 + u_i \\right] - \\mathop{\\mathbb{E}}\\left[ \\beta_0 + 0 + u_i \\right]\\)\n. . .\n\\(\\quad = \\beta_0 + \\beta_1 - \\beta_0\\) \\(\\quad = \\beta_1\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-3",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nwhere \\(\\text{Pay}_i\\) is a continuous variable measuring an individual’s pay and \\(\\text{Female}_i\\) is a binary variable equal to \\(1\\) when \\(i\\) is female.\nInterpretation\n\\(\\beta_0 + \\beta_1\\): is the expected \\(\\text{Pay}\\) for females:\n\\(\\mathop{\\mathbb{E}}\\left[ \\text{Pay} | \\text{Female} \\right]\\)\n. . .\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1\\times 1 + u_i \\right]\\)\n. . .\n\\(\\quad = \\mathop{\\mathbb{E}}\\left[ \\beta_0 + \\beta_1 + u_i \\right]\\)\n. . .\n\\(\\quad = \\beta_0 + \\beta_1\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-4",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nInterpretation\n\n\\(\\beta_0\\): expected \\(\\text{Pay}\\) for males (i.e., when \\(\\text{Female} = 0\\))\n\\(\\beta_1\\): expected difference in \\(\\text{Pay}\\) between females and males\n\\(\\beta_0 + \\beta_1\\): expected \\(\\text{Pay}\\) for females\nMales are the reference group"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-5",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\nConsider the relationship\n\\[\n\\text{Pay}_i = \\beta_0 + \\beta_1 \\text{Female}_i + u_i\n\\]\nNote. If there are no other variables to condition on, then \\(\\hat{\\beta}_1\\) equals the difference in group means, e.g., \\(\\bar{X}_\\text{Female} - \\bar{X}_\\text{Male}\\).\n\n. . .\nNote2. The holding all other variables constant interpretation also applies for categorical variables in multiple regression settings."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-6",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-6",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-7",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-7",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-8",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#categorical-variables-8",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\\(Y_i = \\beta_0 + \\beta_1 X_i + u_i\\) for binary variable \\(X_i = \\{\\color{#434C5E}{0}, \\, {\\color{#B48EAD}{1}}\\}\\)"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\n\\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i \\quad\\) \\(X_1\\) is continuous \\(\\quad X_2\\) is categorical"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-1",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nThe intercept and categorical variable \\(X_2\\) control for the groups’ means."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-2",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nWith groups’ means removed"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-3",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\n\\(\\hat{\\beta}_1\\) estimates the relationship between \\(Y\\) and \\(X_1\\) after controlling for \\(X_2\\)."
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-4",
+    "href": "lectures/08-Categorical-Variables/081-categorical-vars.html#multiple-regression-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Multiple Regression",
+    "text": "Multiple Regression\nAnother way to think about it: Regression by group"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/083-interactions.html",
+    "href": "lectures/08-Categorical-Variables/083-interactions.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Regression coefficients describe average effects. But for whom does on average mean?\n\n. . .\nAverages can mask heterogeneous effects that differ by group or by the level of another variable.\n\n. . .\nWe can use interaction terms to model heterogeneous effects, accommodating complexity and nuance by going beyond “the effect of \\(X\\) on \\(Y\\) is \\(\\beta_1\\).”"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/083-interactions.html#motivation",
+    "href": "lectures/08-Categorical-Variables/083-interactions.html#motivation",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Regression coefficients describe average effects. But for whom does on average mean?\n\n. . .\nAverages can mask heterogeneous effects that differ by group or by the level of another variable.\n\n. . .\nWe can use interaction terms to model heterogeneous effects, accommodating complexity and nuance by going beyond “the effect of \\(X\\) on \\(Y\\) is \\(\\beta_1\\).”"
+  },
+  {
+    "objectID": "lectures/08-Categorical-Variables/083-interactions.html#interaction-terms",
+    "href": "lectures/08-Categorical-Variables/083-interactions.html#interaction-terms",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Interaction Terms",
+    "text": "Interaction Terms\nStarting point: \\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i\\)\n\n\n\n\\(X_{1i}\\) is the variable of interest\n\n\n\n\\(X_{2i}\\) is a control variable\n\n\n\n. . .\nA richer model: Interactions test whether \\(X_{2i}\\) moderates the effect of \\(X_{1i}\\)\n\\[\nY_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{1i} \\cdot X_{2i} + u_i\n\\]\n. . .\nInterpretation: The partial derivative of \\(Y_i\\) with respect to \\(X_{1i}\\) is the marginal effect of \\(X_1\\) on \\(Y_i\\):\n\\[\n\\color{#81A1C1}{\\dfrac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_{2i}}\n\\]\n. . .\nThe effect of \\(X_1\\) depends on the level of \\(X_2\\) 🤯"
   }
 ]

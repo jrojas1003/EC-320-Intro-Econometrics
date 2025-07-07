@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lectures – EC 320 - Intro. Econometrics</title>
+<title>interactions – EC 320 - Intro. Econometrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../UO-icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../UO-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-401534a81502bb050162c7e5212a4163.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC 320 - Intro. Econometrics</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../lectures/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/problem-sets/index.html"> 
+    <a class="nav-link" href="../../documents/problem-sets/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documents/readings/index.html"> 
+    <a class="nav-link" href="../../documents/readings/index.html"> 
 <span class="menu-text">Readings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -123,16 +152,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a>
-  <ul class="collapse">
-  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables">Random Variables</a></li>
-  <li><a href="#estimators" id="toc-estimators" class="nav-link" data-scroll-target="#estimators">Estimators</a></li>
-  <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a></li>
-  <li><a href="#multiple-variable-regressions" id="toc-multiple-variable-regressions" class="nav-link" data-scroll-target="#multiple-variable-regressions">Multiple Variable Regressions</a></li>
-  <li><a href="#non-linear-models" id="toc-non-linear-models" class="nav-link" data-scroll-target="#non-linear-models">Non-Linear Models</a></li>
-  <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">Categorical Variables</a></li>
-  <li><a href="#funadmental-probelm-of-causal-inference" id="toc-funadmental-probelm-of-causal-inference" class="nav-link" data-scroll-target="#funadmental-probelm-of-causal-inference">Funadmental Probelm of Causal Inference</a></li>
-  </ul></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#interaction-terms" id="toc-interaction-terms" class="nav-link" data-scroll-target="#interaction-terms">Interaction Terms</a></li>
   </ul>
 </nav>
 </nav>
@@ -141,100 +162,50 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lectures</h1>
+
+
+
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>Regression coefficients describe average effects. <span class="fragment">But for whom does <em>on average</em> mean?</span></p>
+<p><br></p>
+<p>. . .</p>
+<p>Averages can mask <span class="hp">heterogeneous effects</span> that differ by group or by the level of another variable.</p>
+<p><br></p>
+<p>. . .</p>
+<p>We can use <span class="note">interaction terms</span> to model <span class="hp">heterogeneous effects</span><span class="fragment">, accommodating complexity and nuance by going beyond <em>“the effect of</em> <span class="math inline">\(X\)</span> <em>on</em> <span class="math inline">\(Y\)</span> <em>is</em> <span class="math inline">\(\beta_1\)</span><em>.”</em></span></p>
+<hr>
+</section>
+<section id="interaction-terms" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-terms">Interaction Terms</h2>
+<p><span class="hi">Starting point:</span> <span class="math inline">\(Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + u_i\)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(X_{1i}\)</span> is the variable of interest</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(X_{2i}\)</span> is a control variable</li>
+</ul>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="theory" class="level2">
-<h2 class="anchored" data-anchor-id="theory">Theory</h2>
-<section id="random-variables" class="level3">
-<h3 class="anchored" data-anchor-id="random-variables">Random Variables</h3>
-<div>
-  <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../lectures/01-Random-Variables/010-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="estimators" class="level3">
-<h3 class="anchored" data-anchor-id="estimators">Estimators</h3>
-<section id="part-i" class="level4">
-<h4 class="anchored" data-anchor-id="part-i">Part I</h4>
-<div>
-  <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/03-Estimators-01/030-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="part-ii" class="level4">
-<h4 class="anchored" data-anchor-id="part-ii">Part II</h4>
-<div>
-  <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/04-Estimators-02/040-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-</section>
-<section id="inference" class="level3">
-<h3 class="anchored" data-anchor-id="inference">Inference</h3>
-<div>
-  <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/05-Inference/050-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="multiple-variable-regressions" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-variable-regressions">Multiple Variable Regressions</h3>
-<div>
-  <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/06-Multiple-Var-Reg/060-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="non-linear-models" class="level3">
-<h3 class="anchored" data-anchor-id="non-linear-models">Non-Linear Models</h3>
-<div>
-  <iframe class="slide deck" src="07-Non-Linear-Models/070-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/07-Non-Linear-Models/070-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="categorical-variables" class="level3">
-<h3 class="anchored" data-anchor-id="categorical-variables">Categorical Variables</h3>
-<div>
-  <iframe class="slide deck" src="08-Categorical-Variables/080-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../lectures/08-Categorical-Variables/080-compile.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="funadmental-probelm-of-causal-inference" class="level3">
-<h3 class="anchored" data-anchor-id="funadmental-probelm-of-causal-inference">Funadmental Probelm of Causal Inference</h3>
+<p>. . .</p>
+<p><span class="note">A richer model:</span> Interactions test whether <span class="math inline">\(X_{2i}\)</span> <span class="purple"><em>moderates</em></span> the effect of <span class="math inline">\(X_{1i}\)</span></p>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \beta_3 X_{1i} \cdot X_{2i} + u_i
+\]</span></p>
+<p>. . .</p>
+<p><span class="note">Interpretation:</span> The partial derivative of <span class="math inline">\(Y_i\)</span> with respect to <span class="math inline">\(X_{1i}\)</span> is the <span class="note">marginal effect</span> of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y_i\)</span>:</p>
+<p><span class="math display">\[
+\color{#81A1C1}{\dfrac{\partial Y}{\partial X_1} = \beta_1 + \beta_3 X_{2i}}
+\]</span></p>
+<p>. . .</p>
+<p>The effect of <span class="math inline">\(X_1\)</span> depends on the level of <span class="math inline">\(X_2\)</span> 🤯</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
