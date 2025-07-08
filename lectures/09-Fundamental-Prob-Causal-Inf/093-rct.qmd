@@ -1,0 +1,209 @@
+---
+name: randomized controlled trials
+---
+
+
+## Selection Bias
+
+[Problem:]{.hi} Selection bias precludes *all else equal* comparisons.
+
+- To make causal statements, we need to shut down the bias term.
+
+. . .
+
+[Potential solution:]{.hi} Conduct an experiment.
+
+- How? [Random assignment of treatment]{.hii}
+
+- Hence the name, [*randomized* control trial]{.note} (RCT).
+
+. . .
+
+Groups will need to be large enough
+
+- Following the LLN, as we increase $n$ of both groups, our randomly assigned treatment estimate is _more likely_ to be representative of the population mean. 
+
+
+---
+
+## Randomized control trials 
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+<br>
+
+[Motivation:]{.hi-bb} Intestinal worms are common among children in less-developed countries. The parasitic symptoms disrupt human capital acquisition by keeping children home.
+
+<br>
+
+[Policy Question:]{.hii} Do school-based de-worming interventions provide a cost-effective way to increase school attendance? 
+
+
+---
+
+## Randomized control trials 
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+<br>
+
+[Research Question:]{.hi} How much do de-worming interventions increase school attendance?
+
+<br>[Q:]{.note} Could we simply compare average attendance among children with and without access to de-worming medication?
+
+. . .
+
+<br>[A:]{.note} If we're after the causal effect, probably not.
+
+---
+
+## Randomized control trials {data-visibility="uncounted"}
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+<br>
+
+[Research Question:]{.hi} How much do de-worming interventions increase school attendance?
+
+<br>[Q:]{.note} Why not?
+
+. . .
+
+<br>[A:]{.note} [Selection bias]{.note} [-- Families with access to de-worming medication probably have healthier children for other reasons (_e.g. wealth, access to clean drinking water_).^[_Can't make an *all else equal* comparison. Biased and/or spurious results._]]{.fragment}
+
+
+---
+
+## Randomized Control Trials 
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+. . .
+
+Imagine an [RCT]{.note} where we have [two]{.hi} groups of villages:
+
+- [Treatment:]{.hii} Where children get de-worming medication in school.
+- [Control:]{.hp} Where children don't get de-worming medication in school _(status quo)_.
+
+. . .
+
+By randomizing, we will, on average, include all kinds of villages in both groups
+
+- poor _vs._ less poor
+- access to clean water _vs._ contaminated water
+- hospital _vs._ no hospital
+
+
+---
+
+##
+
+[[54 villages]{.hi}]{.small}
+
+![](images/rct-01.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development
+
+![](images/rct-02.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development [plus randomly assigned treatment]{.hii}
+
+![](images/rct-03.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development [plus randomly assigned treatment]{.hii}
+
+![](images/rct-04.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development [plus randomly assigned treatment]{.hii}
+
+![](images/rct-05.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development [plus randomly assigned treatment]{.hii}
+
+![](images/rct-06.png){fig-align="center"}
+
+---
+
+## 
+
+[[54 villages]{.hi}]{.small} of varying levels of development [plus randomly assigned treatment]{.hii}
+
+![](images/rct-07.png){fig-align="center"}
+
+---
+
+## Randomized Control Trials 
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+We can estimate the [causal effect]{.hi} of de-worming on school attendance by comparing the average attendance rates in the treatment group (💊) with those in the control group (no 💊).
+
+$$
+\begin{align}
+  \overline{\text{Attendance}}_\text{Treatment} - \overline{\text{Attendance}}_\text{Control}
+\end{align}
+$$
+
+. . .
+
+
+Alternatively, we can use the regression
+
+. . .
+
+
+$$
+\begin{align}
+  \text{Attendance}_i = \beta_0 + \beta_1 \text{Treatment}_i + u_i \tag{1}
+\end{align}
+$$
+
+where $\text{Treatment}_i$ is a binary variable (=1 if village $i$ received the de-worming treatment).
+
+---
+
+## Randomized Control Trials {data-visibility="uncounted"}
+
+[Ex.]{.ex} [Effect of de-worming on attendance]{.hi}
+
+$$
+\begin{align}
+  \text{Attendance}_i = \beta_0 + \beta_1 \text{Treatment}_i + u_i \tag{1}
+\end{align}
+$$
+
+where $\text{Treatment}_i$ is a binary variable (=1 if village $i$ received the de-worming treatment).
+
+[Q:]{.note} Should trust the results of Eq. $(1)$? [Why?]{.fragment}
+
+. . .
+
+<br>[A:]{.note} On average, [randomly assigning treatment should balance]{.hi} treatment and control across the other dimensions that affect school attendance.
+
+[But we must always be cautious]{.fragment}
+
+---
+
+[Randomization can go wrong!]{.hi}
+
+![](images/rct-08.png){fig-align="center"}

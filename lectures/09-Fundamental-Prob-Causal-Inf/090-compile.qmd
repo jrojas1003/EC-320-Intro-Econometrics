@@ -1,0 +1,31 @@
+---
+title: "Fundamental Problem of Causal Inference"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: "Jose Rojas-Fallas"
+date: last-modified
+date-format: "YYYY"
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    footer: "EC320, Lecture 08 | Fundamental Problem of Causal Inference"
+    preview-links: auto
+    code-fold: false
+    html: true
+    embed-resources: false
+    self-contained: false
+title-slide-attributes: 
+  data-background-position: left
+---
+
+# Prologue {.inverse .note}
+
+{{< include 091-prologue.qmd >}}
+
+# Fundamental Problem of Causal Inference {.inverse .note}
+
+{{< include 092-fundamental.qmd >}}
+
+# Randomized Controlled Trials {.inverse .note}
+
+{{< include 093-rct.qmd >}}
