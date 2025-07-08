@@ -4,14 +4,294 @@
     "href": "lectures/index.html",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
   },
   {
     "objectID": "lectures/index.html#theory",
     "href": "lectures/index.html#theory",
     "title": "Lectures",
     "section": "",
-    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+    "text": "Expand\n\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand\n\n\n\n\n\n  \n\n\n   Expand"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Goal:\n\nIdentify the effect of a treatment, \\(D_i\\), on individual \\(i\\)’s outcome, \\(Y_{D,i}\\).\n\n\n. . .\n\nIdeally, we could calculate the treatment effect for each individual \\(i\\) as\n\\[Y_{1,i} - Y_{0,i}\\]\n\n\\(Y_{1,i}\\): the outcome for person \\(i\\) when she receives the treatment.\n\\(Y_{0,i}\\): the outcome for person \\(i\\) when she doesn’t receive the treatment.\n\n. . .\nReferred to as potential outcomes"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#causal-identification",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#causal-identification",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Goal:\n\nIdentify the effect of a treatment, \\(D_i\\), on individual \\(i\\)’s outcome, \\(Y_{D,i}\\).\n\n\n. . .\n\nIdeally, we could calculate the treatment effect for each individual \\(i\\) as\n\\[Y_{1,i} - Y_{0,i}\\]\n\n\\(Y_{1,i}\\): the outcome for person \\(i\\) when she receives the treatment.\n\\(Y_{0,i}\\): the outcome for person \\(i\\) when she doesn’t receive the treatment.\n\n. . .\nReferred to as potential outcomes"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-data",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-data",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Ideal data",
+    "text": "Ideal data\n\n\nThe ideal data for 10 people\n\n\n\n\n\n\nCausal effect of treatment.\n\\[\n\\begin{align}\n  \\tau_i = Y_{1,i} -  Y_{0,i}\n\\end{align}\n\\] for each individual \\(i\\)."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-data-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-data-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Ideal data",
+    "text": "Ideal data\n\n\nThe ideal data for 10 people\n\n\n\n\n\n\nCausal effect of treatment.\n\\[\n\\begin{align}\n  \\tau_i = Y_{1,i} -  Y_{0,i}\n\\end{align}\n\\] for each individual \\(i\\).\nDefine the mean of \\(\\tau_i\\) as the average treatment effect (ATE)\n\\[\n\\color{#81A1C1}{\\overline{\\tau} = 3.82}\n\\]\n\n\n. . .\nNotice the assignment of treatment is irrelevant in this setting."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-comparison",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#ideal-comparison",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Ideal comparison",
+    "text": "Ideal comparison\n\\[\n\\begin{align}\n  \\tau_i = \\color{#81A1C1}{Y_{1,i}} &- \\color{#B48EAD}{Y_{0,i}}\n\\end{align}\n\\]\nHighlights the fundamental problem of econometrics, much like when a traveler assesses options down two separate roads.\n. . .\nThe problem\n\nIf we observe \\(\\color{#81A1C1}{Y_{1,i}}\\), then we cannot observe \\(\\color{#B48EAD}{Y_{0,i}}\\).\nIf we observe \\(\\color{#B48EAD}{Y_{0,i}}\\), then we cannot observe \\(\\color{#81A1C1}{Y_{1,i}}\\).\nWe do not observe the counterfactual."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#counterfactual",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#counterfactual",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Counterfactual",
+    "text": "Counterfactual\n\nHypothetical scenario representing the unobserved outcome for an individual or unit if they had experienced the alternative treatment or condition\n\n. . .\nThe traveler’s alternative outcome is forever unknown to them."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#fundamental-problem-of-causal-inference",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#fundamental-problem-of-causal-inference",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Fundamental problem of causal inference",
+    "text": "Fundamental problem of causal inference\nA dataset that we can observe for 10 people looks something like\n\n\n\n\n\n\n\n\nWe can’t observe \\(\\color{#81A1C1}{Y_{1,i}}\\) and \\(\\color{#B48EAD}{Y_{0,i}}\\).\nBut, we do observe\n\n\\(\\color{#81A1C1}{Y_{1,i}}\\) for \\(i\\) in 1, 2, 3, 4, 5\n\\(\\color{#B48EAD}{Y_{0,i}}\\) for \\(i\\) in 6, 7, 8, 9, 10\n\n\n\n. . .\nQ: How do we “fill in” the NAs and estimate \\(\\overline{\\tau}\\)? Or.\n. . .\nQ: What is a good counterfactual for the missing data?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nNotation: \\(D_i\\) is a binary indicator variable such that\n\n\\(\\color{#81A1C1}{D_i=1}\\) if individual \\(\\color{#81A1C1}{i}\\) is treated.\n\\(\\color{#B48EAD}{D_i=0}\\) if individual \\(\\color{#B48EAD}{i}\\) is not treated (control group).\n\n. . .\nThen, rephrasing the previous slide,\n\nWe only observe \\(\\color{#81A1C1}{Y_{1,i}}\\) when \\(\\color{#81A1C1}{D_{i}=1}\\).\nWe only observe \\(\\color{#B48EAD}{Y_{0,i}}\\) when \\(\\color{#B48EAD}{D_{i}=0}\\).\n\n. . .\nQ: How can we estimate \\(\\overline{\\tau}\\) using only \\(\\left(\\color{#81A1C1}{Y_{1,i}|D_i=1}\\right)\\) and \\(\\left(\\color{#B48EAD}{Y_{0,i}|D_i=0}\\right)\\)?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nQ: How can we estimate \\(\\overline{\\tau}\\) using only \\(\\left(\\color{#81A1C1}{Y_{1,i}|D_i=1}\\right)\\) and \\(\\left(\\color{#B48EAD}{Y_{0,i}|D_i=0}\\right)\\)?\n. . .\nIdea: What if we compare the group of \\(n\\) peoples’ means? I.e.,\n\\[\n\\begin{aligned}\n  =&\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\\\\n  =&\\color{#81A1C1}{E\\left( Y_{1i}\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_{0i}\\mid D_i =0 \\right)}\n\\end{aligned}\n\\]\n. . .\nQ: When does a simple difference-in-means provide information on the causal effect of the treatment?\n. . .\nQ: Is \\(\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\) a good estimator for \\(\\overline{\\tau}\\)?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nAssumption: Let \\(\\tau_i = \\tau\\) for all \\(i\\).\n\nThe treatment effect is equal (constant) across all individuals \\(i\\).\n\n. . .\nNote: We defined\n\\[\n  \\tau_i = \\tau = \\color{#81A1C1}{Y_{1,i}} - \\color{#B48EAD}{Y_{0,i}}\n\\]\nwhich implies\n\\[\n   \\color{#81A1C1}{Y_{1,i}} = \\color{#B48EAD}{Y_{0,i}} + \\tau\n\\]\n\nQ: Is \\(\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} \\color{#434C5E}{-} \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\) a good estimator for \\(\\tau\\)?\n\n. . .\n\\(\\quad \\color{#ffffff}{\\Bigg|}=\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} \\color{#434C5E}{-} \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\)\n. . .\n\\(\\quad \\color{#ffffff}{\\Bigg|}=\\color{#81A1C1}{E\\left( Y_{1,i}\\mid D_i = 1 \\right)} \\color{#434C5E}{-} \\color{#B48EAD}{E\\left( Y_{0,i}\\mid D_i =0 \\right)}\\)\n. . .\n\\(\\quad \\color{#ffffff}{\\Bigg|}=\\color{#B48EAD}{E\\left( \\color{#434C5E}{\\tau \\: +} \\: \\color{#B48EAD}{Y_{0,i}} \\mid D_i = 1 \\right)} \\color{#434C5E}{-} \\color{#B48EAD}{E\\left( Y_{0,i}\\mid D_i =0 \\right)}\\)\n. . .\n\\(\\quad \\color{#ffffff}{\\Bigg|}= \\color{#434C5E}{\\tau} \\color{#434C5E}{+} \\color{#B48EAD}{E\\left(\\color{#B48EAD}{Y_{0,i}} \\mid D_i = 1 \\right)} \\color{#434C5E}{-} \\color{#B48EAD}{E\\left( Y_{0,i}\\mid D_i =0 \\right)}\\)\n. . .\n\\(\\quad \\color{#ffffff}{\\Bigg|}= \\color{#434C5E}{\\text{Average causal effect}} + \\color{#B48EAD}{\\text{Selection bias}}\\)"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#estimating-causal-effects-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nOur proposed difference-in-means estimator\n\\[\n\\color{#434C5E}{\\text{Average causal effect}} + \\color{#B48EAD}{\\text{Selection bias}}\n\\]\ngives us the sum of\n\n\\(\\tau\\), the causal, average treatment effect that we want.\nSelection bias: How much treatment and control groups differ, on average."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#mastering-metrics-video-on-selection-bias",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/092-fundamental.html#mastering-metrics-video-on-selection-bias",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Mastering Metrics Video on Selection Bias",
+    "text": "Mastering Metrics Video on Selection Bias"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#statistics-inform-policy",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#statistics-inform-policy",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Statistics Inform Policy",
+    "text": "Statistics Inform Policy\nPolicy: In 2017, the University of Oregon started requiring first-year students to live on campus.\n\nRationale: First-year students who live on campus fare better:\n\n80 percent more likely to graduate in four years.\nSecond-year retention rate 5 percentage points higher.\nGPAs 0.13 points higher, on average.\n\n\n\nDo these comparisons suggest the policy improves student outcomes?\n\n\nDo they describe the effect of living on campus?\n\n\nDo they describe something else?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#other-things-equal",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#other-things-equal",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Other Things Equal",
+    "text": "Other Things Equal\nThe UO’s interpretation of those comparisons warrants skepticism.\n\nThe decision to live on campus is probably related to family wealth and interest in school.\nFamily wealth and interest in school are related to academic achievement.\n\n\n\nWhy might I be worried?\n\nThe difference in outcomes between those on and off campus is not an all else equal comparison.\n\n\nUpshot: Can’t attribute the difference in outcomes solely to living on campus."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#all-else-equal",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#all-else-equal",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "All else equal",
+    "text": "All else equal\n\nCeteris paribus, all else held constant, etc.\n\n\n\nA high bar\nWhen all else equal, statistical comparisons detect causal relationships.\n(Micro)economics has developed a comparative advantage in understanding where all else equal comparisons can and cannot be made.\n\nAnyone can retort “correlation doesn’t necessarily imply causation.”\nUnderstanding why is difficult, but useful for learning from data."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#causal-identification",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#causal-identification",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Causal identification",
+    "text": "Causal identification\n\nGoal:\n\nIdentify the effect of a treatment, \\(D_i\\), on individual \\(i\\)’s outcome, \\(Y_{D,i}\\).\n\n\n\n\nIdeally, we could calculate the treatment effect for each individual \\(i\\) as\n\\[Y_{1,i} - Y_{0,i}\\]\n\n\\(Y_{1,i}\\): the outcome for person \\(i\\) when she receives the treatment.\n\\(Y_{0,i}\\): the outcome for person \\(i\\) when she doesn’t receive the treatment.\n\n\n\nReferred to as potential outcomes"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-data",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-data",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Ideal data",
+    "text": "Ideal data\n\n\nThe ideal data for 10 people\n\n\n\n\n\n\nCausal effect of treatment.\n\\[\n\\begin{align}\n  \\tau_i = Y_{1,i} -  Y_{0,i}\n\\end{align}\n\\] for each individual \\(i\\)."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-data-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-data-1",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Ideal data",
+    "text": "Ideal data\n\n\nThe ideal data for 10 people\n\n\n\n\n\n\nCausal effect of treatment.\n\\[\n\\begin{align}\n  \\tau_i = Y_{1,i} -  Y_{0,i}\n\\end{align}\n\\] for each individual \\(i\\).\nDefine the mean of \\(\\tau_i\\) as the average treatment effect (ATE)\n\\[\n\\color{#81A1C1}{\\overline{\\tau} = 3.82}\n\\]\n\n\n\nNotice the assignment of treatment is irrelevant in this setting."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-comparison",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#ideal-comparison",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Ideal comparison",
+    "text": "Ideal comparison\n\\[\n\\begin{align}\n  \\tau_i = \\color{#81A1C1}{Y_{1,i}} &- \\color{#B48EAD}{Y_{0,i}}\n\\end{align}\n\\]\nHighlights the fundamental problem of econometrics, much like when a traveler assesses options down two separate roads.\n\nThe problem\n\nIf we observe \\(\\color{#81A1C1}{Y_{1,i}}\\), then we cannot observe \\(\\color{#B48EAD}{Y_{0,i}}\\).\nIf we observe \\(\\color{#B48EAD}{Y_{0,i}}\\), then we cannot observe \\(\\color{#81A1C1}{Y_{1,i}}\\).\nWe do not observe the counterfactual."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#counterfactual",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#counterfactual",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Counterfactual",
+    "text": "Counterfactual\n\nHypothetical scenario representing the unobserved outcome for an individual or unit if they had experienced the alternative treatment or condition\n\n\nThe traveler’s alternative outcome is forever unknown to them."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#fundamental-problem-of-causal-inference-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#fundamental-problem-of-causal-inference-1",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Fundamental problem of causal inference",
+    "text": "Fundamental problem of causal inference\nA dataset that we can observe for 10 people looks something like\n\n\n\n\n\n\n\n\nWe can’t observe \\(\\color{#81A1C1}{Y_{1,i}}\\) and \\(\\color{#B48EAD}{Y_{0,i}}\\).\nBut, we do observe\n\n\\(\\color{#81A1C1}{Y_{1,i}}\\) for \\(i\\) in 1, 2, 3, 4, 5\n\\(\\color{#B48EAD}{Y_{0,i}}\\) for \\(i\\) in 6, 7, 8, 9, 10\n\n\n\n\nQ: How do we “fill in” the NAs and estimate \\(\\overline{\\tau}\\)? Or.\n\n\nQ: What is a good counterfactual for the missing data?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nNotation: \\(D_i\\) is a binary indicator variable such that\n\n\\(\\color{#81A1C1}{D_i=1}\\) if individual \\(\\color{#81A1C1}{i}\\) is treated.\n\\(\\color{#B48EAD}{D_i=0}\\) if individual \\(\\color{#B48EAD}{i}\\) is not treated (control group).\n\n\nThen, rephrasing the previous slide,\n\nWe only observe \\(\\color{#81A1C1}{Y_{1,i}}\\) when \\(\\color{#81A1C1}{D_{i}=1}\\).\nWe only observe \\(\\color{#B48EAD}{Y_{0,i}}\\) when \\(\\color{#B48EAD}{D_{i}=0}\\).\n\n\n\nQ: How can we estimate \\(\\overline{\\tau}\\) using only \\(\\left(\\color{#81A1C1}{Y_{1,i}|D_i=1}\\right)\\) and \\(\\left(\\color{#B48EAD}{Y_{0,i}|D_i=0}\\right)\\)?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-1",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nQ: How can we estimate \\(\\overline{\\tau}\\) using only \\(\\left(\\color{#81A1C1}{Y_{1,i}|D_i=1}\\right)\\) and \\(\\left(\\color{#B48EAD}{Y_{0,i}|D_i=0}\\right)\\)?\n\nIdea: What if we compare the group of \\(n\\) peoples’ means? I.e.,\n\\[\n\\begin{aligned}\n  =&\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\\\\n  =&\\color{#81A1C1}{E\\left( Y_{1i}\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_{0i}\\mid D_i =0 \\right)}\n\\end{aligned}\n\\]\n\n\nQ: When does a simple difference-in-means provide information on the causal effect of the treatment?\n\n\nQ: Is \\(\\color{#81A1C1}{E\\left( Y_i\\mid D_i = 1 \\right)} - \\color{#B48EAD}{E\\left( Y_i\\mid D_i =0 \\right)}\\) a good estimator for \\(\\overline{\\tau}\\)?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-2",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nAssumption: Let \\(\\tau_i = \\tau\\) for all \\(i\\).\n\nThe treatment effect is equal (constant) across all individuals \\(i\\).\n\n\nNote: We defined\n\\[\n  \\tau_i = \\tau = \\color{#81A1C1}{Y_{1,i}} - \\color{#B48EAD}{Y_{0,i}}\n\\]\nwhich implies\n\\[\n   \\color{#81A1C1}{Y_{1,i}} = \\color{#B48EAD}{Y_{0,i}} + \\tau\n\\]"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#estimating-causal-effects-3",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Estimating causal effects",
+    "text": "Estimating causal effects\nOur proposed difference-in-means estimator\n\\[\n\\color{#434C5E}{\\text{Average causal effect}} + \\color{#B48EAD}{\\text{Selection bias}}\n\\]\ngives us the sum of\n\n\\(\\tau\\), the causal, average treatment effect that we want.\nSelection bias: How much treatment and control groups differ, on average."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#mastering-metrics-video-on-selection-bias",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#mastering-metrics-video-on-selection-bias",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Mastering Metrics Video on Selection Bias",
+    "text": "Mastering Metrics Video on Selection Bias"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#selection-bias",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#selection-bias",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Selection Bias",
+    "text": "Selection Bias\nProblem: Selection bias precludes all else equal comparisons.\n\nTo make causal statements, we need to shut down the bias term.\n\n\nPotential solution: Conduct an experiment.\n\nHow? Random assignment of treatment\nHence the name, randomized control trial (RCT).\n\n\n\nGroups will need to be large enough\n\nFollowing the LLN, as we increase \\(n\\) of both groups, our randomly assigned treatment estimate is more likely to be representative of the population mean."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nMotivation: Intestinal worms are common among children in less-developed countries. The parasitic symptoms disrupt human capital acquisition by keeping children home.\n\nPolicy Question: Do school-based de-worming interventions provide a cost-effective way to increase school attendance?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-1",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nResearch Question: How much do de-worming interventions increase school attendance?\nQ: Could we simply compare average attendance among children with and without access to de-worming medication?\n\nA: If we’re after the causal effect, probably not."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-2",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nResearch Question: How much do de-worming interventions increase school attendance?\nQ: Why not?\n\nA: Selection bias – Families with access to de-worming medication probably have healthier children for other reasons (e.g. wealth, access to clean drinking water).1\n\nCan’t make an all else equal comparison. Biased and/or spurious results."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-3",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\n\nImagine an RCT where we have two groups of villages:\n\nTreatment: Where children get de-worming medication in school.\nControl: Where children don’t get de-worming medication in school (status quo).\n\n\n\nBy randomizing, we will, on average, include all kinds of villages in both groups\n\npoor vs. less poor\naccess to clean water vs. contaminated water\nhospital vs. no hospital"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-1",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-2",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-3",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-4",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-4",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-5",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-5",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-6",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#section-6",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-4",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-4",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\nWe can estimate the causal effect of de-worming on school attendance by comparing the average attendance rates in the treatment group (💊) with those in the control group (no 💊).\n\\[\n\\begin{align}\n  \\overline{\\text{Attendance}}_\\text{Treatment} - \\overline{\\text{Attendance}}_\\text{Control}\n\\end{align}\n\\]\n\nAlternatively, we can use the regression\n\n\n\\[\n\\begin{align}\n  \\text{Attendance}_i = \\beta_0 + \\beta_1 \\text{Treatment}_i + u_i \\tag{1}\n\\end{align}\n\\]\nwhere \\(\\text{Treatment}_i\\) is a binary variable (=1 if village \\(i\\) received the de-worming treatment)."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-5",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/090-compile.html#randomized-control-trials-5",
+    "title": "Fundamental Problem of Causal Inference",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\n\\[\n\\begin{align}\n  \\text{Attendance}_i = \\beta_0 + \\beta_1 \\text{Treatment}_i + u_i \\tag{1}\n\\end{align}\n\\]\nwhere \\(\\text{Treatment}_i\\) is a binary variable (=1 if village \\(i\\) received the de-worming treatment).\nQ: Should trust the results of Eq. \\((1)\\)? Why?\n\nA: On average, randomly assigning treatment should balance treatment and control across the other dimensions that affect school attendance.\nBut we must always be cautious"
   },
   {
     "objectID": "lectures/08-Categorical-Variables/082-ovb.html",
@@ -277,7 +557,7 @@
     "href": "lectures/08-Categorical-Variables/080-compile.html#interaction-terms",
     "title": "Categorical Variables and Interactions",
     "section": "Interaction Terms",
-    "text": "Interaction Terms\nStarting point: \\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i\\)\n\n\n\n\\(X_{1i}\\) is the variable of interest\n\n\n\n\\(X_{2i}\\) is a control variable\n\n\n\nA richer model: Interactions test whether \\(X_{2i}\\) moderates the effect of \\(X_{1i}\\)\n\\[\nY_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{1i} \\cdot X_{2i} + u_i\n\\]\n\n\nInterpretation: The partial derivative of \\(Y_i\\) with respect to \\(X_{1i}\\) is the marginal effect of \\(X_1\\) on \\(Y_i\\):\n\\[\n\\color{#81A1C1}{\\dfrac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_{2i}}\n\\]\n\n\nThe effect of \\(X_1\\) depends on the level of \\(X_2\\) 🤯"
+    "text": "Interaction Terms\nStarting point: \\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i\\)\n\n\n\n\\(X_{1i}\\) is the variable of interest\n\n\n\n\\(X_{2i}\\) is a control variable\n\n\n\n\nA richer model: Interactions test whether \\(X_{2i}\\) moderates the effect of \\(X_{1i}\\)\n\\[\nY_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{1i} \\cdot X_{2i} + u_i\n\\]\n\n\nInterpretation: The partial derivative of \\(Y_i\\) with respect to \\(X_{1i}\\) is the marginal effect of \\(X_1\\) on \\(Y_i\\):\n\\[\n\\color{#81A1C1}{\\dfrac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_{2i}}\n\\]\n\n\nThe effect of \\(X_1\\) depends on the level of \\(X_2\\) 🤯\n\n\nEC320, Lecture 07 | Categorical Vars and Interactions"
   },
   {
     "objectID": "lectures/07-Non-Linear-Models/072-logarithms.html",
@@ -760,7 +1040,7 @@
     "href": "lectures/07-Non-Linear-Models/070-compile.html#anscombes-quartet-aka-plot-your-data",
     "title": "Non-Linear Models",
     "section": "Anscombe’s Quartet AKA Plot Your Data",
-    "text": "Anscombe’s Quartet AKA Plot Your Data\nFour “identical” regressions: Intercept \\(= 3\\), Slope \\(= 0.5\\), \\(R^{2} = 0.67\\)\n\nSame results, but with very different distributions only visible when you scatter them"
+    "text": "Anscombe’s Quartet AKA Plot Your Data\nFour “identical” regressions: Intercept \\(= 3\\), Slope \\(= 0.5\\), \\(R^{2} = 0.67\\)\n\nSame results, but with very different distributions only visible when you scatter them\n\n\nEC320, Lecture 06 | Non-Linear Models"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/065-multicollinearity.html",
@@ -1155,13 +1435,6 @@
     "text": "Inference\nAfter deriving the distribution of \\(\\hat{\\beta}_1\\)1, we have two (related) options for formal statistical inference (learning) about our unknown parameter \\(\\beta_1\\):\n\n\nHypothesis testing: Determine whether there is statistically significant evidence to reject a hypothesized value or range of values.\nConfidence intervals: Use the estimate and its standard error to create an interval that will generally2 contain the true parameter."
   },
   {
-    "objectID": "lectures/05-Inference/052-inference.html#footnotes",
-    "href": "lectures/05-Inference/052-inference.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHint: It’s normal with mean \\(\\beta_1\\) and variance \\(\\frac{\\sigma^2}{\\sum_{i=1}^n (X_i - \\bar{X})^2}\\).↩︎\nE.g., similarly constructed 95% confidence intervals will contain the true parameter 95% of the time.↩︎"
-  },
-  {
     "objectID": "lectures/05-Inference/050-compile.html#ols",
     "href": "lectures/05-Inference/050-compile.html#ols",
     "title": "Inference",
@@ -1460,7 +1733,7 @@
     "href": "lectures/05-Inference/050-compile.html#ex.-association-of-police-with-crime-1",
     "title": "Inference",
     "section": "Ex. Association of police with crime",
-    "text": "Ex. Association of police with crime\n\nFour confidence intervals for the same coefficient."
+    "text": "Ex. Association of police with crime\n\nFour confidence intervals for the same coefficient.\n\n\nEC320, Lecture 04 | Inference"
   },
   {
     "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html",
@@ -1694,13 +1967,6 @@
     "text": "A6. Normality\n\nThe population error term in normally distributed with mean zero and variance \\(\\sigma^{2}\\)\n\nAlso known as:\n\\[\n    u \\sim N(0,\\sigma^{2})\n\\]\nWhere \\(\\sim\\) means distributed by and \\(N\\) stands for normal distribution\nHowever, A6 is not required for efficiency nor unbiasedness"
   },
   {
-    "objectID": "lectures/04-Estimators-02/043-classical-assumptions.html#footnotes",
-    "href": "lectures/04-Estimators-02/043-classical-assumptions.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nNotes: \\(\\forall i = \\text{for all} \\: i\\), \\(\\text{s.t.} = \\text{such that}\\), \\(i \\neq j \\: \\text{means} \\: i \\: \\text{is not equal to} \\: j\\)↩︎\n(e.g. common correlation in unobservables among individuals within a given US state)↩︎"
-  },
-  {
     "objectID": "lectures/04-Estimators-02/041-ols-properties.html",
     "href": "lectures/04-Estimators-02/041-ols-properties.html",
     "title": "EC 320 - Intro. Econometrics",
@@ -1876,13 +2142,6 @@
     "text": "Minimizing RSS\nWe could test thousands of guesses of \\(\\beta_0\\) and \\(\\beta_1\\) an pick the pair the has the smallest RSS\nWe could painstakingly do that, and eventually figure out which one fits best.\nOr… We could just do a little math"
   },
   {
-    "objectID": "lectures/03-Estimators-01/033-linear-ex.html#footnotes",
-    "href": "lectures/03-Estimators-01/033-linear-ex.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAssumptions regarding the error term↩︎"
-  },
-  {
     "objectID": "lectures/03-Estimators-01/031-estimators.html",
     "href": "lectures/03-Estimators-01/031-estimators.html",
     "title": "EC 320 - Intro. Econometrics",
@@ -1922,7 +2181,7 @@
     "href": "lectures/03-Estimators-01/031-estimators.html#properties-of-estimators-1",
     "title": "EC 320 - Intro. Econometrics",
     "section": "Properties of estimators",
-    "text": "Properties of estimators\nQuestion What properties make an estimator reliable?\nA01: Unbiasedness\n\n\nUnbiased estimator: \\(E\\left[ \\hat{\\mu} \\right] = \\mu\\)\n\n\n\n\n\n\n\n\n\n\nBiased estimator \\(E\\left[ \\hat{\\mu} \\right] \\neq \\mu\\)"
+    "text": "Properties of estimators\nQuestion What properties make an estimator reliable?\nA01: Unbiasedness\n\n\nUnbiased estimator: \\(E\\left[ \\hat{\\mu} \\right] = \\mu\\)\n\n\n\n\n\n\nBiased estimator \\(E\\left[ \\hat{\\mu} \\right] \\neq \\mu\\)"
   },
   {
     "objectID": "lectures/03-Estimators-01/031-estimators.html#properties-of-estimators---efficiency",
@@ -2160,7 +2419,7 @@
     "href": "lectures/01-Random-Variables/010-compile.html#discrete-and-continuous-rv",
     "title": "Random Variables",
     "section": "Discrete and Continuous RV",
-    "text": "Discrete and Continuous RV\nWhat’s the difference?\n\n\nDiscrete\n\nCounted\nTake on a small number of possible values\nEx: Number of M&Ms in your bag\n\n\nContinuous\n\nMeasured\nCan take on an infinite number of possible values\nEx: How heavy your bag is\n\n\nVariables can also be categorical instead of numeric. They may represent qualitative data that can be divided into categories or groups. For now, we will lump them in with discrete variables"
+    "text": "Discrete and Continuous RV\nWhat’s the difference?\n\n\nDiscrete\n\nCounted\nTake on a small number of possible values\nEx: Number of M&Ms in your bag\n\n\nContinuous\n\nMeasured\nCan take on an infinite number of possible values\nEx: How heavy your bag is\n\n\n\nVariables can also be categorical instead of numeric. They may represent qualitative data that can be divided into categories or groups. For now, we will lump them in with discrete variables"
   },
   {
     "objectID": "lectures/01-Random-Variables/010-compile.html#discrete-probability-distributions",
@@ -2279,7 +2538,7 @@
     "href": "lectures/01-Random-Variables/010-compile.html#primary-differences-in-expected-values-by-rv-type",
     "title": "Random Variables",
     "section": "Primary Differences in Expected Values by RV Type",
-    "text": "Primary Differences in Expected Values by RV Type\nTo find the expected value or variance of a continuous random variable instead of a discrete random variable, we just swap integrals for sums and the PDF \\(f(X)\\) for \\(p_{i}\\):\n\n\n\n\n\n\n\n\n\n\\(E[X]\\)\n\\(Var(X) = E[(X - \\mu_{X})^{2}]\\)\n\n\n\n\nDiscrete\n\\(\\sum_{i=1}^{n} x_{i}p_{i}\\)\n\\(\\sum_{i=1}^{n} (x_{i} - \\mu_{X})^{2} p_{i}\\)\n\n\nContinuous\n\\(\\int X f(X) dX\\)\n\\(\\int (X - \\mu_{x})^{2} f(X) dX\\)"
+    "text": "Primary Differences in Expected Values by RV Type\nTo find the expected value or variance of a continuous random variable instead of a discrete random variable, we just swap integrals for sums and the PDF \\(f(X)\\) for \\(p_{i}\\):\n\n\n\n\n\n\n\n\n\n\\(E[X]\\)\n\\(Var(X) = E[(X - \\mu_{X})^{2}]\\)\n\n\n\n\nDiscrete\n\\(\\sum_{i=1}^{n} x_{i}p_{i}\\)\n\\(\\sum_{i=1}^{n} (x_{i} - \\mu_{X})^{2} p_{i}\\)\n\n\nContinuous\n\\(\\int X f(X) dX\\)\n\\(\\int (X - \\mu_{x})^{2} f(X) dX\\)\n\n\n\n\n\nEC320, Lecture 01 | Random Variables"
   },
   {
     "objectID": "lectures/01-Random-Variables/012-expected-values.html",
@@ -2426,7 +2685,7 @@
     "href": "lectures/03-Estimators-01/030-compile.html#properties-of-estimators-1",
     "title": "Estimators",
     "section": "Properties of estimators",
-    "text": "Properties of estimators\nQuestion What properties make an estimator reliable?\nA01: Unbiasedness\n\n\nUnbiased estimator: \\(E\\left[ \\hat{\\mu} \\right] = \\mu\\)\n\n\n\n\n\n\n\n\n\n\nBiased estimator \\(E\\left[ \\hat{\\mu} \\right] \\neq \\mu\\)"
+    "text": "Properties of estimators\nQuestion What properties make an estimator reliable?\nA01: Unbiasedness\n\n\nUnbiased estimator: \\(E\\left[ \\hat{\\mu} \\right] = \\mu\\)\n\n\n\n\n\n\nBiased estimator \\(E\\left[ \\hat{\\mu} \\right] \\neq \\mu\\)"
   },
   {
     "objectID": "lectures/03-Estimators-01/030-compile.html#properties-of-estimators---efficiency",
@@ -2755,7 +3014,7 @@
     "href": "lectures/03-Estimators-01/030-compile.html#coefficient-interpretation-2",
     "title": "Estimators",
     "section": "Coefficient Interpretation",
-    "text": "Coefficient Interpretation\nUsing OLS gives us the fitted line\n\\[\n\\widehat{\\text{Crime}_i} = \\hat{\\beta}_1 + \\hat{\\beta}_2\\text{Police}_i.\n\\]\nWhat does \\(\\hat{\\beta_0}\\) = \\(18.41\\) tell us? Without any police on campus, the crime rate is \\(18.41\\) per 1,000 people on campus\n\nWhat does \\(\\hat{\\beta_1}\\) = \\(1.76\\) tell us? For each additional police officer per 1,000, there is an associated increase in the crime rate by \\(1.76\\) crimes per 1,000 people on campus.\n\n\nDoes this mean that police cause crime? Probably not.\nThis is where deciding if the interpretation should be taken at face value. It now becomes your job to bring reason to the values."
+    "text": "Coefficient Interpretation\nUsing OLS gives us the fitted line\n\\[\n\\widehat{\\text{Crime}_i} = \\hat{\\beta}_1 + \\hat{\\beta}_2\\text{Police}_i.\n\\]\nWhat does \\(\\hat{\\beta_0}\\) = \\(18.41\\) tell us? Without any police on campus, the crime rate is \\(18.41\\) per 1,000 people on campus\n\nWhat does \\(\\hat{\\beta_1}\\) = \\(1.76\\) tell us? For each additional police officer per 1,000, there is an associated increase in the crime rate by \\(1.76\\) crimes per 1,000 people on campus.\n\n\nDoes this mean that police cause crime? Probably not.\nThis is where deciding if the interpretation should be taken at face value. It now becomes your job to bring reason to the values.\n\n\nEC320, Lecture 02 | Estimators"
   },
   {
     "objectID": "lectures/03-Estimators-01/032-linear-model.html",
@@ -3287,7 +3546,7 @@
     "href": "lectures/04-Estimators-02/040-compile.html#gauss-markov-theorem-2",
     "title": "Estimators Part II",
     "section": "Gauss-Markov Theorem",
-    "text": "Gauss-Markov Theorem\n\nOLS is the Best Unbiased Estimator (BUE) when the following assumptions hold:\n\n\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term in normally distributed with mean zero and variance \\(\\sigma^2\\)"
+    "text": "Gauss-Markov Theorem\n\nOLS is the Best Unbiased Estimator (BUE) when the following assumptions hold:\n\n\nA1. Linearity: The population relationship is linear in parameters with an additive error term.\nA2. Sample Variation: There is variation in \\(X\\).\nA3. Exogeniety: The \\(X\\) variable is exogenous\nA4. Homoskedasticity: The error term has the same variance for each value of the independent variable\nA5. Non-autocorrelation: The values of error terms have independent distributions\nA6. Normality: The population error term in normally distributed with mean zero and variance \\(\\sigma^2\\)\n\n\nEC320, Lecture 03 | Estimators II"
   },
   {
     "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html",
@@ -3385,7 +3644,7 @@
     "href": "lectures/04-Estimators-02/042-goodness-of-fit.html#section-8",
     "title": "EC 320 - Intro. Econometrics",
     "section": "",
-    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (Y_i - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{Y_i} - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]\n\n\n\n\nWarning: `position_dodge()` requires non-overlapping x intervals.\n`position_dodge()` requires non-overlapping x intervals."
+    "text": "\\[\n\\color{#BF616A}{\\text{TSS}} \\equiv \\sum_{i=1}^n (Y_i - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#8FBCBB}{\\text{ESS}} \\equiv \\sum_{i=1}^n (\\hat{Y_i} - \\bar{Y})^2\n\\]\n\n\\[\n\\color{#D08770}{\\text{RSS}} \\equiv \\sum_{i=1}^n \\hat{u}_i^2\n\\]\n\n\n\n\nWarning: `position_dodge()` requires non-overlapping x intervals\n`position_dodge()` requires non-overlapping x intervals"
   },
   {
     "objectID": "lectures/04-Estimators-02/042-goodness-of-fit.html#goodness-of-fit-2",
@@ -3470,13 +3729,6 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "",
     "text": "Plotting the distributions of the point estimates in a histogram\n \n\n\n\n\n\nSimulating 1,000 draws\n\nPlotting the distributions of the point estimates in a histogram\n \n\n\n\n\n\nSimulating 10,000 draws"
-  },
-  {
-    "objectID": "lectures/05-Inference/051-prologue.html#footnotes",
-    "href": "lectures/05-Inference/051-prologue.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nUseful for making inferences, constructing confidence intervals, and performing hypothesis tests using the t-distribution.↩︎"
   },
   {
     "objectID": "lectures/05-Inference/053-hypothesis-test.html#hypothesis-tests",
@@ -3624,13 +3876,6 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "One-sided tests",
     "text": "One-sided tests\nRight-tailed: Based on a critical value of \\(t_{1-\\alpha, n-2} = t_{0.95, 100} = 1.66\\), we can identify a rejection region on the \\(t\\)-distribution.\n\n\n\n\n\n. . .\nIf our \\(t\\) statistic is in the rejection region, then we reject the null hypothesis at the 5 percent level.\n\nEx. Do campus police deter campus crime? (\\(\\alpha = 0.1\\))\nSuppose we rule out the possibility that police increase crime, but not that they have no effect.\n\n\n\n\n\n\n\n\\(H_0\\): \\(\\beta_\\text{Police} = 0\\)\n\\(H_1\\): \\(\\beta_\\text{Police} &lt; 0\\)\n\nNotice that the \\(\\color{#434C5E}{t \\text{-stat}} = 1.35\\). The critical value is \\(\\color{#434C5E}{t_{\\text{0.9, 94}}} = 1.29\\).\nWhich implies that \\(p &gt; 0.05\\). Therefore, we reject \\(H_0\\) at the 5% level."
-  },
-  {
-    "objectID": "lectures/05-Inference/053-hypothesis-test.html#footnotes",
-    "href": "lectures/05-Inference/053-hypothesis-test.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nType I error↩︎\nType II error↩︎\n\\(\\beta_1^0\\) is the value of \\(\\beta_1\\) in our null hypothesis (e.g., \\(\\beta_1^0 = 0\\)).↩︎\nrepresents the number of independent values in a sample that are free to vary when estimating statistical parameters.↩︎\nWe reject the null hypothesis, but the null is actually true.↩︎\nNote: Fail to reject \\(\\neq\\) accept.↩︎\n{{&lt; fa brands r-project &gt;}} defaults to testing hypotheses against the null hypothesis of zero.↩︎"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/060-compile.html#quick-recap",
@@ -3994,14 +4239,14 @@
     "href": "lectures/06-Multiple-Var-Reg/060-compile.html#multiple-regression",
     "title": "Multiple Variable Regression Analysis",
     "section": "Multiple regression",
-    "text": "Multiple regression\nThere are tradeoffs to remember as we add/remove variables:\n\n\nFewer variables\n\nExplains less variation in \\(y\\)\nProvide simple interpretations and visualizations\nMore worried about omitted-variable bias\n\n\nMore variables\n\nMore likely to find spurious relationships1\nMore difficult interpretation\nThe variance of our point estimates will be bigger\nWe still might have omitted-variable bias\n\n\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship"
+    "text": "Multiple regression\nThere are tradeoffs to remember as we add/remove variables:\n\n\nFewer variables\n\nExplains less variation in \\(y\\)\nProvide simple interpretations and visualizations\nMore worried about omitted-variable bias\n\n\nMore variables\n\nMore likely to find spurious relationships1\nMore difficult interpretation\nThe variance of our point estimates will be bigger\nWe still might have omitted-variable bias\n\n\n\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/060-compile.html#multiple-regression-1",
     "href": "lectures/06-Multiple-Var-Reg/060-compile.html#multiple-regression-1",
     "title": "Multiple Variable Regression Analysis",
     "section": "Multiple regression",
-    "text": "Multiple regression\nThere are tradeoffs to remember as we add/remove variables:\n\n\nFewer variables\n\nExplains less variation in \\(y\\)\nProvide simple interpretations and visualizations\nMore worried about omitted-variable bias\n\n\nMore variables\n\nMore likely to find spurious relationships1\nMore difficult interpretation\nThe variance of our point estimates will be bigger\nWe still might have omitted-variable bias\n\n\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship"
+    "text": "Multiple regression\nThere are tradeoffs to remember as we add/remove variables:\n\n\nFewer variables\n\nExplains less variation in \\(y\\)\nProvide simple interpretations and visualizations\nMore worried about omitted-variable bias\n\n\nMore variables\n\nMore likely to find spurious relationships1\nMore difficult interpretation\nThe variance of our point estimates will be bigger\nWe still might have omitted-variable bias\n\n\n\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/060-compile.html#ols-variances",
@@ -4148,7 +4393,7 @@
     "href": "lectures/06-Multiple-Var-Reg/060-compile.html#f-tests-7",
     "title": "Multiple Variable Regression Analysis",
     "section": "F Tests",
-    "text": "F Tests\nRSS is usually a large cumbersome number.\nAlternative: Calculate the \\(F\\)-statistic using \\(R^2\\).\n\\[\n\\begin{align}\n  F = \\dfrac{\\left(R^2_u - R^2_r\\right)/q}{ (1 - R^2_u)/(n-k-1)}\n\\end{align}\n\\]\n\nWhere does this come from?\n\n\n\\(\\text{TSS} = \\text{RSS} + \\text{ESS}\\)\n\\(R^2 = \\text{ESS}/\\text{TSS}\\)\n\n\\(\\text{RSS}_r = \\text{TSS}(1-R^2_r)\\)\n\\(\\text{RSS}_u = \\text{TSS}(1-R^2_u)\\)"
+    "text": "F Tests\nRSS is usually a large cumbersome number.\nAlternative: Calculate the \\(F\\)-statistic using \\(R^2\\).\n\\[\n\\begin{align}\n  F = \\dfrac{\\left(R^2_u - R^2_r\\right)/q}{ (1 - R^2_u)/(n-k-1)}\n\\end{align}\n\\]\n\nWhere does this come from?\n\n\n\\(\\text{TSS} = \\text{RSS} + \\text{ESS}\\)\n\\(R^2 = \\text{ESS}/\\text{TSS}\\)\n\n\\(\\text{RSS}_r = \\text{TSS}(1-R^2_r)\\)\n\\(\\text{RSS}_u = \\text{TSS}(1-R^2_u)\\)\n\n\n\n\nEC320, Lecture 05 | Multi Variable Regression"
   },
   {
     "objectID": "lectures/06-Multiple-Var-Reg/062-class-size-ex.html",
@@ -4396,13 +4641,6 @@
     "text": "Multiple regression\nThere are tradeoffs to remember as we add/remove variables:\n\n\nFewer variables\n\nExplains less variation in \\(y\\)\nProvide simple interpretations and visualizations\nMore worried about omitted-variable bias\n\n\nMore variables\n\nMore likely to find spurious relationships3\nMore difficult interpretation\nThe variance of our point estimates will be bigger\nWe still might have omitted-variable bias"
   },
   {
-    "objectID": "lectures/06-Multiple-Var-Reg/064-multi-linear-reg.html#footnotes",
-    "href": "lectures/06-Multiple-Var-Reg/064-multi-linear-reg.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\n\\(k+1\\) due to the intercept.↩︎\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship↩︎\nSpurious meaning statistically significant by coincidence—not reflective of true, population-level relationship↩︎"
-  },
-  {
     "objectID": "lectures/06-Multiple-Var-Reg/066-f-tests.html#f-tests",
     "href": "lectures/06-Multiple-Var-Reg/066-f-tests.html#f-tests",
     "title": "EC 320 - Intro. Econometrics",
@@ -4513,13 +4751,6 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "Linearity",
     "text": "Linearity\nWhich of the following are an example of linear-in-parameters, linear-in-variables, or neither?\n\n1. \\(\\color{#A3BE8C}{Y_i = \\beta_0 + \\beta_1X_{i} + \\beta_2X_{i}^2 + \\dots + \\beta_kX_{i}^k + u_i}\\)\n2. \\(\\color{#434C5E}{Y_i = \\beta_0X_i^{\\beta_1}v_i}\\)\n3. \\(\\color{#B48EAD}{Y_i = \\beta_0 + \\beta_1\\beta_2X_{i} + u_i}\\)\n\nModel 1 is linear-in-parameters, but not linear-in-variables.\nModel 2 is neither.\nModel 3 is linear-in-variables, but not linear-in-parameters."
-  },
-  {
-    "objectID": "lectures/07-Non-Linear-Models/071-prologue.html#footnotes",
-    "href": "lectures/07-Non-Linear-Models/071-prologue.html#footnotes",
-    "title": "EC 320 - Intro. Econometrics",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nBeyond the scope of this class.↩︎"
   },
   {
     "objectID": "lectures/07-Non-Linear-Models/073-quadratic.html",
@@ -4744,5 +4975,138 @@
     "title": "EC 320 - Intro. Econometrics",
     "section": "Interaction Terms",
     "text": "Interaction Terms\nStarting point: \\(Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + u_i\\)\n\n\n\n\\(X_{1i}\\) is the variable of interest\n\n\n\n\\(X_{2i}\\) is a control variable\n\n\n\n. . .\nA richer model: Interactions test whether \\(X_{2i}\\) moderates the effect of \\(X_{1i}\\)\n\\[\nY_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{1i} \\cdot X_{2i} + u_i\n\\]\n. . .\nInterpretation: The partial derivative of \\(Y_i\\) with respect to \\(X_{1i}\\) is the marginal effect of \\(X_1\\) on \\(Y_i\\):\n\\[\n\\color{#81A1C1}{\\dfrac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_{2i}}\n\\]\n. . .\nThe effect of \\(X_1\\) depends on the level of \\(X_2\\) 🤯"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Policy: In 2017, the University of Oregon started requiring first-year students to live on campus.\n. . .\nRationale: First-year students who live on campus fare better:\n\n80 percent more likely to graduate in four years.\nSecond-year retention rate 5 percentage points higher.\nGPAs 0.13 points higher, on average.\n\n. . .\nDo these comparisons suggest the policy improves student outcomes?\n. . .\nDo they describe the effect of living on campus?\n. . .\nDo they describe something else?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#statistics-inform-policy",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#statistics-inform-policy",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Policy: In 2017, the University of Oregon started requiring first-year students to live on campus.\n. . .\nRationale: First-year students who live on campus fare better:\n\n80 percent more likely to graduate in four years.\nSecond-year retention rate 5 percentage points higher.\nGPAs 0.13 points higher, on average.\n\n. . .\nDo these comparisons suggest the policy improves student outcomes?\n. . .\nDo they describe the effect of living on campus?\n. . .\nDo they describe something else?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#other-things-equal",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#other-things-equal",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Other Things Equal",
+    "text": "Other Things Equal\nThe UO’s interpretation of those comparisons warrants skepticism.\n\nThe decision to live on campus is probably related to family wealth and interest in school.\nFamily wealth and interest in school are related to academic achievement.\n\n. . .\n\nWhy might I be worried?\n\nThe difference in outcomes between those on and off campus is not an all else equal comparison.\n\n\nUpshot: Can’t attribute the difference in outcomes solely to living on campus.\n\nLiving on campus (D) increases student welfare (Y)\n\n\n\n\n\n\nLiving on campus (D) increases student welfare (Y)\n\n\n\n\n\nBut parental income (W) impacts both student welfare (Y) and living on campus (D). Failing to account for parental income will bias comparisons"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#all-else-equal",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/091-prologue.html#all-else-equal",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "All else equal",
+    "text": "All else equal\n\nCeteris paribus, all else held constant, etc.\n\n\n. . .\nA high bar\nWhen all else equal, statistical comparisons detect causal relationships.\n(Micro)economics has developed a comparative advantage in understanding where all else equal comparisons can and cannot be made.\n\nAnyone can retort “correlation doesn’t necessarily imply causation.”\nUnderstanding why is difficult, but useful for learning from data."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Problem: Selection bias precludes all else equal comparisons.\n\nTo make causal statements, we need to shut down the bias term.\n\n. . .\nPotential solution: Conduct an experiment.\n\nHow? Random assignment of treatment\nHence the name, randomized control trial (RCT).\n\n. . .\nGroups will need to be large enough\n\nFollowing the LLN, as we increase \\(n\\) of both groups, our randomly assigned treatment estimate is more likely to be representative of the population mean."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#selection-bias",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#selection-bias",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "Problem: Selection bias precludes all else equal comparisons.\n\nTo make causal statements, we need to shut down the bias term.\n\n. . .\nPotential solution: Conduct an experiment.\n\nHow? Random assignment of treatment\nHence the name, randomized control trial (RCT).\n\n. . .\nGroups will need to be large enough\n\nFollowing the LLN, as we increase \\(n\\) of both groups, our randomly assigned treatment estimate is more likely to be representative of the population mean."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nMotivation: Intestinal worms are common among children in less-developed countries. The parasitic symptoms disrupt human capital acquisition by keeping children home.\n\nPolicy Question: Do school-based de-worming interventions provide a cost-effective way to increase school attendance?"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nResearch Question: How much do de-worming interventions increase school attendance?\nQ: Could we simply compare average attendance among children with and without access to de-worming medication?\n. . .\nA: If we’re after the causal effect, probably not."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized control trials",
+    "text": "Randomized control trials\nEx. Effect of de-worming on attendance\n\nResearch Question: How much do de-worming interventions increase school attendance?\nQ: Why not?\n. . .\nA: Selection bias – Families with access to de-worming medication probably have healthier children for other reasons (e.g. wealth, access to clean drinking water).1"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\n. . .\nImagine an RCT where we have two groups of villages:\n\nTreatment: Where children get de-worming medication in school.\nControl: Where children don’t get de-worming medication in school (status quo).\n\n. . .\nBy randomizing, we will, on average, include all kinds of villages in both groups\n\npoor vs. less poor\naccess to clean water vs. contaminated water\nhospital vs. no hospital"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-1",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-1",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-2",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-2",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-3",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-3",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-4",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-5",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-6",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#section-6",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "",
+    "text": "54 villages of varying levels of development plus randomly assigned treatment"
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-4",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-4",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\nWe can estimate the causal effect of de-worming on school attendance by comparing the average attendance rates in the treatment group (💊) with those in the control group (no 💊).\n\\[\n\\begin{align}\n  \\overline{\\text{Attendance}}_\\text{Treatment} - \\overline{\\text{Attendance}}_\\text{Control}\n\\end{align}\n\\]\n. . .\nAlternatively, we can use the regression\n. . .\n\\[\n\\begin{align}\n  \\text{Attendance}_i = \\beta_0 + \\beta_1 \\text{Treatment}_i + u_i \\tag{1}\n\\end{align}\n\\]\nwhere \\(\\text{Treatment}_i\\) is a binary variable (=1 if village \\(i\\) received the de-worming treatment)."
+  },
+  {
+    "objectID": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-5",
+    "href": "lectures/09-Fundamental-Prob-Causal-Inf/093-rct.html#randomized-control-trials-5",
+    "title": "EC 320 - Intro. Econometrics",
+    "section": "Randomized Control Trials",
+    "text": "Randomized Control Trials\nEx. Effect of de-worming on attendance\n\\[\n\\begin{align}\n  \\text{Attendance}_i = \\beta_0 + \\beta_1 \\text{Treatment}_i + u_i \\tag{1}\n\\end{align}\n\\]\nwhere \\(\\text{Treatment}_i\\) is a binary variable (=1 if village \\(i\\) received the de-worming treatment).\nQ: Should trust the results of Eq. \\((1)\\)? Why?\n. . .\nA: On average, randomly assigning treatment should balance treatment and control across the other dimensions that affect school attendance.\nBut we must always be cautious\n\nRandomization can go wrong!"
   }
 ]
