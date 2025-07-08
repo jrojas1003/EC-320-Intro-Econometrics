@@ -1,0 +1,137 @@
+\documentclass[12pt]{exam}
+\usepackage{amsthm}
+\usepackage{libertine}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}  % Ensure proper encoding
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+\CorrectChoiceEmphasis{\color{red}\bfseries\itshape}
+
+\newcommand{\class}{\fontfamily{lmss}\selectfont \textbf{EC 320}} % This is the name of the course 
+\newcommand{\examnum}{\fontfamily{lmss}\selectfont \textbf{Problem Set 03}} % This is the name of the assignment
+\newcommand{\examdate}{\textbf{Due 07/11 @ 11:59pm}} % This is the due date
+\newcommand{\timelimit}{}
+\addpoints % Allows to add points up to include table at end of document
+
+\pagestyle{headandfoot} % Fancy equivalent for exam documentclass
+\firstpageheadrule % Horizontal bar in first page
+\runningheadrule % Horizontal bar in rest of pages
+\firstpageheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % 1st page header content
+\firstpagefooter{}{Page \thepage}{} % 1st page footer content
+\runningheader{\class}{\examnum}{\fontfamily{lmss}\selectfont  \examdate} % Rest of pages header content
+%\runningfooter{Points earned: \makebox[1in]{\hrulefill} / \pointsonpage{\thepage} points}{}{\thepage\ of \numpages} % Rest of pages footer content
+\bracketedpoints % Puts points per question inside brackets instead of parenthesis 
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+
+\begin{document}
+\fontfamily{lmss}\selectfont
+
+Suppose the true data generating process in the examples below are of the form 
+
+\begin{align*}
+    y_{i} = \beta_{0} + \beta_{1} x_{i} + \beta_{2} o_{i} + u_{i},
+\end{align*}
+
+where $x_{i}$ and $o_{i}$ are exogenous such that $\mathbb{E}[u_{i}|o,x] = 0$.
+
+However, $o$ is a variable that cannot be observed and so instead, we run the model: 
+
+$y_{i} = \beta_{0} + \beta_{1} x_{i} + \varepsilon_{i}$ where $\varepsilon_{i} = \beta_{2} o_{i} + u_{i}$
+
+Recall that we can sign the bias by:
+
+\begin{align*}
+    \mathbb{E}[\hat{\beta}_{1}] = \beta_{1} + \beta_{2} \dfrac{Cov(X_{i},Z_{i})}{Var(X_{i})}
+\end{align*}
+
+\begin{questions}
+
+\subsection*{Causal Effect of Migration on Earnings}
+
+\question %01
+Suppose we took survey data that included people's earnings and whether they have recently moved to a new city or not, and we estimated this model:
+
+\begin{align*}
+    Earnings_{i} = \beta_{0} + \beta_{1} Migration_{i} + \varepsilon_{i}
+\end{align*}
+
+Consider the unobservable variable absorbed in $\varepsilon_{i}$ which is $o_{i} = ambition_{i}$.
+
+\begin{parts}
+    \part How does $Ambition$ correlate with $Earnings$? That is, would you expect $\beta_{2}$ to be positive, negative or 0? 
+    \vspace*{\stretch{1}}
+    \part How does $Ambition$ correlate with $Migration$? 
+    That is, would you expect 
+    
+    $Cov(migration,ambition)$ to be positive, negative or 0?
+    \vspace*{\stretch{1}}
+    \part We have to omit $ambition$ from the model because it is not observable. Considering your answers to parts (a) and (b), we should expect that $\hat{\beta}_{1}$ will be biased (circle one): up / down / not at all. 
+    \vspace*{\stretch{1}}
+\end{parts}
+
+\newpage 
+
+\subsection*{Causal Effect of Friends of the Opposite Sex on a High School Student's GPA}
+
+\question %02
+Suppose we took survey data that included high school student's GPAs and the number of friends of the opposite sex they have, and we estimated the following model:
+
+\begin{align*}
+    GPA_{i} = \beta_{0} + \beta_{1} \text{Opposite Sex Friends}_{i} + \varepsilon_{i}
+\end{align*}
+
+Consider the unobservable variable absorbed in $\varepsilon_{i}$ which is $o_{i} = \text{strict parents}_{i}$. 
+
+\begin{parts}
+    \part How does \emph{Strict Parents} correlate with $GPA$?
+    That is, would you expect $\beta_{2}$ to be positive, negative or 0?
+    \vspace*{\stretch{1}}
+    \part How does \emph{Strict Parents} correlate with \emph{Opposite Sex Friends}? 
+    That is, would you expect $Cov(\emph{Opposite Sex Friends}, \emph{Strict Parents})$ to be positive, negative, or 0?
+    \vspace*{\stretch{1}}
+    \part We have to omit \emph{Strict Parents} from the model because it is not observable. 
+    Considering your answers to parts (a) and (b), we should expect that $\hat{\beta}_{1}$ will be biased (circle one): up / down / not at all.
+    \vspace*{\stretch{1}} 
+\end{parts}
+
+\newpage 
+
+\question %03
+
+For the questions below, suppose you estimate the following model:
+
+\begin{align*}
+    weight = 0 - 140 \cdot female + 30 \cdot height + 20 \cdot height \times female + u 
+\end{align*}
+
+\begin{parts}
+    \part How much would you predict a 6 foot male weighs?
+    \vspace*{\stretch{1}}
+    \part How much would you predict a 6 foot female weighs?
+    \vspace*{\stretch{1}}
+    \part What is the estimated impact of a one-unit (one foot) increase in height for a male individual?
+    \vspace*{\stretch{1}}
+    \part What is the estimated impact of a one-unit (one foot) increase in height for a female person?
+    \vspace*{\stretch{1}}
+    \part Which group has the steeper slope when it comes to how height $(x)$ impacts weight $(y)$?
+    \vspace*{\stretch{1}}
+\end{parts}
+
+\end{questions}
+
+\end{document}
