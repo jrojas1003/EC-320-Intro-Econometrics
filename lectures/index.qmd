@@ -83,7 +83,7 @@ title: "Lectures"
 </a>
 ```
 
-### Funadmental Problem of Causal Inference
+### Fundamental Problem of Causal Inference
 
 ```{=html}
 <div>
@@ -93,3 +93,13 @@ title: "Lectures"
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
+
+## Learning R 
+
+### Vectors and Pipes
+
+### Tibbles and *lm*
+
+### Dplyr
+
+### ggplot
