@@ -424,15 +424,7 @@ Jose Rojas-Fallas
 <section class="slide level2">
 
 <p>Visualize the OLS fit? Is <span class="math inline">\(\beta_1\)</span> positive or negeative?</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-  There is a binary version available but the source version is later:
-          binary source needs_compilation
-gapminder  1.0.0  1.0.1             FALSE</code></pre>
-</div>
 
-</div>
 <img data-src="070-compile_files/figure-revealjs/gapminder-scatter-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="linear-regression-1" class="slide level2">
 <h2>Linear regression</h2>
@@ -443,12 +435,12 @@ gapminder  1.0.0  1.0.1             FALSE</code></pre>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(gapminder)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(broom)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>m1 <span class="ot">=</span> <span class="fu">lm</span>(lifeExp <span class="sc">~</span> gdpPercap, <span class="at">data =</span> gapminder) </span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">tidy</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(broom)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>m1 <span class="ot">=</span> <span class="fu">lm</span>(lifeExp <span class="sc">~</span> gdpPercap, <span class="at">data =</span> gapminder) </span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">tidy</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term         estimate std.error statistic   p.value
