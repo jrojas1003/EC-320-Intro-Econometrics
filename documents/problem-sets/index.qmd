@@ -49,7 +49,7 @@ title: "Assignments"
 </details>
 ```
 
-### PS03 (Due July 11 at 11:59) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875506)
+### PS03 (Due July 11 at 11:59) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875506){target="_blank"} 
 
 ```{=html}
 <details>
@@ -63,18 +63,6 @@ title: "Assignments"
 </details>
 ```
 
-```{=html}
-<details>
-  <summary>View PDF</summary> 
-  <a class="btn btn-primary btn-lg cv-download" href="/documents/problem-sets/ps02/questions.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
-  </a>
-  <div class="embed-container">
-    <iframe src="/documents/problem-sets/ps02/questions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details>
-```
-
 ### PS04
 
 
@@ -84,6 +72,6 @@ title: "Assignments"
 
 ### Quiz 02 on [**Canvas**](https://canvas.uoregon.edu/courses/266330/quizzes/403029){target="_blank"} 
 
-### Quiz 03
+### Quiz 03 on [**Canvas**](https://canvas.uoregon.edu/courses/266330/quizzes/402832){target="_blank"} 
 
 ### Quiz 04
