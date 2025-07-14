@@ -18,11 +18,10 @@ title-slide-attributes:
   data-background-position: left
 ---
 
-```{r setup, include=FALSE}
+```{r setup-100, include=FALSE}
 library(pacman)
 p_load(tidyverse, dplyr)
 ```
-
 
 ## Preview
 

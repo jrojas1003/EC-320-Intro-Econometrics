@@ -2,7 +2,7 @@
 name: regressions using lm()
 ---
 
-```{r setup, include=FALSE}
+```{r setup-102, include=FALSE}
 library(pacman)
 p_load(tidyverse, dplyr)
 ```
