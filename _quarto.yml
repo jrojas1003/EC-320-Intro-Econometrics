@@ -7,9 +7,6 @@ project:
   resources:
     - documents/problem-sets/ps01/questions.pdf
 
-execute: 
-  setup: _setup.R
-
 website:
   title: "EC 320 - Intro. Econometrics"
   favicon: UO-icon.png
