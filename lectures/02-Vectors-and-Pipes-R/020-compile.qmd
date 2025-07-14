@@ -1,5 +1,5 @@
 ---
-title: "Random Variables"
+title: "Learning R: Vectors and Pipes"
 subtitle: "EC 320 - Introduction to Econometrics"
 author: Jose Rojas-Fallas
 date: last-modified
@@ -8,9 +8,43 @@ format:
     revealjs:
         theme: [default, styles.scss]
         slide-number: true
-        footer: "EC320, Lecture 01 | Random Variables"
+        footer: "EC320, R Lecture | Vectors and Pipes"
         preview-links: auto
         code-fold: FALSE
+        execute:
+          echo: true
+          eval: true
 title-slide-attributes: 
   data-background-position: left
 ---
+
+## Preview 
+ 
+In this lecture, you will:
+
+- Download R and RStudio
+- Install some packages
+- Learn how to create vectors and use pipes to apply functions
+- Complete some exercises
+
+# Installing R and RStudio {.inverse .note}
+
+{{< include 021-install-r.qmd >}}
+
+# Tidied Data {.inverse .note}
+
+{{< include 022-tidy.qmd >}}
+
+{{< include 023-pipes.qmd >}}
+
+## Practice: Download "Worksheet 01" From the Site
+
+This worksheet will help you learn coding by doing.
+You will learn:
+
+- Math operators work on vectors
+- `min()` and `sum()` work on vectors
+- How to use `length()` to find the number of elements in a vector
+- Repeat elements using `rep()`
+- How to do Random Sampling from a vector
+- How to pipe data through multiple functions

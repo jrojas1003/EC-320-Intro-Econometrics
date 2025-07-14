@@ -1,0 +1,43 @@
+---
+name: tidy 
+---
+
+## Topics
+
+1. Vectors
+
+2. Pipes
+
+---
+
+## Vectors
+
+In R, data is held in vectors. 
+You can construct a vector using the function `c()`. 
+`c` is short for "combine". 
+
+You can combine elements to form a vector, for example:
+
+::: {.fragment}
+- Combine numbers to form a numeric vector:
+
+```{r}
+
+c(5,3,9)
+```
+:::
+
+::: {.fragment}
+- Combine character strings to form a character vector:
+
+```{r}
+
+c("apple", "banana", "strawberry")
+```
+
+::: {.small}
+> [Note: character strings need quotes around them. numbers should not have quotes around them]{.note}
+:::
+
+:::
+

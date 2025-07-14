@@ -1,0 +1,86 @@
+---
+name: install R
+---
+
+## Step 1: Grab a Computer
+
+Good news! 
+If you are reading this, you are most likely on a computer already. 
+Great work so far.
+
+The good news about R is that it works on any operating system. 
+I personally use it on both Mac and Windows. 
+
+---
+
+## Step 2: Download and Install R
+
+Go to https://cran.r-project.org/ and follow the instructions to download R for your device. 
+
+---
+
+## Step 3: Install RStudio
+
+Go to https://posit.co/download/rstudio-desktop/ and click the blue button that says step 2: install Rstudio Desktop.
+Follow the instructions to complete the installation. 
+
+---
+
+## Step 4: Open RStudio and Install Some Packages
+
+Run these lines of code in your console to make sure you have the `tidyverse` installed and attached to your current session. 
+
+```{r}
+#| eval: false
+#| echo: true
+
+install.packages("tidyverse", dependencies = TRUE)
+library(tidyverse)
+```
+
+<br>
+
+An important shortcut to installing and using packages is a package called `pacman`. 
+It has a function `p_load()` which functions as both `install.packages()` and `library()` above.
+
+```{r}
+#| eval: false
+#| echo: true
+
+install.packages("pacman")
+```
+
+Use `p_load` to install the next set of packages
+
+---
+
+## Step 4a: Install More Packages
+
+A former PhD Student (Colleen O'Briant) in the Econ Department created a lovely package that serves as an alternative set of beginner friendly help docs. 
+
+Run this code to install it:
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(pacman)
+p_load(Rcpp, devtools) # Note you can do several packages at once
+
+install_github("cobriant/qelp")
+```
+
+To test everything worked, now run:
+
+```{r}
+#| eval: false
+#| echo: true 
+
+?qelp::install.packages
+```
+
+If everything went right, the help docs she wrote on the function `install.packages` should pop up. 
+
+::: {.small}
+> [Note:]{.note} It is not a complete library of every function, but many of the basic ones we will use are included. 
+:::

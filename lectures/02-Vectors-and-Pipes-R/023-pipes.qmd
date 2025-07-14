@@ -1,0 +1,65 @@
+---
+name: pipes
+---
+
+## Pipes
+
+```{r setup, include=FALSE}
+library(pacman)
+p_load(tidyverse)
+```
+
+The pipe `%>%` is the most frequently used function in the `tidyverse`. 
+
+[What It Does:]{.hi}
+
+Suppose you have some data `x` and you would like to apply some function `f()` on it. 
+So you run `f(x)`.
+
+- For example, take the vector 1:3 and find its minimum by applying `min()`:
+
+```{r}
+
+min(1:3)
+```
+
+::: {.fragment}
+Another way to do the same things is to use a pipe:
+
+```{r}
+
+1:3 %>% min()
+```
+:::
+
+---
+
+## Pipes {.small}
+
+The pipe simply takes the data that comes before it and inserts it into the function that comes after
+
+The way you should read the pipe is with the word "then", as in: "take `x`, then apply `f()`"
+
+We are not limited to only one pipe. 
+What if we wanted to take `x` then apply `f()`, then apply `g()`, then apply `h()`. 
+
+Using pipes:
+
+```{r}
+#| eval: false
+
+x %>% f() %>% g() %>% h()
+```
+
+Or using multiple lines (this is easier to read once things get hectic)
+
+```{r}
+#| eval: false
+
+x %>%
+    f() %>% # Benefit: Allows you to comment on each function to keep track of what you are doing
+    g() %>% # Hello
+    h() # Goodbye
+```
+
+If we did not use pipes, we'd have to read it inside-out `h(g(f(x)))`, which is nasty.
