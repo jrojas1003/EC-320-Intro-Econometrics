@@ -98,8 +98,46 @@ title: "Lectures"
 
 ### Vectors and Pipes
 
+```{=html}
+<div>
+  <iframe class="slide deck" src="02-Vectors-and-Pipes-R/020-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="02-Vectors-and-Pipes-R/020-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+
 ### Tibbles and *lm*
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="10-Tibbles-and-lm/100-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="10-Tibbles-and-lm/100-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
 ### Dplyr
 
+```{=html}
+<div>
+  <iframe class="slide deck" src="11-Dplyr/110-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="11-Dplyr/110-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+
 ### ggplot
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="12-ggplot/120-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="12-ggplot/120-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+
+[Download Dataset](/lectures/12-ggplot/students-data.Rdata)
