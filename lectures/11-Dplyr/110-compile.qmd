@@ -1,0 +1,52 @@
+---
+title: "Learning R: Dplyr"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, R Lecture | Dplyr"
+        preview-links: auto
+        code-fold: FALSE
+        execute:
+          echo: true
+          eval: true
+title-slide-attributes: 
+  data-background-position: left
+---
+
+```{r setup, include=FALSE}
+library(pacman)
+p_load(tidyverse, dplyr)
+```
+
+## Preview 
+
+So now you know how to build a dataset and run a regresion.
+
+But sometimes you want to ask your dataset questions, like:
+
+- Which student got the highest final grade?
+- How much, on average, do "A" students study?
+- Out of all the students who finished the first semester with a "B", how many of them turned it around to earn an "A" for their final grade?
+
+::: {.fragment}
+In this lecture you will learn how to answer these questions and more using a toolset included in the tidyverse called `dplyr`.
+The name stands for `data pliers` and the idea is tha tyou should reach for your data pliers when you want to manipulate your data.
+:::
+
+# Functions {.inverse .note}
+
+{{< include 111-functions.qmd >}}
+
+---
+
+## Practice: Download "Worksheet 03" From the Site
+
+This worksheet will help you learn coding by doing.
+You will:
+
+- Practice how to do use all of these functions

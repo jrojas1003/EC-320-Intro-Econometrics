@@ -1,0 +1,68 @@
+---
+name: dplyr functions
+---
+
+## Dplyr Functions
+
+`dplyr` is an amazing tool because, with just 7 main functions, you can answer just about any question you could possibly have about your data
+
+<br>
+
+::: {.fragment}
+If you have any data science experience, you will quickly realize that `dplyr` is nothing new. 
+
+It is actually just `SQL`, a language for querying databases that has been around since the '70s. 
+
+We will not be write any `SQL` but you should know that by learning `dplyr`, you are also learning `SQL`. 
+
+[The graphics for the functions were created by Colleen O'Briant]{.note .small}
+
+:::
+
+---
+
+## 
+
+![](images/select.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/filter.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/logical-operators.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/arrange.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/slice.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/mutate.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/summarize.jpg){fig-align="center"}
+
+---
+
+## 
+
+![](images/group-by.jpg){fig-align="center"}

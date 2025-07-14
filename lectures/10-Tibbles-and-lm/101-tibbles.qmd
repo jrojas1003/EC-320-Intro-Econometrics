@@ -1,0 +1,155 @@
+---
+name: tibbles
+---
+
+```{r setup, include=FALSE}
+library(pacman)
+p_load(tidyverse, dplyr)
+```
+
+## What is a tibble?
+
+They are `tidyverse` spreadsheets
+
+Data is still being held in vectors (column vectors specifically), but the rows of a tibble also hold meaning.
+
+The [rows are the observations]{.hii} while the [columns are the variables]{.hii}
+
+Let's look at an example
+
+---
+
+## [Ex]{.ex} Daily Weather
+
+Let's write down each day's high temp, low temp, and rainfall.
+In words the data is:
+
+- Jan 01, 2023: We had a high of $46^{\circ}$, a low of $37^{\circ}$ and $0.07$ in. of rain
+- Jan 02, 2023: We had a high of $46^{\circ}$, a low of $35^{\circ}$ and $0.00$ in. of rain
+- Jan 03, 2023: We had a high of $47^{\circ}$, a low of $34^{\circ}$ and $0.08$ in. of rain
+
+::: {.incremental}
+- What should the [observations (rows)]{.hii} be?
+
+    - Each day we went outside and observed the weather. So each day should have its own row.
+
+- What are the [variables (columns)]{.hii} we observe?
+
+    - The date, the high temp, the low temp, rainfall
+:::
+
+---
+
+## [Ex.]{.ex} Daily Weather
+
+So we want our tibble to look like:
+
+| Date | High Temp | Low Temp | Rainfall |
+|:----:|:---------:|:--------:|:--------:|
+|1/1/23|     46    |    37    |   0.07   |
+|1/2/23|     46    |    35    |   0.00   |
+|1/3/23|     47    |    34    |   0.08   |
+
+::: {.fragment}
+The mantra "observations as rows, variables as columns" is what we call the [tidied data format]{.hii}
+
+There are tons of ways you [could]{.hi} format your data, but the tidyverse is compatible with only this way. 
+
+Luckily, it turns out to be very experssible
+:::
+
+---
+
+## [Ex.]{.ex} Daily Weather {.small}
+
+Here's the code to construct our tibble:
+
+```{r}
+tibble(
+    date = as.Date(c("2023-01-01", "2023-01-02", "2023-01-03")),
+    high_temp = c(46, 46, 47),
+    low_temp = c(37, 35, 36),
+    rainfall = c(0.07, 0.00, 0.08)
+)
+```
+
+How it works:
+
+1. Use the function `tibble()`
+2. `tibble()` takes a list of vectors created with `c()` that become variable columns 
+3. Each varible column has a name 
+
+---
+
+## 2 Rules for Tibbles
+
+[_1._ Each Column Must be Named]{.note .hi} 
+
+- If you try to define a column without giving it a name, `tibble()` generatses one for you (try it out yourself)
+- When naming variables, avoid spaces between words 
+
+[_2._ Each Column Must Have the Same Number of Rows]{.note .hi}
+
+- If you try to define a column that is shorter than the others, `tibble()` will throw an error. 
+    - Exception: If you define a column with only one element, `tibble()` will repeat it to make it the same length as the other columns.
+
+---
+
+## Data Types 
+
+::: {.vertical-center}
+There are 3 types of data that you will come across
+
+- Cross-sectional 
+- Time Series
+- Panel
+
+Importantly, we cannot model different data types the same way. 
+
+In this class we build models of exclusively cross-sectional data.
+:::
+
+---
+
+## Cross-Sectional Data
+
+- [Cross-sectional Data]{.h} is data about many individuals at (around) the same time. Here, "individuals" might refer to people, or households, companies, cities, states, countries, etc. 
+
+```{r}
+tibble(
+    name = c("Kris", "Kourtney", "Kim"),
+    study_time = c("< 2hrs", "2-5hrs", "< 2hrs"),
+    final_grade = c(69.4, 89.7, 66.3)
+)
+```
+
+The name "cross-sectional" comes from the fact that the data is a cross-section of some population. It is a [snapshot in time]{.hi} of a smaple of individuals.
+
+---
+
+## Time Series Data
+
+- [Time Series Data]{.h} is data that follows one specific individual (or household, company, city, state, country, etc.) over time. So this dataset would be a time series if it reports quiz grades over the course of a term for one student:
+
+```{r}
+tibble(
+    assignment = c("Quiz 01", "Quiz 02", "Quiz 03", "Quiz 04", "Quiz 05"),
+    study_hours = c(4,3,2,3,8),
+    grade = c(75, 74, 69, 77, 89)
+)
+```
+
+---
+
+## Panel Data
+
+[Panel Data]{.h} describes many individuals over many periods of time. 
+For example, many students' scores over the course of a term would be panel data
+
+```{r}
+tibble(
+    name = rep(c("Kris", "Kourtney", "Kim"), each = 3),
+    assignment = rep(c("Quiz 01", "Quiz 02", "Quiz 03"), times = 3),
+    grade = c(75, 78, 66, 95, 97, 90, 62, 66, 54)
+)
+```

@@ -1,0 +1,54 @@
+---
+title: "Learning R: Tibbles and lm()"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, R Lecture | Tibbles and lm()"
+        preview-links: auto
+        code-fold: FALSE
+        execute:
+          echo: true
+          eval: true
+title-slide-attributes: 
+  data-background-position: left
+---
+
+```{r setup, include=FALSE}
+library(pacman)
+p_load(tidyverse, dplyr)
+```
+
+## Preview
+
+::: {.vertical-center}
+In this lecture, you will:
+
+- Learn about holding data in tibbles (tidy tables)
+- Use those tibbles to run regressions using the function `lm()`
+:::
+
+# Tibbles {.inverse .note}
+
+{{< include 101-tibbles.qmd >}}
+
+# Regressions Using lm() {.inverse .note}
+
+{{< include 102-lm.qmd >}}
+
+## Practice: Download "Worksheet 02" From the Site
+
+This worksheet will help you learn coding by doing.
+You will:
+
+- Construct your own tibble
+- `<-` Assign it to a variable name in your environment
+- `view()` it in a separate tab
+- Find dimensions of the data
+- Find variable names
+- Add new observations
+- Run a regression and practice interpreting results

@@ -1,0 +1,45 @@
+---
+title: "Learning R: ggplot"
+subtitle: "EC 320 - Introduction to Econometrics"
+author: Jose Rojas-Fallas
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC320, R Lecture | ggplot"
+        preview-links: auto
+        code-fold: FALSE
+        execute:
+          echo: true
+          eval: true
+title-slide-attributes: 
+  data-background-position: left
+---
+
+## Preview
+
+Data manipulation and querying is a very useful skill. 
+
+An equally important one is being able to visualize the data.
+
+In this lecture, you will learn a handful of recipes to draw plots using `ggplot`
+
+In particular, you will learn about:
+
+- Bar plots
+- Histograms
+- Box plots ("Box-and-Whisker" plots)
+- Scatterplots (and how to add a best fit line)
+
+# Recipes for Success {.inverse .note}
+
+{{< include 121-recipes.qmd >}}
+
+## Practice: Download "Worksheet 04" From the Site
+
+This worksheet will help you learn coding by doing.
+You will:
+
+- Practice aesthetic mappings and all the recipes you've seen in this section
