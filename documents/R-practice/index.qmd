@@ -1,0 +1,13 @@
+---
+title: R Worksheets
+---
+
+# R Worksheets
+
+## [Worksheet 01 - Vectors and Pipes](/documents/R-practice/vectors-pipes.R)
+
+## [Worksheet 02 - Tibbles and *lm*](/documents/R-practice/tibbles-lm.R)
+
+## [Worksheet 03 - Dplyr](/documents/R-practice/dplyr.R)
+
+## [Worksheet 04 - ggplot](/documents/R-practice/ggplot.R)
