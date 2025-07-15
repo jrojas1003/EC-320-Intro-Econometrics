@@ -2,9 +2,9 @@
 title: "Assignments"
 ---
 
-## Midterm Exam 
+## Final Exam
 
-### Midterm Exam Available at 12:00pm on July 03 (Due July 23 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875509){target="_blank"}
+## Final Exam Available at 12:00pm on July 18 (Due July 18 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875510)
 
 ## Problem Sets
 
@@ -49,7 +49,7 @@ title: "Assignments"
 </details>
 ```
 
-### PS03 (Due July 11 at 11:59) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875506){target="_blank"} 
+### PS03 (Due July 11 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875506){target="_blank"} 
 
 ```{=html}
 <details>
@@ -63,7 +63,11 @@ title: "Assignments"
 </details>
 ```
 
-### PS04
+### PS04 (Due July 17 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875507)
+
+Download this [Assignment](./ps04/Murder-Mystery.R) and submit your completed R script on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875507)
+
+Also submit your answer to who did it on [**Canvas**](https://canvas.uoregon.edu/courses/266330/quizzes/404334)
 
 
 ## Quiz
@@ -74,4 +78,8 @@ title: "Assignments"
 
 ### Quiz 03 on [**Canvas**](https://canvas.uoregon.edu/courses/266330/quizzes/402832){target="_blank"} 
 
-### Quiz 04
+### Quiz 04 on [**Canvas**](https://canvas.uoregon.edu/courses/266330/quizzes/404333){target="_blank"}
+
+## Midterm Exam 
+
+### Midterm Exam Available at 12:00pm on July 03 (Due July 03 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875509){target="_blank"}
