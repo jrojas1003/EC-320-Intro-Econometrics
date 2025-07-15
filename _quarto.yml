@@ -18,6 +18,8 @@ website:
         text: Lectures
       - href: documents/problem-sets/index.qmd
         text: Assignments
+      - href: documents/R-practice/index.qmd
+        text: R Worksheets
       - href: documents/readings/index.qmd
         text: Readings
       - href: about.qmd
