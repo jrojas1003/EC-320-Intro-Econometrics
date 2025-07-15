@@ -49,6 +49,18 @@ title: "Assignments"
 </details>
 ```
 
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <a class="btn btn-primary btn-lg cv-download" href="/documents/problem-sets/ps02/ps02-answer-key.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+  </a>
+  <div class="embed-container">
+    <iframe src="/documents/problem-sets/ps02/ps02-answer-key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
 ### PS03 (Due July 11 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875506){target="_blank"} 
 
 ```{=html}
@@ -59,6 +71,18 @@ title: "Assignments"
   </a>
   <div class="embed-container">
     <iframe src="/documents/problem-sets/ps03/questions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <a class="btn btn-primary btn-lg cv-download" href="/documents/problem-sets/ps03/ps03-answer-key.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+  </a>
+  <div class="embed-container">
+    <iframe src="/documents/problem-sets/ps03/ps03-answer-key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
