@@ -6,8 +6,60 @@ title: R Worksheets
 
 ## [Worksheet 01 - Vectors and Pipes](/documents/R-practice/vectors-pipes.R)
 
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <div style="width: 100%; max-width: 800px; height: 500px; overflow: auto; border: 1px solid #ccc;">
+    <iframe src="/documents/R-practice/vector-pipes-sol.html"
+            width="100%"
+            height="100%"
+            style="border: none;">
+    </iframe>
+  </div>
+</details>
+```
+
 ## [Worksheet 02 - Tibbles and *lm*](/documents/R-practice/tibbles-lm.R)
+
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <div style="width: 100%; max-width: 800px; height: 500px; overflow: auto; border: 1px solid #ccc;">
+    <iframe src="/documents/R-practice/tibbles-lm-sol.html"
+            width="100%"
+            height="100%"
+            style="border: none;">
+    </iframe>
+  </div>
+</details>
+```
 
 ## [Worksheet 03 - Dplyr](/documents/R-practice/dplyr.R)
 
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <div style="width: 100%; max-width: 800px; height: 500px; overflow: auto; border: 1px solid #ccc;">
+    <iframe src="/documents/R-practice/dplyr-sol.html"
+            width="100%"
+            height="100%"
+            style="border: none;">
+    </iframe>
+  </div>
+</details>
+```
+
 ## [Worksheet 04 - ggplot](/documents/R-practice/ggplot.R)
+
+```{=html}
+<details>
+  <summary>Solutions</summary> 
+  <div style="width: 100%; max-width: 800px; height: 500px; overflow: auto; border: 1px solid #ccc;">
+    <iframe src="/documents/R-practice/ggplot-sol.html"
+            width="100%"
+            height="100%"
+            style="border: none;">
+    </iframe>
+  </div>
+</details>
+```
