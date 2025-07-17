@@ -1,0 +1,178 @@
+---
+title: "dplyr-sol"
+author: "Jose Rojas"
+date: "2025-07-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Solutions
+
+```{r, include = FALSE}
+library(tidyverse)
+library(gapminder)
+view(gapminder)
+```
+
+## filter()
+
+### Q01: Filter gapminder for all the observations from Europe in 2007
+
+```{r}
+gapminder %>% 
+  filter(continent == "Europe" & year == 2007)
+```
+
+### Q02: Filter gapminder for all the observations where lifeExp was exactly equal to 68 years old.
+
+```{r}
+gapminder %>% 
+  filter(lifeExp == 68)
+```
+
+## Logical Operators
+
+### Q03: Filter gapminder for a short list of the richest countries in Asia.
+
+```{r}
+gapminder %>%
+  filter(continent == "Asia", gdpPercap > 30000)
+```
+
+### Q04: Filter gapminder for observations *IN* the United States, Germany, and Brazil.\
+
+```{r}
+gapminder %>%
+  filter(country %in% c("United States","Germany","Brazil"))
+```
+
+## select()
+
+### Q05: Select the last 3 variables of 'gapminder' by name
+
+```{r}
+gapminder %>%
+  select(lifeExp, pop, gdpPercap)
+```
+
+## mutate()
+
+### Q06: Use 'mutate()' to create a new variable 'pop_in_thousands'. So if the observation has 'pop' = 97,462, then 'pop_in_thousands' will be 97.462.
+
+```{r}
+gapminder %>%
+  mutate(pop_in_thousands = pop/1000)
+```
+
+## summarize()
+
+### Q07. Take 'gapminder', filter for only observations in Africa, and summarize to find the:
+
+  - median life expectancy,
+  - median population, and
+  - median GDP per capita.
+  
+```{r}
+gapminder %>%
+  filter(continent == "Africa") %>%
+  summarise(
+    median_life = median(lifeExp),
+    median_pop = median(pop),
+    median_gdp = median(gdpPercap)
+  )
+```
+  
+  
+### Q08. Take 'gapminder', add a new column (mutate) for the total gdp, and summarize to find the mean and median total gdp.
+
+```{r}
+gapminder %>%
+  mutate(total_gdp = sum(gdpPercap)) %>%
+  summarise(
+    median_gdp = median(total_gdp),
+    mean_gdp = mean(total_gdp)
+  )
+```
+
+
+## group_by()
+
+### Q08. Take 'gapminder', filter for only observations in Africa, and summarize to find the median life expectancy, population, and GDP per capita *for each country*.
+
+```{r}
+gapminder %>%
+  filter(continent == "Africa") %>%
+  group_by(country) %>%
+  summarise(
+    median_life = median(lifeExp),
+    median_pop = median(pop),
+    median_gdp = median(gdpPercap)
+  )
+```
+
+
+### Q09. Summarize 'gapminder' to find the mean GDP per capita for each continent, for each year (use 2 variables inside 'group_by').
+
+
+```{r}
+gapminder %>%
+  group_by(continent, year) %>%
+  summarise(
+    mean_gdp = mean(gdpPercap)
+  )
+```
+
+## count()
+
+### Q10. How many observations are there from each country?
+
+```{r}
+gapminder %>%
+  count(country)
+```
+
+## arrange() and slice()
+
+### Q11. Take all the observations in Asia and sort them from the lowest life expectancies to the highest.
+
+```{r}
+gapminder %>%
+  filter(continent == "Asia") %>%
+  arrange(lifeExp)
+```
+
+### Q12. Take all the observations in Asia and sort them from the highest life expectancies to the lowest.
+
+```{r}
+gapminder %>%
+  filter(continent == "Asia") %>%
+  arrange(desc(lifeExp))
+```
+
+### Q13. Select row 853 to row 864.
+
+```{r}
+gapminder %>%
+  slice(853:864)
+```
+
+### Q14. Take all the observations in Asia and return the five with the highest life expectancies (hint: use arrange()).
+
+```{r}
+gapminder %>%
+  filter(continent == "Asia") %>%
+  arrange(desc(lifeExp)) %>%
+  slice_head(n = 5)
+```
+
+### Q15. Which (one) country has the highest life expectancy in each continent? (hint: use arrange() and also group_by()).
+
+```{r}
+gapminder %>%
+  group_by(continent) %>%
+  arrange(desc(lifeExp)) %>%
+  slice_head(n = 1)
+```

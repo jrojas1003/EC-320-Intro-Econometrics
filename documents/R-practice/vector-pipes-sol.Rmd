@@ -1,0 +1,111 @@
+---
+title: "vectors-pipes-sol"
+author: "Jose Rojas"
+date: "2025-07-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gapminder)
+```
+
+# Solutions
+
+## Create a vector with `c()`
+
+### Q01. Make the first element of this numeric vector '6'. 
+
+```{r}
+c(6, 4, 5, 2, 3)
+```
+
+### Q02. Make the third element of this character vector 'economics'. 
+Note that quotes shouldn't be used with numbers, but should be used with character strings.
+
+```{r}
+c("apple", "banana", "economics")
+```
+
+## Calculations on vectors
+
+### Q03. Add these two numeric vectors.
+
+```{r}
+c(6, 3, 2) + c(3, 2, 1) == c(9, 5, 3)
+```
+
+### Q04. Find the minimum of this vector.
+
+
+```{r}
+min(c(6, 3, 2)) == 2
+```
+
+### Q05. Find the sum of all elements of this vector.
+
+```{r}
+sum(c(6, 3, 2)) == 11
+```
+
+### Q06. Multiply a scalar and a vector.\
+
+```{r}
+100 * c(6, 3, 2) == c(600, 300, 200)
+```
+
+### Q07. Divide two vectors.
+
+```{r}
+c(6, 3, 2) / c(2, 3, 1) == c(12, 9, 2)
+```
+
+## Length
+
+### Q08.  Create a vector of length 5. It can be a character vector or a numeric vector.
+
+```{r}
+length(c(1:5)) == 5
+```
+
+### Q09. Create a random character vector that draws "heads" or "tails".
+
+```{r}
+sample(c("heads","tails"), size = 5, replace = TRUE)
+```
+
+## Pipes
+
+```{r}
+us_data <- tibble(
+  year      = c(1957, 1977, 1997, 2017),
+  gdpPercap = c(14847, 24073, 35767, 60062),
+  lifeExp   = c(69.5, 73.4, 76.8, 78.5)
+)
+```
+
+### Q10. Your turn: apply 'print' to us_data using a pipe.
+
+```{r}
+us_data %>% print()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
