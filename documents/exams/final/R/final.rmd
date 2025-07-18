@@ -1,0 +1,254 @@
+---
+title: "Take Home Final"
+subtitle: "Due 07/18 @ 11:59pm"
+author: "WRITE YOUR NAME HERE"
+output: html_document
+---
+
+## README
+
+Complete the following questions below and show all work.
+You must submit a compiled html file with all code and answers in this document on Canvas.
+Make sure to write your name above where it says "WRITE YOUR NAME HERE".
+Include it within the quotation marks.
+
+The total amount of points possible is 110.
+You can find a table at the bottom of the document 
+that denotes how points are allocated to each question.
+Following previous guidelines, stay within the `tidyverse`, `broom`, and `here` packages.
+You may not use other packages, although base R functions are allowed.
+All code must be placed in code blocks and all regression estimates must be
+presented in a `broom` tidy format.
+
+To use broom after a regression, simply pipe the lm( ) into broom::tidy( ) as in the example below:
+
+```{r, eval = FALSE}
+lm(INCTOT ~ AGE, data = ipums_tbl) %>%
+  broom::tidy()
+```
+
+__Style Points__.
+Good code should be easy to read and presentation is an important skill.
+10 points on the exam are dedicated for style points.
+Style points are determined by the following criteria:
+
+- Your submission is organized and follows the directions
+
+- Your written answers are clear
+
+- Code is concise and easy to read.
+It follows the principles of the tidyverse as introduced in koan assignments
+
+- Plots are labelled and clearly presented
+
+_Note_: 
+Before answering the following questions, make sure to compile the document to make sure that everything is working properly.
+You can compile the document by clicking on the **knit** option on the bar above. 
+As you answer each question, compile after each question to make sure you are not making any errors.
+If you are experiencing an error, read the error carefully.
+One tactic is to selectively delete questions/sections until the report compiles.
+This will help you narrow down where the coding error is occurring.
+
+#### Data
+
+The data set used on this exam come from the 2022 American Community Survey (ACS), which was downloaded from [IPUMS](https://ipums.org/).
+At the bottom of this document, you will find a table codebook that describes the variables in the data set.
+
+#### Integrity
+
+If you are suspected of cheating, you will receive a zero—for the assignment and possibly for the course.
+Collaboration is not allowed.
+All work must be your own.
+If you have any questions about what constitutes cheating, please ask.
+
+## Questions
+
+### Setup
+
+__Q01__. Use the following code block to load the data.
+It should just work, so don't mess with it.
+Compile the document and proceed to the next question.
+
+```{r, include=FALSE}
+# Install the 'here' package if it is not already installed
+if (!requireNamespace("here", quietly = TRUE)) {
+  install.packages("here")
+}
+
+# Load packages
+library(here)
+library(tidyverse)
+library(broom)
+
+# Define the path to the data file using the 'here' package
+ipums_tbl = here("data", "ipums_2022.csv") %>%
+  readr::read_csv() 
+```
+
+---
+
+# Step 0: Define a research question
+
+In this assignment, you will be looking at the return to education for 
+various different types of degrees and college majors. 
+
+Our main research question will be:
+___Do returns to educational attainment differ by college major?___
+
+# Step 1: Observe the Data 
+
+### __Q01: Take a look at the ipums dataset. Describe it's structure in words.__ 
+
+  - How many observations are there? 
+
+  - Is it cross-sectional, time-series, or panel data?
+  Who/what does each observation (row) describe?
+
+  - What qualitative information is contained in this dataset? 
+
+  - What quantitative information is contained in this dataset? 
+
+*Use the codebook at the end of this document to help you answer this question.*
+
+### __Q02: How many people who received a degree in economics are now unemployed?__
+
+```{r}
+# Write your code here
+```
+
+### __Q03: How does the unemployment rate for economists compare to other types of majors?__
+
+```{r}
+# Write your code here
+```
+
+### __Q04: How does the unemployment rate for people who's highest degree is a bachelors degree compare to those for whom their highest degree is only a high school diploma?__
+
+```{r}
+# Write your code here
+```
+
+### __Q05: Now take a closer look at the INCTOT variable. Describe the shape of the distribution of personal incomes within this dataset.__
+
+  - Label your axis and include a title and as explain in words what your 
+  figure teaches us about personal incomes.
+
+```{r}
+# Write your code here
+```
+
+### __Q06: Create a new variable for log incomes instead. How does the shape of the distribution change?__
+
+```{r}
+# Write your code here
+```
+
+### __Q07: Now plot the INCTOT together with years of school attainment__
+
+**WARNING: A scatterplot with all 100,000 observations will take a very long time to generate and will be hard to see the trend! You should use an alternative like a bin scatter plot, a geom_hex, or subset to a smaller sample**
+
+```{r}
+# Write your code here
+```
+
+  - Can you see any visual evidence of a relationship?
+
+### __Q08: Based on your graphs, are there any considerations of which transformations of variables to use in your regressions? __
+  
+# Step 3: Analyze the Data
+
+### __Q09: Regress your transformation of the income variable on school attainment. Report and interpret your estimates in the context of the returns to education __
+  
+```{r}
+# Write your code here
+```
+
+### __Q10: Does there seem to be any evidence of heteroskedasticity in this relationship? Plot the residuals from your previous regression at different levels of school attendance and interpret. __
+
+```{r}
+# Write your code here
+```
+
+### __Q11: What are some potential omitted variables in the relationship between school attainment and income which could bias your regression estimates? __
+
+  - How might these variable be related to *both* income and school attainment?
+  
+  - Choose one variable and argue which direction (positive or negative) of bias 
+  likely would result from omitting that variable.
+
+### __Q12: Now regress income on school attainment, age, and on whether the person received a degree in economics__
+
+```{r}
+# Write your code here
+```
+
+  - How does the estimate on school attainment change? 
+  
+  - How does your interpretation change?
+
+### __Q13: Regress income on school attainment and the interaction between school attainment and the degree category of your choice. __
+
+```{r}
+# Write your code here
+```
+
+# Step 4: Discuss your conclusions
+
+### __Q14: In this dataset, does it seem like some degrees have better returns to lifetime income than others?__
+
+  - Make sure to cite your estimate results and explain why they support 
+  your claim.
+  
+### __Q15: What are some reasons why your estimates may not be enough to answer the question of whether degree type actually has a *causal* effect on the returns to education? __
+
+<br>
+
+---
+
+## Points
+
+| Question             | Points        |
+|----------------------|---------------|
+| Q01                  | 8             |
+| Q02                  | 2             |
+| Q03                  | 4             |
+| Q04                  | 4             |
+| Q05                  | 6             |
+| Q06                  | 6             |
+| Q07                  | 6             |
+| Q08                  | 2             |
+| Q09                  | 8             |
+| Q10                  | 6             |
+| Q11                  | 8             |
+| Q12                  | 10            |
+| Q13                  | 10            |
+| Q14                  | 10            |
+| Q15                  | 10            |
+| Style Points         | 10            |
+| Total                | 110           |
+
+
+
+---
+
+## Codebook
+
+| Variable     | Description                                                                           |
+|--------------|---------------------------------------------------------------------------------------|
+| STATEFIPS    | State name                                                                            |
+| AGE          | The individual's age (in years)                                                       |
+| INCTOT       | Personal pre-tax income (in 2022 dollars)                                             |
+| school       | Estimated number of years of education attainment (based on courser measure in ipums) |
+| i_unemployed | Binary indicator for whether the individual is unemployed                             |
+| i_business   | Binary indicator for whether the individual received a bachelors degree in business   |
+| i_education  | Binary indicator for whether the individual received a bachelors degree in education  |
+| i_engineering| Binary indicator for whether the individual received a bachelors degree in engineering|
+| i_medicine   | Binary indicator for whether the individual received a bachelors degree within 'Medical and Health Sciences and Services' |
+| i_socialsci  | Binary indicator for whether the individual received a bachelors degree in a social science |
+| i_economics  | Binary indicator for whether the individual received a bachelors degree in economics  |
+| i_hsdiploma  | Binary indicator for whether the individual received at least a high school diploma   |
+| i_ged        | Binary indicator for whether the individual received at least a GED                   |
+| i_associates | Binary indicator for whether the individual received at least an associates degree    |
+| i_bachelors  | Binary indicator for whether the individual received at least a bachelors degree      |
+| i_masters    | Binary indicator for whether the individual received at least a masters degree        |
+| i_doctorate  | Binary indicator for whether the individual received a doctoral degree                |
