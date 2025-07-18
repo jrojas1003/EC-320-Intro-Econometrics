@@ -6,9 +6,8 @@ title: "Assignments"
 
 ## Final Exam Available at 12:00pm on July 18 (Due July 18 at 11:59pm) on [**Canvas**](https://canvas.uoregon.edu/courses/266330/assignments/1875510)
 
-<!--
+
 [Download this zipped file](../exams/final.zip)
--->
 
 ## Problem Sets
 
