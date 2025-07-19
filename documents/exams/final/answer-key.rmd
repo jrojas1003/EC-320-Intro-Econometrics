@@ -1,0 +1,402 @@
+---
+title: "Take Home Final"
+subtitle: "Due 07/18 @ 11:59pm"
+author: "ANSWER KEY"
+output: html_document
+---
+
+## README
+
+Complete the following questions below and show all work.
+You must submit a compiled html file with all code and answers in this document on Canvas.
+Make sure to write your name above where it says "WRITE YOUR NAME HERE".
+Include it within the quotation marks.
+
+The total amount of points possible is 110.
+You can find a table at the bottom of the document 
+that denotes how points are allocated to each question.
+Following previous guidelines, stay within the `tidyverse`, `broom`, and `here` packages.
+You may not use other packages, although base R functions are allowed.
+All code must be placed in code blocks and all regression estimates must be
+presented in a `broom` tidy format.
+
+To use broom after a regression, simply pipe the lm( ) into broom::tidy( ) as in the example below:
+
+```{r, eval = FALSE}
+lm(INCTOT ~ AGE, data = ipums_tbl) %>%
+  broom::tidy()
+```
+
+__Style Points__.
+Good code should be easy to read and presentation is an important skill.
+10 points on the exam are dedicated for style points.
+Style points are determined by the following criteria:
+
+- Your submission is organized and follows the directions
+
+- Your written answers are clear
+
+- Code is concise and easy to read.
+It follows the principles of the tidyverse as introduced in koan assignments
+
+- Plots are labelled and clearly presented
+
+_Note_: 
+Before answering the following questions, make sure to compile the document to make sure that everything is working properly.
+You can compile the document by clicking on the **knit** option on the bar above. 
+As you answer each question, compile after each question to make sure you are not making any errors.
+If you are experiencing an error, read the error carefully.
+One tactic is to selectively delete questions/sections until the report compiles.
+This will help you narrow down where the coding error is occurring.
+
+#### Data
+
+The data set used on this exam come from the 2022 American Community Survey (ACS), which was downloaded from [IPUMS](https://ipums.org/).
+At the bottom of this document, you will find a table codebook that describes the variables in the data set.
+
+#### Integrity
+
+If you are suspected of cheating, you will receive a zero—for the assignment and possibly for the course.
+Collaboration is not allowed.
+All work must be your own.
+If you have any questions about what constitutes cheating, please ask.
+
+## Questions
+
+### Setup
+
+__Q01__. Use the following code block to load the data.
+It should just work, so don't mess with it.
+Compile the document and proceed to the next question.
+
+```{r, include=FALSE}
+# Install the 'here' package if it is not already installed
+if (!requireNamespace("here", quietly = TRUE)) {
+  install.packages("here")
+}
+
+# Load packages
+library(here)
+library(tidyverse)
+library(broom)
+
+# Define the path to the data file using the 'here' package
+ipums_tbl = here("data", "ipums_2022.csv") %>%
+  readr::read_csv() 
+```
+
+---
+
+# Step 0: Define a research question
+
+In this assignment, you will be looking at the return to education for 
+various different types of degrees and college majors. 
+
+Our main research question will be:
+___Do returns to educational attainment differ by college major?___
+
+# Step 1: Observe the Data 
+
+### __Q01: Take a look at the ipums dataset. Describe it's structure in words.__ 
+
+  - How many observations are there? This data has 100,000 observations of individuals.
+
+  - Is it cross-sectional, time-series, or panel data? It is cross-sectional. There are no years.
+  Who/what does each observation (row) describe? It describes an individual's location (state), their age, total income, their years of schooling, and what degree they received (if any).
+
+  - What qualitative information is contained in this dataset? Their degree type, degree level, and state.
+
+  - What quantitative information is contained in this dataset? Their age, income, and years of education.
+
+*Use the codebook at the end of this document to help you answer this question.*
+
+### __Q02: How many people who received a degree in economics are now unemployed?__
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  filter(i_economics == 1) %>%
+  nrow()
+```
+
+### __Q03: How does the unemployment rate for economists compare to other types of majors?__
+
+```{r}
+# Write your code here
+econ_unemp <- ipums_tbl %>%
+  filter(i_economics == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    econ_u_rate = (unemployed/total)*100
+  ) 
+
+buss_unemp <-ipums_tbl %>%
+  filter(i_business == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    buss_u_rate = (unemployed/total)*100
+  ) 
+
+edu_unemp <-ipums_tbl %>%
+  filter(i_education == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    edu_u_rate = (unemployed/total)*100
+  ) 
+
+engi_unemp <-ipums_tbl %>%
+  filter(i_engineering == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    engi_u_rate = (unemployed/total)*100
+  ) 
+
+med_unemp <-ipums_tbl %>%
+  filter(i_medicine == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    med_u_rate = (unemployed/total)*100
+  ) 
+
+soc_unemp <-ipums_tbl %>%
+  filter(i_socialsci == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed), # Can do this sum because each unemployed individual is =1
+    soc_u_rate = (unemployed/total)*100
+  ) 
+
+## THIS IS ME BEING EXTRA. TO BETTER SEE THE UNEMPLOYMENT RATES TOGETHER
+rates <- bind_rows(econ_unemp, buss_unemp, edu_unemp, engi_unemp, med_unemp, soc_unemp)
+rates
+```
+
+It seems econ is on the lower end of unemployment rate compared to the other majors. 
+
+### __Q04: How does the unemployment rate for people who's highest degree is a bachelors degree compare to those for whom their highest degree is only a high school diploma?__
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  filter(i_bachelors == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed),
+    unemp_rate = (unemployed/total)*100
+  ) 
+
+ipums_tbl %>%
+  filter(i_hsdiploma == 1) %>%
+  summarise(
+    total = n(),
+    unemployed = sum(i_unemployed),
+    unemp_rate = (unemployed/total)*100
+  ) 
+```
+
+Those with a bachelors degree have a much lower unemployment rate than those with a highest degree of a high school diploma (7.54% vs 19.5%)
+
+### __Q05: Now take a closer look at the INCTOT variable. Describe the shape of the distribution of personal incomes within this dataset.__
+
+  - Label your axis and include a title and as explain in words what your 
+  figure teaches us about personal incomes.
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  ggplot(., aes(x = INCTOT)) +
+  geom_histogram(bins = 100, fill = 'darkgreen', color = 'black') +
+  labs(
+    title = "Income Distribution",
+    x = "Total Personal Income ($'s)",
+    y = ""
+  ) +
+  theme_minimal()
+```
+
+The incomes are concentrated around 0, likely due to the many unemployed individuals in the data. It is hard to describe in detail given the small amount of individuals with extremely high incomes (>300,000)
+
+### __Q06: Create a new variable for log incomes instead. How does the shape of the distribution change?__
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  mutate(log_inc = log(INCTOT)) %>%
+  ggplot(., aes(x = log_inc)) + 
+  geom_histogram(bins = 100, fill = 'darkgreen', color = 'black') +
+  labs(
+    title = "Income Distribution",
+    x = "Total Personal Income ($'s)",
+    y = ""
+  ) +
+  theme_minimal()
+```
+
+The distribution became more "normal"-looking. All the 0 income observations drop out of the data because log(0) = -infinity
+
+### __Q07: Now plot the INCTOT together with years of school attainment__
+
+**WARNING: A scatterplot with all 100,000 observations will take a very long time to generate and will be hard to see the trend! You should use an alternative like a bin scatter plot, a geom_hex, or subset to a smaller sample**
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  ggplot(., aes(x = school, y = INCTOT)) + 
+  geom_hex()
+```
+
+  - Can you see any visual evidence of a relationship? 
+  It is hard to tell based on this form of personal income. 
+  But there is a week positive correlation between years of education and income. 
+
+### __Q08: Based on your graphs, are there any considerations of which transformations of variables to use in your regressions? __
+
+I would consider log-transforming the income variable as it may show the relationship in a more intuitive manner. 
+  
+# Step 3: Analyze the Data
+
+### __Q09: Regress your transformation of the income variable on school attainment. Report and interpret your estimates in the context of the returns to education __
+  
+```{r}
+# Write your code here
+ipums_tbl %>%
+  filter(INCTOT > 0) %>%
+  lm(log(INCTOT) ~ school, data = .) %>%
+  broom::tidy()
+```
+
+The regression suggests that an additional year of education is associated with a 13.7% increase in income. 
+
+### __Q10: Does there seem to be any evidence of heteroskedasticity in this relationship? Plot the residuals from your previous regression at different levels of school attendance and interpret. __
+
+```{r}
+# Write your code here
+model <- ipums_tbl %>%
+  lm(log(INCTOT) ~ school, data = .)
+
+ipums_tbl <- ipums_tbl %>%
+  mutate(residuals = residuals(model))
+
+ggplot(ipums_tbl, aes(x = school, y = residuals)) + 
+  geom_point(alpha = 0.5) + 
+  geom_smooth(method = "lm")
+```
+
+There does not seem to be any evidence of heteroskedasticity. We can see this because there is no systemic variation in the residuals as years of school increases. The linear fit line also seems to be flat around 0. 
+
+### __Q11: What are some potential omitted variables in the relationship between school attainment and income which could bias your regression estimates? __
+
+  - How might these variable be related to *both* income and school attainment? 
+  
+  State of residence and sex may be possible omitted variables. State is potentially related to income as different states will have different economies (and employment opportunities). Each state may also have different quality of educational institutions which affect future labor market outcomes. Sex may also be related to income due to possible sex-based discrimination in income and to school attainment as there may be differential trends in school attainment by sex. 
+  
+  - Choose one variable and argue which direction (positive or negative) of bias 
+  likely would result from omitting that variable.
+  
+  For state of residence: If a state has a stronger economy (California vs Arkansas), then income and state would be positively correlated. This would bias the estimate upwards. 
+
+### __Q12: Now regress income on school attainment, age, and on whether the person received a degree in economics__
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  lm(log(INCTOT) ~ school + AGE + i_economics, data =.) %>%
+  broom::tidy()
+```
+
+  - How does the estimate on school attainment change? 
+  There is a small decrease, which is likely not a significant change. It goes from 0.1370176 to 0.13549457.
+  - How does your interpretation change?
+  An additional year of school attainment is associated with a 13.5% increase in total income
+  
+### __Q13: Regress income on school attainment and the interaction between school attainment and the degree category of your choice. __
+
+```{r}
+# Write your code here
+ipums_tbl %>%
+  lm(log(INCTOT) ~ school + school:i_socialsci, data = .) %>%
+  broom::tidy()
+
+ipums_tbl %>%
+  lm(log(INCTOT) ~ school + school:i_engineering, data = .) %>%
+  broom::tidy()
+
+ipums_tbl %>%
+  lm(log(INCTOT) ~ school + school:i_economics, data = .) %>%
+  broom::tidy()
+```
+
+# Step 4: Discuss your conclusions
+
+### __Q14: In this dataset, does it seem like some degrees have better returns to lifetime income than others?__
+
+  - Make sure to cite your estimate results and explain why they support 
+  your claim.
+  
+  Yes. Above I ran a regression for social sciences, engineering and economics. 
+  For these degree categories, social science has an interacted effect of 0.02299027, engineering of 0.03733596 and economics of 0.03556361.
+  Which suggest that each individual major has different returns to total income as the coefficient in the interaction are different. 
+  
+### __Q15: What are some reasons why your estimates may not be enough to answer the question of whether degree type actually has a *causal* effect on the returns to education? __
+
+There are so many other potential factors that determine wages, such as sex mentioned before. 
+The fundamental problem of causal inference means that we cannot observe how someone that studied economics would have done if they had studied engineering. So we cannot directly compare them. However, we are also likely missing many other factors which get absorbed in the error term of the model, like institutional quality or labor market conditions. 
+Lastly, this is also a cross-sectional dataset. We cannot observe trends in any way, but rather the snapshot of how these individuals are. 
+
+
+<br>
+
+---
+
+## Points
+
+| Question             | Points        |
+|----------------------|---------------|
+| Q01                  | 8             |
+| Q02                  | 2             |
+| Q03                  | 4             |
+| Q04                  | 4             |
+| Q05                  | 6             |
+| Q06                  | 6             |
+| Q07                  | 6             |
+| Q08                  | 2             |
+| Q09                  | 8             |
+| Q10                  | 6             |
+| Q11                  | 8             |
+| Q12                  | 10            |
+| Q13                  | 10            |
+| Q14                  | 10            |
+| Q15                  | 10            |
+| Style Points         | 10            |
+| Total                | 110           |
+
+
+
+---
+
+## Codebook
+
+| Variable     | Description                                                                           |
+|--------------|---------------------------------------------------------------------------------------|
+| STATEFIPS    | State name                                                                            |
+| AGE          | The individual's age (in years)                                                       |
+| INCTOT       | Personal pre-tax income (in 2022 dollars)                                             |
+| school       | Estimated number of years of education attainment (based on courser measure in ipums) |
+| i_unemployed | Binary indicator for whether the individual is unemployed                             |
+| i_business   | Binary indicator for whether the individual received a bachelors degree in business   |
+| i_education  | Binary indicator for whether the individual received a bachelors degree in education  |
+| i_engineering| Binary indicator for whether the individual received a bachelors degree in engineering|
+| i_medicine   | Binary indicator for whether the individual received a bachelors degree within 'Medical and Health Sciences and Services' |
+| i_socialsci  | Binary indicator for whether the individual received a bachelors degree in a social science |
+| i_economics  | Binary indicator for whether the individual received a bachelors degree in economics  |
+| i_hsdiploma  | Binary indicator for whether the individual received at least a high school diploma   |
+| i_ged        | Binary indicator for whether the individual received at least a GED                   |
+| i_associates | Binary indicator for whether the individual received at least an associates degree    |
+| i_bachelors  | Binary indicator for whether the individual received at least a bachelors degree      |
+| i_masters    | Binary indicator for whether the individual received at least a masters degree        |
+| i_doctorate  | Binary indicator for whether the individual received a doctoral degree                |
