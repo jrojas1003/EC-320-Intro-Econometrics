@@ -113,11 +113,11 @@ Also submit your answer to who did it on [**Canvas**](https://canvas.uoregon.edu
 ```{=html}
 <details>
   <summary>Solutions</summary> 
-  <a class="btn btn-primary btn-lg cv-download" href="/documents/exams/midterm-solutions.pdf" target="_blank">
+  <a class="btn btn-primary btn-lg cv-download" href="/documents/exams/midterm/midterm-solutions.pdf" target="_blank">
     <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
-    <iframe src="/documents/exams/midterm-solutions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="/documents/exams/midterm/midterm-solutions.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
