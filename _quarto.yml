@@ -22,8 +22,14 @@ website:
         text: R Worksheets
       - href: documents/readings/index.qmd
         text: Readings
-      - href: about.qmd
-        text: About Me
+
+  announcement: 
+    icon: clipboard2-check-fill
+    dismissable: true
+    content: "Welcome to my Introduction to Econometrics Course!"
+    type: warning
+    position: below-navbar
+
 format:
   html:
     theme: 

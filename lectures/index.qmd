@@ -10,8 +10,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="01-Random-Variables/010-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="01-Random-Variables/010-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="01-Random-Variables/010-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -23,8 +23,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="03-Estimators-01/030-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="03-Estimators-01/030-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="03-Estimators-01/030-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -34,8 +34,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="04-Estimators-02/040-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="04-Estimators-02/040-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="04-Estimators-02/040-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -45,8 +45,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="05-Inference/050-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="05-Inference/050-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="05-Inference/050-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -56,8 +56,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="06-Multiple-Var-Reg/060-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="06-Multiple-Var-Reg/060-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="06-Multiple-Var-Reg/060-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -67,8 +67,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="07-Non-Linear-Models/070-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="07-Non-Linear-Models/070-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="07-Non-Linear-Models/070-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -78,8 +78,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="08-Categorical-Variables/080-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="08-Categorical-Variables/080-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="08-Categorical-Variables/080-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -89,8 +89,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="09-Fundamental-Prob-Causal-Inf/090-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="09-Fundamental-Prob-Causal-Inf/090-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="09-Fundamental-Prob-Causal-Inf/090-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -102,8 +102,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="02-Vectors-and-Pipes-R/020-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="02-Vectors-and-Pipes-R/020-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="02-Vectors-and-Pipes-R/020-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -113,8 +113,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="10-Tibbles-and-lm/100-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="10-Tibbles-and-lm/100-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="10-Tibbles-and-lm/100-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -124,8 +124,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="11-Dplyr/110-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="11-Dplyr/110-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="11-Dplyr/110-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 
@@ -135,8 +135,8 @@ title: "Lectures"
 <div>
   <iframe class="slide deck" src="12-ggplot/120-compile.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="12-ggplot/120-compile.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+<a class="btn btn-primary btn-lg cv-download" href="12-ggplot/120-compile.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>Expand
 </a>
 ```
 

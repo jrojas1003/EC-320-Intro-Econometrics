@@ -13,11 +13,14 @@ You will find everything you need on this site by navigating the tabs above.
 
 ## Syllabus
 
+
+
+
 ```{=html}
 <details>
   <summary>Summer 2025 Syllabus PDF</summary>
   <a class="btn btn-primary btn-lg cv-download" href="documents/syllabus/syllabus.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+    <i class="fa-solid fa-file-arrow-down"></i>Download
   </a>
   <div class="embed-container">
     <iframe src="documents/syllabus/syllabus.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
@@ -32,14 +35,14 @@ You will find everything you need on this site by navigating the tabs above.
 
 **Instructor:** Jose Rojas-Fallas
 
-**Office Hours:** Tues/Thurs 02:00 to 04:00 pm
+**Office Hours:** Day and Time
 :::
 
 ::: {.column width="50%"}
 
 **Email:** jrojas2@uoregon.edu
 
-[**Zoom Room**](https://uoregon.zoom.us/j/98965994279)
+**Zoom Room**
 :::
 
 ::::
@@ -55,4 +58,4 @@ For more details, read the [Syllabus](Documents/Syllabus/Syllabus.pdf) above
 | Quizzes (x4) | **20%** |
 | Midterm Exam | **30%** |
 | Final Exam | **30%** |
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1750656277.30898 "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" "syllabus.pdf" "syllabus" 1750656278.08961 0
-  "/Users/joserojas/Documents/Teaching/EC320/documents/syllabus/syllabus.tex" 1750653852.09068 986 b1fe2ba3297b11b2adb0d5e06fe07a73 ""
+["pdflatex"] 1757912102.59028 "/Users/joserojas/Documents/Teaching/EC320 - Intro to Econometrics/documents/syllabus/syllabus.tex" "syllabus.pdf" "syllabus" 1757912103.11439 0
+  "/Users/joserojas/Documents/Teaching/EC320 - Intro to Econometrics/documents/syllabus/syllabus.tex" 1757912102.32442 987 9b8792bd2f3362c9503a59cfa993915b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -131,14 +131,13 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1734939054.00986 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1734939011 8221433 bb52dd08fc4036ad0c5bff34b43066ca ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "01-header/Class-Information.tex" 1750653846.44956 765 62711e2f69ad9f8ea42292ce79e8be32 ""
-  "02-course-summary/course-summary.tex" 1750654085.02696 5882 50ea46e77dd9ba10c7092f1506c4f5ee ""
-  "03-grades/grades.tex" 1750653678.58911 926 cb6897647be340fc6640a0256d8a5688 ""
-  "04-schedule/schedule.tex" 1750656277.09468 417 192c3c9ae6d9eae8c3fa7b3af06f92df ""
-  "05-recommendations/recommendations.tex" 1750224119.97505 1408 c09826ad5c94e1bce1828e4ff4cacdac ""
-  "syllabus.aux" 1750656277.96919 257 05758fd683ead0a40fe8a10db615d480 "pdflatex"
-  "syllabus.out" 1750656277.74353 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "syllabus.tex" 1750653852.09068 986 b1fe2ba3297b11b2adb0d5e06fe07a73 ""
+  "01-header/Class-Information.tex" 1752527963.79392 765 62711e2f69ad9f8ea42292ce79e8be32 ""
+  "02-course-summary/course-summary.tex" 1752527963.79499 5882 50ea46e77dd9ba10c7092f1506c4f5ee ""
+  "03-grades/grades.tex" 1752527963.79736 926 cb6897647be340fc6640a0256d8a5688 ""
+  "05-recommendations/recommendations.tex" 1752527963.79974 1408 c09826ad5c94e1bce1828e4ff4cacdac ""
+  "syllabus.aux" 1757912103.04103 257 05758fd683ead0a40fe8a10db615d480 "pdflatex"
+  "syllabus.out" 1757912102.89295 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "syllabus.tex" 1757912102.32442 987 9b8792bd2f3362c9503a59cfa993915b ""
   (generated)
   "syllabus.aux"
   "syllabus.log"

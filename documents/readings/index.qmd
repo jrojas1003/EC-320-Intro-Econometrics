@@ -10,7 +10,7 @@ title: "Readings"
 <details>
   <summary>View PDF</summary> 
   <a class="btn btn-primary btn-lg cv-download" href="/documents/readings/math/math-rules.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+    <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
     <iframe src="/documents/readings/math/math-rules.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
@@ -22,56 +22,64 @@ title: "Readings"
 
 ## Review
 
+<!--
 ```{=html}
 <details>
   <summary>View PDF</summary> 
   <a class="btn btn-primary btn-lg cv-download" href="/documents/readings/textbook/Review.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+    <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
     <iframe src="/documents/readings/textbook/Review.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
+-->
 
 ## Ch.01 - Simple Regression Analysis
 
+<!--
 ```{=html}
 <details>
   <summary>View PDF</summary> 
   <a class="btn btn-primary btn-lg cv-download" href="/documents/readings/textbook/Ch1-Simple-Reg.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+    <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
     <iframe src="/documents/readings/textbook/Ch1-Simple-Reg.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
+-->
 
 ## Ch.02 - Coefficient & Hypothesis Testing
 
+<!--
 ```{=html}
 <details>
   <summary>View PDF</summary> 
   <a class="btn btn-primary btn-lg cv-download" href="/documents/readings/textbook/Ch2-Coeff-Hypo-Testing.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+    <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
     <iframe src="/documents/readings/textbook/Ch2-Coeff-Hypo-Testing.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
+-->
 
 ## Ch.03 - Multiple Regression Analysis
 
+<!--
 ```{=html}
 <details>
   <summary>View PDF</summary> 
   <a class="btn btn-primary btn-lg cv-download" href="/documents/readings/textbook/Ch3-Multiple-Reg.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download 
+    <i class="fa-solid fa-file-arrow-down"></i>Download 
   </a>
   <div class="embed-container">
     <iframe src="/documents/readings/textbook/CCh3-Multiple-Reg.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
+-->

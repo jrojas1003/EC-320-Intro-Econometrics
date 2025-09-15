@@ -115,7 +115,7 @@ ___Do returns to educational attainment differ by college major?___
 ```{r}
 # Write your code here
 ipums_tbl %>%
-  filter(i_economics == 1) %>%
+  filter(i_economics == 1, i_unemployed == 1) %>%
   nrow()
 ```
 
@@ -277,9 +277,11 @@ The regression suggests that an additional year of education is associated with 
 ```{r}
 # Write your code here
 model <- ipums_tbl %>%
+  filter(INCTOT > 0) %>%
   lm(log(INCTOT) ~ school, data = .)
 
 ipums_tbl <- ipums_tbl %>%
+  filter(INCTOT > 0) %>%
   mutate(residuals = residuals(model))
 
 ggplot(ipums_tbl, aes(x = school, y = residuals)) + 
